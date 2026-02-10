@@ -1,0 +1,13 @@
+---
+description: Build and deployment commands
+alwaysApply: false
+globs: package.json,**/next.config*
+---
+
+# Build Configuration
+
+- Use **Vercel CLI** for production builds: `vercel build` or `vercel --prod`
+- For development: `vercel dev` (prefer over pnpm dev when possible)
+- Use `vercel pull` to sync env vars; use `vercel link` to link project
+- Avoid running pnpm build directly for production
+- For local build output: `vercel build --output public`

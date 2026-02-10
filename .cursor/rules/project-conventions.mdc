@@ -1,0 +1,32 @@
+---
+description: Dr. Jan Duffy Providence Las Vegas project rules
+alwaysApply: true
+---
+
+# Providence Las Vegas – Project Rules
+
+## Agent & Business
+- **Agent:** Dr. Jan Duffy (NEVER "Janet"), License S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties
+- Use tel: links for phone numbers; verify correct number per page
+- Summarize task, assumptions, and plan before changes; wait for confirmation
+- Do not delete files or refactor without explicit approval
+
+## Tech Stack
+- Next.js 15 App Router, React, TypeScript, shadcn/ui, Tailwind CSS
+- Use Vercel CLI for production builds: `vercel build` (not local pnpm build)
+- Prefer `vercel dev` for development
+
+## SEO & GBP
+- NAP must exactly match Google Business Profile on every page
+- LocalBusiness schema (JSON-LD) on all pages
+- Business hours, map embed, Call/Directions/Reviews CTAs on relevant pages
+- E-E-A-T, Core Web Vitals, GBP optimization per 2026 guidelines
+
+## Integrations
+- **RealScout:** Load script once in root layout; CSP must allow both `em.realscout.com` and `www.realscout.com` in script-src and connect-src
+- **IDX/MLS:** Always display MLS disclaimer and listing attribution
+- **Vercel + Cloudflare:** DNS only (gray cloud); do not proxy through Cloudflare
+
+## External Feeds/APIs
+- Extract and display image URLs; add image domains to CSP img-src
+- Add remote hosts to next.config.js images.remotePatterns when using next/image
