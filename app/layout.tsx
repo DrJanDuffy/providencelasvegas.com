@@ -17,7 +17,7 @@ import {
 const title = "Providence Las Vegas | Dr. Jan Duffy, REALTOR®";
 const description =
   "Expert real estate in Providence, Las Vegas. Dr. Jan Duffy with BHHS Nevada Properties offers buying, selling, and investing—backed by Warren Buffett's legacy of trust.";
-const url = "https://providencelasvegas.com";
+const url = "https://www.providencelasvegas.com";
 
 export const metadata: Metadata = {
   title: {
@@ -54,10 +54,17 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: "index, follow",
   },
   alternates: {
     canonical: url,
   },
+  // Add your Google Search Console verification code in .env as GOOGLE_SITE_VERIFICATION
+  ...(process.env.GOOGLE_SITE_VERIFICATION && {
+    verification: {
+      google: process.env.GOOGLE_SITE_VERIFICATION,
+    },
+  }),
 };
 
 // Combined site-wide schemas using the schema utility
@@ -76,9 +83,9 @@ export default function RootLayout({
       <head>
         {/* Site-wide JSON-LD Schema: RealEstateAgent + WebSite */}
         <SchemaScript schema={siteWideSchemas} id="site-schema" />
-        {/* Google Analytics */}
+        {/* Google tag (gtag.js) - Providence Las Vegas */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-WB5DLLZ4C6"
+          src="https://www.googletagmanager.com/gtag/js?id=G-L5B3V7RE8R"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -86,7 +93,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-WB5DLLZ4C6');
+            gtag('config', 'G-L5B3V7RE8R');
           `}
         </Script>
         {/* RealScout Widget Script - loaded once globally */}

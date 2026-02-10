@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
+import { siteConfig, providenceNeighborhoods } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://heyberkshire.com";
+  const baseUrl = siteConfig.url;
   const lastModified = new Date();
 
   // Core pages
@@ -16,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/market-insights`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/google-business`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/faq`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/providence`, priority: 0.95, changeFrequency: "weekly" as const },
+    { url: `${baseUrl}/neighborhoods`, priority: 0.9, changeFrequency: "weekly" as const },
   ];
 
   // Service pages
@@ -51,11 +54,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/55-plus-communities/sun-city-summerlin`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/55-plus-communities/sun-city-anthem`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/55-plus-communities/del-webb-lake-las-vegas`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/55-plus-communities/sun-city-aliante`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/55-plus-communities/heritage-stonebridge`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/55-plus-communities/solera-anthem`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/55-plus-communities/trilogy-summerlin`, priority: 0.8, changeFrequency: "monthly" as const },
   ];
 
-  // Neighborhood pages
+  // Providence Las Vegas: hub + 27 neighborhood pages
+  const providencePages = [
+    ...providenceNeighborhoods.map((n) => ({
+      url: `${baseUrl}/providence/neighborhoods/${n.slug}`,
+      priority: 0.85 as const,
+      changeFrequency: "weekly" as const,
+    })),
+  ];
+
+  // Other neighborhood pages (non-Providence)
   const neighborhoodPages = [
-    { url: `${baseUrl}/neighborhoods`, priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/neighborhoods/summerlin`, priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/neighborhoods/henderson`, priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/neighborhoods/green-valley`, priority: 0.7, changeFrequency: "weekly" as const },
@@ -68,7 +83,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/neighborhoods/mountains-edge`, priority: 0.7, changeFrequency: "weekly" as const },
   ];
 
-  const allPages = [...corePages, ...servicePages, ...buyerPersonaPages, ...sellerPersonaPages, ...fiftyPlusCommunityPages, ...neighborhoodPages];
+  const allPages = [
+    ...corePages,
+    ...servicePages,
+    ...buyerPersonaPages,
+    ...sellerPersonaPages,
+    ...fiftyPlusCommunityPages,
+    ...providencePages,
+    ...neighborhoodPages,
+  ];
 
   return allPages.map((page) => ({
     url: page.url,

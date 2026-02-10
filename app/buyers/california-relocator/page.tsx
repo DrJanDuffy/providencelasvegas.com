@@ -84,7 +84,7 @@ const realEstateAgentSchema = {
   "@type": "RealEstateAgent",
   name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
   telephone: "+17025001942",
-  url: "https://heyberkshire.com/buyers/california-relocator",
+  url: "https://www.providencelasvegas.com/buyers/california-relocator",
   address: {
     "@type": "PostalAddress",
     streetAddress: "7181 N Hualapai Way #135",

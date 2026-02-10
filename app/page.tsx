@@ -27,7 +27,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-  url: "https://providencelasvegas.com",
+  url: "https://www.providencelasvegas.com",
   telephone: "+17025001942",
   address: {
     "@type": "PostalAddress",

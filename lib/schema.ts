@@ -113,6 +113,11 @@ export function generateRealEstateAgentSchema() {
     },
     areaServed: [
       {
+        "@type": "Place",
+        name: "Providence",
+        description: "Providence master-planned community, Las Vegas NV",
+      },
+      {
         "@type": "City",
         name: "Las Vegas",
         sameAs: "https://en.wikipedia.org/wiki/Las_Vegas",
