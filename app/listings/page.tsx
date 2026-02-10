@@ -18,6 +18,14 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { generateBreadcrumbSchema } from "@/lib/schema";
+
+export const revalidate = 3600;
+
+const listingsBreadcrumbs = generateBreadcrumbSchema([
+  { name: "Home", url: "/" },
+  { name: "Listings", url: "/listings" },
+]);
 
 export const metadata: Metadata = {
   title: "Las Vegas Homes for Sale | MLS Property Search | Berkshire Hathaway HomeServices",
@@ -109,6 +117,7 @@ const neighborhoods = [
 export default function ListingsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listingsBreadcrumbs) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(listingsSchema) }}

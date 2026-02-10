@@ -4,6 +4,10 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { TrendingUp, TrendingDown, Home, Calendar, DollarSign, BarChart, Phone } from "lucide-react";
 import type { Metadata } from "next";
+import { marketStats } from "@/lib/site-config";
+import { generateBreadcrumbSchema } from "@/lib/schema";
+
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: "Las Vegas Real Estate Market Report January 2026 | Berkshire Hathaway HomeServices",
@@ -35,9 +39,15 @@ const reportSchema = {
   },
 };
 
+const marketReportBreadcrumbs = generateBreadcrumbSchema([
+  { name: "Home", url: "/" },
+  { name: "Market Report", url: "/market-report" },
+]);
+
 export default function MarketReportPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(marketReportBreadcrumbs) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }}
@@ -59,22 +69,22 @@ export default function MarketReportPage() {
             </p>
           </div>
 
-          {/* Key Stats Overview */}
+          {/* Key Stats Overview - from site-config marketStats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              Las Vegas Market Snapshot | January 2026
+              Las Vegas Market Snapshot | {marketStats.lastUpdated}
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">$450,000</div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{marketStats.lasVegas.medianPriceFormatted}</div>
                 <div className="text-slate-300 text-sm">Median Home Price</div>
                 <div className="flex items-center justify-center mt-1 text-green-400 text-sm">
                   <TrendingUp className="h-4 w-4 mr-1" />
-                  +4.2% YoY
+                  {marketStats.lasVegas.yearOverYearChange} YoY
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">28</div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{marketStats.lasVegas.daysOnMarket}</div>
                 <div className="text-slate-300 text-sm">Days on Market</div>
                 <div className="flex items-center justify-center mt-1 text-green-400 text-sm">
                   <TrendingDown className="h-4 w-4 mr-1" />
@@ -82,14 +92,14 @@ export default function MarketReportPage() {
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">4,850</div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{marketStats.lasVegas.activeListings.toLocaleString()}</div>
                 <div className="text-slate-300 text-sm">Active Listings</div>
                 <div className="flex items-center justify-center mt-1 text-yellow-400 text-sm">
                   +12% YoY
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">2.1</div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{marketStats.lasVegas.inventoryMonths}</div>
                 <div className="text-slate-300 text-sm">Months Inventory</div>
                 <div className="flex items-center justify-center mt-1 text-slate-400 text-sm">
                   Seller's Market
@@ -98,7 +108,7 @@ export default function MarketReportPage() {
             </div>
           </section>
 
-          {/* Area Breakdown */}
+          {/* Area Breakdown - uses marketStats where available */}
           <section className="mb-16 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
               Market Data by Area
@@ -107,23 +117,23 @@ export default function MarketReportPage() {
               {[
                 {
                   area: "Las Vegas (Overall)",
-                  median: "$450,000",
-                  change: "+4.2%",
-                  dom: 28,
+                  median: marketStats.lasVegas.medianPriceFormatted,
+                  change: marketStats.lasVegas.yearOverYearChange,
+                  dom: marketStats.lasVegas.daysOnMarket,
                   trend: "up",
                 },
                 {
                   area: "Henderson",
-                  median: "$485,000",
-                  change: "+5.1%",
-                  dom: 24,
+                  median: marketStats.henderson.medianPriceFormatted,
+                  change: marketStats.henderson.yearOverYearChange,
+                  dom: marketStats.henderson.daysOnMarket,
                   trend: "up",
                 },
                 {
                   area: "Summerlin",
-                  median: "$625,000",
-                  change: "+6.8%",
-                  dom: 22,
+                  median: marketStats.summerlin.medianPriceFormatted,
+                  change: marketStats.summerlin.yearOverYearChange,
+                  dom: marketStats.summerlin.daysOnMarket,
                   trend: "up",
                 },
                 {
@@ -142,9 +152,9 @@ export default function MarketReportPage() {
                 },
                 {
                   area: "Luxury ($1M+)",
-                  median: "$1,200,000",
+                  median: marketStats.luxury.medianPriceFormatted,
                   change: "+8.5%",
-                  dom: 45,
+                  dom: marketStats.luxury.daysOnMarket,
                   trend: "up",
                 },
               ].map((item) => (
@@ -213,10 +223,10 @@ export default function MarketReportPage() {
                   For Sellers
                 </h3>
                 <ul className="space-y-2 text-slate-600">
-                  <li>• Still a seller's market (2.1 months inventory)</li>
+                  <li>• Still a seller's market ({marketStats.lasVegas.inventoryMonths} months inventory)</li>
                   <li>• Proper pricing is crucial</li>
-                  <li>• 4.2% appreciation in past year</li>
-                  <li>• Well-priced homes sell in under 30 days</li>
+                  <li>• {marketStats.lasVegas.yearOverYearChange} appreciation in past year</li>
+                  <li>• Well-priced homes sell in under {marketStats.lasVegas.daysOnMarket} days</li>
                 </ul>
               </div>
             </div>
@@ -278,7 +288,7 @@ export default function MarketReportPage() {
                 },
                 {
                   q: "Is this a buyer's or seller's market?",
-                  a: "With 2.1 months of inventory, Las Vegas is technically still a seller's market (6 months is balanced). However, buyers have more leverage than they've had since 2019. It's a balanced environment that rewards proper pricing.",
+                  a: `With ${marketStats.lasVegas.inventoryMonths} months of inventory, Las Vegas is technically still a seller's market (6 months is balanced). However, buyers have more leverage than they've had since 2019. It's a balanced environment that rewards proper pricing.`,
                 },
                 {
                   q: "What's happening with interest rates?",
@@ -315,8 +325,13 @@ export default function MarketReportPage() {
           </section>
         </div>
 
-        {/* Last Updated */}
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        {/* Data sources and last updated */}
+        <section className="mt-12 max-w-4xl mx-auto px-4" aria-label="Data sources">
+          <p className="text-sm text-slate-600 mb-2">
+            <strong>Data sources:</strong> Data from Las Vegas REALTORS® (LVR) MLS, {marketStats.lastUpdated}; neighborhood figures from local housing authority and broker analysis. Statistics are subject to change.
+          </p>
+          <p className="text-center text-sm text-slate-500 mt-6">Last Updated: {marketStats.lastUpdated}</p>
+        </section>
       </main>
       <RealScoutListings />
       <Footer />

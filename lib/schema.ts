@@ -502,6 +502,51 @@ export function generateRealEstateListingSchema(listing: {
 }
 
 // ============================================================================
+// Event Schema (Open Houses)
+// ============================================================================
+
+/**
+ * Generate Event schema for open house listings.
+ * Use when displaying open house date/time from MLS or RealScout.
+ */
+export function generateOpenHouseEventSchema(event: {
+  name: string;
+  startDate: string; // ISO 8601 e.g. "2026-02-15T10:00:00-08:00"
+  endDate?: string;
+  location: {
+    name?: string;
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
+  };
+  url?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: event.name,
+    startDate: event.startDate,
+    ...(event.endDate && { endDate: event.endDate }),
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
+    location: {
+      "@type": "Place",
+      name: event.location.name,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: event.location.streetAddress,
+        addressLocality: event.location.addressLocality,
+        addressRegion: event.location.addressRegion,
+        postalCode: event.location.postalCode,
+        addressCountry: "US",
+      },
+    },
+    ...(event.url && { url: event.url.startsWith("http") ? event.url : `${BASE_URL}${event.url}` }),
+  };
+}
+
+// ============================================================================
 // Page-Specific Schema Generators
 // ============================================================================
 

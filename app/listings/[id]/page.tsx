@@ -4,20 +4,40 @@ import Image from "next/image";
 import { Bed, Bath, Square, MapPin, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
+import { siteConfig } from "@/lib/site-config";
+import { generateBreadcrumbSchema, generateRealEstateListingSchema } from "@/lib/schema";
 
-export const metadata: Metadata = {
-  title: "Property Details | Las Vegas & Henderson Real Estate",
-  description: "View detailed information about this property listing in Las Vegas or Henderson, NV.",
+type PropertyPageProps = {
+  params: Promise<{ id: string }>;
 };
 
-// This would typically fetch from RealScout API
+export const revalidate = 3600;
+
+export async function generateMetadata({ params }: PropertyPageProps): Promise<Metadata> {
+  const { id } = await params;
+  const property = await getProperty(id);
+  const listingUrl = `${siteConfig.url}/listings/${id}`;
+  return {
+    title: `${property.name} | Las Vegas & Henderson Real Estate`,
+    description: property.description.slice(0, 160),
+    alternates: { canonical: listingUrl },
+    openGraph: {
+      title: `${property.name} | BHHS Nevada Properties`,
+      description: property.description.slice(0, 160),
+      url: listingUrl,
+      images: property.image ? [{ url: property.image.startsWith("http") ? property.image : `${siteConfig.url}${property.image}` }] : undefined,
+    },
+  };
+}
+
+// Placeholder: replace with RealScout API when wired. When real data exists, add evidence-dense blocks: key specs, price history, neighborhood link, school ratings (see plan Phase 1.6).
 async function getProperty(id: string) {
-  // Placeholder - replace with RealScout API call
   return {
     id,
     name: "Modern Luxury Home",
     location: "Summerlin, Las Vegas, NV",
     price: "$850,000",
+    priceNumber: 850000,
     image: "/Image/hero_bg_1.jpg",
     bedrooms: 4,
     bathrooms: 3,
@@ -28,16 +48,31 @@ async function getProperty(id: string) {
   };
 }
 
-type PropertyPageProps = {
-  params: Promise<{ id: string }>;
-};
-
 export default async function PropertyPage({ params }: PropertyPageProps) {
   const { id } = await params;
   const property = await getProperty(id);
+  const listingUrl = `${siteConfig.url}/listings/${id}`;
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Listings", url: "/listings" },
+    { name: property.name, url: `/listings/${id}` },
+  ]);
+  const listingSchema = generateRealEstateListingSchema({
+    name: property.name,
+    description: property.description,
+    price: (property.priceNumber ?? parseInt(property.price.replace(/[^0-9]/g, ""), 10)) || 0,
+    address: { street: "See listing", city: "Las Vegas", state: "NV", zip: "89135" },
+    bedrooms: property.bedrooms,
+    bathrooms: property.bathrooms,
+    sqft: property.squareFeet,
+    images: [property.image],
+    url: listingUrl,
+  });
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listingSchema) }} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">

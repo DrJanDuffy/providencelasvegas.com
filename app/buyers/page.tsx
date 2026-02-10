@@ -167,11 +167,14 @@ export default function BuyersPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
               The Home Buying Process in Las Vegas
             </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-4">
               Buying a home is one of the most significant financial decisions you'll make. 
               Understanding the process helps reduce stress and ensures you're prepared at each 
               step. Here's what to expect when purchasing a home in Las Vegas with Dr. Jan Duffy 
               and Berkshire Hathaway HomeServices.
+            </p>
+            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+              Have questions? See our <Link href="/faq" className="text-blue-600 hover:underline">FAQ</Link>. Ready to search? <Link href="/listings" className="text-blue-600 hover:underline">Browse listings</Link> or <Link href="/home-valuation" className="text-blue-600 hover:underline">get a free home valuation</Link>.
             </p>
             <div className="space-y-6">
               {buyingSteps.map((step, index) => {

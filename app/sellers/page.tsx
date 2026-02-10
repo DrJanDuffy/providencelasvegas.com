@@ -152,6 +152,12 @@ export default function SellersPage() {
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> World-Class Marketing</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Expert Negotiation</span>
             </div>
+            <div className="mt-8 max-w-2xl mx-auto bg-slate-50 rounded-xl p-6 border-l-4 border-blue-600">
+              <blockquote className="text-slate-700 italic">
+                "Pricing is everything. I've seen overpriced homes sit for months while well-priced listings get multiple offers in weeks. My job is to get you the highest net—and that starts with getting the price right."
+              </blockquote>
+              <cite className="text-slate-900 font-semibold not-italic block mt-2">— Dr. Jan Duffy, BHHS Nevada Properties</cite>
+            </div>
           </div>
 
           {/* Market Stats */}
@@ -378,9 +384,9 @@ export default function SellersPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
               Frequently Asked Questions About Selling in Las Vegas
             </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-4">
               Selling your home raises many questions. Here are answers to the most common 
-              concerns from Las Vegas home sellers.
+              concerns from Las Vegas home sellers. For more, see our <Link href="/faq" className="text-blue-600 hover:underline">full FAQ</Link> or <Link href="/home-valuation" className="text-blue-600 hover:underline">get a free home valuation</Link>.
             </p>
             <div className="space-y-4">
               {[

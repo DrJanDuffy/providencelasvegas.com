@@ -5,18 +5,21 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Phone, MapPin, ExternalLink } from "lucide-react";
-import { providenceNeighborhoods, providenceCommunity } from "@/lib/site-config";
+import { providenceNeighborhoods, providenceCommunity, marketStats } from "@/lib/site-config";
+import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
+import { siteConfig } from "@/lib/site-config";
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
   return providenceNeighborhoods.map((n) => ({ slug: n.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const { slug } = params;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
   const neighborhood = providenceNeighborhoods.find((n) => n.slug === slug);
   if (!neighborhood) return { title: "Providence Las Vegas" };
+  const canonical = `${siteConfig.url}/providence/neighborhoods/${slug}`;
   return {
     title: `${neighborhood.name} | Providence Las Vegas | Dr. Jan Duffy, REALTOR®`,
     description: `Homes for sale in ${neighborhood.name}, Providence Las Vegas. Dr. Jan Duffy with BHHS Nevada Properties. Part of Providence's 27 neighborhoods. Call (702) 500-1942.`,
@@ -25,16 +28,31 @@ export function generateMetadata({ params }: Props): Metadata {
       `${neighborhood.name} Las Vegas real estate`,
       "Providence Las Vegas homes",
     ],
+    alternates: { canonical },
   };
 }
 
-export default function ProvidenceNeighborhoodPage({ params }: Props) {
-  const { slug } = params;
+export default async function ProvidenceNeighborhoodPage({ params }: Props) {
+  const { slug } = await params;
   const neighborhood = providenceNeighborhoods.find((n) => n.slug === slug);
   if (!neighborhood) notFound();
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Providence", url: "/providence" },
+    { name: neighborhood.name, url: `/providence/neighborhoods/${slug}` },
+  ]);
+  const providenceFaqs = [
+    { question: `What parks are near ${neighborhood.name}?`, answer: `All Providence Las Vegas residents, including ${neighborhood.name}, have access to three community parks: The Promenade, Knickerbocker Park, and Huckleberry Park. See the Providence HOA website for details.` },
+    { question: `Is ${neighborhood.name} part of the Providence Master HOA?`, answer: `Yes. ${neighborhood.name} is one of ${providenceCommunity.neighborhoodCount} neighborhoods in Providence Las Vegas. HOA assessments are due ${providenceCommunity.hoaAssessmentDueDates} of each year.` },
+    { question: `How do I get HOA resale or Design Review info for ${neighborhood.name}?`, answer: `For Design Review, Realtors/Resale, and community documents for ${neighborhood.name}, visit the official Providence Master HOA website. Dr. Jan Duffy can also guide you through the resale process.` },
+    { question: `Are there homes for sale in ${neighborhood.name}?`, answer: `Yes. Providence Las Vegas homes for sale in ${neighborhood.name} are listed on the MLS and through this site. Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties specializes in Providence real estate.` },
+  ];
+  const faqSchema = generateFAQSchema(providenceFaqs);
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <main>
         <section className="pt-24 pb-12 md:pt-28 md:pb-16 bg-slate-50">
@@ -70,6 +88,18 @@ export default function ProvidenceNeighborhoodPage({ params }: Props) {
               latest. HOA assessments for Providence are due {providenceCommunity.hoaAssessmentDueDates}{" "}
               of each year.
             </p>
+
+            {/* Market snapshot - data-rich for AI parsing */}
+            <section className="mt-6 max-w-3xl" aria-label="Market snapshot">
+              <h2 className="text-xl font-bold text-slate-900 mb-3">Providence & Las Vegas Market Snapshot</h2>
+              <p className="text-slate-700 text-sm mb-2">
+                {neighborhood.name} is one of {providenceCommunity.neighborhoodCount} Providence neighborhoods; Providence has {providenceCommunity.homeCount} homes and {providenceCommunity.parks.length} community parks. Las Vegas Valley median home price ({marketStats.lastUpdated}): {marketStats.lasVegas.medianPriceFormatted}; {marketStats.lasVegas.daysOnMarket} days on market.
+              </p>
+              <ul className="text-slate-700 text-sm list-disc list-inside space-y-1">
+                <li>Providence HOA due: {providenceCommunity.hoaAssessmentDueDates}</li>
+                <li>Parks: {providenceCommunity.parks.map((p) => p.name).join(", ")}</li>
+              </ul>
+            </section>
           </div>
         </section>
 
@@ -154,6 +184,20 @@ export default function ProvidenceNeighborhoodPage({ params }: Props) {
               The Neighborhoods of Providence (HOA)
               <ExternalLink className="h-4 w-4" />
             </a>
+          </div>
+        </section>
+
+        <section className="py-12 md:py-16 bg-slate-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions About {neighborhood.name}</h2>
+            <div className="space-y-4">
+              {providenceFaqs.map((faq, index) => (
+                <div key={index} className="bg-white rounded-lg p-6 border border-slate-200">
+                  <h3 className="font-bold text-slate-900 mb-2">{faq.question}</h3>
+                  <p className="text-slate-700">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

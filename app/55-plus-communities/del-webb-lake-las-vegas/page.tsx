@@ -12,6 +12,13 @@ import {
   CheckCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { generateBreadcrumbSchema } from "@/lib/schema";
+
+const breadcrumbs = generateBreadcrumbSchema([
+  { name: "Home", url: "/" },
+  { name: "55+ Communities", url: "/55-plus-communities" },
+  { name: "Del Webb at Lake Las Vegas", url: "/55-plus-communities/del-webb-lake-las-vegas" },
+]);
 
 export const metadata: Metadata = {
   title: "Del Webb at Lake Las Vegas Homes | Berkshire Hathaway HomeServices",
@@ -29,6 +36,7 @@ export const metadata: Metadata = {
 export default function DelWebbLakeLasVegasPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">

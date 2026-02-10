@@ -42,11 +42,13 @@ export const metadata: Metadata = {
     siteName: "Providence Las Vegas | Berkshire Hathaway HomeServices Nevada Properties",
     type: "website",
     locale: "en_US",
+    images: [{ url: "/hero_bg_1.jpg", width: 1200, height: 630, alt: "Providence Las Vegas | Dr. Jan Duffy, REALTOR®" }],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    images: ["/hero_bg_1.jpg"],
   },
   icons: {
     icon: "/favicon-32x32.png",

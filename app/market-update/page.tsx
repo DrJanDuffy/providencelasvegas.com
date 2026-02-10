@@ -15,6 +15,8 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices Las Vegas Market Update | January 2026",
   description:
@@ -428,9 +430,14 @@ export default function MarketUpdatePage() {
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-12">
-          Last Updated: January 24, 2026 | Data Source: Las Vegas REALTORS® MLS
-        </div>
+        <section className="mt-12 max-w-4xl mx-auto px-4" aria-label="Data sources">
+          <p className="text-sm text-slate-600 mb-2">
+            <strong>Data sources:</strong> Data from Las Vegas REALTORS® (LVR) MLS; weekly figures from broker analysis and local housing authority. Statistics are subject to change.
+          </p>
+          <p className="text-center text-sm text-slate-500 mt-6">
+            Last Updated: January 24, 2026
+          </p>
+        </section>
       </main>
       <RealScoutListings />
       <Footer />

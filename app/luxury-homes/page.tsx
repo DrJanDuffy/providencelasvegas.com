@@ -18,6 +18,18 @@ import {
   Users,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { generateFAQSchema } from "@/lib/schema";
+
+const luxuryFaqs = [
+  { question: "What defines a luxury home in Las Vegas?", answer: "Generally, homes priced at $1 million and above are considered luxury in Las Vegas. The ultra-luxury segment starts around $3 million. Features typically include custom architecture, premium locations in guard-gated communities, high-end finishes, and exclusive amenities like private pools, home theaters, and wine cellars." },
+  { question: "How long do luxury homes take to sell in Las Vegas?", answer: "Luxury homes average 45 days on market, longer than the overall market average of 28 days. However, exceptional properties priced correctly can sell quickly, sometimes within weeks. Marketing strategy and pricing are crucial at this level—overpricing can lead to properties sitting for months." },
+  { question: "Can I sell my luxury home privately without public listing?", answer: "Yes. Dr. Jan offers confidential, off-market sales for clients who prefer discretion. Berkshire Hathaway HomeServices' network can connect your property with qualified buyers without public marketing, protecting your privacy while still reaching serious buyers." },
+  { question: "What commission do you charge for luxury home sales?", answer: "Commission rates are negotiable and discussed during your consultation. Dr. Jan provides transparent pricing based on your property and marketing needs. The value of Berkshire Hathaway's global reach and reputation often results in higher sale prices that more than offset commission." },
+  { question: "Do you work with international buyers?", answer: "Yes. Berkshire Hathaway HomeServices' global network includes agents in major international markets. Dr. Jan has experience working with buyers from Asia, Europe, and the Middle East who are interested in Las Vegas luxury properties." },
+  { question: "What's the process for buying a luxury home in Las Vegas?", answer: "The process is similar to standard purchases but with additional considerations. Proof of funds is typically required before showings. Inspections are more extensive. Dr. Jan coordinates all aspects, including working with attorneys, financial advisors, and other professionals as needed." },
+];
+
+const luxuryFaqSchema = generateFAQSchema(luxuryFaqs);
 
 export const metadata: Metadata = {
   title: "Las Vegas Luxury Homes for Sale | Berkshire Hathaway HomeServices",
@@ -382,35 +394,10 @@ export default function LuxuryHomesPage() {
               to common questions from buyers and sellers in this market segment.
             </p>
             <div className="space-y-4">
-              {[
-                {
-                  q: "What defines a luxury home in Las Vegas?",
-                  a: "Generally, homes priced at $1 million and above are considered luxury in Las Vegas. The ultra-luxury segment starts around $3 million. Features typically include custom architecture, premium locations in guard-gated communities, high-end finishes, and exclusive amenities like private pools, home theaters, and wine cellars.",
-                },
-                {
-                  q: "How long do luxury homes take to sell in Las Vegas?",
-                  a: "Luxury homes average 45 days on market, longer than the overall market average of 28 days. However, exceptional properties priced correctly can sell quickly, sometimes within weeks. Marketing strategy and pricing are crucial at this level—overpricing can lead to properties sitting for months.",
-                },
-                {
-                  q: "Can I sell my luxury home privately without public listing?",
-                  a: "Yes. Dr. Jan offers confidential, off-market sales for clients who prefer discretion. Berkshire Hathaway HomeServices' network can connect your property with qualified buyers without public marketing, protecting your privacy while still reaching serious buyers.",
-                },
-                {
-                  q: "What commission do you charge for luxury home sales?",
-                  a: "Commission rates are negotiable and discussed during your consultation. Dr. Jan provides transparent pricing based on your property and marketing needs. The value of Berkshire Hathaway's global reach and reputation often results in higher sale prices that more than offset commission.",
-                },
-                {
-                  q: "Do you work with international buyers?",
-                  a: "Yes. Berkshire Hathaway HomeServices' global network includes agents in major international markets. Dr. Jan has experience working with buyers from Asia, Europe, and the Middle East who are interested in Las Vegas luxury properties.",
-                },
-                {
-                  q: "What's the process for buying a luxury home in Las Vegas?",
-                  a: "The process is similar to standard purchases but with additional considerations. Proof of funds is typically required before showings. Inspections are more extensive. Dr. Jan coordinates all aspects, including working with attorneys, financial advisors, and other professionals as needed.",
-                },
-              ].map((faq, index) => (
+              {luxuryFaqs.map((faq, index) => (
                 <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
+                  <h3 className="font-bold text-slate-900 mb-2">{faq.question}</h3>
+                  <p className="text-slate-600">{faq.answer}</p>
                 </div>
               ))}
             </div>

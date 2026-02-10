@@ -15,6 +15,13 @@ import {
   Heart,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { generateBreadcrumbSchema } from "@/lib/schema";
+
+const breadcrumbs = generateBreadcrumbSchema([
+  { name: "Home", url: "/" },
+  { name: "55+ Communities", url: "/55-plus-communities" },
+  { name: "Trilogy at Summerlin", url: "/55-plus-communities/trilogy-summerlin" },
+]);
 
 export const metadata: Metadata = {
   title: "Trilogy at Summerlin Homes for Sale | Luxury Resort 55+ Living | Dr. Jan Duffy",
@@ -58,6 +65,7 @@ const communitySchema = {
 export default function TrilogySummerlinPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(communitySchema) }}

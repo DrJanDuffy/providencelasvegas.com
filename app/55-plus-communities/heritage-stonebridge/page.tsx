@@ -15,6 +15,13 @@ import {
   Star,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { generateBreadcrumbSchema } from "@/lib/schema";
+
+const breadcrumbs = generateBreadcrumbSchema([
+  { name: "Home", url: "/" },
+  { name: "55+ Communities", url: "/55-plus-communities" },
+  { name: "Heritage at Stonebridge", url: "/55-plus-communities/heritage-stonebridge" },
+]);
 
 export const metadata: Metadata = {
   title: "Heritage at Stonebridge Homes for Sale | Guard-Gated 55+ Summerlin | Dr. Jan Duffy",
@@ -58,6 +65,7 @@ const communitySchema = {
 export default function HeritageAtStonebridgePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(communitySchema) }}

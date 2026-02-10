@@ -104,6 +104,22 @@ export default function SummerlinPage() {
             </p>
           </div>
 
+          {/* What's Summerlin like? / Expensive? / Good for families? - multi-question block */}
+          <section className="mb-16 max-w-4xl mx-auto" aria-label="Summerlin overview">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">What's Summerlin Like—and Is It Right for You?</h2>
+            <p className="text-slate-700 mb-4">
+              Summerlin is Las Vegas's premier master-planned community: Red Rock Canyon views, 150+ parks, top-rated schools, and distinct villages. It appeals to families, professionals, and luxury buyers alike.
+            </p>
+            <h3 className="text-lg font-semibold text-slate-900 mb-2">Is Summerlin expensive?</h3>
+            <p className="text-slate-700 mb-4">
+              The median home price in Summerlin is about $625,000 (January 2026)—above the Las Vegas Valley median of $450,000. You'll find condos and townhomes from the $400s and luxury estates in The Ridges from $2M+. <Link href="/market-report" className="text-blue-600 hover:underline">See the latest market report</Link> for current numbers.
+            </p>
+            <h3 className="text-lg font-semibold text-slate-900 mb-2">Is Summerlin good for families?</h3>
+            <p className="text-slate-700 mb-4">
+              Yes. Summerlin is known for strong CCSD schools, low crime, and family-friendly amenities: parks, trails, community pools, and events. Many families relocate from California specifically for the schools and quality of life. <Link href="/listings" className="text-blue-600 hover:underline">Browse Summerlin homes for sale</Link> or <Link href="/home-valuation" className="text-blue-600 hover:underline">get a free home valuation</Link>.
+            </p>
+          </section>
+
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">

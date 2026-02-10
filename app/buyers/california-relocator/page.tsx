@@ -141,6 +141,12 @@ export default function CaliforniaRelocatorPage() {
               <Phone className="h-5 w-5 mr-2" />
               Start Your Tax-Free Life → (702) 500-1942
             </a>
+            <div className="mt-10 max-w-2xl mx-auto bg-slate-50 rounded-xl p-6 border-l-4 border-amber-500">
+              <blockquote className="text-slate-700 italic">
+                "Most of my California clients are shocked by how far their equity goes here. They sell in Irvine or the Bay Area and buy something bigger in Summerlin or Henderson—and keep six figures in the bank. The quality of life is what keeps them."
+              </blockquote>
+              <cite className="text-slate-900 font-semibold not-italic block mt-2">— Dr. Jan Duffy, BHHS Nevada Properties</cite>
+            </div>
           </div>
 
           {/* Tax Savings Comparison */}

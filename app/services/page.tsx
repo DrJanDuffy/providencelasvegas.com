@@ -203,6 +203,12 @@ export default function ServicesPage() {
                 <span>500+ Satisfied Clients</span>
               </div>
             </div>
+            <div className="mt-8 max-w-2xl mx-auto bg-slate-50 rounded-xl p-6 border-l-4 border-blue-600">
+              <blockquote className="text-slate-700 italic">
+                "My job is to match you with the right service—whether you're buying your first home, selling a Providence property, or relocating from California. Berkshire Hathaway gives us the tools; I bring the local expertise."
+              </blockquote>
+              <cite className="text-slate-900 font-semibold not-italic block mt-2">— Dr. Jan Duffy, BHHS Nevada Properties</cite>
+            </div>
           </div>
 
           {/* Core Services Section */}

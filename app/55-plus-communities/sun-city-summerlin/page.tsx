@@ -15,6 +15,13 @@ import {
   CheckCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { generateBreadcrumbSchema } from "@/lib/schema";
+
+const breadcrumbs = generateBreadcrumbSchema([
+  { name: "Home", url: "/" },
+  { name: "55+ Communities", url: "/55-plus-communities" },
+  { name: "Sun City Summerlin", url: "/55-plus-communities/sun-city-summerlin" },
+]);
 
 export const metadata: Metadata = {
   title: "Sun City Summerlin Homes for Sale | Berkshire Hathaway HomeServices",
@@ -50,6 +57,7 @@ const communitySchema = {
 export default function SunCitySummerlinPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(communitySchema) }}

@@ -14,6 +14,13 @@ import {
   TrendingUp,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { generateBreadcrumbSchema } from "@/lib/schema";
+
+const breadcrumbs = generateBreadcrumbSchema([
+  { name: "Home", url: "/" },
+  { name: "55+ Communities", url: "/55-plus-communities" },
+  { name: "Sun City Aliante", url: "/55-plus-communities/sun-city-aliante" },
+]);
 
 export const metadata: Metadata = {
   title: "Sun City Aliante Homes for Sale | Most Affordable Sun City | Dr. Jan Duffy",
@@ -57,6 +64,7 @@ const communitySchema = {
 export default function SunCityAliantePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(communitySchema) }}

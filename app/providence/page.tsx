@@ -3,7 +3,7 @@ import Footer from "@/components/layouts/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Phone, ExternalLink, MapPin } from "lucide-react";
-import { providenceCommunity, providenceNeighborhoods } from "@/lib/site-config";
+import { providenceCommunity, providenceNeighborhoods, marketStats } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Providence Las Vegas Community | Dr. Jan Duffy, REALTOR®",
@@ -43,6 +43,24 @@ export default function ProvidencePage() {
               Jan Duffy offers hyperlocal expertise and HOA resale guidance for Providence Las
               Vegas.
             </p>
+
+            {/* Providence at a glance - data-rich block for AI parsing */}
+            <section className="mt-8 max-w-3xl" aria-label="Providence at a glance">
+              <h2 className="text-xl font-bold text-slate-900 mb-4">Providence at a Glance</h2>
+              <p className="text-slate-700 mb-3 text-sm">
+                Quick facts about Providence Las Vegas. Las Vegas Valley median home price ({marketStats.lastUpdated}): {marketStats.lasVegas.medianPriceFormatted}; {marketStats.lasVegas.daysOnMarket} days on market.
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border border-slate-200 rounded-lg">
+                  <tbody>
+                    <tr className="border-b border-slate-200"><td className="px-3 py-2 font-medium text-slate-900">Neighborhoods</td><td className="px-3 py-2">{providenceCommunity.neighborhoodCount}</td></tr>
+                    <tr className="border-b border-slate-200"><td className="px-3 py-2 font-medium text-slate-900">Homes</td><td className="px-3 py-2">{providenceCommunity.homeCount}</td></tr>
+                    <tr className="border-b border-slate-200"><td className="px-3 py-2 font-medium text-slate-900">Community parks</td><td className="px-3 py-2">{providenceCommunity.parks.length}</td></tr>
+                    <tr><td className="px-3 py-2 font-medium text-slate-900">HOA assessments due</td><td className="px-3 py-2">{providenceCommunity.hoaAssessmentDueDates}</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
           </div>
         </section>
 
