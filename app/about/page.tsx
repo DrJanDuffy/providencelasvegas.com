@@ -2,6 +2,7 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
+import Image from "next/image";
 import { 
   Phone, 
   Mail, 
@@ -225,13 +226,20 @@ export default function AboutPage() {
 
               {/* Stats & Credentials */}
               <div className="space-y-6">
-                {/* Agent Photo Placeholder */}
-                <div className="bg-gradient-to-br from-blue-100 to-slate-100 rounded-lg p-8 aspect-square flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">👩‍💼</div>
-                    <p className="text-slate-600 font-semibold">Dr. Jan Duffy</p>
-                    <p className="text-sm text-slate-500">BHHS Nevada Properties</p>
-                  </div>
+                {/* Agent Headshot */}
+                <div className="relative aspect-square rounded-lg overflow-hidden border border-slate-200 shadow-md">
+                  <Image
+                    src="/agent1.jpg"
+                    alt="Dr. Jan Duffy, REALTOR® - Berkshire Hathaway HomeServices Nevada Properties"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                <div className="text-center mt-4">
+                  <p className="text-slate-600 font-semibold">Dr. Jan Duffy</p>
+                  <p className="text-sm text-slate-500">BHHS Nevada Properties</p>
                 </div>
 
                 {/* Stats Grid */}

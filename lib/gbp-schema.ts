@@ -215,7 +215,7 @@ export function generateLocalBusinessSchema() {
     "@type": "RealEstateAgent",
     "@id": "https://www.providencelasvegas.com/#organization",
     name: businessInfo.name,
-    image: "https://www.providencelasvegas.com/images/dr-jan-duffy.jpg",
+    image: "https://www.providencelasvegas.com/agent1.jpg",
     url: businessInfo.url,
     telephone: businessInfo.phone.tel,
     email: businessInfo.email,

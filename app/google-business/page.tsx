@@ -1,6 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Phone,
   Mail,
@@ -69,6 +70,16 @@ export default function GoogleBusinessPage() {
             <div className="bg-gradient-to-br from-slate-900 to-blue-900 text-white rounded-2xl p-8 md:p-12">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
+                  <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-blue-400 mb-4">
+                    <Image
+                      src="/agent1.jpg"
+                      alt="Dr. Jan Duffy, REALTOR®"
+                      fill
+                      sizes="96px"
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
                   <div className="flex items-center gap-2 mb-4">
                     <Award className="h-6 w-6 text-yellow-400" />
                     <span className="text-yellow-400 font-semibold">Berkshire Hathaway HomeServices</span>
