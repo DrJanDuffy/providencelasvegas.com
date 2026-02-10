@@ -22,11 +22,12 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Real Estate Services Las Vegas | Berkshire Hathaway HomeServices",
+  title: "Real Estate Services | Providence Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Comprehensive real estate services from Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Buying, selling, luxury, investment, relocation, 55+ communities, and new construction. Call (702) 500-1942.",
+    "Comprehensive Providence Las Vegas real estate services from Dr. Jan Duffy. Buying, selling, luxury, investment, relocation, 55+ communities, and new construction. BHHS Nevada Properties. Call (702) 500-1942.",
   keywords: [
-    "Las Vegas real estate services",
+    "Providence Las Vegas real estate services",
+    "Providence Las Vegas homes",
     "Berkshire Hathaway services",
     "home buying Las Vegas",
     "home selling Henderson",
@@ -44,7 +45,7 @@ const servicesSchema = {
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
     telephone: "+17025001942",
   },
-  areaServed: "Las Vegas, Henderson, Summerlin, Clark County NV",
+  areaServed: "Las Vegas, Providence, Henderson, Summerlin, Clark County NV",
   serviceType: "Real Estate Services",
 };
 
@@ -63,7 +64,7 @@ const coreServices = [
     title: "Home Selling Services",
     slug: "sellers",
     description:
-      "Maximize your home's value with professional marketing, accurate pricing, and expert negotiation from Berkshire Hathaway HomeServices—the most trusted name in real estate.",
+      "Maximize your home's value in Providence Las Vegas and beyond with professional marketing, accurate pricing, and expert negotiation from Berkshire Hathaway HomeServices—the most trusted name in real estate.",
     highlights: ["World-class marketing", "Accurate pricing", "Global exposure", "Staging guidance"],
     stats: { label: "Homes Sold", value: "500+" },
   },
@@ -179,13 +180,14 @@ export default function ServicesPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Las Vegas Real Estate Services
+              Providence Las Vegas Real Estate Services
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              Comprehensive real estate solutions from Dr. Jan Duffy, backed by the most trusted
-              name in the business—<strong>Berkshire Hathaway HomeServices</strong>. Whether you're 
-              buying your first home, selling a luxury estate, or relocating from California, 
-              you'll receive expert guidance every step of the way.
+              Comprehensive real estate solutions for Providence Las Vegas and Southern Nevada from
+              Dr. Jan Duffy, backed by the most trusted name in the business—<strong>Berkshire
+              Hathaway HomeServices</strong>. Whether you're buying your first home, selling a
+              luxury estate, or relocating from California, you'll receive expert guidance every
+              step of the way.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <div className="flex items-center">

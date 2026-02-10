@@ -15,10 +15,11 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Move-Up Sellers Las Vegas | Berkshire Hathaway HomeServices",
+  title: "Move-Up Sellers | Providence Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Ready for your next chapter? Dr. Jan Duffy helps Las Vegas homeowners leverage equity into their dream home. Sell and buy seamlessly. Call (702) 500-1942.",
+    "Ready for your next chapter? Dr. Jan Duffy helps Providence Las Vegas homeowners leverage equity into their dream home. Sell and buy seamlessly. Call (702) 500-1942.",
   keywords: [
+    "move up Providence Las Vegas",
     "move up buyer Las Vegas",
     "sell and buy Las Vegas",
     "home equity Las Vegas",
@@ -54,7 +55,9 @@ export default function MoveUpSellerPage() {
               Ready for Your Next Chapter?
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              Your home's equity unlocks your dream home. Let's make the upgrade seamless.
+              Dr. Jan Duffy helps Providence Las Vegas homeowners leverage equity into their dream
+              home—whether you're in Providence or elsewhere in Las Vegas. Let's make the upgrade
+              seamless.
             </p>
             <a
               href="tel:+17025001942"
@@ -213,11 +216,11 @@ export default function MoveUpSellerPage() {
             </h2>
             <div className="prose prose-lg max-w-none text-slate-700 mb-8">
               <p>
-                The biggest concern move-up buyers have is timing. What happens if you sell before
-                finding your next home? What if you find your dream home but can't sell in time?
-                <strong> Berkshire Hathaway HomeServices</strong> agents like Dr. Jan Duffy have
-                strategies for every scenario, ensuring you never end up homeless or paying two
-                mortgages unnecessarily.
+                The biggest concern Providence Las Vegas move-up sellers and buyers have is timing. What
+                happens if you sell before finding your next home? What if you find your dream home
+                but can't sell in time? <strong>Berkshire Hathaway HomeServices</strong> agents like
+                Dr. Jan Duffy have strategies for every scenario, ensuring you never end up homeless
+                or paying two mortgages unnecessarily.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">

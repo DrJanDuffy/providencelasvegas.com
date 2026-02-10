@@ -19,16 +19,16 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
+  title: "About Dr. Jan Duffy | Providence Las Vegas Real Estate | BHHS Nevada Properties",
   description:
-    "Meet Dr. Jan Duffy, your trusted Berkshire Hathaway HomeServices Nevada Properties agent. Serving Las Vegas since 2008, $127M+ in transactions, Henderson & Summerlin specialist. Call (702) 500-1942.",
+    "Meet Dr. Jan Duffy, your trusted Providence Las Vegas real estate agent. Berkshire Hathaway HomeServices Nevada Properties. Serving Las Vegas since 2008, $127M+ in transactions. Providence Las Vegas specialist. Call (702) 500-1942.",
   keywords: [
     "Dr. Jan Duffy",
+    "Providence Las Vegas realtor",
     "Berkshire Hathaway HomeServices agent",
-    "Las Vegas realtor",
     "BHHS Nevada Properties",
-    "Henderson real estate agent",
-    "Summerlin realtor",
+    "Providence Las Vegas real estate agent",
+    "Providence Las Vegas homes",
   ],
 };
 
@@ -41,17 +41,17 @@ const personSchema = {
   description:
     "Licensed real estate agent with Berkshire Hathaway HomeServices Nevada Properties, serving Las Vegas, Henderson, and Summerlin since 2008.",
   telephone: "+17025001942",
-  email: "homes@heyberkshire.com",
+  email: "DrDuffy@ProvidenceLasVegas.com",
   url: "https://heyberkshire.com/about",
   worksFor: {
     "@type": "RealEstateAgent",
     name: "Berkshire Hathaway HomeServices Nevada Properties",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "9406 W Lake Mead Blvd, Suite 100",
+      streetAddress: "7181 N Hualapai Way #135",
       addressLocality: "Las Vegas",
       addressRegion: "NV",
-      postalCode: "89134",
+      postalCode: "89166",
     },
   },
   hasCredential: {
@@ -128,12 +128,13 @@ export default function AboutPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Meet Your Berkshire Hathaway HomeServices Agent
+              Your Providence Las Vegas Real Estate Agent
             </h1>
             <p className="text-xl text-slate-600">
               Dr. Jan Duffy has been serving Las Vegas since 2008—backed by the most
-              trusted name in real estate. Whether you're buying, selling, investing, or 
-              relocating, you'll receive expert guidance with integrity and professionalism.
+              trusted name in real estate. Your Providence Las Vegas specialist for buying,
+              selling, investing, or relocating in Providence and its 27 neighborhoods.
+              Expert guidance with integrity and professionalism.
             </p>
           </div>
 
@@ -155,8 +156,9 @@ export default function AboutPage() {
                   </p>
                   <p>
                     Since 2008, I've closed $127 million in transactions and
-                    helped hundreds of families find their perfect home in Las Vegas, Henderson,
-                    Summerlin, and throughout Southern Nevada. My expertise spans luxury properties,
+                    helped hundreds of families find their perfect home in Las Vegas, Providence,
+                    Henderson, Summerlin, and throughout Southern Nevada. My expertise spans luxury
+                    properties in Providence Las Vegas and beyond,
                     new construction, investment real estate, 55+ active adult communities, and 
                     relocations—particularly for California families seeking Nevada's tax advantages.
                   </p>
@@ -189,17 +191,17 @@ export default function AboutPage() {
                       <span className="font-semibold">(702) 500-1942</span>
                     </a>
                     <a
-                      href="mailto:homes@heyberkshire.com"
+                      href="mailto:DrDuffy@ProvidenceLasVegas.com"
                       className="flex items-center text-slate-700 hover:text-blue-600"
                     >
                       <Mail className="h-5 w-5 mr-3 text-blue-600" />
-                      Homes@HeyBerkshire.com
+                      DrDuffy@ProvidenceLasVegas.com
                     </a>
                     <div className="flex items-start text-slate-700">
                       <MapPin className="h-5 w-5 mr-3 text-blue-600 mt-0.5" />
                       <address className="not-italic">
-                        9406 W Lake Mead Blvd, Suite 100<br />
-                        Las Vegas, NV 89134
+                        7181 N Hualapai Way #135<br />
+                        Las Vegas, NV 89166
                       </address>
                     </div>
                     <div className="flex items-center text-slate-700">

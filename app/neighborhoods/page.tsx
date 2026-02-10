@@ -2,114 +2,21 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
-import { MapPin, Phone, Home, Users, GraduationCap } from "lucide-react";
+import { MapPin, Phone, ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
+import { providenceNeighborhoods, providenceCommunity } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Las Vegas Neighborhoods | Berkshire Hathaway HomeServices",
+  title: "The Neighborhoods of Providence | Providence Las Vegas | Dr. Jan Duffy",
   description:
-    "Explore Las Vegas and Henderson neighborhoods with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Summerlin, Henderson, The Ridges, Southern Highlands & more.",
+    "Explore all 27 neighborhoods of Providence, Las Vegas. Master-planned community with 5,600+ homes. Community parks, HOA info. Dr. Jan Duffy, BHHS Nevada Properties.",
   keywords: [
-    "Las Vegas neighborhoods",
-    "Henderson communities",
-    "Summerlin real estate",
-    "best neighborhoods Las Vegas",
-    "where to live Las Vegas",
+    "Providence Las Vegas neighborhoods",
+    "Providence community",
+    "27 neighborhoods Providence",
+    "Providence HOA",
   ],
 };
-
-const neighborhoods = [
-  {
-    name: "Summerlin",
-    slug: "summerlin",
-    medianPrice: "$625,000",
-    priceChange: "+6.8%",
-    description: "Premier master-planned community with parks, trails, and top-rated schools",
-    highlights: ["150+ Parks", "Top Schools", "Red Rock Views", "Downtown Summerlin"],
-    bestFor: "Families, professionals, outdoor enthusiasts",
-  },
-  {
-    name: "Henderson",
-    slug: "henderson",
-    medianPrice: "$485,000",
-    priceChange: "+5.1%",
-    description: "Nevada's second-largest city known for safety, schools, and family-friendly living",
-    highlights: ["Low Crime Rate", "Excellent Schools", "Lake Las Vegas", "Green Valley"],
-    bestFor: "Families, retirees, commuters",
-  },
-  {
-    name: "Green Valley",
-    slug: "green-valley",
-    medianPrice: "$520,000",
-    priceChange: "+4.8%",
-    description: "Established Henderson community with mature landscaping and excellent amenities",
-    highlights: ["Golf Courses", "Walking Trails", "The District", "Mature Trees"],
-    bestFor: "Established families, golfers, professionals",
-  },
-  {
-    name: "The Ridges",
-    slug: "the-ridges",
-    medianPrice: "$2,500,000",
-    priceChange: "+8.5%",
-    description: "Ultra-luxury guard-gated community with custom estates and celebrity residents",
-    highlights: ["Guard-Gated", "Custom Estates", "Bear's Best Golf", "Strip Views"],
-    bestFor: "Luxury buyers, celebrities, executives",
-  },
-  {
-    name: "Southern Highlands",
-    slug: "southern-highlands",
-    medianPrice: "$750,000",
-    priceChange: "+7.2%",
-    description: "Master-planned luxury community with championship golf and mountain views",
-    highlights: ["Golf Community", "Guard-Gated", "Mountain Views", "Luxury Amenities"],
-    bestFor: "Golfers, luxury buyers, families",
-  },
-  {
-    name: "North Las Vegas",
-    slug: "north-las-vegas",
-    medianPrice: "$385,000",
-    priceChange: "+3.2%",
-    description: "Rapidly growing area with affordable new construction and family-friendly communities",
-    highlights: ["New Construction", "Affordable", "Growing Area", "Family-Friendly"],
-    bestFor: "First-time buyers, young families, investors",
-  },
-  {
-    name: "Skye Canyon",
-    slug: "skye-canyon",
-    medianPrice: "$550,000",
-    priceChange: "+5.5%",
-    description: "Newer master-planned community in northwest Las Vegas with mountain views",
-    highlights: ["New Homes", "Mountain Views", "Skye Center", "Great Schools"],
-    bestFor: "Young families, outdoor enthusiasts, commuters",
-  },
-  {
-    name: "Centennial Hills",
-    slug: "centennial-hills",
-    medianPrice: "$495,000",
-    priceChange: "+4.8%",
-    description: "Northwest Las Vegas community with mountain proximity and family amenities",
-    highlights: ["Mountain Access", "Parks", "Shopping", "Family-Friendly"],
-    bestFor: "Families, outdoor lovers, professionals",
-  },
-  {
-    name: "Inspirada",
-    slug: "inspirada",
-    medianPrice: "$525,000",
-    priceChange: "+5.0%",
-    description: "Henderson master-planned community with resort-style living and modern homes",
-    highlights: ["Resort Pools", "Walking Trails", "New Construction", "Great Schools"],
-    bestFor: "Families, active adults, new home buyers",
-  },
-  {
-    name: "Mountains Edge",
-    slug: "mountains-edge",
-    medianPrice: "$475,000",
-    priceChange: "+4.5%",
-    description: "Southwest Las Vegas master-planned community with mountain views and parks",
-    highlights: ["Mountain Views", "Parks", "Growing Area", "Affordable Luxury"],
-    bestFor: "Families, commuters, value-seekers",
-  },
-];
 
 export default function NeighborhoodsPage() {
   return (
@@ -118,53 +25,105 @@ export default function NeighborhoodsPage() {
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
-          <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-12">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Berkshire Hathaway HomeServices Nevada Properties
+              Providence Las Vegas
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Las Vegas & Henderson Neighborhoods
+              The Neighborhoods of Providence
             </h1>
-            <p className="text-xl text-slate-600">
-              Explore the best communities in Southern Nevada with Dr. Jan Duffy, your{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> neighborhood expert
+            <p className="text-xl text-slate-600 mb-4">
+              Providence Las Vegas is a master-planned community of{" "}
+              <strong>{providenceCommunity.neighborhoodCount} neighborhoods</strong> and more than{" "}
+              <strong>{providenceCommunity.homeCount} homes</strong>. Each Providence Las Vegas
+              neighborhood has its own amenities. All Providence neighborhoods have access to
+              Knickerbocker Park, Huckleberry Park, and The Promenade. Your trusted partner for
+              Providence Las Vegas real estate: Dr. Jan Duffy, Berkshire Hathaway HomeServices
+              Nevada Properties.
+            </p>
+            <p className="text-slate-600 max-w-2xl mx-auto">
+              Whether you are buying or selling in Providence Las Vegas—from Oxford Commons and
+              Saratoga Highlands to Auburn & Bradford and all 27 neighborhoods—Dr. Jan Duffy
+              offers hyperlocal expertise and HOA resale guidance for Providence Las Vegas.
             </p>
           </div>
 
-          {/* Neighborhood Grid */}
-          <section className="mb-16 max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
-              {neighborhoods.map((neighborhood) => (
-                <Link
-                  key={neighborhood.slug}
-                  href={`/neighborhoods/${neighborhood.slug}`}
-                  className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg transition-all hover:border-blue-300 group"
+          {/* Community Parks */}
+          <section className="mb-12 max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4 text-center">
+              Community Parks in Providence Las Vegas
+            </h2>
+            <p className="text-slate-600 text-center mb-4">
+              All Providence Las Vegas residents have access to three community parks:
+            </p>
+            <h3 className="text-lg font-semibold text-slate-800 mb-2 text-center">
+              The Promenade, Knickerbocker Park, and Huckleberry Park
+            </h3>
+            <p className="text-slate-600 text-center mb-4">
+              All Providence residents have access to three community parks:
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              {providenceCommunity.parks.map((park) => (
+                <span
+                  key={park.slug}
+                  className="inline-flex items-center gap-2 bg-slate-100 rounded-lg px-4 py-2 text-slate-700 font-medium"
                 >
-                  <div className="flex justify-between items-start mb-3">
-                    <div>
-                      <h2 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                        {neighborhood.name}
-                      </h2>
-                      <p className="text-sm text-slate-500">{neighborhood.bestFor}</p>
-                    </div>
-                    <div className="text-right">
-                      <div className="font-bold text-slate-900">{neighborhood.medianPrice}</div>
-                      <div className="text-sm text-green-600">{neighborhood.priceChange} YoY</div>
-                    </div>
-                  </div>
-                  <p className="text-slate-600 text-sm mb-4">{neighborhood.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {neighborhood.highlights.map((highlight) => (
-                      <span
-                        key={highlight}
-                        className="bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded"
-                      >
-                        {highlight}
-                      </span>
-                    ))}
-                  </div>
+                  <MapPin className="h-4 w-4 text-blue-600" />
+                  {park.name}
+                </span>
+              ))}
+            </div>
+            <div className="text-center mt-4">
+              <a
+                href={providenceCommunity.hoaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm"
+              >
+                Providence HOA – Community Info
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            </div>
+          </section>
+
+          {/* 27 Neighborhoods Grid */}
+          <section className="mb-16 max-w-6xl mx-auto">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4 text-center">
+              All {providenceCommunity.neighborhoodCount} Providence Las Vegas Neighborhoods
+            </h2>
+            <h3 className="text-lg font-semibold text-slate-800 mb-6 text-center">
+              Explore Each Providence Neighborhood
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {providenceNeighborhoods.map((n) => (
+                <Link
+                  key={n.slug}
+                  href={`/providence/neighborhoods/${n.slug}`}
+                  className="bg-white border border-slate-200 rounded-lg p-4 hover:shadow-md hover:border-blue-300 transition-all group text-center"
+                >
+                  <h3 className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
+                    {n.name}
+                  </h3>
+                  <p className="text-sm text-slate-500 mt-1">Providence</p>
                 </Link>
               ))}
+            </div>
+            <div className="text-center mt-8 flex flex-wrap justify-center gap-4">
+              <Link
+                href="/providence"
+                className="text-blue-600 hover:text-blue-700 font-semibold"
+              >
+                Explore Providence →
+              </Link>
+              <a
+                href={providenceCommunity.neighborhoodsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-slate-600 hover:text-slate-800 font-medium text-sm"
+              >
+                The Neighborhoods of Providence (HOA)
+                <ExternalLink className="h-4 w-4" />
+              </a>
             </div>
           </section>
 
@@ -172,11 +131,10 @@ export default function NeighborhoodsPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-slate-50 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Every Las Vegas neighborhood has its own personality. Whether you want the
-                family-friendly parks of Summerlin, the established charm of Green Valley, or the
-                luxury of The Ridges, I'll help you find the community that matches your lifestyle.
-                That's the Berkshire Hathaway HomeServices difference—personalized guidance backed
-                by local expertise."
+                "Providence is one of Las Vegas's best master-planned communities. With 27
+                neighborhoods, each with its own character and amenities, there's a fit for every
+                buyer. I know Providence inside and out—from HOA resale to Design Review—and I'm
+                here to help you find the right neighborhood and the right home."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, BHHS Nevada Properties
@@ -184,42 +142,13 @@ export default function NeighborhoodsPage() {
             </div>
           </section>
 
-          {/* Neighborhood Services */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">Neighborhood Services</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <MapPin className="h-12 w-12 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">Area Tours</h3>
-                <p className="text-slate-400 text-sm">
-                  Personalized neighborhood tours to help you experience each community firsthand
-                </p>
-              </div>
-              <div className="text-center">
-                <GraduationCap className="h-12 w-12 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">School Research</h3>
-                <p className="text-slate-400 text-sm">
-                  Detailed school district information, ratings, and enrollment guidance
-                </p>
-              </div>
-              <div className="text-center">
-                <Home className="h-12 w-12 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">Home Matching</h3>
-                <p className="text-slate-400 text-sm">
-                  Find homes that match your criteria in the neighborhoods you love
-                </p>
-              </div>
-            </div>
-          </section>
-
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Need Help Choosing a Neighborhood?
+              Buy or Sell in a Providence Neighborhood?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Dr. Jan Duffy knows every Las Vegas community inside and out. Call for personalized
-              neighborhood recommendations.
+              Dr. Jan Duffy knows every Providence neighborhood. Call for personalized guidance.
             </p>
             <a
               href="tel:+17025001942"
@@ -229,15 +158,21 @@ export default function NeighborhoodsPage() {
               Call (702) 500-1942
             </a>
             <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
+              Dr. Jan Duffy | License S.0197614.LLC | Berkshire Hathaway HomeServices Nevada
+              Properties
             </p>
           </section>
         </div>
 
+        <div className="container mx-auto px-4 py-8">
+          <RealScoutListings />
+        </div>
+
         {/* Last Updated */}
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-slate-500 mt-8 pb-8">
+          Last Updated: January 2026 | Providence Las Vegas
+        </div>
       </main>
-      <RealScoutListings />
       <Footer />
     </>
   );

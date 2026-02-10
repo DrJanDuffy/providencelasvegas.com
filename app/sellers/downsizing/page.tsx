@@ -16,10 +16,11 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Downsizing in Las Vegas | Berkshire Hathaway HomeServices",
+  title: "Downsizing | Providence Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Ready to simplify? Dr. Jan Duffy helps Las Vegas homeowners extract equity and transition to low-maintenance living. 55+ communities, condos, and more. Call (702) 500-1942.",
+    "Ready to simplify? Dr. Jan Duffy helps Providence Las Vegas homeowners extract equity and transition to low-maintenance living. 55+ communities, condos, and more. Call (702) 500-1942.",
   keywords: [
+    "downsizing Providence Las Vegas",
     "downsizing Las Vegas",
     "sell large home Las Vegas",
     "55 plus communities Las Vegas",
@@ -55,7 +56,9 @@ export default function DownsizingPage() {
               Simplify. Downsize. Enjoy.
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              Extract your equity. Embrace low-maintenance living. Start your next chapter.
+              Dr. Jan Duffy helps Providence Las Vegas homeowners extract equity and transition to
+              low-maintenance living—whether you're in Providence Las Vegas or another Southern
+              Nevada community. Embrace your next chapter.
             </p>
             <a
               href="tel:+17025001942"
@@ -229,10 +232,11 @@ export default function DownsizingPage() {
                 barbecues. Downsizing isn't just a real estate transaction; it's a life transition.
               </p>
               <p className="text-slate-700">
-                Dr. Jan approaches downsizing with empathy and patience. She'll never rush you,
-                and she'll help you find a new home that feels right—not just financially, but
-                emotionally. Many of her downsizing clients have become friends because she
-                genuinely cares about their happiness, not just the sale.
+                Dr. Jan approaches downsizing with empathy and patience—whether you're in Providence Las
+                Vegas or another community. She'll never rush you, and she'll help you find a new
+                home that feels right—not just financially, but emotionally. Many of her downsizing
+                clients have become friends because she genuinely cares about their happiness, not
+                just the sale.
               </p>
             </div>
           </section>

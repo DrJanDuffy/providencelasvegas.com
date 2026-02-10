@@ -4,11 +4,11 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import FAQSection from "@/components/sections/FAQSection";
-import CTASection from "@/components/sections/CTASection";
 import Footer from "@/components/layouts/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Home as HomeIcon, TrendingUp, Shield, Users, Phone } from "lucide-react";
+import { providenceNeighborhoods, providenceCommunity } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Providence Las Vegas | Dr. Jan Duffy, REALTOR®",
@@ -31,10 +31,10 @@ const organizationSchema = {
   telephone: "+17025001942",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "9406 W Lake Mead Blvd, Suite 100",
+    streetAddress: "7181 N Hualapai Way #135",
     addressLocality: "Las Vegas",
     addressRegion: "NV",
-    postalCode: "89134",
+    postalCode: "89166",
   },
   aggregateRating: {
     "@type": "AggregateRating",
@@ -69,7 +69,7 @@ const faqSchema = {
       name: "How do I contact Dr. Jan Duffy at Berkshire Hathaway HomeServices?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You can reach Dr. Jan Duffy at (702) 500-1942 or email homes@heyberkshire.com. Office located at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+        text: "You can reach Dr. Jan Duffy at (702) 500-1942 or email DrDuffy@ProvidenceLasVegas.com. Office located at 7181 N Hualapai Way #135, Las Vegas, NV 89166.",
       },
     },
     {
@@ -86,6 +86,22 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "As of January 2026, the Las Vegas median home price is $450,000 (+4.2% YoY), with homes selling in an average of 28 days. Henderson's median is slightly higher at $485,000. The market remains competitive but balanced.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is Providence, Las Vegas?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Providence is a master-planned community in Las Vegas with 27 neighborhoods and more than 5,600 homes. Each neighborhood has its own amenities. Residents enjoy three community parks: The Promenade, Knickerbocker Park, and Huckleberry Park. The Providence Master HOA manages the community.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Where can I find HOA and resale information for Providence?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The official Providence Master HOA website at providencelvhoa.com has Design Review, Realtors/Resale, Community Info, and Documents. HOA assessments are due Jan 1, Apr 1, Jul 1, and Oct 1. Dr. Jan Duffy can help you buy or sell in any Providence neighborhood.",
       },
     },
   ],
@@ -105,6 +121,25 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
+
+        {/* Providence Las Vegas SEO intro - one H1 is in Hero; this section adds H2 + copy */}
+        <section className="py-12 md:py-16 bg-white" aria-labelledby="why-providence">
+          <div className="container mx-auto px-4 max-w-4xl mx-auto">
+            <h2 id="why-providence" className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+              Why Providence Las Vegas Real Estate?
+            </h2>
+            <p className="text-slate-700 leading-relaxed mb-4">
+              Providence Las Vegas is a master-planned community in the northwest Las Vegas Valley
+              with 27 neighborhoods and more than 5,600 homes. Whether you are buying or selling in
+              Providence, Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties
+              offers hyperlocal expertise in every Providence neighborhood—from Oxford Commons and
+              Saratoga Highlands to Auburn & Bradford and beyond. Providence residents enjoy three
+              community parks (The Promenade, Knickerbocker Park, and Huckleberry Park), and the
+              Providence Master HOA keeps the community well maintained. For Providence Las Vegas
+              homes for sale, market insights, and HOA resale guidance, contact Dr. Jan Duffy.
+            </p>
+          </div>
+        </section>
 
         {/* Berkshire Hathaway Value Proposition Section */}
         <section className="py-16 md:py-20 bg-white">
@@ -178,10 +213,11 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Las Vegas Real Estate Market | January 2026
+                Providence & Las Vegas Real Estate Market | January 2026
               </h2>
               <p className="text-slate-300">
-                Current market data from Berkshire Hathaway HomeServices Nevada Properties
+                Current market data including Providence's 27 neighborhoods. Berkshire Hathaway
+                HomeServices Nevada Properties.
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
@@ -216,65 +252,114 @@ export default function Home() {
 
         <RealScoutListings />
 
-        {/* Neighborhoods Section */}
+        {/* The Neighborhoods of Providence */}
         <section className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                Las Vegas Neighborhoods We Serve
+                The Neighborhoods of Providence
               </h2>
               <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                Berkshire Hathaway HomeServices Nevada Properties covers all of Southern Nevada
+                Providence is a master-planned community of {providenceCommunity.neighborhoodCount}{" "}
+                neighborhoods and more than {providenceCommunity.homeCount} homes. Each neighborhood
+                has its own amenities.
               </p>
             </div>
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold text-slate-800 mb-4 text-center">
+                Community Parks
+              </h3>
+              <div className="flex flex-wrap justify-center gap-4">
+                {providenceCommunity.parks.map((park) => (
+                  <span
+                    key={park.slug}
+                    className="bg-slate-100 rounded-lg px-4 py-2 text-slate-700 font-medium"
+                  >
+                    {park.name}
+                  </span>
+                ))}
+              </div>
+            </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
-              {[
-                { name: "Summerlin", price: "$625K", slug: "summerlin" },
-                { name: "Henderson", price: "$485K", slug: "henderson" },
-                { name: "Green Valley", price: "$520K", slug: "green-valley" },
-                { name: "The Ridges", price: "$2.5M", slug: "the-ridges" },
-                { name: "Southern Highlands", price: "$750K", slug: "southern-highlands" },
-                { name: "North Las Vegas", price: "$385K", slug: "north-las-vegas" },
-                { name: "Skye Canyon", price: "$550K", slug: "skye-canyon" },
-                { name: "Centennial Hills", price: "$495K", slug: "centennial-hills" },
-                { name: "Inspirada", price: "$525K", slug: "inspirada" },
-                { name: "Mountains Edge", price: "$475K", slug: "mountains-edge" },
-              ].map((area) => (
+              {providenceNeighborhoods.map((area) => (
                 <Link
                   key={area.slug}
-                  href={`/neighborhoods/${area.slug}`}
+                  href={`/providence/neighborhoods/${area.slug}`}
                   className="bg-slate-50 hover:bg-blue-50 rounded-lg p-4 text-center transition-colors group"
                 >
                   <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">
                     {area.name}
                   </h3>
-                  <p className="text-sm text-slate-500">From {area.price}</p>
+                  <p className="text-sm text-slate-500">Providence</p>
                 </Link>
               ))}
             </div>
-            <div className="text-center mt-8">
+            <div className="text-center mt-8 flex flex-wrap justify-center gap-4">
               <Link
-                href="/neighborhoods"
+                href="/providence"
                 className="text-blue-600 hover:text-blue-700 font-semibold"
               >
-                View All Neighborhoods →
+                Explore Providence →
               </Link>
+              <a
+                href={providenceCommunity.hoaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-600 hover:text-slate-800 font-medium"
+              >
+                Providence HOA
+              </a>
             </div>
           </div>
         </section>
 
         <WhyChooseUs />
         <ReviewsSection />
-        <FAQSection />
+        <FAQSection
+          title="Frequently Asked Questions About Providence Las Vegas Real Estate"
+          subtitle="Common questions about buying, selling, and living in Providence Las Vegas"
+          faqs={[
+            {
+              question: "What is Providence Las Vegas?",
+              answer:
+                "Providence is a master-planned community in Las Vegas with 27 neighborhoods and more than 5,600 homes. Each neighborhood has its own amenities. Residents enjoy three community parks: The Promenade, Knickerbocker Park, and Huckleberry Park. The Providence Master HOA manages the community.",
+            },
+            {
+              question: "Where can I find homes for sale in Providence Las Vegas?",
+              answer:
+                "Dr. Jan Duffy lists Providence Las Vegas homes for sale through Berkshire Hathaway HomeServices Nevada Properties and the MLS. You can search Providence neighborhoods—including Oxford Commons, Saratoga Highlands, and all 27 communities—on this site or call (702) 500-1942 for personalized listings.",
+            },
+            {
+              question: "How do I get HOA or resale information for Providence?",
+              answer:
+                "The official Providence Master HOA website (providencelvhoa.com) has Design Review, Realtors/Resale, Community Info, and Documents. HOA assessments are due Jan 1, Apr 1, Jul 1, and Oct 1. Dr. Jan Duffy can also guide you through buying or selling in any Providence neighborhood.",
+            },
+            {
+              question: "Why use a Berkshire Hathaway HomeServices agent in Providence Las Vegas?",
+              answer:
+                "Berkshire Hathaway HomeServices is backed by Warren Buffett's Berkshire Hathaway Inc.—unmatched trust and a global network. Dr. Jan Duffy has served Las Vegas since 2008 with $127M+ in closed transactions and knows Providence Las Vegas inside and out.",
+            },
+            {
+              question: "What are the community parks in Providence Las Vegas?",
+              answer:
+                "Providence has three community parks: The Promenade (linear walking park and playground), Knickerbocker Park (multigenerational park with skyline views, ball field, splash pad, dog parks), and Huckleberry Park (basketball, tennis, pickleball, playgrounds, splash pad, dog parks).",
+            },
+            {
+              question: "How do I contact Dr. Jan Duffy for Providence Las Vegas real estate?",
+              answer:
+                "Call (702) 500-1942 or use the contact form on this site. Office: 7181 N Hualapai Way #135, Las Vegas, NV 89166. Dr. Jan Duffy, License S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties.",
+            },
+          ]}
+        />
 
         {/* CTA Section */}
         <section className="py-16 md:py-20 bg-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Work with Berkshire Hathaway HomeServices?
+              Ready to Buy or Sell in Providence?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Whether you're buying, selling, or investing in Las Vegas real estate, Dr. Jan Duffy
+              Whether you're buying, selling, or investing in Providence real estate, Dr. Jan Duffy
               is here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -301,8 +386,8 @@ export default function Home() {
 
         {/* Last Updated */}
         <div className="bg-slate-100 py-4 text-center text-sm text-slate-500">
-          Last Updated: January 2026 | HeyBerkshire.com - Berkshire Hathaway HomeServices Nevada
-          Properties
+          Last Updated: January 2026 | Providence Las Vegas | Berkshire Hathaway HomeServices
+          Nevada Properties
         </div>
       </main>
       <Footer />

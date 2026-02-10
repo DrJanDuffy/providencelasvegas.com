@@ -1,0 +1,186 @@
+import Navbar from "@/components/layouts/Navbar";
+import Footer from "@/components/layouts/Footer";
+import RealScoutListings from "@/components/realscout/RealScoutListings";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { Phone, MapPin, ExternalLink } from "lucide-react";
+import { providenceNeighborhoods, providenceCommunity } from "@/lib/site-config";
+
+type Props = { params: { slug: string } };
+
+export function generateStaticParams() {
+  return providenceNeighborhoods.map((n) => ({ slug: n.slug }));
+}
+
+export function generateMetadata({ params }: Props): Metadata {
+  const { slug } = params;
+  const neighborhood = providenceNeighborhoods.find((n) => n.slug === slug);
+  if (!neighborhood) return { title: "Providence Las Vegas" };
+  return {
+    title: `${neighborhood.name} | Providence Las Vegas | Dr. Jan Duffy, REALTOR®`,
+    description: `Homes for sale in ${neighborhood.name}, Providence Las Vegas. Dr. Jan Duffy with BHHS Nevada Properties. Part of Providence's 27 neighborhoods. Call (702) 500-1942.`,
+    keywords: [
+      `${neighborhood.name} Providence`,
+      `${neighborhood.name} Las Vegas real estate`,
+      "Providence Las Vegas homes",
+    ],
+  };
+}
+
+export default function ProvidenceNeighborhoodPage({ params }: Props) {
+  const { slug } = params;
+  const neighborhood = providenceNeighborhoods.find((n) => n.slug === slug);
+  if (!neighborhood) notFound();
+
+  return (
+    <>
+      <Navbar />
+      <main>
+        <section className="pt-24 pb-12 md:pt-28 md:pb-16 bg-slate-50">
+          <div className="container mx-auto px-4">
+            <nav className="text-sm text-slate-600 mb-4">
+              <Link href="/" className="hover:text-blue-600">
+                Home
+              </Link>
+              {" / "}
+              <Link href="/providence" className="hover:text-blue-600">
+                Providence
+              </Link>
+              {" / "}
+              <span className="text-slate-900">{neighborhood.name}</span>
+            </nav>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+              {neighborhood.name}, Providence Las Vegas
+            </h1>
+            <p className="text-lg text-slate-700 max-w-3xl mb-4">
+              {neighborhood.name} is one of {providenceCommunity.neighborhoodCount} neighborhoods
+              in Providence Las Vegas, a master-planned community in the northwest Las Vegas
+              Valley with more than {providenceCommunity.homeCount} homes. Each Providence Las
+              Vegas neighborhood has its own amenities and character. Buying or selling in{" "}
+              {neighborhood.name} means access to Providence's three community parks, strong HOA,
+              and well-maintained streetscapes. Dr. Jan Duffy at Berkshire Hathaway HomeServices
+              Nevada Properties specializes in Providence Las Vegas real estate and can guide you
+              through {neighborhood.name} and every Providence neighborhood.
+            </p>
+            <p className="text-slate-700 max-w-3xl">
+              Providence Las Vegas homes for sale in {neighborhood.name} are listed on the MLS
+              and through this site. For HOA resale information, Design Review, or community
+              documents for {neighborhood.name}, the Providence Master HOA website has the
+              latest. HOA assessments for Providence are due {providenceCommunity.hoaAssessmentDueDates}{" "}
+              of each year.
+            </p>
+          </div>
+        </section>
+
+        <section className="py-12 md:py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              Community Parks Near {neighborhood.name}, Providence Las Vegas
+            </h2>
+            <p className="text-slate-700 mb-4">
+              All Providence Las Vegas residents, including {neighborhood.name}, have access to
+              three community parks:
+            </p>
+            <ul className="space-y-3 text-slate-700">
+              {providenceCommunity.parks.map((park) => (
+                <li key={park.slug} className="flex items-start gap-2">
+                  <MapPin className="h-4 w-4 text-blue-600 shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-slate-900">{park.name}</h3>
+                    <span className="text-sm">
+                      {park.slug === "the-promenade" &&
+                        "Linear walking park and community centerpiece with seating, landscaping, and interactive playground."}
+                      {park.slug === "knickerbocker-park" &&
+                        "Multigenerational park with Las Vegas skyline views, workout stations, ball field, playgrounds, splash pad, and dog parks."}
+                      {park.slug === "huckleberry-park" &&
+                        "Basketball, tennis, pickleball courts, multi-use fields, playgrounds, splash pad, and dog parks."}
+                    </span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <a
+              href={providenceCommunity.hoaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-4 text-blue-600 hover:text-blue-700 font-medium text-sm"
+            >
+              Providence HOA – Community Info
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+        </section>
+
+        <section className="py-12 md:py-16 bg-slate-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              Homes for Sale in {neighborhood.name}
+            </h2>
+            <RealScoutListings />
+          </div>
+        </section>
+
+        <section className="py-12 md:py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              HOA & Resale in {neighborhood.name}, Providence Las Vegas
+            </h2>
+            <p className="text-slate-700 mb-4">
+              For Design Review, Realtors/Resale, and community documents for Providence Las
+              Vegas and {neighborhood.name}, visit the official Providence Master HOA website.
+              HOA assessments for Providence are due {providenceCommunity.hoaAssessmentDueDates}{" "}
+              of each year. Dr. Jan Duffy can help you buy or sell in {neighborhood.name} and
+              navigate Providence HOA resale requirements.
+            </p>
+            <h3 className="text-lg font-semibold text-slate-900 mb-2">Design Review & Documents</h3>
+            <p className="text-slate-700 mb-4">
+              The Providence Master HOA oversees design review for exterior modifications. For
+              guidelines and neighborhood-specific information for {neighborhood.name}, see the
+              Providence HOA site or your Sub Association.
+            </p>
+            <h3 className="text-lg font-semibold text-slate-900 mb-2">New Homeowners in Providence Las Vegas</h3>
+            <p className="text-slate-700 mb-4">
+              New homeowners in {neighborhood.name} and other Providence Las Vegas neighborhoods
+              can find New Homeowner Info and Community Contacts on the official Providence HOA
+              website.
+            </p>
+            <a
+              href={providenceCommunity.neighborhoodsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
+            >
+              The Neighborhoods of Providence (HOA)
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+        </section>
+
+        <section className="py-12 md:py-16 bg-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-2xl font-bold mb-4">
+              Buy or Sell in {neighborhood.name}
+            </h2>
+            <p className="text-blue-100 mb-6 max-w-xl mx-auto">
+              Dr. Jan Duffy knows Providence and can help you in {neighborhood.name} and every
+              neighborhood.
+            </p>
+            <a
+              href="tel:+17025001942"
+              className="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-md font-semibold hover:bg-blue-50 transition-colors"
+            >
+              <Phone className="h-5 w-5" />
+              Call (702) 500-1942
+            </a>
+            <p className="mt-4 text-blue-200 text-sm">
+              Dr. Jan Duffy | License S.0197614.LLC | Berkshire Hathaway HomeServices Nevada
+              Properties
+            </p>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}

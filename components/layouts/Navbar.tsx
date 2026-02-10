@@ -20,6 +20,7 @@ export default function Navbar() {
 
   const mainNavLinks = [
     { href: "/", label: "Home", external: false },
+    { href: "/providence", label: "Providence", external: false },
     { href: "http://drjanduffy.realscout.com/", label: "Properties", external: true },
     { href: "/neighborhoods", label: "Neighborhoods", external: false },
     { href: "/about", label: "About", external: false },

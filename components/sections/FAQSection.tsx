@@ -8,37 +8,37 @@ export interface FAQ {
   answer: string;
 }
 
-// Default FAQs for the section
+// Default FAQs for the section (Providence Las Vegas–focused when no custom faqs passed)
 export const defaultFaqs: FAQ[] = [
   {
-    question: "What areas do you serve?",
+    question: "What areas do you serve in Providence Las Vegas?",
     answer:
-      "We specialize in Las Vegas and Henderson, Nevada, including Summerlin, Green Valley, and surrounding communities. Our expertise covers residential, luxury, and investment properties throughout Southern Nevada.",
+      "We specialize in Providence Las Vegas—all 27 neighborhoods including Oxford Commons, Saratoga Highlands, Auburn & Bradford, and every Providence neighborhood. Our expertise covers residential, luxury, and investment properties throughout Providence Las Vegas and the Las Vegas Valley.",
   },
   {
-    question: "How long does the home buying process take?",
+    question: "How long does the home buying process take in Providence Las Vegas?",
     answer:
-      "Typically, the home buying process takes 30-45 days from offer acceptance to closing. However, this can vary based on financing, inspections, and other factors. We'll guide you through each step to ensure a smooth transaction.",
+      "Typically, the home buying process in Providence Las Vegas takes 30-45 days from offer acceptance to closing. However, this can vary based on financing, inspections, and HOA resale requirements. We'll guide you through each step for a smooth Providence Las Vegas transaction.",
   },
   {
-    question: "Do you help with home valuations?",
+    question: "Do you help with home valuations in Providence Las Vegas?",
     answer:
-      "Yes! We provide free, no-obligation home valuations using current market data and comparable sales. This helps you understand your home's value whether you're considering selling or just curious about your investment.",
+      "Yes! We provide free, no-obligation home valuations for Providence Las Vegas using current market data and comparable sales. This helps you understand your home's value in any Providence neighborhood whether you're considering selling or just curious.",
   },
   {
-    question: "What makes you different from other real estate agents?",
+    question: "What makes you different for Providence Las Vegas real estate?",
     answer:
-      "Serving Las Vegas since 2008 with 500+ successful transactions, we combine deep local market knowledge with personalized service. As part of Berkshire Hathaway HomeServices, we have access to extensive resources and technology to serve you better.",
+      "Serving Las Vegas since 2008 with 500+ successful transactions, we combine deep Providence Las Vegas neighborhood knowledge with personalized service. As part of Berkshire Hathaway HomeServices, we have access to extensive resources to serve Providence Las Vegas buyers and sellers better.",
   },
   {
-    question: "Can you help with investment properties?",
+    question: "Can you help with investment properties in Providence Las Vegas?",
     answer:
-      "Absolutely! We specialize in investment real estate including rental properties, fix-and-flip opportunities, and commercial properties. We'll help you identify profitable opportunities and navigate the investment process.",
+      "Absolutely! We specialize in investment real estate in Providence Las Vegas including rental properties and fix-and-flip opportunities. We'll help you identify profitable opportunities in Providence Las Vegas neighborhoods and navigate the investment process.",
   },
   {
-    question: "What are your fees?",
+    question: "What are your fees for Providence Las Vegas real estate?",
     answer:
-      "For buyers, our services are typically free as commissions are paid by the seller. For sellers, we offer competitive commission structures. Contact us for a personalized consultation to discuss your specific situation.",
+      "For buyers, our services are typically free as commissions are paid by the seller. For sellers in Providence Las Vegas, we offer competitive commission structures. Contact us for a personalized consultation for your Providence Las Vegas situation.",
   },
 ];
 

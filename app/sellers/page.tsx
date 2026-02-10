@@ -20,12 +20,12 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
+  title: "Sell Your Providence Las Vegas Home | Berkshire Hathaway HomeServices",
   description:
-    "Sell your Las Vegas or Henderson home for top dollar with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Free home valuation. World-class marketing. Call (702) 500-1942.",
+    "Sell your Providence Las Vegas home or any of its 27 neighborhoods for top dollar with Dr. Jan Duffy. BHHS Nevada Properties. Free home valuation. World-class marketing. Call (702) 500-1942.",
   keywords: [
-    "sell home Las Vegas",
-    "Las Vegas listing agent",
+    "sell home Providence Las Vegas",
+    "Providence Las Vegas listing agent",
     "Berkshire Hathaway sell house",
     "Henderson home selling",
     "what is my home worth Las Vegas",
@@ -37,13 +37,13 @@ export const metadata: Metadata = {
 const sellerSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Home Selling Services Las Vegas",
+  name: "Home Selling Services Providence Las Vegas",
   provider: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
     telephone: "+17025001942",
   },
-  areaServed: "Las Vegas, Henderson, Summerlin, Clark County NV",
+  areaServed: "Las Vegas, Providence, Henderson, Summerlin, Clark County NV",
   serviceType: "Seller Representation",
 };
 
@@ -138,13 +138,14 @@ export default function SellersPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Sell Your Las Vegas Home for Top Dollar
+              Sell Your Providence Las Vegas Home for Top Dollar
             </h1>
             <p className="text-xl text-slate-600 mb-8">
               When you list with <strong>Berkshire Hathaway HomeServices</strong>, you get
-              world-class marketing, expert pricing, and a name that buyers trust. Dr. Jan Duffy 
-              has been serving Las Vegas since 2008—helping sellers achieve top-dollar results 
-              with proven marketing strategies and skilled negotiation.
+              world-class marketing, expert pricing, and a name that buyers trust. Dr. Jan Duffy
+              has been serving Providence Las Vegas and its 27 neighborhoods since 2008—helping
+              sellers achieve top-dollar results with proven marketing strategies and skilled
+              negotiation.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Free Home Valuation</span>
@@ -418,7 +419,7 @@ export default function SellersPage() {
 
           {/* CTA */}
           <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Sell Your Las Vegas Home?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Sell Your Providence Las Vegas Home?</h2>
             <p className="text-xl text-slate-300 mb-8">
               Schedule a free listing consultation with Dr. Jan Duffy and discover what your home
               could sell for with Berkshire Hathaway HomeServices. No obligation, no pressure—just 

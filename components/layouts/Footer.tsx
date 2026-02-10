@@ -12,8 +12,8 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-xl mb-4">Berkshire Hathaway HomeServices</h3>
             <p className="text-slate-300 mb-4 text-sm">
-              Nevada Properties - Your trusted real estate partner in Las Vegas, Henderson, and
-              Summerlin. Backed by Warren Buffett's legacy of trust.
+              Nevada Properties - Your trusted real estate partner in Providence, Las Vegas. Backed by
+              Warren Buffett's legacy of trust.
             </p>
             <div className="flex space-x-4">
               <a
@@ -62,11 +62,29 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/providence"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
+                  Providence
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/neighborhoods"
                   className="text-slate-300 hover:text-white transition-colors text-sm"
                 >
                   Neighborhoods
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="https://www.providencelvhoa.com/home/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
+                  Providence HOA
+                </a>
               </li>
               <li>
                 <Link
@@ -173,9 +191,9 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0 mt-0.5" />
                 <span className="text-slate-300 text-sm">
-                  9406 W Lake Mead Blvd, Suite 100
+                  7181 N Hualapai Way #135
                   <br />
-                  Las Vegas, NV 89134
+                  Las Vegas, NV 89166
                 </span>
               </li>
               <li className="flex items-center">
@@ -190,10 +208,10 @@ export default function Footer() {
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0" />
                 <Link
-                  href="mailto:homes@heyberkshire.com"
+                  href="mailto:DrDuffy@ProvidenceLasVegas.com"
                   className="text-slate-300 hover:text-white transition-colors text-sm"
                 >
-                  Homes@HeyBerkshire.com
+                  DrDuffy@ProvidenceLasVegas.com
                 </Link>
               </li>
             </ul>

@@ -3,33 +3,39 @@ import { Shield, TrendingUp, Users, Award, Clock, Home } from "lucide-react";
 const features = [
   {
     icon: Shield,
-    title: "Trusted Expertise",
-    description: "Serving Las Vegas and Henderson since 2008 with proven results.",
+    title: "Trusted Expertise in Providence Las Vegas",
+    description:
+      "Serving Las Vegas since 2008 with proven results. Hyperlocal expertise in all 27 Providence Las Vegas neighborhoods.",
   },
   {
     icon: TrendingUp,
-    title: "Market Knowledge",
-    description: "Deep understanding of local market trends and neighborhood insights.",
+    title: "Providence Las Vegas Market Knowledge",
+    description:
+      "Deep understanding of Providence Las Vegas real estate trends, HOA resale, and neighborhood insights.",
   },
   {
     icon: Users,
-    title: "Personalized Service",
-    description: "Dedicated attention to every client with customized solutions.",
+    title: "Personalized Providence Las Vegas Service",
+    description:
+      "Dedicated attention to every buyer and seller in Providence Las Vegas with customized solutions.",
   },
   {
     icon: Award,
-    title: "Proven Results",
-    description: "500+ successful transactions and satisfied clients.",
+    title: "Proven Results in Providence Las Vegas",
+    description:
+      "500+ successful transactions and satisfied clients. Providence Las Vegas homes for sale and sold.",
   },
   {
     icon: Clock,
-    title: "Responsive",
-    description: "Quick response times and seamless communication throughout.",
+    title: "Responsive Providence Las Vegas Agent",
+    description:
+      "Quick response times and seamless communication for Providence Las Vegas real estate.",
   },
   {
     icon: Home,
-    title: "Full Service",
-    description: "Complete support from search to closing and beyond.",
+    title: "Full Service Providence Las Vegas Real Estate",
+    description:
+      "Complete support from search to closing and beyond in Providence Las Vegas and all 27 neighborhoods.",
   },
 ];
 
@@ -39,10 +45,11 @@ export default function WhyChooseUs() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            Why Choose Us
+            Why Choose Us for Providence Las Vegas Real Estate
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Experience the difference of working with a trusted real estate professional
+            Experience the difference of working with a trusted Providence Las Vegas real
+            estate professional. Dr. Jan Duffy knows every Providence neighborhood.
           </p>
         </div>
 

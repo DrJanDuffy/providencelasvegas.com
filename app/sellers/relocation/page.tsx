@@ -16,10 +16,11 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Relocation Home Sales Las Vegas | Berkshire Hathaway HomeServices",
+  title: "Relocation Home Sales | Providence Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Leaving Las Vegas for a new opportunity? Dr. Jan Duffy helps relocating homeowners sell fast and coordinates with BHHS offices nationwide. Call (702) 500-1942.",
+    "Leaving Providence Las Vegas for a new opportunity? Dr. Jan Duffy helps relocating homeowners sell fast and coordinates with BHHS offices nationwide. Call (702) 500-1942.",
   keywords: [
+    "relocation sale Providence Las Vegas",
     "relocation sale Las Vegas",
     "job relocation Las Vegas",
     "sell home fast Las Vegas",
@@ -55,8 +56,9 @@ export default function RelocationPage() {
               New Opportunity?<br />We Handle Your Sale.
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              Sell your Las Vegas home while you focus on your new chapter.
-              We coordinate both ends of your move.
+              Sell your Providence Las Vegas home while you focus on your new chapter.
+              Whether you're in one of Providence's 27 neighborhoods or elsewhere in the valley,
+              we coordinate both ends of your move.
             </p>
             <a
               href="tel:+17025001942"
@@ -74,7 +76,7 @@ export default function RelocationPage() {
               <h2 className="text-3xl font-bold">Berkshire Hathaway HomeServices Network</h2>
             </div>
             <p className="text-center text-slate-300 mb-8 max-w-2xl mx-auto">
-              When you work with Dr. Jan, you're not just getting a Las Vegas agent—you're
+              When you work with Dr. Jan, you're not just getting a Providence Las Vegas agent—you're
               tapping into the most trusted real estate network in America.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
@@ -106,7 +108,7 @@ export default function RelocationPage() {
               <div>
                 <h3 className="font-bold text-xl text-slate-900 mb-4 flex items-center">
                   <HomeIcon className="h-6 w-6 text-blue-600 mr-2" />
-                  Selling Your Las Vegas Home
+                  Selling Your Providence Las Vegas Home
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex items-start">

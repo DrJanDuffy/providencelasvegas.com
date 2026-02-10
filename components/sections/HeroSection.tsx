@@ -46,11 +46,11 @@ export default function HeroSection() {
         <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
           Find Your Dream Home in
           <br />
-          <span className="text-blue-400">Las Vegas & Henderson</span>
+          <span className="text-blue-400">Providence, Las Vegas</span>
         </h1>
         <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl">
-          Expert real estate services with personalized attention. Your trusted partner for buying,
-          selling, and investing in Southern Nevada.
+          Providence is a master-planned community of 27 neighborhoods and 5,600+ homes. Your
+          trusted partner for buying, selling, and investing in Providence.
         </p>
 
         {/* RealScout Search Widget */}
@@ -70,7 +70,7 @@ export default function HeroSection() {
           </div>
           <div className="flex items-center gap-2">
             <span className="font-semibold">Since 2008</span>
-            <span>Serving Las Vegas</span>
+            <span>Your Providence expert</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="font-semibold">4.9★</span>

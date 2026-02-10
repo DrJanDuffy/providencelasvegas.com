@@ -87,10 +87,10 @@ const realEstateAgentSchema = {
   url: "https://heyberkshire.com/buyers/california-relocator",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "9406 W Lake Mead Blvd, Suite 100",
+    streetAddress: "7181 N Hualapai Way #135",
     addressLocality: "Las Vegas",
     addressRegion: "NV",
-    postalCode: "89134",
+    postalCode: "89166",
   },
   areaServed: ["Las Vegas", "Henderson", "Summerlin", "North Las Vegas"],
   priceRange: "$350,000 - $10,000,000+",

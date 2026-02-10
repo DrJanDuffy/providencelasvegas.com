@@ -6,13 +6,13 @@ import { Shield, Users, Globe, Award, TrendingUp, CheckCircle, Phone } from "luc
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Why Choose Berkshire Hathaway HomeServices | Las Vegas Real Estate",
+  title: "Why Choose Berkshire Hathaway HomeServices | Providence Las Vegas Real Estate",
   description:
-    "Discover why Berkshire Hathaway HomeServices is the most trusted name in real estate. Backed by Warren Buffett, with 50,000+ agents worldwide. Work with BHHS Nevada Properties today.",
+    "Discover why Berkshire Hathaway HomeServices is the most trusted name for Providence Las Vegas real estate. Backed by Warren Buffett. BHHS Nevada Properties. Call (702) 500-1942.",
   keywords: [
+    "Providence Las Vegas real estate",
     "Berkshire Hathaway HomeServices",
-    "why choose BHHS",
-    "Warren Buffett real estate",
+    "BHHS Providence Las Vegas",
     "trusted real estate brand",
     "BHHS Nevada Properties",
   ],
@@ -53,9 +53,10 @@ export default function WhyBerkshireHathawayPage() {
               Why Choose Berkshire Hathaway HomeServices?
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed">
-              When you work with a <strong>Berkshire Hathaway HomeServices</strong> agent, you're
-              backed by a name synonymous with trust, ethical standards, and financial strength—the
-              same principles that built Warren Buffett's empire.
+              When you work with a <strong>Berkshire Hathaway HomeServices</strong> agent for your
+              Providence Las Vegas real estate needs, you're backed by a name synonymous with trust,
+              ethical standards, and financial strength—the same principles that built Warren Buffett's
+              empire.
             </p>
           </div>
 
@@ -191,13 +192,14 @@ export default function WhyBerkshireHathawayPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                  Your Local BHHS Expert in Las Vegas
+                  Your Local BHHS Expert for Providence Las Vegas
                 </h2>
                 <p className="text-lg text-slate-700 mb-6">
                   Dr. Jan Duffy brings the power of <strong>Berkshire Hathaway HomeServices</strong>{" "}
-                  to Las Vegas, Henderson, Summerlin, and all of Southern Nevada. Serving the area 
-                  since 2008 with $127M+ in closed transactions, you get global brand strength
-                  with hometown expertise.
+                  to Providence Las Vegas, Henderson, Summerlin, and all of Southern Nevada.
+                  Whether you're in one of Providence's 27 neighborhoods or elsewhere in the valley,
+                  serving the area since 2008 with $127M+ in closed transactions, you get global
+                  brand strength with hometown expertise.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[
@@ -254,7 +256,7 @@ export default function WhyBerkshireHathawayPage() {
                 },
                 {
                   q: "Can BHHS help with relocations to Las Vegas?",
-                  a: "Yes! Our global network makes relocations seamless. Dr. Jan Duffy can coordinate with BHHS agents in your current city while providing expert guidance on Las Vegas neighborhoods, schools, and communities.",
+                  a: "Yes! Our global network makes relocations seamless. Dr. Jan Duffy can coordinate with BHHS agents in your current city while providing expert guidance on Providence Las Vegas, Las Vegas neighborhoods, schools, and communities.",
                 },
               ].map((faq, index) => (
                 <div key={index} className="bg-slate-50 rounded-lg p-6">

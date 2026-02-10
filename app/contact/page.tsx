@@ -7,15 +7,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
+  title: "Contact Dr. Jan Duffy | Providence Las Vegas Real Estate | BHHS Nevada Properties",
   description:
-    "Contact Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Schedule an appointment, get directions, or call (702) 500-1942. Las Vegas, Henderson, Summerlin real estate expert.",
+    "Contact Dr. Jan Duffy for Providence Las Vegas real estate. Berkshire Hathaway HomeServices Nevada Properties. Schedule an appointment, get directions, or call (702) 500-1942. Providence Las Vegas real estate expert.",
   keywords: [
-    "contact real estate agent Las Vegas",
+    "contact Providence Las Vegas real estate agent",
+    "Dr. Jan Duffy Providence Las Vegas",
     "Berkshire Hathaway contact",
-    "Dr. Jan Duffy phone",
-    "Las Vegas realtor contact",
-    "schedule real estate appointment",
+    "Providence Las Vegas realtor contact",
+    "schedule Providence Las Vegas real estate appointment",
   ],
 };
 
@@ -26,13 +26,13 @@ const contactSchema = {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
     telephone: "+17025001942",
-    email: "homes@heyberkshire.com",
+    email: "DrDuffy@ProvidenceLasVegas.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "9406 W Lake Mead Blvd, Suite 100",
+      streetAddress: "7181 N Hualapai Way #135",
       addressLocality: "Las Vegas",
       addressRegion: "NV",
-      postalCode: "89134",
+      postalCode: "89166",
       addressCountry: "US",
     },
   },
@@ -54,24 +54,26 @@ export default function ContactPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Contact Dr. Jan Duffy
+              Contact Dr. Jan Duffy for Providence Las Vegas Real Estate
             </h1>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Questions about Las Vegas real estate? Your{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> expert is here to help. 
-              Schedule an appointment or reach out directly.
+              Questions about Providence Las Vegas real estate? Your{" "}
+              <strong>Berkshire Hathaway HomeServices</strong> Providence Las Vegas expert is
+              here to help. Schedule an appointment or reach out directly.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Info & Map */}
             <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">Get In Touch</h2>
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">Get In Touch for Providence Las Vegas Real Estate</h2>
               <p className="text-slate-700 mb-8">
-                Whether you're buying your first home, selling a luxury property, or exploring
-                investment opportunities, I'm here to provide expert guidance backed by the trusted{" "}
-                <strong>Berkshire Hathaway HomeServices</strong> brand. Serving Las Vegas since 2008 
-                with $127M+ in closed transactions.
+                Whether you're buying your first home in Providence Las Vegas, selling a
+                property in any of the 27 Providence neighborhoods, or exploring investment
+                opportunities, I'm here to provide expert guidance backed by the trusted{" "}
+                <strong>Berkshire Hathaway HomeServices</strong> brand. Serving Las Vegas since
+                2008 with $127M+ in closed transactions. Providence Las Vegas real estate
+                specialist.
               </p>
 
               {/* NAP Information */}
@@ -97,10 +99,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Email</h3>
                     <a
-                      href="mailto:homes@heyberkshire.com"
+                      href="mailto:DrDuffy@ProvidenceLasVegas.com"
                       className="text-blue-600 hover:text-blue-700 font-medium"
                     >
-                      Homes@HeyBerkshire.com
+                      DrDuffy@ProvidenceLasVegas.com
                     </a>
                     <p className="text-sm text-slate-500 mt-1">
                       Typically respond within 2 hours
@@ -113,10 +115,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Office Address</h3>
                     <address className="not-italic text-slate-700">
-                      Berkshire Hathaway HomeServices<br />
-                      Nevada Properties<br />
-                      9406 W Lake Mead Blvd, Suite 100<br />
-                      Las Vegas, NV 89134
+                      Berkshire Hathaway HomeServices Nevada Properties<br />
+                      7181 N Hualapai Way #135<br />
+                      Las Vegas, NV 89166
                     </address>
                   </div>
                 </div>
@@ -139,7 +140,7 @@ export default function ContactPage() {
               {/* Google Map Embed */}
               <div className="rounded-xl overflow-hidden shadow-md mb-4">
                 <iframe
-                  src="https://maps.google.com/maps?q=9406+W+Lake+Mead+Blvd+Suite+100,+Las+Vegas,+NV+89134&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=7181+N+Hualapai+Way+%23135,+Las+Vegas,+NV+89166&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
@@ -154,7 +155,7 @@ export default function ContactPage() {
               {/* Map Action Buttons */}
               <div className="flex gap-3 mb-8">
                 <a
-                  href="https://www.google.com/maps/dir//9406+W+Lake+Mead+Blvd+Suite+100,+Las+Vegas,+NV+89134"
+                  href="https://www.google.com/maps/dir//7181+N+Hualapai+Way+%23135,+Las+Vegas,+NV+89166"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors"
@@ -163,7 +164,7 @@ export default function ContactPage() {
                   Get Directions
                 </a>
                 <a
-                  href="https://maps.google.com/?q=Berkshire+Hathaway+HomeServices+Nevada+Properties+9406+W+Lake+Mead+Blvd+Las+Vegas+NV"
+                  href="https://maps.google.com/?q=Berkshire+Hathaway+HomeServices+Nevada+Properties+7181+N+Hualapai+Way+Las+Vegas+NV+89166"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 inline-flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-3 rounded-lg font-medium transition-colors"
@@ -198,7 +199,7 @@ export default function ContactPage() {
 
               {/* Why Contact BHHS */}
               <div className="mt-6 bg-slate-900 text-white rounded-xl p-6">
-                <h3 className="font-bold text-lg mb-4">Why Contact Berkshire Hathaway HomeServices?</h3>
+                <h3 className="font-bold text-lg mb-4">Why Contact Dr. Jan Duffy for Providence Las Vegas?</h3>
                 <div className="space-y-3">
                   <div className="flex items-start">
                     <Shield className="h-5 w-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
@@ -272,13 +273,13 @@ export default function ContactPage() {
                 </div>
               </a>
               <a
-                href="mailto:homes@heyberkshire.com"
+                href="mailto:DrDuffy@ProvidenceLasVegas.com"
                 className="flex items-center justify-center bg-slate-700 hover:bg-slate-800 text-white p-6 rounded-xl transition-colors"
               >
                 <Mail className="h-8 w-8 mr-4" />
                 <div className="text-left">
                   <div className="font-bold text-lg">Send Email</div>
-                  <div className="text-slate-300">Homes@HeyBerkshire.com</div>
+                  <div className="text-slate-300">DrDuffy@ProvidenceLasVegas.com</div>
                 </div>
               </a>
             </div>

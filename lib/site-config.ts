@@ -18,26 +18,71 @@ export const agentInfo = {
   phone: "(702) 500-1942",
   phoneFormatted: "(702) 500-1942",
   phoneTel: "tel:+17025001942",
-  email: "homes@heyberkshire.com",
+  email: "DrDuffy@ProvidenceLasVegas.com",
   brokerage: "Berkshire Hathaway HomeServices Nevada Properties",
 };
 
 export const officeInfo = {
   name: "Berkshire Hathaway HomeServices Nevada Properties",
   address: {
-    street: "9406 W Lake Mead Blvd, Suite 100",
+    street: "7181 N Hualapai Way #135",
     city: "Las Vegas",
     state: "NV",
-    zip: "89134",
-    full: "9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134",
+    zip: "89166",
+    full: "7181 N Hualapai Way #135, Las Vegas, NV 89166",
   },
   coordinates: {
-    lat: 36.1893,
-    lng: -115.2821,
+    lat: 36.2136,
+    lng: -115.2702,
   },
   phone: "(702) 500-1942",
   phoneTel: "tel:+17025001942",
 };
+
+// Providence community (from providencelvhoa.com)
+export const providenceCommunity = {
+  neighborhoodCount: 27,
+  homeCount: "5,600+",
+  parks: [
+    { name: "The Promenade", slug: "the-promenade" },
+    { name: "Knickerbocker Park", slug: "knickerbocker-park" },
+    { name: "Huckleberry Park", slug: "huckleberry-park" },
+  ],
+  hoaAssessmentDueDates: "Jan 1, Apr 1, Jul 1, Oct 1",
+  hoaUrl: "https://www.providencelvhoa.com/home/",
+  neighborhoodsUrl: "https://www.providencelvhoa.com/neighborhood-communities-2/",
+};
+
+// The 27 neighborhoods of Providence (from providencelvhoa.com)
+export const providenceNeighborhoods = [
+  { name: "Auburn & Bradford", slug: "auburn-bradford" },
+  { name: "Bar Arbor Glen", slug: "bar-arbor-glen" },
+  { name: "Barrington Manor", slug: "barrington-manor" },
+  { name: "Brighton", slug: "brighton" },
+  { name: "Cambridge", slug: "cambridge" },
+  { name: "Chestnut Hill", slug: "chestnut-hill" },
+  { name: "Easton Place", slug: "easton-place" },
+  { name: "Emerson", slug: "emerson" },
+  { name: "Franklin Park", slug: "franklin-park" },
+  { name: "Hearthstone/Brookstone", slug: "hearthstone-brookstone" },
+  { name: "Highgate", slug: "highgate" },
+  { name: "Kensington", slug: "kensington" },
+  { name: "Living Smart", slug: "living-smart" },
+  { name: "Madison Colony", slug: "madison-colony" },
+  { name: "Madison Grove", slug: "madison-grove" },
+  { name: "Manchester Park", slug: "manchester-park" },
+  { name: "Monticello/Liberty Hill", slug: "monticello-liberty-hill" },
+  { name: "Northern Terrace", slug: "northern-terrace" },
+  { name: "Oak Ridge", slug: "oak-ridge" },
+  { name: "Oxford Commons", slug: "oxford-commons" },
+  { name: "Saratoga Highlands", slug: "saratoga-highlands" },
+  { name: "Somerset", slug: "somerset" },
+  { name: "Thrive", slug: "thrive" },
+  { name: "Verada View", slug: "verada-view" },
+  { name: "West End", slug: "west-end" },
+  { name: "Westminster", slug: "westminster" },
+  { name: "Windimere", slug: "windimere" },
+];
 
 // Market Statistics (Updated January 2026)
 export const marketStats = {
@@ -91,6 +136,8 @@ export const valuePropositions = {
     "Berkshire Hathaway HomeServices is the only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This means unmatched financial stability, ethical standards, and a global referral network of 50,000+ agents.",
   expertise:
     "Serving Las Vegas since 2008 with $127M+ in closed transactions, Dr. Jan Duffy combines deep local market knowledge with the resources of a global brand.",
+  providence:
+    "Providence is a master-planned community in Las Vegas with 27 neighborhoods and more than 5,600 homes. Each neighborhood has its own amenities. Residents enjoy three community parks: The Promenade, Knickerbocker Park, and Huckleberry Park.",
 };
 
 // Neighborhoods served
