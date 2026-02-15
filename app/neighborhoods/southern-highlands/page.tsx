@@ -1,9 +1,12 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Shield, Mountain, Star, MapPin } from "lucide-react";
 import type { Metadata } from "next";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices Southern Highlands | Las Vegas Golf Community",
@@ -18,52 +21,12 @@ export const metadata: Metadata = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the current median home price in Southern Highlands?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, Southern Highlands' median home price is $750,000, up 7.2% year-over-year. Prices range from $500,000 for non-gated homes to over $3 million in guard-gated sections.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does Southern Highlands have guard-gated sections?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, Southern Highlands features multiple guard-gated luxury sections including Southern Highlands Golf Club estates and exclusive enclaves with 24/7 security. Non-gated sections also offer excellent value with community amenities.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the Southern Highlands Golf Club like?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Southern Highlands Golf Club features an award-winning Robert Trent Jones Jr. designed course. It offers private membership, a stunning clubhouse, fine dining, and is consistently ranked among Nevada's best golf courses.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How does Southern Highlands compare to Summerlin?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Southern Highlands offers similar luxury and amenities to Summerlin but in southwest Las Vegas, providing faster access to the Strip, airport, and I-15. It's ideal for buyers who want premier living with southern valley convenience.",
-      },
-    },
-  ],
-};
-
 export default function SouthernHighlandsPage() {
+  const southernHighlandsFAQs = getFAQsForPage("southern-highlands");
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={southernHighlandsFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -318,53 +281,11 @@ export default function SouthernHighlandsPage() {
           </section>
 
           {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About Southern Highlands
-            </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What is the current median home price in Southern Highlands?
-                </h3>
-                <p className="text-slate-600">
-                  As of January 2026, Southern Highlands' median home price is $750,000, up 7.2%
-                  year-over-year. Prices range from $500,000 for non-gated homes to over $3 million
-                  in guard-gated sections.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Does Southern Highlands have guard-gated sections?
-                </h3>
-                <p className="text-slate-600">
-                  Yes, Southern Highlands features multiple guard-gated luxury sections including
-                  Southern Highlands Golf Club estates and exclusive enclaves with 24/7 security.
-                  Non-gated sections also offer excellent value with community amenities.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What is the Southern Highlands Golf Club like?
-                </h3>
-                <p className="text-slate-600">
-                  Southern Highlands Golf Club features an award-winning Robert Trent Jones Jr. designed
-                  course. It offers private membership, a stunning clubhouse, fine dining, and is
-                  consistently ranked among Nevada's best golf courses.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How does Southern Highlands compare to Summerlin?
-                </h3>
-                <p className="text-slate-600">
-                  Southern Highlands offers similar luxury and amenities to Summerlin but in southwest
-                  Las Vegas, providing faster access to the Strip, airport, and I-15. It's ideal for
-                  buyers who want premier living with southern valley convenience.
-                </p>
-              </div>
-            </div>
-          </section>
+          <FAQSection
+            faqs={southernHighlandsFAQs}
+            title="Frequently Asked Questions About Southern Highlands"
+            subtitle="Common questions about golf community living in southwest Las Vegas"
+          />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

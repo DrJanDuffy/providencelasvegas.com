@@ -1,10 +1,13 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { MapPin, Phone, ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 import { providenceNeighborhoods, providenceCommunity } from "@/lib/site-config";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "The Neighborhoods of Providence | Providence Las Vegas | Dr. Jan Duffy",
@@ -19,8 +22,11 @@ export const metadata: Metadata = {
 };
 
 export default function NeighborhoodsPage() {
+  const neighborhoodsFAQs = getFAQsForPage("neighborhoods");
+
   return (
     <>
+      <FAQSchema faqs={neighborhoodsFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -126,6 +132,13 @@ export default function NeighborhoodsPage() {
               </a>
             </div>
           </section>
+
+          {/* FAQ Section */}
+          <FAQSection
+            faqs={neighborhoodsFAQs}
+            title="Frequently Asked Questions About Las Vegas Neighborhoods"
+            subtitle="Common questions about neighborhoods, areas served, and finding the right community"
+          />
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">

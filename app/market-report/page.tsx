@@ -6,6 +6,9 @@ import { TrendingUp, TrendingDown, Home, Calendar, DollarSign, BarChart, Phone }
 import type { Metadata } from "next";
 import { marketStats } from "@/lib/site-config";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const revalidate = 86400;
 
@@ -45,9 +48,12 @@ const marketReportBreadcrumbs = generateBreadcrumbSchema([
 ]);
 
 export default function MarketReportPage() {
+  const marketReportFAQs = getFAQsForPage("market-report");
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(marketReportBreadcrumbs) }} />
+      <FAQSchema faqs={marketReportFAQs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }}
@@ -272,36 +278,11 @@ export default function MarketReportPage() {
           </section>
 
           {/* FAQ */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Market Questions We're Hearing
-            </h2>
-            <div className="space-y-4">
-              {[
-                {
-                  q: "Is now a good time to buy in Las Vegas?",
-                  a: "Yes. With more inventory, returning negotiating power, and stable interest rates, buyers have more options than they've had in years. Well-priced homes are still moving quickly, but you won't face the bidding wars of 2021-2022.",
-                },
-                {
-                  q: "Should I wait for prices to drop?",
-                  a: "Las Vegas prices have historically been resilient. Current appreciation of 4.2% YoY, strong job growth, and continued California migration suggest prices will remain stable or continue gradual increases. Waiting typically costs more than potential savings.",
-                },
-                {
-                  q: "Is this a buyer's or seller's market?",
-                  a: `With ${marketStats.lasVegas.inventoryMonths} months of inventory, Las Vegas is technically still a seller's market (6 months is balanced). However, buyers have more leverage than they've had since 2019. It's a balanced environment that rewards proper pricing.`,
-                },
-                {
-                  q: "What's happening with interest rates?",
-                  a: "Rates have stabilized around 6.5% for conventional loans. Many buyers are using builder incentives or rate buydowns to achieve effective rates in the low 5% range. VA and FHA options remain competitive.",
-                },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          <FAQSection
+            faqs={marketReportFAQs}
+            title="Market Questions We're Hearing"
+            subtitle="Common questions about the Las Vegas real estate market"
+          />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

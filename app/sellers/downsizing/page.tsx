@@ -1,5 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -14,6 +16,7 @@ import {
   Sun,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Downsizing | Providence Las Vegas | Berkshire Hathaway HomeServices",
@@ -30,8 +33,11 @@ export const metadata: Metadata = {
 };
 
 export default function DownsizingPage() {
+  const downsizingFAQs = getFAQsForPage("sellers/downsizing");
+
   return (
     <>
+      <FAQSchema faqs={downsizingFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -394,40 +400,11 @@ export default function DownsizingPage() {
           </section>
 
           {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Downsizing FAQs
-            </h2>
-            <div className="space-y-4">
-              {[
-                {
-                  q: "How much can I expect to pocket when downsizing?",
-                  a: "Most downsizers moving from large family homes ($650K-$900K) to 55+ communities or condos ($400K-$550K) walk away with $150,000-$350,000+ in net equity after all costs. Dr. Jan provides a detailed projection based on your specific situation.",
-                },
-                {
-                  q: "What if my home needs repairs before selling?",
-                  a: "Dr. Jan helps you prioritize repairs that matter—and skip those that don't. Often, minor cosmetic updates (paint, landscaping) provide the best ROI. For larger issues, she can connect you with contractors or explore as-is selling options.",
-                },
-                {
-                  q: "How do I choose between 55+ communities?",
-                  a: "Key factors include HOA fees and what they cover, community size and culture, amenities that match your interests, location relative to family/healthcare, and financial stability of the HOA. Dr. Jan tours communities with you and provides unbiased comparisons.",
-                },
-                {
-                  q: "Can I buy before selling my current home?",
-                  a: "Yes, several options exist: bridge loans, HELOCs, or making offers contingent on selling. Dr. Jan works with lenders who specialize in these scenarios and can advise on the best approach for your financial situation.",
-                },
-                {
-                  q: "What about all my stuff?",
-                  a: "Decluttering is part of downsizing. Dr. Jan recommends starting early—months before listing. She can refer you to professional organizers and estate sale companies if needed. Many clients find the process liberating once they start.",
-                },
-              ].map((faq, index) => (
-                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          <FAQSection
+            faqs={downsizingFAQs}
+            title="Downsizing FAQs"
+            subtitle="Common questions about downsizing and transitioning to simpler living"
+          />
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">

@@ -14,12 +14,14 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/sections/FAQSection";
 import {
   generateBreadcrumbSchema,
   generateSeniorCommunitySchema,
   generateFAQSchema,
   combineSchemas,
 } from "@/lib/schema";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Sun City Anthem Homes for Sale | Berkshire Hathaway HomeServices",
@@ -55,29 +57,7 @@ const communityAmenities = [
   { name: "Social Clubs", description: "80+ clubs and activity groups" },
 ];
 
-// FAQ data for schema
-const sunCityAnthemFaqs = [
-  {
-    question: "What is the age requirement for Sun City Anthem?",
-    answer:
-      "Sun City Anthem is a 55+ active adult community. At least one resident in each home must be 55 or older, and no residents under 19 are permitted.",
-  },
-  {
-    question: "What are the HOA fees at Sun City Anthem?",
-    answer:
-      "Monthly HOA fees at Sun City Anthem range from $180-$230 depending on the neighborhood and home type. Fees cover access to all community amenities, common area maintenance, and some utilities.",
-  },
-  {
-    question: "What is the price range for homes in Sun City Anthem?",
-    answer:
-      "Homes in Sun City Anthem range from approximately $350,000 to $1.2 million. The Liberty section offers more affordable options, while Heritage and Eagle's Landing feature premium homes with the best views.",
-  },
-  {
-    question: "Does Sun City Anthem have golf courses?",
-    answer:
-      "Yes, Sun City Anthem residents have access to two championship golf courses: Anthem Country Club (members-only) and the adjacent Revere Golf Club (public). Residents enjoy discounted rates and priority tee times.",
-  },
-];
+const sunCityAnthemFaqs = getFAQsForPage("sun-city-anthem");
 
 // Combined page schemas
 const pageSchemas = combineSchemas(
@@ -311,6 +291,13 @@ export default function SunCityAnthemPage() {
               </cite>
             </div>
           </section>
+
+          {/* FAQ */}
+          <FAQSection
+            faqs={sunCityAnthemFaqs}
+            title="Sun City Anthem FAQs"
+            subtitle="Common questions about Henderson's premier 55+ community"
+          />
 
           {/* CTA */}
           <section className="text-center bg-green-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

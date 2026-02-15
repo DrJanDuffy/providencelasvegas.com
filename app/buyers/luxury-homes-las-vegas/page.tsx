@@ -1,5 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -16,6 +18,7 @@ import {
   DollarSign,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Luxury Homes Las Vegas | Berkshire Hathaway HomeServices",
@@ -31,44 +34,12 @@ export const metadata: Metadata = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the luxury home market like in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Las Vegas luxury ($1M+) has appreciated 161% since 2015, making it #4 nationally for luxury growth. The December 2025 luxury median is $1.45M. Cash buyers represent approximately 60% of luxury transactions.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What are the most exclusive luxury communities in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The Ridges in Summerlin ($1.5M-$10M+) is the valley's most prestigious address. MacDonald Highlands and Ascaya in Henderson ($2M-$15M) offer Strip views. For high-rise luxury, Waldorf Astoria, Veer Towers, and Panorama Towers dominate the Strip corridor.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do luxury buyers need representation?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. Luxury transactions involve complex negotiations, privacy concerns, and significant financial exposure. One wrong move can cost hundreds of thousands. Berkshire Hathaway HomeServices provides discrete, sophisticated representation for discerning buyers.",
-      },
-    },
-  ],
-};
-
 export default function LuxuryHomesPage() {
+  const luxuryHomesFAQs = getFAQsForPage("buyers/luxury-homes-las-vegas");
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={luxuryHomesFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -363,6 +334,13 @@ export default function LuxuryHomesPage() {
               </div>
             </div>
           </section>
+
+          {/* FAQ Section */}
+          <FAQSection
+            faqs={luxuryHomesFAQs}
+            title="Luxury Homes Las Vegas FAQs"
+            subtitle="Common questions about buying luxury real estate in Las Vegas"
+          />
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">

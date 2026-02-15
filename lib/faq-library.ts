@@ -1,0 +1,999 @@
+/**
+ * FAQ Library - Page-specific FAQ content for all 47 pages
+ * Used for FAQSection component and FAQPage JSON-LD schema
+ */
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+type FAQPageType = keyof typeof faqLibrary;
+
+const faqLibrary: Record<string, FAQItem[]> = {
+  // ============ Core Pages ============
+  home: [
+    {
+      question: "Why should I choose a Berkshire Hathaway HomeServices agent in Las Vegas?",
+      answer:
+        "Berkshire Hathaway HomeServices is the only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This means unmatched financial stability, ethical standards, and a global referral network of 50,000+ agents. When you're making the biggest purchase of your life, that trust matters.",
+    },
+    {
+      question: "What areas does Berkshire Hathaway HomeServices Nevada Properties serve?",
+      answer:
+        "BHHS Nevada Properties serves all of Las Vegas, Henderson, North Las Vegas, and surrounding areas, with specialized expertise in Summerlin, The Ridges, Skye Canyon, Southern Highlands, Green Valley, Providence, and all Henderson communities.",
+    },
+    {
+      question: "How do I contact Dr. Jan Duffy at Berkshire Hathaway HomeServices?",
+      answer:
+        "You can reach Dr. Jan Duffy at (702) 500-1942 or email DrDuffy@ProvidenceLasVegas.com. Office located at 7181 N Hualapai Way #135, Las Vegas, NV 89166.",
+    },
+    {
+      question: "Does Berkshire Hathaway HomeServices help with new construction homes?",
+      answer:
+        "Yes! BHHS agents provide free buyer representation for new construction purchases from builders like Toll Brothers, Lennar, and Century Communities—the builder pays the commission, not you.",
+    },
+    {
+      question: "What is the current Las Vegas real estate market like in 2026?",
+      answer:
+        "As of January 2026, the Las Vegas median home price is $450,000 (+4.2% YoY), with homes selling in an average of 28 days. Henderson's median is slightly higher at $485,000. The market remains competitive but balanced.",
+    },
+    {
+      question: "What is Providence, Las Vegas?",
+      answer:
+        "Providence is a master-planned community in Las Vegas with 27 neighborhoods and more than 5,600 homes. Each neighborhood has its own amenities. Residents enjoy three community parks: The Promenade, Knickerbocker Park, and Huckleberry Park. The Providence Master HOA manages the community.",
+    },
+    {
+      question: "Where can I find HOA and resale information for Providence?",
+      answer:
+        "The official Providence Master HOA website at providencelvhoa.com has Design Review, Realtors/Resale, Community Info, and Documents. HOA assessments are due Jan 1, Apr 1, Jul 1, and Oct 1. Dr. Jan Duffy can help you buy or sell in any Providence neighborhood.",
+    },
+  ],
+
+  about: [
+    {
+      question: "How long has Dr. Jan Duffy been serving Las Vegas real estate?",
+      answer:
+        "Dr. Jan Duffy has been serving the Las Vegas real estate market since 2008, with over $127 million in closed transactions and 500+ satisfied clients. Her expertise spans residential, luxury, investment, and new construction properties throughout Southern Nevada.",
+    },
+    {
+      question: "Why choose Dr. Jan Duffy over other Las Vegas realtors?",
+      answer:
+        "Dr. Jan combines deep local market knowledge with the global resources of Berkshire Hathaway HomeServices. She offers personalized service, expert negotiation, and a commitment to educating clients—not sales pressure. Her track record speaks for itself.",
+    },
+    {
+      question: "What certifications or credentials does Dr. Jan Duffy have?",
+      answer:
+        "Dr. Jan Duffy is a licensed REALTOR® (License S.0197614.LLC) with Berkshire Hathaway HomeServices Nevada Properties. She holds expertise in luxury homes, 55+ communities, California relocation, and investment properties.",
+    },
+    {
+      question: "Does Dr. Jan Duffy work with first-time home buyers?",
+      answer:
+        "Absolutely. Dr. Jan guides first-time buyers through every step, including pre-approval, loan programs (FHA, VA, conventional), down payment assistance, and the closing process. Her goal is to make buying your first home stress-free.",
+    },
+    {
+      question: "How can I schedule a consultation with Dr. Jan Duffy?",
+      answer:
+        "Call or text (702) 500-1942 for immediate assistance, or email DrDuffy@ProvidenceLasVegas.com. Office visits are available at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 9am-6pm, Saturday 10am-4pm, Sunday by appointment.",
+    },
+    {
+      question: "What neighborhoods does Dr. Jan Duffy specialize in?",
+      answer:
+        "Dr. Jan has specialized expertise in Providence, Summerlin, The Ridges, Southern Highlands, Henderson, Green Valley, Skye Canyon, Centennial Hills, Inspirada, and North Las Vegas. She serves the entire Las Vegas Valley.",
+    },
+  ],
+
+  contact: [
+    {
+      question: "What is the best way to contact Dr. Jan Duffy?",
+      answer:
+        "For immediate assistance, call or text (702) 500-1942. You can also email DrDuffy@ProvidenceLasVegas.com or use the contact form on this site. Dr. Jan typically responds within a few hours during business hours.",
+    },
+    {
+      question: "What are Dr. Jan Duffy's office hours?",
+      answer:
+        "Office hours are Monday-Friday 9am-6pm, Saturday 10am-4pm, and Sunday by appointment. The office is located at 7181 N Hualapai Way #135, Las Vegas, NV 89166.",
+    },
+    {
+      question: "Can I get a free home valuation without visiting the office?",
+      answer:
+        "Yes. You can request a free, no-obligation home valuation through the contact form or by calling (702) 500-1942. Dr. Jan uses current MLS data and comparable sales to provide an accurate estimate.",
+    },
+    {
+      question: "Does Dr. Jan Duffy work with out-of-state buyers?",
+      answer:
+        "Yes. Dr. Jan specializes in helping California relocators and other out-of-state buyers purchase Las Vegas homes. She can conduct virtual tours, coordinate inspections remotely, and guide you through the entire process from afar.",
+    },
+    {
+      question: "How quickly will I hear back after submitting the contact form?",
+      answer:
+        "Dr. Jan typically responds to contact form submissions within 24 hours, often same-day during business hours. For urgent inquiries, calling (702) 500-1942 is the fastest option.",
+    },
+    {
+      question: "Is there a fee for an initial consultation?",
+      answer:
+        "No. Initial consultations with Dr. Jan Duffy are free and come with no obligation. She offers complimentary home valuations for sellers and buyer consultations to discuss your needs and timeline.",
+    },
+  ],
+
+  providence: [
+    {
+      question: "What is Providence Las Vegas?",
+      answer:
+        "Providence is a master-planned community in northwest Las Vegas with 27 neighborhoods and more than 5,600 homes. Each neighborhood has its own character and amenities. Residents enjoy three community parks: The Promenade, Knickerbocker Park, and Huckleberry Park.",
+    },
+    {
+      question: "What are the HOA assessment due dates for Providence?",
+      answer:
+        "Providence Master HOA assessments are due January 1, April 1, July 1, and October 1 of each year. The HOA oversees community standards, Design Review for modifications, and maintains common areas.",
+    },
+    {
+      question: "Where can I find Providence HOA documents and resale information?",
+      answer:
+        "The official Providence Master HOA website at providencelvhoa.com has Design Review guidelines, Realtors/Resale info, Community Info, and Documents. Dr. Jan Duffy is familiar with the resale process and Design Review requirements.",
+    },
+    {
+      question: "What are the community parks in Providence Las Vegas?",
+      answer:
+        "Providence has three community parks: The Promenade (linear walking park and playground), Knickerbocker Park (skyline views, ball field, splash pad, dog parks), and Huckleberry Park (basketball, tennis, pickleball, playgrounds, splash pad, dog parks).",
+    },
+    {
+      question: "How do I buy or sell a home in Providence?",
+      answer:
+        "Dr. Jan Duffy at Berkshire Hathaway HomeServices knows all 27 Providence neighborhoods, the HOA resale process, and Design Review requirements. Call (702) 500-1942 for buyer or seller representation in any Providence community.",
+    },
+    {
+      question: "Are there gated neighborhoods in Providence?",
+      answer:
+        "Some Providence neighborhoods have private entry gates, community pools, and other amenities. Each of the 27 neighborhoods has its own character. Dr. Jan can explain the differences and help you find the right fit.",
+    },
+  ],
+
+  neighborhoods: [
+    {
+      question: "What Las Vegas neighborhoods does Dr. Jan Duffy serve?",
+      answer:
+        "Dr. Jan serves Providence, Summerlin, Henderson, Green Valley, The Ridges, Southern Highlands, North Las Vegas, Skye Canyon, Centennial Hills, Inspirada, Mountains Edge, and all of Clark County. She has deep expertise in master-planned communities.",
+    },
+    {
+      question: "Which Las Vegas neighborhood is best for families?",
+      answer:
+        "Summerlin, Henderson, Green Valley, and Inspirada are popular for families due to top-rated schools, parks, and community amenities. Dr. Jan can help you compare neighborhoods based on your priorities.",
+    },
+    {
+      question: "Where are the luxury neighborhoods in Las Vegas?",
+      answer:
+        "The Ridges in Summerlin, Southern Highlands, and MacDonald Highlands in Henderson are Las Vegas's premier luxury communities. These offer guard-gated living, celebrity homes, and world-class amenities.",
+    },
+    {
+      question: "What neighborhoods have the most affordable homes?",
+      answer:
+        "North Las Vegas, Mountains Edge, and some areas of Henderson offer more affordable options. Dr. Jan can show you current inventory and help you find value in your price range.",
+    },
+    {
+      question: "How do I choose the right Las Vegas neighborhood?",
+      answer:
+        "Consider schools, commute, amenities, HOA fees, and lifestyle. Dr. Jan offers neighborhood tours and can match you with communities that fit your budget, needs, and preferences. Call (702) 500-1942 to get started.",
+    },
+    {
+      question: "Are there new construction communities in Las Vegas?",
+      answer:
+        "Yes. Skye Canyon, Inspirada, North Las Vegas, and several other areas have active new construction from builders like Toll Brothers, Lennar, and Century Communities. Dr. Jan provides free buyer representation for new construction.",
+    },
+  ],
+
+  // ============ Providence Neighborhood Template ============
+  // Use replacements: { neighborhoodName: "Oxford Commons" }
+  providenceNeighborhood: [
+    {
+      question: "What parks are near {neighborhoodName}?",
+      answer:
+        "All Providence Las Vegas residents, including {neighborhoodName}, have access to three community parks: The Promenade, Knickerbocker Park, and Huckleberry Park. See the Providence HOA website for details.",
+    },
+    {
+      question: "Is {neighborhoodName} part of the Providence Master HOA?",
+      answer:
+        "Yes. {neighborhoodName} is one of 27 neighborhoods in Providence Las Vegas. HOA assessments are due Jan 1, Apr 1, Jul 1, and Oct 1 of each year.",
+    },
+    {
+      question: "How do I get HOA resale or Design Review info for {neighborhoodName}?",
+      answer:
+        "For Design Review, Realtors/Resale, and community documents for {neighborhoodName}, visit the official Providence Master HOA website at providencelvhoa.com. Dr. Jan Duffy can also guide you through the resale process.",
+    },
+    {
+      question: "Are there homes for sale in {neighborhoodName}?",
+      answer:
+        "Yes. Providence Las Vegas homes for sale in {neighborhoodName} are listed on the MLS and through this site. Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties specializes in Providence real estate. Call (702) 500-1942.",
+    },
+    {
+      question: "What amenities does {neighborhoodName} offer?",
+      answer:
+        "Each Providence neighborhood has its own amenities. All {neighborhoodName} residents have access to The Promenade, Knickerbocker Park, and Huckleberry Park. Some neighborhoods add pools, gates, or other features. Dr. Jan can provide specifics.",
+    },
+    {
+      question: "How do I contact Dr. Jan Duffy about {neighborhoodName}?",
+      answer:
+        "Call (702) 500-1942 or email DrDuffy@ProvidenceLasVegas.com. Dr. Jan offers free consultations and can schedule neighborhood tours, showings, or provide a home valuation for your {neighborhoodName} property.",
+    },
+  ],
+
+  // ============ Other Neighborhoods ============
+  summerlin: [
+    {
+      question: "What is Summerlin, Las Vegas?",
+      answer:
+        "Summerlin is Las Vegas's premier master-planned community in the northwest valley. It features 150+ parks, top-rated schools, Red Rock Canyon access, and multiple villages. The median home price is around $625,000 with luxury options in The Ridges.",
+    },
+    {
+      question: "What are the best neighborhoods in Summerlin for families?",
+      answer:
+        "Summerlin's villages offer excellent schools, parks, and family amenities. The Trails, Stonebridge, and The Mesa are popular. Dr. Jan Duffy can help you compare villages based on schools, lifestyle, and budget.",
+    },
+    {
+      question: "Is The Ridges part of Summerlin?",
+      answer:
+        "Yes. The Ridges is an ultra-luxury guard-gated community within Summerlin, known for celebrity homes and Bear's Best Golf. Median prices exceed $2.5 million. Dr. Jan specializes in luxury Summerlin real estate.",
+    },
+    {
+      question: "How long does it take to close on a Summerlin home?",
+      answer:
+        "Typically 30-45 days from offer acceptance. Cash purchases can close in 7-14 days. Dr. Jan Duffy guides you through financing, inspections, and HOA requirements to ensure a smooth Summerlin transaction.",
+    },
+    {
+      question: "What is the Summerlin real estate market like in 2026?",
+      answer:
+        "Summerlin remains a strong seller's market with median prices around $625,000. Luxury homes in The Ridges average $2.5M+. Days on market average 22. Dr. Jan provides current market data—call (702) 500-1942.",
+    },
+  ],
+
+  henderson: [
+    {
+      question: "Why buy a home in Henderson, Nevada?",
+      answer:
+        "Henderson is Nevada's second-largest city with excellent schools, low crime, Lake Las Vegas, and family-friendly communities. Median home price is $485,000. Many California relocators choose Henderson for its quality of life.",
+    },
+    {
+      question: "What are the best Henderson neighborhoods?",
+      answer:
+        "Green Valley, Inspirada, MacDonald Highlands, and Seven Hills are popular. Each offers different amenities and price points. Dr. Jan Duffy knows Henderson inside and out—call (702) 500-1942 for neighborhood guidance.",
+    },
+    {
+      question: "Are there 55+ communities in Henderson?",
+      answer:
+        "Yes. Sun City Anthem, Solera at Anthem, and Del Webb Lake Las Vegas are premier active adult communities in Henderson. Dr. Jan specializes in 55+ real estate and can help you find the right fit.",
+    },
+    {
+      question: "How does Henderson compare to Las Vegas for commuting?",
+      answer:
+        "Henderson is southeast of the Strip. Commute to downtown Las Vegas is typically 20-30 minutes. Many Henderson residents work remotely or in Henderson's growing employment centers. Dr. Jan can discuss commute options.",
+    },
+    {
+      question: "What schools serve Henderson neighborhoods?",
+      answer:
+        "Henderson is served by the Clark County School District. Some areas have top-rated schools. Dr. Jan can provide school information for specific neighborhoods and connect you with resources for school research.",
+    },
+  ],
+
+  "green-valley": [
+    {
+      question: "What is Green Valley, Henderson?",
+      answer:
+        "Green Valley is an established Henderson community with mature landscaping, golf courses, and excellent schools. Median home prices are around $520,000. It offers a mix of resale and some newer construction.",
+    },
+    {
+      question: "Is Green Valley a good place for families?",
+      answer:
+        "Yes. Green Valley has top-rated schools, parks, walking trails, and family-friendly amenities. The community is known for its safe neighborhoods and strong sense of community.",
+    },
+    {
+      question: "What are home prices like in Green Valley?",
+      answer:
+        "As of 2026, Green Valley median is around $520,000. Prices vary by neighborhood, size, and condition. Dr. Jan Duffy provides free home valuations and can show you current Green Valley listings.",
+    },
+    {
+      question: "How do I find homes for sale in Green Valley?",
+      answer:
+        "Search on this site or call (702) 500-1942. Dr. Jan Duffy lists Green Valley homes through Berkshire Hathaway HomeServices and the MLS. She can set up automated alerts for new listings matching your criteria.",
+    },
+  ],
+
+  "the-ridges": [
+    {
+      question: "What is The Ridges in Summerlin?",
+      answer:
+        "The Ridges is an ultra-luxury guard-gated community in Summerlin with celebrity homes, custom estates, and Bear's Best Golf. Median prices exceed $2.5 million. It offers Strip views and Red Rock Canyon proximity.",
+    },
+    {
+      question: "What are the entry requirements for The Ridges?",
+      answer:
+        "The Ridges is guard-gated with strict access control. Buyers typically need proof of funds or pre-approval for luxury financing. Dr. Jan Duffy specializes in Ridges real estate and can guide you through the process.",
+    },
+    {
+      question: "What amenities does The Ridges offer?",
+      answer:
+        "Bear's Best Golf Course, clubhouse, fitness, and stunning mountain and Strip views. The community emphasizes privacy and luxury. Visit The Ridges Village Association website for official amenity details.",
+    },
+    {
+      question: "How do I buy a luxury home in The Ridges?",
+      answer:
+        "Dr. Jan Duffy has extensive experience with Ridges transactions. She understands the luxury buyer expectations, discretion requirements, and negotiation nuances. Call (702) 500-1942 for a confidential consultation.",
+    },
+  ],
+
+  "southern-highlands": [
+    {
+      question: "What is Southern Highlands, Las Vegas?",
+      answer:
+        "Southern Highlands is a master-planned luxury community in south Las Vegas with championship golf, guard-gated neighborhoods, and mountain views. Median prices are around $750,000.",
+    },
+    {
+      question: "What golf courses are in Southern Highlands?",
+      answer:
+        "Southern Highlands Golf Club is the centerpiece—a private championship course. The community offers resort-style living with golf, pools, and premium amenities.",
+    },
+    {
+      question: "Are Southern Highlands homes guard-gated?",
+      answer:
+        "Many Southern Highlands neighborhoods are guard-gated. The community emphasizes security and exclusivity. Dr. Jan Duffy can explain the different villages and their access requirements.",
+    },
+    {
+      question: "How do I contact a Southern Highlands real estate expert?",
+      answer:
+        "Dr. Jan Duffy specializes in Southern Highlands and luxury Las Vegas real estate. Call (702) 500-1942 for listings, market insight, and representation for buying or selling in Southern Highlands.",
+    },
+  ],
+
+  "north-las-vegas": [
+    {
+      question: "Is North Las Vegas a good place to buy a home?",
+      answer:
+        "North Las Vegas offers some of the most affordable new construction in the Las Vegas Valley. Median price is around $385,000. The area is rapidly growing with new amenities and employment centers.",
+    },
+    {
+      question: "What new construction is available in North Las Vegas?",
+      answer:
+        "Several builders have active communities in North Las Vegas including Lennar, KB Home, and others. Dr. Jan provides free buyer representation for new construction—the builder pays her commission.",
+    },
+    {
+      question: "How far is North Las Vegas from the Las Vegas Strip?",
+      answer:
+        "North Las Vegas is approximately 20-30 minutes north of the Strip depending on traffic. It offers a more suburban, family-oriented environment with good value.",
+    },
+    {
+      question: "What schools serve North Las Vegas?",
+      answer:
+        "North Las Vegas is in the Clark County School District. Dr. Jan can provide school information for specific neighborhoods and help you find areas that match your family's needs.",
+    },
+  ],
+
+  "skye-canyon": [
+    {
+      question: "What is Skye Canyon, Las Vegas?",
+      answer:
+        "Skye Canyon is a newer master-planned community in northwest Las Vegas with mountain views, modern amenities, and new construction. Median prices are around $550,000. It appeals to families and outdoor enthusiasts.",
+    },
+    {
+      question: "What amenities does Skye Canyon offer?",
+      answer:
+        "Skye Canyon features parks, trails, a community center, splash pads, and mountain proximity. The community has a focus on outdoor recreation and modern lifestyle.",
+    },
+    {
+      question: "Is there new construction in Skye Canyon?",
+      answer:
+        "Yes. Skye Canyon has active new construction from several builders. Dr. Jan Duffy provides free buyer representation for new construction purchases—call (702) 500-1942.",
+    },
+    {
+      question: "How do I find homes for sale in Skye Canyon?",
+      answer:
+        "Search on this site or call (702) 500-1942. Dr. Jan knows Skye Canyon well and can show you resale and new construction options. She'll help you navigate builder contracts and negotiations.",
+    },
+  ],
+
+  "centennial-hills": [
+    {
+      question: "What is Centennial Hills, Las Vegas?",
+      answer:
+        "Centennial Hills is a northwest Las Vegas community with mountain access, parks, shopping, and family-friendly neighborhoods. Median prices are around $495,000. It offers good value with suburban amenities.",
+    },
+    {
+      question: "Is Centennial Hills near the mountains?",
+      answer:
+        "Yes. Centennial Hills is close to the Spring Mountains and offers easy access to hiking and outdoor recreation. Mt. Charleston is within driving distance for skiing and mountain activities.",
+    },
+    {
+      question: "What is the Centennial Hills real estate market like?",
+      answer:
+        "Centennial Hills offers a mix of resale and some newer homes. Prices are generally more affordable than Summerlin. Dr. Jan Duffy provides current market data—call (702) 500-1942.",
+    },
+  ],
+
+  inspirada: [
+    {
+      question: "What is Inspirada, Henderson?",
+      answer:
+        "Inspirada is a master-planned Henderson community with resort-style pools, walking trails, and new construction. Median prices are around $525,000. It's popular with families and relocators.",
+    },
+    {
+      question: "What amenities does Inspirada offer?",
+      answer:
+        "Inspirada features multiple resort-style pools, splash pads, parks, walking trails, and community events. The lifestyle is active and family-focused.",
+    },
+    {
+      question: "Is there new construction in Inspirada?",
+      answer:
+        "Yes. Inspirada has active new construction from several builders. Dr. Jan Duffy provides free buyer representation for new construction. The builder pays her commission—you get expert representation at no cost.",
+    },
+    {
+      question: "How do I contact an Inspirada real estate expert?",
+      answer:
+        "Dr. Jan Duffy knows Inspirada and Henderson real estate. Call (702) 500-1942 for listings, new construction options, and neighborhood guidance.",
+    },
+  ],
+
+  "mountains-edge": [
+    {
+      question: "What is Mountains Edge, Las Vegas?",
+      answer:
+        "Mountains Edge is a southwest Las Vegas master-planned community with mountain views, parks, and growing amenities. Median prices are around $475,000. It offers affordable luxury and newer construction.",
+    },
+    {
+      question: "What is the Mountains Edge real estate market like?",
+      answer:
+        "Mountains Edge has a mix of resale and new construction. The area has grown significantly with added shopping and services. Dr. Jan Duffy provides current market data—call (702) 500-1942.",
+    },
+    {
+      question: "Is Mountains Edge good for families?",
+      answer:
+        "Yes. Mountains Edge offers parks, trails, and family-friendly amenities. Schools are part of the Clark County School District. Dr. Jan can provide specific school and neighborhood information.",
+    },
+  ],
+
+  // ============ Buyer Service Pages ============
+  buyers: [
+    {
+      question: "How long does the home buying process take in Las Vegas?",
+      answer:
+        "Typically 30-45 days from offer acceptance to closing. Cash purchases can close in 7-14 days. The timeline depends on financing, inspections, and other contingencies. Dr. Jan Duffy guides you through each step.",
+    },
+    {
+      question: "Do I need a pre-approval before looking at homes?",
+      answer:
+        "Yes. A pre-approval letter shows sellers you're serious and gives you a clear budget. Dr. Jan can connect you with trusted local lenders who offer competitive rates and various loan programs.",
+    },
+    {
+      question: "How much do I need for a down payment?",
+      answer:
+        "Down payment requirements vary: FHA loans require 3.5%, conventional typically 3-20%, and VA/USDA may require 0% down. Dr. Jan connects you with lenders who specialize in various programs including Nevada down payment assistance.",
+    },
+    {
+      question: "Are buyer's agent services free?",
+      answer:
+        "Yes. In most cases, the seller pays the buyer's agent commission. You get full representation from Dr. Jan Duffy at no cost. She works exclusively for you—not the seller.",
+    },
+    {
+      question: "What should I look for when viewing homes?",
+      answer:
+        "Consider layout, condition, location, schools, HOA, and resale potential. Dr. Jan points out red flags, discusses comparables, and helps you evaluate each property objectively.",
+    },
+    {
+      question: "How do I make an offer on a Las Vegas home?",
+      answer:
+        "Dr. Jan prepares a competitive offer based on market data, comparable sales, and your budget. She handles negotiations, inspections, and contingencies. Call (702) 500-1942 to get started.",
+    },
+  ],
+
+  "buyers/first-time-buyers": [
+    {
+      question: "What loan programs are available for first-time buyers?",
+      answer:
+        "FHA (3.5% down), VA (0% down for eligible veterans), conventional (3-20% down), and Nevada down payment assistance programs. Dr. Jan connects you with lenders who specialize in first-time buyer programs.",
+    },
+    {
+      question: "How much can I afford as a first-time buyer?",
+      answer:
+        "Your budget depends on income, debts, credit score, and down payment. Get pre-approved to know your exact number. Dr. Jan works with first-time buyers to find homes in their budget without overextending.",
+    },
+    {
+      question: "What are closing costs for first-time buyers?",
+      answer:
+        "Closing costs typically run 2-5% of the loan amount. They include appraisal, title insurance, and lender fees. Some programs offer closing cost assistance. Dr. Jan explains all costs upfront.",
+    },
+    {
+      question: "Should I use the listing agent to buy a home?",
+      answer:
+        "No. The listing agent represents the seller. You need your own buyer's agent who works exclusively for you. Dr. Jan's services are free—the seller pays her commission. You get advocacy at no cost.",
+    },
+    {
+      question: "What's the first step to buying my first home?",
+      answer:
+        "Get pre-approved with a lender. Then call (702) 500-1942 to schedule a consultation with Dr. Jan Duffy. She'll discuss your needs, timeline, and neighborhoods—with zero pressure.",
+    },
+  ],
+
+  "buyers/california-relocator": [
+    {
+      question: "Why are so many Californians moving to Las Vegas?",
+      answer:
+        "Nevada has 0% state income tax, and Las Vegas home prices are 40-60% lower than comparable California markets. You get more house for your money, no state income tax, and a lower cost of living.",
+    },
+    {
+      question: "How do I buy a Las Vegas home from California?",
+      answer:
+        "Dr. Jan Duffy specializes in California relocation. She conducts virtual tours, coordinates inspections remotely, and guides you through the entire process. Many clients close without visiting until move-in.",
+    },
+    {
+      question: "Should I sell my California home first or buy in Nevada first?",
+      answer:
+        "It depends on your equity, timeline, and risk tolerance. Dr. Jan can discuss options including bridge loans, rent-back agreements, and timing strategies. Every situation is different.",
+    },
+    {
+      question: "What Las Vegas neighborhoods do California relocators prefer?",
+      answer:
+        "Summerlin, Henderson, Green Valley, and Inspirada are popular. Factors include schools, commute, amenities, and vibe. Dr. Jan helps you narrow down based on your lifestyle and budget.",
+    },
+    {
+      question: "How do I get started with my California to Las Vegas move?",
+      answer:
+        "Call (702) 500-1942 or email DrDuffy@ProvidenceLasVegas.com. Dr. Jan offers free relocation consultations. She'll discuss neighborhoods, schools, timing, and create a customized plan for your move.",
+    },
+  ],
+
+  "buyers/luxury-homes-las-vegas": [
+    {
+      question: "What defines a luxury home in Las Vegas?",
+      answer:
+        "Luxury typically starts around $1M+ in Las Vegas. The Ridges, Southern Highlands, and MacDonald Highlands are premier luxury communities. Luxury buyers expect discretion, expertise, and flawless execution.",
+    },
+    {
+      question: "What are the best luxury neighborhoods in Las Vegas?",
+      answer:
+        "The Ridges (Summerlin), Southern Highlands, MacDonald Highlands (Henderson), and certain Summerlin and Henderson estates. Each offers different lifestyles—guard-gated, golf, views, or privacy.",
+    },
+    {
+      question: "How does buying a luxury home differ?",
+      answer:
+        "Luxury transactions require discretion, strong negotiation, and attention to detail. One wrong move can cost hundreds of thousands. Dr. Jan Duffy has $127M+ in closed transactions and understands luxury buyer expectations.",
+    },
+    {
+      question: "Do I need proof of funds for luxury purchases?",
+      answer:
+        "For cash purchases, yes. For financing, you'll need a jumbo loan pre-approval. Dr. Jan works with luxury lenders and can guide you through the requirements for high-end transactions.",
+    },
+    {
+      question: "How do I schedule a luxury home viewing?",
+      answer:
+        "Call (702) 500-1942 for a confidential consultation. Dr. Jan specializes in luxury Las Vegas real estate and can show you off-market and MLS listings in The Ridges, Southern Highlands, and beyond.",
+    },
+  ],
+
+  // ============ Seller Service Pages ============
+  sellers: [
+    {
+      question: "What is my home worth in today's Las Vegas market?",
+      answer:
+        "Home values depend on location, condition, size, and recent comparable sales. Dr. Jan provides free, comprehensive home valuations using current MLS data and her expertise serving Las Vegas since 2008.",
+    },
+    {
+      question: "How long will it take to sell my home?",
+      answer:
+        "Currently, well-priced homes in Las Vegas sell in an average of 28 days. Luxury homes may take 45+ days. Pricing strategy is crucial—overpriced homes sit for months. Dr. Jan's pricing gets results.",
+    },
+    {
+      question: "What do I need to do to prepare my home for sale?",
+      answer:
+        "Dr. Jan provides a personalized preparation checklist. Generally, decluttering, minor repairs, fresh paint, and professional photography yield the highest ROI. She coordinates staging and photography for her listings.",
+    },
+    {
+      question: "What is your commission structure?",
+      answer:
+        "Commission structures are negotiable. Dr. Jan offers transparent pricing and walks you through all costs before you sign. She invests in professional marketing to get top dollar for your home.",
+    },
+    {
+      question: "Should I make repairs before listing?",
+      answer:
+        "It depends. Some repairs (cosmetic, safety) add value. Others don't pay back. Dr. Jan provides honest guidance on what to fix, what to leave, and how to price accordingly.",
+    },
+    {
+      question: "How do I get a free home valuation?",
+      answer:
+        "Call (702) 500-1942 or request one through this site. Dr. Jan provides free, no-obligation valuations using current market data. You'll receive a comprehensive analysis with no pressure.",
+    },
+  ],
+
+  "sellers/move-up": [
+    {
+      question: "How do I sell and buy a bigger home at the same time?",
+      answer:
+        "Options include selling first (with a rent-back or short-term rental), buying first (with a bridge loan or contingent offer), or simultaneous closings. Dr. Jan helps you choose the strategy that minimizes stress and risk.",
+    },
+    {
+      question: "What is a contingent offer?",
+      answer:
+        "A contingent offer means your purchase depends on selling your current home. In competitive markets, non-contingent offers often win. Dr. Jan explains the pros/cons and helps you structure the best approach.",
+    },
+    {
+      question: "Should I sell before or after buying my move-up home?",
+      answer:
+        "It depends on equity, market conditions, and risk tolerance. Selling first gives you cash and clarity but may require temporary housing. Dr. Jan guides you through the options for your situation.",
+    },
+  ],
+
+  "sellers/downsizing": [
+    {
+      question: "How do I downsize from a large home?",
+      answer:
+        "Dr. Jan helps you declutter, stage, and price your current home while identifying smaller properties that fit your new lifestyle. Many downsizers choose 55+ communities or maintenance-free condos.",
+    },
+    {
+      question: "What are good downsizing options in Las Vegas?",
+      answer:
+        "55+ communities (Sun City Summerlin, Sun City Anthem), condos, townhomes, and smaller single-family homes. Dr. Jan specializes in 55+ and can help you find low-maintenance living.",
+    },
+    {
+      question: "How do I handle excess belongings when downsizing?",
+      answer:
+        "Dr. Jan can refer you to estate sale companies, donation resources, and moving services. The goal is to simplify your move and make the transition to a smaller home as smooth as possible.",
+    },
+  ],
+
+  "sellers/relocation": [
+    {
+      question: "How do I sell my home when relocating for a job?",
+      answer:
+        "Dr. Jan coordinates with your relocation timeline. Options include selling before you move, selling after (with a property manager), or corporate relocation programs. She works with employers and relocation companies.",
+    },
+    {
+      question: "What if I need to sell quickly for a relocation?",
+      answer:
+        "Pricing right and staging for quick sale are key. Dr. Jan has a strong track record of selling homes in 28 days or less when priced correctly. She can discuss accelerated marketing strategies.",
+    },
+  ],
+
+  "sellers/divorce-probate": [
+    {
+      question: "How does a divorce home sale work?",
+      answer:
+        "Dr. Jan provides neutral representation, working with both parties' attorneys. The goal is a fair sale that divides the asset appropriately. She handles the transaction with discretion and professionalism.",
+    },
+    {
+      question: "What is involved in a probate real estate sale?",
+      answer:
+        "Probate sales require court approval and coordination with the estate attorney. Dr. Jan has experience with probate transactions and ensures compliance with Nevada probate requirements.",
+    },
+    {
+      question: "Do I need both parties to agree to sell in a divorce?",
+      answer:
+        "Generally yes, unless one party has been awarded the property. Dr. Jan works with divorce attorneys to understand the decree and facilitate a sale that satisfies the court and both parties.",
+    },
+  ],
+
+  // ============ Other Service Pages ============
+  "luxury-homes": [
+    {
+      question: "What Las Vegas neighborhoods have luxury homes?",
+      answer:
+        "The Ridges (Summerlin), Southern Highlands, MacDonald Highlands (Henderson), and select Summerlin and Henderson estates. Median luxury prices range from $1.2M to $2.5M+ in premier communities.",
+    },
+    {
+      question: "What should I expect when buying a luxury home?",
+      answer:
+        "Discretion, expert negotiation, and attention to detail. Luxury transactions often involve custom terms, inspections, and longer timelines. Dr. Jan has $127M+ in closed transactions and understands luxury buyer expectations.",
+    },
+    {
+      question: "Are there off-market luxury listings?",
+      answer:
+        "Yes. Dr. Jan has access to off-market and pocket listings through the Berkshire Hathaway HomeServices network. Call (702) 500-1942 for a confidential discussion of your luxury home search.",
+    },
+  ],
+
+  "new-construction": [
+    {
+      question: "Is buyer representation free for new construction?",
+      answer:
+        "Yes. The builder pays the buyer's agent commission. You get Dr. Jan's expertise at no cost. She negotiates upgrades, reviews contracts, and protects your interests—the builder's agent works for the builder, not you.",
+    },
+    {
+      question: "Which Las Vegas areas have new construction?",
+      answer:
+        "Skye Canyon, Inspirada, North Las Vegas, and several other communities. Builders include Toll Brothers, Lennar, Century Communities, KB Home, and others. Dr. Jan represents you with every builder.",
+    },
+    {
+      question: "Should I use the builder's sales agent?",
+      answer:
+        "No. The builder's agent represents the builder. You need your own agent who negotiates for you, reviews contracts, and ensures you're not overpaying for upgrades. Dr. Jan's services are free.",
+    },
+  ],
+
+  "investment-properties": [
+    {
+      question: "What are good Las Vegas neighborhoods for investment properties?",
+      answer:
+        "North Las Vegas, certain Henderson areas, and established Las Vegas neighborhoods often offer favorable rental yields. Dr. Jan analyzes cap rates, appreciation potential, and rental demand for each area.",
+    },
+    {
+      question: "What is the average rental yield in Las Vegas?",
+      answer:
+        "Las Vegas rental yields vary by neighborhood but can be competitive with national averages. Dr. Jan provides investment analysis including cap rates, cash flow projections, and market trends.",
+    },
+    {
+      question: "Are short-term rentals allowed in Las Vegas?",
+      answer:
+        "Short-term rental regulations vary by area. Some neighborhoods restrict or prohibit them. Dr. Jan stays current on HOA and municipal rules and can advise on STR feasibility for specific properties.",
+    },
+  ],
+
+  relocation: [
+    {
+      question: "Does Dr. Jan Duffy help with corporate relocation?",
+      answer:
+        "Yes. Dr. Jan works with relocation companies and employers. She helps transferees find homes, sell existing properties, and navigate the relocation process with minimal stress.",
+    },
+    {
+      question: "What if I'm relocating from another state?",
+      answer:
+        "Dr. Jan specializes in out-of-state relocations, especially California. She conducts virtual tours, coordinates inspections, and guides you through the process remotely. Many clients close without visiting until move-in.",
+    },
+    {
+      question: "How do I find a rental while I look for a home?",
+      answer:
+        "Dr. Jan can refer you to rental resources and short-term options. She helps you understand neighborhoods before committing to a purchase, so you make an informed decision when you're ready to buy.",
+    },
+  ],
+
+  "home-valuation": [
+    {
+      question: "How is my home's value determined?",
+      answer:
+        "Value is based on comparable sales (comps), condition, location, and market trends. Dr. Jan uses current MLS data and her market expertise to provide an accurate valuation. The valuation is free and no-obligation.",
+    },
+    {
+      question: "Is the home valuation really free?",
+      answer:
+        "Yes. Dr. Jan provides free home valuations with no obligation. You'll receive a comprehensive analysis. There's no pressure—whether you're ready to sell now or just curious about your home's value.",
+    },
+    {
+      question: "How accurate are online home value estimators?",
+      answer:
+        "Online estimators (Zillow, Redfin) use algorithms and can be off by 10-20% or more. Dr. Jan's valuation uses real MLS data, local expertise, and comparable sales for greater accuracy.",
+    },
+  ],
+
+  "market-report": [
+    {
+      question: "What is the Las Vegas median home price in 2026?",
+      answer:
+        "As of January 2026, the Las Vegas median home price is $450,000, up 4.2% year-over-year. Henderson's median is $485,000. Summerlin luxury averages $625,000 with The Ridges at $2.5M+.",
+    },
+    {
+      question: "How long do homes sit on the market in Las Vegas?",
+      answer:
+        "Well-priced homes sell in an average of 28 days. Luxury homes may take 45+ days. Overpriced homes sit for months. Pricing correctly from day one is the key to a successful sale.",
+    },
+    {
+      question: "Is now a good time to buy or sell in Las Vegas?",
+      answer:
+        "Market conditions change. Dr. Jan provides current data and honest advice. Generally, low inventory favors sellers; balanced markets give buyers more negotiating power. Call (702) 500-1942 for a market consultation.",
+    },
+  ],
+
+  "market-insights": [
+    {
+      question: "What drives Las Vegas real estate prices?",
+      answer:
+        "Employment, population growth, interest rates, and housing inventory. Las Vegas benefits from no state income tax, tourism, and a growing diversifying economy. Dr. Jan monitors trends and provides insights.",
+    },
+    {
+      question: "How do interest rates affect Las Vegas home prices?",
+      answer:
+        "Higher rates reduce buying power and can cool demand. Lower rates boost affordability. Dr. Jan helps you understand how rate changes affect your purchase or sale strategy.",
+    },
+  ],
+
+  "market-update": [
+    {
+      question: "What's the latest Las Vegas real estate market update?",
+      answer:
+        "As of January 2026, the market shows a median of $450K, 28 days on market, and 4,850 active listings. Inventory is at 2.1 months. Dr. Jan provides ongoing market updates—call (702) 500-1942.",
+    },
+    {
+      question: "Where can I get current Las Vegas market statistics?",
+      answer:
+        "Dr. Jan Duffy provides market reports and insights. You can also check GLVAR (Greater Las Vegas Association of REALTORS) for official MLS statistics. Call (702) 500-1942 for a personalized market briefing.",
+    },
+  ],
+
+  // ============ 55+ Communities ============
+  fiftyPlusCommunities: [
+    {
+      question: "What 55+ communities does Dr. Jan Duffy specialize in?",
+      answer:
+        "Sun City Summerlin, Sun City Anthem, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera at Anthem, and Trilogy Summerlin. Each offers different amenities, price points, and lifestyles.",
+    },
+    {
+      question: "What is the age requirement for 55+ communities?",
+      answer:
+        "At least one resident must be 55 or older. Some communities allow 18+ in the household under certain rules. Each community has specific age restriction details—Dr. Jan can explain the rules for any community.",
+    },
+    {
+      question: "What amenities do Las Vegas 55+ communities offer?",
+      answer:
+        "Pools, fitness centers, clubs, golf, pickleball, and social activities. Sun City Summerlin has 7,700+ homes and multiple recreation centers. Del Webb communities offer resort-style amenities.",
+    },
+    {
+      question: "Are 55+ community homes good investments?",
+      answer:
+        "55+ communities often have steady demand from retirees and relocators. Resale values depend on the community and market. Dr. Jan can provide investment and resale analysis for 55+ properties.",
+    },
+    {
+      question: "How do I choose the right 55+ community?",
+      answer:
+        "Consider amenities, location, HOA fees, resale history, and lifestyle fit. Dr. Jan offers community tours and can match you with the right active adult community. Call (702) 500-1942.",
+    },
+  ],
+
+  "sun-city-summerlin": [
+    {
+      question: "What is Sun City Summerlin?",
+      answer:
+        "Sun City Summerlin is Nevada's largest 55+ community with 7,700+ homes in Summerlin. It offers multiple recreation centers, golf, pools, clubs, and active adult living. Built by Del Webb.",
+    },
+    {
+      question: "What are home prices in Sun City Summerlin?",
+      answer:
+        "Prices vary by model, size, and condition. Dr. Jan provides current Sun City Summerlin market data and free home valuations. Call (702) 500-1942 for listings and price ranges.",
+    },
+    {
+      question: "What amenities does Sun City Summerlin have?",
+      answer:
+        "Multiple recreation centers, golf courses, pools, fitness, pickleball, clubs, and social activities. The community is designed for active adults 55 and older.",
+    },
+  ],
+
+  "sun-city-anthem": [
+    {
+      question: "What is Sun City Anthem?",
+      answer:
+        "Sun City Anthem is a 55+ community in Henderson's Black Mountain area. It offers recreation centers, golf, pools, and active adult living with views of the Las Vegas valley.",
+    },
+    {
+      question: "How does Sun City Anthem compare to Sun City Summerlin?",
+      answer:
+        "Sun City Anthem is in Henderson; Sun City Summerlin is in Las Vegas/Summerlin. Each has different amenities, price points, and vibes. Dr. Jan can tour you through both to help you decide.",
+    },
+  ],
+
+  "sun-city-aliante": [
+    {
+      question: "What is Sun City Aliante?",
+      answer:
+        "Sun City Aliante is a 55+ community in North Las Vegas. It offers active adult living with recreation centers, pools, and amenities at a typically lower price point than Sun City Summerlin or Anthem.",
+    },
+  ],
+
+  "heritage-stonebridge": [
+    {
+      question: "What is Heritage at Stonebridge?",
+      answer:
+        "Heritage at Stonebridge is a gated 55+ community in northwest Las Vegas. It offers active adult living with a focus on community and low-maintenance homes.",
+    },
+  ],
+
+  "solera-anthem": [
+    {
+      question: "What is Solera at Anthem?",
+      answer:
+        "Solera at Anthem is a 55+ community in Henderson. It offers active adult living with modern amenities and a range of home styles.",
+    },
+  ],
+
+  "trilogy-summerlin": [
+    {
+      question: "What is Trilogy Summerlin?",
+      answer:
+        "Trilogy Summerlin is a 55+ community in Summerlin offering active adult living with resort-style amenities and a focus on an active lifestyle.",
+    },
+  ],
+
+  "del-webb-lake-las-vegas": [
+    {
+      question: "What is Del Webb Lake Las Vegas?",
+      answer:
+        "Del Webb Lake Las Vegas is a 55+ community near Lake Las Vegas in Henderson. It offers active adult living with access to lake amenities and recreation.",
+    },
+  ],
+
+  // ============ Misc Pages ============
+  faq: [
+    {
+      question: "Why choose Berkshire Hathaway HomeServices for Las Vegas real estate?",
+      answer:
+        "BHHS is backed by Warren Buffett's Berkshire Hathaway Inc.—unmatched trust and financial stability. You get a global network of 50,000+ agents, world-class marketing, and a brand synonymous with integrity.",
+    },
+    {
+      question: "How do I contact Dr. Jan Duffy?",
+      answer:
+        "Call (702) 500-1942 or email DrDuffy@ProvidenceLasVegas.com. Office: 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 9am-6pm, Saturday 10am-4pm, Sunday by appointment.",
+    },
+  ],
+
+  "google-business": [
+    {
+      question: "Where can I read Dr. Jan Duffy's Google reviews?",
+      answer:
+        "Search 'Dr. Jan Duffy Berkshire Hathaway' on Google to find her Google Business Profile. You can read 200+ reviews from satisfied clients. Click through to leave your own review after working with Dr. Jan.",
+    },
+  ],
+
+  "why-berkshire-hathaway": [
+    {
+      question: "Why is Berkshire Hathaway HomeServices different from other real estate brands?",
+      answer:
+        "BHHS is the only major real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This means financial stability, ethical standards, and a global referral network of 50,000+ agents.",
+    },
+    {
+      question: "Does Berkshire Hathaway charge higher fees?",
+      answer:
+        "Commission structures are negotiable. Dr. Jan offers transparent pricing. For buyers, representation is typically free—the seller pays. You get BHHS resources without paying more.",
+    },
+  ],
+
+  services: [
+    {
+      question: "What real estate services does Dr. Jan Duffy offer?",
+      answer:
+        "Buyer and seller representation, luxury homes, new construction, investment properties, 55+ communities, California relocation, probate and divorce sales, first-time buyer guidance, and home valuations.",
+    },
+    {
+      question: "Are buyer services free?",
+      answer:
+        "Yes. In most transactions, the seller pays the buyer's agent commission. You get full representation from Dr. Jan at no cost. This includes new construction—the builder pays her commission.",
+    },
+  ],
+
+  listings: [
+    {
+      question: "How do I search for Las Vegas homes for sale?",
+      answer:
+        "Use the property search on this site or visit Dr. Jan's MLS portal. You can filter by price, beds, baths, and neighborhood. Call (702) 500-1942 to set up automated listing alerts.",
+    },
+    {
+      question: "Are the listings on this site current?",
+      answer:
+        "Listings are fed from the MLS and update regularly. For the most current information, call (702) 500-1942. Dr. Jan can also show you off-market and coming-soon listings.",
+    },
+  ],
+};
+
+/**
+ * Get FAQ items for a specific page type
+ * @param pageType - Key from faqLibrary (e.g. "home", "providence", "summerlin")
+ * @param replacements - Optional object for template replacements (e.g. { neighborhoodName: "Oxford Commons" })
+ */
+export function getFAQsForPage(
+  pageType: string,
+  replacements?: Record<string, string>
+): FAQItem[] {
+  const faqs = faqLibrary[pageType] || faqLibrary.home;
+
+  if (!replacements || Object.keys(replacements).length === 0) {
+    return faqs;
+  }
+
+  return faqs.map((faq) => ({
+    question: Object.entries(replacements).reduce(
+      (q, [key, val]) => q.replace(new RegExp(`{${key}}`, "g"), val),
+      faq.question
+    ),
+    answer: Object.entries(replacements).reduce(
+      (a, [key, val]) => a.replace(new RegExp(`{${key}}`, "g"), val),
+      faq.answer
+    ),
+  }));
+}
+
+/**
+ * Get all available page types for FAQ lookup
+ */
+export function getFAQPageTypes(): string[] {
+  return Object.keys(faqLibrary);
+}

@@ -1,13 +1,16 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Phone, MapPin, ExternalLink } from "lucide-react";
 import { providenceNeighborhoods, providenceCommunity, marketStats } from "@/lib/site-config";
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -41,18 +44,14 @@ export default async function ProvidenceNeighborhoodPage({ params }: Props) {
     { name: "Providence", url: "/providence" },
     { name: neighborhood.name, url: `/providence/neighborhoods/${slug}` },
   ]);
-  const providenceFaqs = [
-    { question: `What parks are near ${neighborhood.name}?`, answer: `All Providence Las Vegas residents, including ${neighborhood.name}, have access to three community parks: The Promenade, Knickerbocker Park, and Huckleberry Park. See the Providence HOA website for details.` },
-    { question: `Is ${neighborhood.name} part of the Providence Master HOA?`, answer: `Yes. ${neighborhood.name} is one of ${providenceCommunity.neighborhoodCount} neighborhoods in Providence Las Vegas. HOA assessments are due ${providenceCommunity.hoaAssessmentDueDates} of each year.` },
-    { question: `How do I get HOA resale or Design Review info for ${neighborhood.name}?`, answer: `For Design Review, Realtors/Resale, and community documents for ${neighborhood.name}, visit the official Providence Master HOA website. Dr. Jan Duffy can also guide you through the resale process.` },
-    { question: `Are there homes for sale in ${neighborhood.name}?`, answer: `Yes. Providence Las Vegas homes for sale in ${neighborhood.name} are listed on the MLS and through this site. Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties specializes in Providence real estate.` },
-  ];
-  const faqSchema = generateFAQSchema(providenceFaqs);
+  const providenceFaqs = getFAQsForPage("providenceNeighborhood", {
+    neighborhoodName: neighborhood.name,
+  });
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <FAQSchema faqs={providenceFaqs} />
       <Navbar />
       <main>
         <section className="pt-24 pb-12 md:pt-28 md:pb-16 bg-slate-50">
@@ -187,19 +186,11 @@ export default async function ProvidenceNeighborhoodPage({ params }: Props) {
           </div>
         </section>
 
-        <section className="py-12 md:py-16 bg-slate-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions About {neighborhood.name}</h2>
-            <div className="space-y-4">
-              {providenceFaqs.map((faq, index) => (
-                <div key={index} className="bg-white rounded-lg p-6 border border-slate-200">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.question}</h3>
-                  <p className="text-slate-700">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FAQSection
+          faqs={providenceFaqs}
+          title={`Frequently Asked Questions About ${neighborhood.name}`}
+          subtitle={`Common questions about the ${neighborhood.name} neighborhood in Providence Las Vegas`}
+        />
 
         <section className="py-12 md:py-16 bg-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">

@@ -1,5 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -14,6 +16,7 @@ import {
   Users,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Divorce & Probate Home Sales Las Vegas | Berkshire Hathaway HomeServices",
@@ -29,8 +32,11 @@ export const metadata: Metadata = {
 };
 
 export default function DivorceProbatePage() {
+  const divorceProbateFAQs = getFAQsForPage("sellers/divorce-probate");
+
   return (
     <>
+      <FAQSchema faqs={divorceProbateFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -406,44 +412,11 @@ export default function DivorceProbatePage() {
           </section>
 
           {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions
-            </h2>
-            <div className="space-y-4">
-              {[
-                {
-                  q: "Can one spouse sell the house without the other's consent?",
-                  a: "In Nevada, generally no. Both spouses must agree to sell community property. If one spouse refuses, the other can petition the court for an order to sell. Dr. Jan has worked with many cases where court intervention was needed and can provide valuations and testimony if required.",
-                },
-                {
-                  q: "How long does a probate sale take in Nevada?",
-                  a: "The probate process typically takes 6-12 months, but the house can often be sold during this period. Once Letters Testamentary are issued, the personal representative has authority to list. The actual sale (listing to closing) usually takes 30-60 days, similar to regular sales.",
-                },
-                {
-                  q: "Do I need to make repairs before selling an estate property?",
-                  a: "Not necessarily. Many estate sales are 'as-is' to avoid further estate expenses. Dr. Jan can advise on whether minimal improvements would significantly increase the sale price. She also has connections to estate cleanout services and can coordinate property preparation.",
-                },
-                {
-                  q: "What if the divorcing parties disagree on the listing price?",
-                  a: "Dr. Jan provides an objective market analysis that both parties can review. If disagreement persists, a formal appraisal (at shared cost) can settle the matter. In contentious cases, the listing price may be court-ordered based on appraised value.",
-                },
-                {
-                  q: "Can I sell a property if there are multiple heirs who disagree?",
-                  a: "Yes, but it requires navigating the disagreement. Often, one heir can buy out others. If that's not possible, a partition action may force a sale. Dr. Jan has experience facilitating consensus and can work with your estate attorney on options.",
-                },
-                {
-                  q: "What happens to the mortgage during a divorce sale?",
-                  a: "The mortgage is paid off at closing from the sale proceeds. If the home is underwater (worth less than owed), options include short sale negotiation with the lender or other arrangements. Dr. Jan can advise on the best approach for your situation.",
-                },
-              ].map((faq, index) => (
-                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          <FAQSection
+            faqs={divorceProbateFAQs}
+            title="Divorce & Probate FAQs"
+            subtitle="Common questions about divorce and probate home sales"
+          />
 
           {/* Why BHHS Matters */}
           <section className="mb-16 max-w-5xl mx-auto">

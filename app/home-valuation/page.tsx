@@ -5,6 +5,9 @@ import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import Link from "next/link";
 import { Phone, CheckCircle, Home, TrendingUp, MapPin, Calculator, Clock, DollarSign } from "lucide-react";
 import type { Metadata } from "next";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Free Home Valuation Las Vegas | What's Your Home Worth? | Berkshire Hathaway HomeServices",
@@ -21,53 +24,11 @@ export const metadata: Metadata = {
   ],
 };
 
-// FAQ Schema for SEO
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How accurate are online home value estimates like Zillow's Zestimate?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Online estimates like Zillow's Zestimate can be off by 5-15% or more, especially in markets like Las Vegas where home features vary significantly. They cannot account for upgrades, condition, views, or lot characteristics. A professional CMA from a local expert provides far more accurate pricing.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What factors affect my Las Vegas home's value?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Key factors include location (neighborhood, school zone, proximity to amenities), square footage, lot size, number of bedrooms and bathrooms, age of the home, upgrades (kitchen, bathrooms, flooring), pool, views, HOA fees, and current market conditions. In Las Vegas, features like solar panels, energy efficiency, and covered patios also significantly impact value.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does a home valuation take?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Dr. Jan Duffy typically provides a comprehensive market analysis within 24-48 hours of receiving your property information. The analysis includes recent comparable sales, current competition, and a recommended price range.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is a home valuation the same as an appraisal?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. A home valuation or CMA (Comparative Market Analysis) is a real estate agent's estimate based on market data. An appraisal is a formal valuation by a licensed appraiser, typically required by lenders. CMAs are free and useful for listing decisions; appraisals cost $400-600 and are required for financing.",
-      },
-    },
-  ],
-};
-
 export default function HomeValuationPage() {
+  const homeValuationFAQs = getFAQsForPage("home-valuation");
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={homeValuationFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -421,40 +382,11 @@ export default function HomeValuationPage() {
           </section>
 
           {/* FAQ Section */}
-          <section className="max-w-4xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About Home Valuations
-            </h2>
-            <div className="space-y-4">
-              {[
-                {
-                  q: "How accurate are online home value estimates like Zillow's Zestimate?",
-                  a: "Online estimates like Zillow's Zestimate can be off by 5-15% or more, especially in markets like Las Vegas where home features vary significantly. They cannot account for upgrades, condition, views, or lot characteristics. A professional CMA from a local expert provides far more accurate pricing.",
-                },
-                {
-                  q: "What factors affect my Las Vegas home's value?",
-                  a: "Key factors include location (neighborhood, school zone, proximity to amenities), square footage, lot size, number of bedrooms and bathrooms, age of the home, upgrades (kitchen, bathrooms, flooring), pool, views, HOA fees, and current market conditions. In Las Vegas, features like solar panels, energy efficiency, and covered patios also significantly impact value.",
-                },
-                {
-                  q: "How long does a home valuation take?",
-                  a: "Dr. Jan Duffy typically provides a comprehensive market analysis within 24-48 hours of receiving your property information. The analysis includes recent comparable sales, current competition, and a recommended price range.",
-                },
-                {
-                  q: "Is a home valuation the same as an appraisal?",
-                  a: "No. A home valuation or CMA (Comparative Market Analysis) is a real estate agent's estimate based on market data. An appraisal is a formal valuation by a licensed appraiser, typically required by lenders. CMAs are free and useful for listing decisions; appraisals cost $400-600 and are required for financing.",
-                },
-                {
-                  q: "Do I need to have my home ready to show for a valuation?",
-                  a: "Not necessarily. Dr. Jan can provide an initial valuation based on property records, MLS data, and information you provide. However, a brief walk-through helps identify features and upgrades that add value. There's no need to stage or prepare extensively.",
-                },
-              ].map((faq, index) => (
-                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          <FAQSection
+            faqs={homeValuationFAQs}
+            title="Frequently Asked Questions About Home Valuations"
+            subtitle="Common questions about getting an accurate home value in Las Vegas"
+          />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

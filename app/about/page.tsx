@@ -1,7 +1,10 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
+import { getFAQsForPage } from "@/lib/faq-library";
 import Image from "next/image";
 import { 
   Phone, 
@@ -114,12 +117,15 @@ const areasServed = [
 ];
 
 export default function AboutPage() {
+  const aboutFAQs = getFAQsForPage("about");
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
+      <FAQSchema faqs={aboutFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -434,6 +440,13 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
+
+          {/* FAQ Section */}
+          <FAQSection
+            faqs={aboutFAQs}
+            title="Frequently Asked Questions About Dr. Jan Duffy"
+            subtitle="Common questions about working with your Providence Las Vegas real estate agent"
+          />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

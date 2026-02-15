@@ -1,9 +1,18 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
+import RelatedPages from "@/components/navigation/RelatedPages";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
+import InlineLink from "@/components/content/InlineLink";
+import ExternalResources from "@/components/content/ExternalResources";
 import Link from "next/link";
+import { getFAQsForPage } from "@/lib/faq-library";
 import type { Metadata } from "next";
 import { Phone, ExternalLink, MapPin } from "lucide-react";
 import { providenceCommunity, providenceNeighborhoods, marketStats } from "@/lib/site-config";
+import { getRelatedPages } from "@/lib/related-pages";
+import { getExternalResources } from "@/lib/external-resources";
 
 export const metadata: Metadata = {
   title: "Providence Las Vegas Community | Dr. Jan Duffy, REALTOR®",
@@ -19,11 +28,15 @@ export const metadata: Metadata = {
 };
 
 export default function ProvidencePage() {
+  const providenceFAQs = getFAQsForPage("providence");
+
   return (
     <>
+      <FAQSchema faqs={providenceFAQs} />
       <Navbar />
+      <Breadcrumbs items={[{ label: "Providence Las Vegas" }]} />
       <main>
-        <section className="pt-24 pb-12 md:pt-28 md:pb-16 bg-slate-50">
+        <section className="pt-8 pb-12 md:pt-12 md:pb-16 bg-slate-50">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
               Providence, Las Vegas
@@ -35,13 +48,20 @@ export default function ProvidencePage() {
               neighborhood has its own unique amenities. Residents enjoy three community
               parks—The Promenade, Knickerbocker Park, and Huckleberry Park—and the Providence
               Master HOA keeps the community well maintained. Providence Las Vegas real estate
-              is served by Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties.
+              is served by Dr. Jan Duffy at{" "}
+              <InlineLink href="/why-berkshire-hathaway">
+                Berkshire Hathaway HomeServices Nevada Properties
+              </InlineLink>.
             </p>
             <p className="text-slate-700 max-w-3xl">
-              Whether you are buying or selling a home in Providence Las Vegas, from Oxford
-              Commons to Saratoga Highlands to Auburn & Bradford and all 27 neighborhoods, Dr.
-              Jan Duffy offers hyperlocal expertise and HOA resale guidance for Providence Las
-              Vegas.
+              Whether you are{" "}
+              <InlineLink href="/buyers">buying</InlineLink> or{" "}
+              <InlineLink href="/sellers">selling</InlineLink> a home in Providence Las Vegas,
+              from <InlineLink href="/providence/neighborhoods/oxford-commons">Oxford Commons</InlineLink> to{" "}
+              <InlineLink href="/providence/neighborhoods/saratoga-highlands">Saratoga Highlands</InlineLink> to{" "}
+              <InlineLink href="/providence/neighborhoods/auburn-bradford">Auburn & Bradford</InlineLink> and all 27
+              neighborhoods, <InlineLink href="/about">Dr. Jan Duffy</InlineLink> offers hyperlocal
+              expertise and HOA resale guidance for Providence Las Vegas.
             </p>
 
             {/* Providence at a glance - data-rich block for AI parsing */}
@@ -135,28 +155,38 @@ export default function ProvidencePage() {
               For Buyers & Sellers in Providence Las Vegas
             </h2>
             <p className="text-slate-700 mb-8 max-w-2xl">
-              Whether you are buying or selling a home in Providence Las Vegas, Dr. Jan Duffy
-              knows the 27 neighborhoods, HOA resale process, and Design Review. Providence Las
-              Vegas real estate is served by Berkshire Hathaway HomeServices Nevada Properties.
+              Whether you are{" "}
+              <InlineLink href="/buyers">buying</InlineLink> or{" "}
+              <InlineLink href="/sellers">selling</InlineLink> a home in Providence Las Vegas,{" "}
+              <InlineLink href="/about">Dr. Jan Duffy</InlineLink> knows the 27 neighborhoods,
+              HOA resale process, and Design Review. Providence Las Vegas real estate is served
+              by <InlineLink href="/why-berkshire-hathaway">Berkshire Hathaway HomeServices Nevada Properties</InlineLink>.
             </p>
             <h3 className="text-xl font-semibold text-slate-900 mb-2">Resale in Providence Las Vegas</h3>
             <p className="text-slate-700 mb-6 max-w-2xl">
-              Dr. Jan Duffy can help you buy or sell in any Providence neighborhood. Familiar with
-              Providence Master HOA resale requirements and Design Review so your Providence Las
-              Vegas transaction stays on track.
+              <InlineLink href="/about">Dr. Jan Duffy</InlineLink> can help you{" "}
+              <InlineLink href="/buyers">buy</InlineLink> or{" "}
+              <InlineLink href="/sellers">sell</InlineLink> in any Providence neighborhood. 
+              Familiar with Providence Master HOA resale requirements and Design Review so your 
+              Providence Las Vegas transaction stays on track. Looking for nearby communities? 
+              Check out <InlineLink href="/neighborhoods/summerlin">Summerlin</InlineLink> or{" "}
+              <InlineLink href="/neighborhoods/centennial-hills">Centennial Hills</InlineLink>.
             </p>
             <h3 className="text-xl font-semibold text-slate-900 mb-2">HOA Assessments for Providence</h3>
             <p className="text-slate-700 mb-6 max-w-2xl">
               Providence Master HOA assessments are due {providenceCommunity.hoaAssessmentDueDates}{" "}
               of each year. The HOA oversees community standards and Design Review for
               modifications. New homeowners can find New Homeowner Info and Community Contacts on
-              the official Providence HOA site.
+              the official Providence HOA site. For current{" "}
+              <InlineLink href="/market-report">market statistics</InlineLink> and{" "}
+              <InlineLink href="/market-insights">market insights</InlineLink>, visit our market pages.
             </p>
             <h3 className="text-xl font-semibold text-slate-900 mb-2">Design Review & Documents</h3>
             <p className="text-slate-700 mb-6 max-w-2xl">
               The Providence Master HOA oversees design review for exterior changes. For
               guidelines, Realtors/Resale info, and community documents, visit the official
-              Providence HOA website.
+              Providence HOA website. Have questions?{" "}
+              <InlineLink href="/contact">Contact Dr. Jan Duffy</InlineLink> for expert guidance.
             </p>
             <ul className="space-y-2 text-slate-700 max-w-2xl list-disc list-inside">
               <li>Providence Las Vegas HOA assessments: {providenceCommunity.hoaAssessmentDueDates}</li>
@@ -175,6 +205,25 @@ export default function ProvidencePage() {
           </div>
         </section>
 
+        {/* External Authority Resources for E-E-A-T */}
+        <ExternalResources
+          title="Official Providence & Las Vegas Resources"
+          resources={getExternalResources("providenceResources")}
+        />
+
+        {/* FAQ Section */}
+        <FAQSection
+          faqs={providenceFAQs}
+          title="Frequently Asked Questions About Providence Las Vegas"
+          subtitle="Common questions about the Providence community, HOA, and real estate"
+        />
+
+        {/* Related Pages for Internal Linking */}
+        <RelatedPages
+          title="You May Also Be Interested In"
+          pages={getRelatedPages("providence")}
+        />
+
         <section className="py-12 md:py-16 bg-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
@@ -184,13 +233,21 @@ export default function ProvidencePage() {
               Dr. Jan Duffy knows Providence and can guide you through buying or selling in any of
               the 27 neighborhoods.
             </p>
-            <a
-              href="tel:+17025001942"
-              className="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-md font-semibold hover:bg-blue-50 transition-colors"
-            >
-              <Phone className="h-5 w-5" />
-              Call (702) 500-1942
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+17025001942"
+                className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-md font-semibold hover:bg-blue-50 transition-colors"
+              >
+                <Phone className="h-5 w-5" />
+                Call (702) 500-1942
+              </a>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-md font-semibold transition-colors"
+              >
+                Send a Message
+              </Link>
+            </div>
             <p className="mt-4 text-blue-200 text-sm">
               Dr. Jan Duffy | License S.0197614.LLC | Berkshire Hathaway HomeServices Nevada
               Properties

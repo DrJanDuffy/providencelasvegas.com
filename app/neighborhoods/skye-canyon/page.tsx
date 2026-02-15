@@ -1,9 +1,12 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Mountain, Users, Home as HomeIcon, GraduationCap } from "lucide-react";
 import type { Metadata } from "next";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices Skye Canyon | Northwest Las Vegas",
@@ -18,52 +21,12 @@ export const metadata: Metadata = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the current median home price in Skye Canyon?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, Skye Canyon's median home price is $550,000, up 5.5% year-over-year. New construction ranges from $450,000 to $800,000, while resales offer additional options across all price points.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What amenities does Skye Canyon offer?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Skye Canyon features Skye Center, a 15-acre amenity complex with resort-style pools, fitness center, sports courts, and event spaces. The community also offers miles of trails, parks, and is adjacent to Floyd Lamb Park.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is Skye Canyon good for families?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, Skye Canyon is designed for families with new schools, extensive children's amenities, community events, and safe neighborhoods. The community hosts family-friendly events throughout the year at Skye Center.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Why use Berkshire Hathaway HomeServices for Skye Canyon new construction?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "BHHS provides free buyer representation on new construction purchases—the builder pays our commission. Dr. Jan Duffy can negotiate upgrades, review contracts, and ensure your interests are protected when builder sales agents work for the builder.",
-      },
-    },
-  ],
-};
-
 export default function SkyeCanyonPage() {
+  const skyeCanyonFAQs = getFAQsForPage("skye-canyon");
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={skyeCanyonFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -319,53 +282,11 @@ export default function SkyeCanyonPage() {
           </section>
 
           {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About Skye Canyon
-            </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What is the current median home price in Skye Canyon?
-                </h3>
-                <p className="text-slate-600">
-                  As of January 2026, Skye Canyon's median home price is $550,000, up 5.5% year-over-year.
-                  New construction ranges from $450,000 to $800,000, while resales offer additional
-                  options across all price points.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What amenities does Skye Canyon offer?
-                </h3>
-                <p className="text-slate-600">
-                  Skye Canyon features Skye Center, a 15-acre amenity complex with resort-style pools,
-                  fitness center, sports courts, and event spaces. The community also offers miles of
-                  trails, parks, and is adjacent to Floyd Lamb Park.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Is Skye Canyon good for families?
-                </h3>
-                <p className="text-slate-600">
-                  Yes, Skye Canyon is designed for families with new schools, extensive children's
-                  amenities, community events, and safe neighborhoods. The community hosts family-friendly
-                  events throughout the year at Skye Center.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Why use Berkshire Hathaway HomeServices for Skye Canyon new construction?
-                </h3>
-                <p className="text-slate-600">
-                  BHHS provides free buyer representation on new construction purchases—the builder pays
-                  our commission. Dr. Jan Duffy can negotiate upgrades, review contracts, and ensure
-                  your interests are protected when builder sales agents work for the builder.
-                </p>
-              </div>
-            </div>
-          </section>
+          <FAQSection
+            faqs={skyeCanyonFAQs}
+            title="Frequently Asked Questions About Skye Canyon"
+            subtitle="Common questions about northwest Las Vegas living and new construction"
+          />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

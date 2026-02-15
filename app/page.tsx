@@ -5,10 +5,12 @@ import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import Footer from "@/components/layouts/Footer";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Home as HomeIcon, TrendingUp, Shield, Users, Phone } from "lucide-react";
 import { providenceNeighborhoods, providenceCommunity } from "@/lib/site-config";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Providence Las Vegas | Dr. Jan Duffy, REALTOR®",
@@ -22,102 +24,15 @@ export const metadata: Metadata = {
   ],
 };
 
-// Organization Schema
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
-  name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-  url: "https://www.providencelasvegas.com",
-  telephone: "+17025001942",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "7181 N Hualapai Way #135",
-    addressLocality: "Las Vegas",
-    addressRegion: "NV",
-    postalCode: "89166",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-  },
-};
-
-// FAQ Schema for SEO
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Why should I choose a Berkshire Hathaway HomeServices agent in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Berkshire Hathaway HomeServices is the only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This means unmatched financial stability, ethical standards, and a global referral network of 50,000+ agents. When you're making the biggest purchase of your life, that trust matters.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What areas does Berkshire Hathaway HomeServices Nevada Properties serve?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "BHHS Nevada Properties serves all of Las Vegas, Henderson, North Las Vegas, and surrounding areas, with specialized expertise in Summerlin, The Ridges, Skye Canyon, Southern Highlands, Green Valley, and all Henderson communities.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I contact Dr. Jan Duffy at Berkshire Hathaway HomeServices?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "You can reach Dr. Jan Duffy at (702) 500-1942 or email DrDuffy@ProvidenceLasVegas.com. Office located at 7181 N Hualapai Way #135, Las Vegas, NV 89166.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does Berkshire Hathaway HomeServices help with new construction homes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes! BHHS agents provide free buyer representation for new construction purchases from builders like Toll Brothers, Lennar, and Century Communities—the builder pays the commission, not you.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the current Las Vegas real estate market like in 2026?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, the Las Vegas median home price is $450,000 (+4.2% YoY), with homes selling in an average of 28 days. Henderson's median is slightly higher at $485,000. The market remains competitive but balanced.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is Providence, Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Providence is a master-planned community in Las Vegas with 27 neighborhoods and more than 5,600 homes. Each neighborhood has its own amenities. Residents enjoy three community parks: The Promenade, Knickerbocker Park, and Huckleberry Park. The Providence Master HOA manages the community.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Where can I find HOA and resale information for Providence?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The official Providence Master HOA website at providencelvhoa.com has Design Review, Realtors/Resale, Community Info, and Documents. HOA assessments are due Jan 1, Apr 1, Jul 1, and Oct 1. Dr. Jan Duffy can help you buy or sell in any Providence neighborhood.",
-      },
-    },
-  ],
-};
+// RealEstateAgent schema is provided site-wide in root layout (SchemaScript)
+// Do not duplicate - causes GSC "missing itemReviewed" errors
 
 export default function Home() {
+  const homeFAQs = getFAQsForPage("home");
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={homeFAQs} />
       <Navbar />
       <main>
         <HeroSection />
@@ -318,38 +233,7 @@ export default function Home() {
         <FAQSection
           title="Frequently Asked Questions About Providence Las Vegas Real Estate"
           subtitle="Common questions about buying, selling, and living in Providence Las Vegas"
-          faqs={[
-            {
-              question: "What is Providence Las Vegas?",
-              answer:
-                "Providence is a master-planned community in Las Vegas with 27 neighborhoods and more than 5,600 homes. Each neighborhood has its own amenities. Residents enjoy three community parks: The Promenade, Knickerbocker Park, and Huckleberry Park. The Providence Master HOA manages the community.",
-            },
-            {
-              question: "Where can I find homes for sale in Providence Las Vegas?",
-              answer:
-                "Dr. Jan Duffy lists Providence Las Vegas homes for sale through Berkshire Hathaway HomeServices Nevada Properties and the MLS. You can search Providence neighborhoods—including Oxford Commons, Saratoga Highlands, and all 27 communities—on this site or call (702) 500-1942 for personalized listings.",
-            },
-            {
-              question: "How do I get HOA or resale information for Providence?",
-              answer:
-                "The official Providence Master HOA website (providencelvhoa.com) has Design Review, Realtors/Resale, Community Info, and Documents. HOA assessments are due Jan 1, Apr 1, Jul 1, and Oct 1. Dr. Jan Duffy can also guide you through buying or selling in any Providence neighborhood.",
-            },
-            {
-              question: "Why use a Berkshire Hathaway HomeServices agent in Providence Las Vegas?",
-              answer:
-                "Berkshire Hathaway HomeServices is backed by Warren Buffett's Berkshire Hathaway Inc.—unmatched trust and a global network. Dr. Jan Duffy has served Las Vegas since 2008 with $127M+ in closed transactions and knows Providence Las Vegas inside and out.",
-            },
-            {
-              question: "What are the community parks in Providence Las Vegas?",
-              answer:
-                "Providence has three community parks: The Promenade (linear walking park and playground), Knickerbocker Park (multigenerational park with skyline views, ball field, splash pad, dog parks), and Huckleberry Park (basketball, tennis, pickleball, playgrounds, splash pad, dog parks).",
-            },
-            {
-              question: "How do I contact Dr. Jan Duffy for Providence Las Vegas real estate?",
-              answer:
-                "Call (702) 500-1942 or use the contact form on this site. Office: 7181 N Hualapai Way #135, Las Vegas, NV 89166. Dr. Jan Duffy, License S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties.",
-            },
-          ]}
+          faqs={homeFAQs}
         />
 
         {/* CTA Section */}

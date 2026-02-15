@@ -304,8 +304,17 @@ export function generateAggregateRatingSchema(
   };
 }
 
+/** itemReviewed reference for Review schemas (required by Google) */
+const itemReviewedRef = {
+  "@type": "RealEstateAgent" as const,
+  "@id": `${BASE_URL}#organization`,
+  name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+  url: BASE_URL,
+};
+
 /**
  * Generate Review schema for individual testimonials
+ * Each Review must include itemReviewed per Google's structured data requirements
  */
 export function generateReviewSchema(reviews: ReviewItem[]) {
   return {
@@ -313,12 +322,14 @@ export function generateReviewSchema(reviews: ReviewItem[]) {
     "@type": "RealEstateAgent",
     "@id": `${BASE_URL}#organization`,
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+    url: BASE_URL,
     aggregateRating: generateAggregateRatingSchema(
       agentStats.averageRating,
       agentStats.reviewCount
     ),
     review: reviews.map((review) => ({
       "@type": "Review",
+      itemReviewed: itemReviewedRef,
       author: {
         "@type": "Person",
         name: review.author,

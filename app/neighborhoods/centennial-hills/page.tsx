@@ -1,9 +1,12 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Mountain, Users, ShoppingBag, Home as HomeIcon } from "lucide-react";
 import type { Metadata } from "next";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices Centennial Hills | Las Vegas Homes",
@@ -18,52 +21,12 @@ export const metadata: Metadata = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the current median home price in Centennial Hills?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, Centennial Hills' median home price is $495,000, up 4.8% year-over-year. Prices range from $380,000 for smaller homes to over $900,000 for larger properties with mountain views.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is Centennial Hills a good family neighborhood?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, Centennial Hills is one of Las Vegas's best family neighborhoods with highly-rated schools, safe streets, multiple parks including Centennial Hills Park, and convenient shopping at Centennial Center.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How far is Centennial Hills from the Las Vegas Strip?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Centennial Hills is approximately 20-25 minutes from the Strip via US-95. The community offers easy freeway access while maintaining a suburban, family-oriented atmosphere away from tourist areas.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What shopping and amenities are near Centennial Hills?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Centennial Center provides extensive shopping, dining, and entertainment including Target, Costco, and numerous restaurants. Downtown Summerlin is also easily accessible for additional retail and entertainment options.",
-      },
-    },
-  ],
-};
-
 export default function CentennialHillsPage() {
+  const centennialHillsFAQs = getFAQsForPage("centennial-hills");
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={centennialHillsFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -319,53 +282,11 @@ export default function CentennialHillsPage() {
           </section>
 
           {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About Centennial Hills
-            </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What is the current median home price in Centennial Hills?
-                </h3>
-                <p className="text-slate-600">
-                  As of January 2026, Centennial Hills' median home price is $495,000, up 4.8%
-                  year-over-year. Prices range from $380,000 for smaller homes to over $900,000
-                  for larger properties with mountain views.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Is Centennial Hills a good family neighborhood?
-                </h3>
-                <p className="text-slate-600">
-                  Yes, Centennial Hills is one of Las Vegas's best family neighborhoods with
-                  highly-rated schools, safe streets, multiple parks including Centennial Hills
-                  Park, and convenient shopping at Centennial Center.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How far is Centennial Hills from the Las Vegas Strip?
-                </h3>
-                <p className="text-slate-600">
-                  Centennial Hills is approximately 20-25 minutes from the Strip via US-95.
-                  The community offers easy freeway access while maintaining a suburban,
-                  family-oriented atmosphere away from tourist areas.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What shopping and amenities are near Centennial Hills?
-                </h3>
-                <p className="text-slate-600">
-                  Centennial Center provides extensive shopping, dining, and entertainment
-                  including Target, Costco, and numerous restaurants. Downtown Summerlin is
-                  also easily accessible for additional retail and entertainment options.
-                </p>
-              </div>
-            </div>
-          </section>
+          <FAQSection
+            faqs={centennialHillsFAQs}
+            title="Frequently Asked Questions About Centennial Hills"
+            subtitle="Common questions about family living in northwest Las Vegas"
+          />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

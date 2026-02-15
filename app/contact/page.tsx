@@ -1,10 +1,13 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import { Phone, Mail, MapPin, Clock, Calendar, CheckCircle, Star, Users, Shield } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Calendar, Star, Users, Shield } from "lucide-react";
 import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Contact Dr. Jan Duffy | Providence Las Vegas Real Estate | BHHS Nevada Properties",
@@ -39,12 +42,15 @@ const contactSchema = {
 };
 
 export default function ContactPage() {
+  const contactFAQs = getFAQsForPage("contact");
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
       />
+      <FAQSchema faqs={contactFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -286,36 +292,11 @@ export default function ContactPage() {
           </section>
 
           {/* FAQ Section */}
-          <section className="max-w-4xl mx-auto mt-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions
-            </h2>
-            <div className="space-y-4">
-              {[
-                {
-                  q: "What should I expect during my first consultation?",
-                  a: "Your consultation is a no-pressure conversation about your real estate goals. We'll discuss your timeline, budget, preferences, and answer any questions you have about the Las Vegas market. Whether you're buying, selling, or exploring options, I'll provide honest guidance tailored to your situation.",
-                },
-                {
-                  q: "Do I need to be pre-approved before scheduling a showing?",
-                  a: "For buyers, having a pre-approval letter strengthens your position, but it's not required for an initial consultation. I can connect you with trusted local lenders during our first meeting if you haven't started the financing process yet.",
-                },
-                {
-                  q: "How quickly can you respond to inquiries?",
-                  a: "I typically respond to calls, texts, and emails within 2 hours during business hours (9am-6pm daily). For urgent matters, calling or texting (702) 500-1942 is the fastest way to reach me.",
-                },
-                {
-                  q: "Do you charge for consultations?",
-                  a: "No. Initial consultations are always free and without obligation. Whether you're ready to move forward or just exploring your options, there's never any pressure.",
-                },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          <FAQSection
+            faqs={contactFAQs}
+            title="Frequently Asked Questions"
+            subtitle="Common questions about contacting Dr. Jan Duffy for Providence Las Vegas real estate"
+          />
         </div>
 
         {/* Last Updated */}

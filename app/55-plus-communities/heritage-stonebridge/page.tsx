@@ -16,6 +16,9 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 const breadcrumbs = generateBreadcrumbSchema([
   { name: "Home", url: "/" },
@@ -63,9 +66,12 @@ const communitySchema = {
 };
 
 export default function HeritageAtStonebridgePage() {
+  const heritageStonebridgeFAQs = getFAQsForPage("heritage-stonebridge");
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <FAQSchema faqs={heritageStonebridgeFAQs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(communitySchema) }}
@@ -393,6 +399,13 @@ export default function HeritageAtStonebridgePage() {
               </cite>
             </div>
           </section>
+
+          {/* FAQ */}
+          <FAQSection
+            faqs={heritageStonebridgeFAQs}
+            title="Heritage at Stonebridge FAQs"
+            subtitle="Common questions about guard-gated 55+ living in Summerlin"
+          />
 
           {/* CTA */}
           <section className="text-center bg-purple-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

@@ -19,18 +19,9 @@ import {
   Globe,
 } from "lucide-react";
 import type { Metadata } from "next";
-import { generateFAQSchema } from "@/lib/schema";
-
-const relocationFaqs = [
-  { question: "Can you help me find a home before I move?", answer: "Absolutely. Dr. Jan provides virtual tours, video walkthroughs, and detailed neighborhood analysis so you can purchase confidently before relocating. Many clients buy their Las Vegas home without ever visiting in person until closing day." },
-  { question: "What are the best areas for families relocating to Las Vegas?", answer: "Summerlin, Henderson (especially Green Valley and Inspirada), and Skye Canyon consistently rank highest for families due to excellent schools, low crime, and family-friendly amenities. Dr. Jan can match you with the right area based on your specific priorities—schools, commute, budget, and lifestyle." },
-  { question: "How does the cost of living compare to California?", answer: "Las Vegas costs about 30-40% less than LA/Orange County and 50%+ less than San Francisco. The biggest savings come from no state income tax (California charges up to 13.3%) and significantly lower housing costs. A family earning $200K in California could save $20,000+ annually just in state taxes." },
-  { question: "Do you help coordinate the sale of my current home too?", answer: "Yes! Through the BHHS referral network, Dr. Jan can connect you with a trusted agent in your current city. This coordination ensures both transactions stay on track with synchronized timelines for a seamless transition." },
-  { question: "What's the job market like in Las Vegas?", answer: "Las Vegas has diversified beyond gaming and hospitality. Major growth sectors include healthcare (Intermountain Health, UMC), technology (Switch, various startups), sports (Raiders, Golden Knights, Aces), logistics (Amazon), and professional services. The economy is growing faster than the national average." },
-  { question: "Is Las Vegas safe for families?", answer: "Yes, particularly in the suburban communities. Henderson consistently ranks as one of America's safest cities. Summerlin, Green Valley, and Inspirada also have very low crime rates. Dr. Jan can provide detailed crime statistics for any neighborhood you're considering." },
-];
-
-const relocationFaqSchema = generateFAQSchema(relocationFaqs);
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Relocating to Las Vegas | Berkshire Hathaway HomeServices",
@@ -116,9 +107,11 @@ const relocationServices = [
 ];
 
 export default function RelocationPage() {
+  const relocationFAQs = getFAQsForPage("relocation");
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(relocationFaqSchema) }} />
+      <FAQSchema faqs={relocationFAQs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(relocationSchema) }}
@@ -387,23 +380,11 @@ export default function RelocationPage() {
           </section>
 
           {/* FAQ */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Relocation Frequently Asked Questions
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Moving to a new city raises many questions. Here are answers to the most common 
-              concerns from people relocating to Las Vegas.
-            </p>
-            <div className="space-y-4">
-              {relocationFaqs.map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.question}</h3>
-                  <p className="text-slate-600">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          <FAQSection
+            faqs={relocationFAQs}
+            title="Relocation Frequently Asked Questions"
+            subtitle="Moving to a new city raises many questions. Here are answers to the most common concerns from people relocating to Las Vegas."
+          />
 
           {/* CTA */}
           <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

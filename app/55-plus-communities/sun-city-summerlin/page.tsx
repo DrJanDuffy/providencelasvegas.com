@@ -16,6 +16,9 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 const breadcrumbs = generateBreadcrumbSchema([
   { name: "Home", url: "/" },
@@ -55,9 +58,12 @@ const communitySchema = {
 };
 
 export default function SunCitySummerlinPage() {
+  const sunCitySummerlinFAQs = getFAQsForPage("sun-city-summerlin");
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <FAQSchema faqs={sunCitySummerlinFAQs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(communitySchema) }}
@@ -289,6 +295,13 @@ export default function SunCitySummerlinPage() {
               </cite>
             </div>
           </section>
+
+          {/* FAQ */}
+          <FAQSection
+            faqs={sunCitySummerlinFAQs}
+            title="Sun City Summerlin FAQs"
+            subtitle="Common questions about Nevada's largest 55+ community"
+          />
 
           {/* CTA */}
           <section className="text-center bg-amber-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

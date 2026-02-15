@@ -13,6 +13,9 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 const breadcrumbs = generateBreadcrumbSchema([
   { name: "Home", url: "/" },
@@ -34,9 +37,12 @@ export const metadata: Metadata = {
 };
 
 export default function DelWebbLakeLasVegasPage() {
+  const delWebbFAQs = getFAQsForPage("del-webb-lake-las-vegas");
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <FAQSchema faqs={delWebbFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -264,6 +270,13 @@ export default function DelWebbLakeLasVegasPage() {
               </cite>
             </div>
           </section>
+
+          {/* FAQ */}
+          <FAQSection
+            faqs={delWebbFAQs}
+            title="Del Webb at Lake Las Vegas FAQs"
+            subtitle="Common questions about lakefront 55+ living"
+          />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

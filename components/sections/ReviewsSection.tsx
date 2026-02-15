@@ -3,6 +3,9 @@
 import { Star, Quote } from "lucide-react";
 import Image from "next/image";
 
+const ITEM_REVIEWED_NAME = "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties";
+const ITEM_REVIEWED_URL = "https://www.providencelasvegas.com";
+
 export interface Review {
   id: number;
   name: string;
@@ -111,6 +114,11 @@ export default function ReviewsSection({
               itemScope
               itemType="https://schema.org/Review"
             >
+              {/* itemReviewed required by Google - hidden for accessibility */}
+              <span itemProp="itemReviewed" itemScope itemType="https://schema.org/RealEstateAgent" className="sr-only">
+                <meta itemProp="name" content={ITEM_REVIEWED_NAME} />
+                <link itemProp="url" href={ITEM_REVIEWED_URL} />
+              </span>
               <div className="flex items-center mb-4">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4 flex-shrink-0">
                   {review.image ? (

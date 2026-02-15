@@ -14,6 +14,9 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const revalidate = 86400;
 
@@ -55,12 +58,15 @@ const articleSchema = {
 };
 
 export default function MarketUpdatePage() {
+  const marketUpdateFAQs = getFAQsForPage("market-update");
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      <FAQSchema faqs={marketUpdateFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -376,6 +382,13 @@ export default function MarketUpdatePage() {
               </table>
             </div>
           </section>
+
+          {/* FAQ */}
+          <FAQSection
+            faqs={marketUpdateFAQs}
+            title="Market Update FAQs"
+            subtitle="Common questions about the latest Las Vegas real estate market"
+          />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

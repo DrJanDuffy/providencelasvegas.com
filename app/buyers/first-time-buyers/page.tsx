@@ -1,5 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -17,6 +19,7 @@ import {
   HelpCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "First-Time Home Buyers Las Vegas | Berkshire Hathaway HomeServices",
@@ -32,52 +35,12 @@ export const metadata: Metadata = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much down payment do I need for my first home in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Down payment requirements vary by loan type: FHA loans require 3.5% down, conventional loans can be as low as 3%, VA loans require 0% down for eligible veterans, and Nevada down payment assistance programs can provide up to $15,000 for qualified buyers.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the FHA loan limit in Las Vegas for 2026?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The 2026 FHA loan limit for Las Vegas (Clark County) is $498,257 for a single-family home. This allows first-time buyers to purchase homes up to approximately $515,000 with 3.5% down.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What neighborhoods are best for first-time buyers in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Top neighborhoods for first-time buyers include North Las Vegas ($350K-$450K), Mountains Edge ($380K-$480K), and Centennial Hills ($398K median). These areas offer new construction options, good schools, and strong appreciation potential.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are there builder incentives for first-time buyers?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes! Las Vegas builders currently offer significant incentives: closing cost credits up to 6%, rate buydowns as low as 4.99%, and upgrade packages worth $15K-$50K. These incentives can make new construction more affordable than resale homes.",
-      },
-    },
-  ],
-};
-
 export default function FirstTimeBuyersPage() {
+  const firstTimeBuyersFAQs = getFAQsForPage("buyers/first-time-buyers");
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={firstTimeBuyersFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -425,57 +388,11 @@ export default function FirstTimeBuyersPage() {
           </section>
 
           {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              First-Time Buyer FAQs
-            </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  How much down payment do I need?
-                </h3>
-                <p className="text-slate-600">
-                  Down payment requirements vary: FHA loans require 3.5%, conventional can be as low as
-                  3%, VA loans require 0% for eligible veterans. Nevada assistance programs can provide
-                  up to $15,000 for qualified buyers.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  What credit score do I need?
-                </h3>
-                <p className="text-slate-600">
-                  FHA loans accept scores as low as 580 (3.5% down) or 500 (10% down). Conventional loans
-                  typically require 620+. Better scores mean better rates. Dr. Jan can connect you with
-                  lenders who work with all credit situations.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Do I pay for Dr. Jan's services as a buyer?
-                </h3>
-                <p className="text-slate-600">
-                  No! Buyer's agent services are typically free to buyers—the seller pays the commission.
-                  You get full professional representation from Berkshire Hathaway HomeServices at no
-                  cost to you.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Should I buy new construction or resale?
-                </h3>
-                <p className="text-slate-600">
-                  Both have advantages. New construction offers modern features, warranties, and current
-                  builder incentives. Resales may have established landscaping and lower HOA dues.
-                  Dr. Jan helps you weigh options based on your specific situation.
-                </p>
-              </div>
-            </div>
-          </section>
+          <FAQSection
+            faqs={firstTimeBuyersFAQs}
+            title="First-Time Buyer FAQs"
+            subtitle="Common questions about buying your first home in Las Vegas"
+          />
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">

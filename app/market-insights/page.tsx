@@ -15,6 +15,9 @@ import {
   CheckCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Las Vegas Real Estate Market Insights 2026 | Berkshire Hathaway HomeServices",
@@ -47,12 +50,15 @@ const reportSchema = {
 };
 
 export default function MarketInsightsPage() {
+  const marketInsightsFAQs = getFAQsForPage("market-insights");
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }}
       />
+      <FAQSchema faqs={marketInsightsFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -420,6 +426,13 @@ export default function MarketInsightsPage() {
               </cite>
             </div>
           </section>
+
+          {/* FAQ */}
+          <FAQSection
+            faqs={marketInsightsFAQs}
+            title="Market Insights FAQs"
+            subtitle="Common questions about Las Vegas real estate trends and forecasts"
+          />
 
           {/* CTA */}
           <section className="text-center bg-purple-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

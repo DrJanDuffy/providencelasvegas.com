@@ -1,9 +1,12 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, Mountain, TreePine, DollarSign, Home as HomeIcon } from "lucide-react";
 import type { Metadata } from "next";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices Mountains Edge | Southwest Las Vegas",
@@ -18,52 +21,12 @@ export const metadata: Metadata = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the current median home price in Mountains Edge?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, Mountains Edge's median home price is $475,000, up 4.5% year-over-year. Prices range from $380,000 for smaller homes to over $750,000 for larger properties with mountain and Strip views.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What makes Mountains Edge different from other Las Vegas communities?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Mountains Edge offers the largest park in the Las Vegas Valley—the 120-acre Exploration Peak Park with stunning views—plus master-planned amenities at prices below Summerlin or Henderson. It's ideal for buyers seeking value without sacrificing lifestyle.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How is the commute from Mountains Edge?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Mountains Edge provides easy access to I-215 and I-15, making commutes to the Strip (15-20 minutes), airport (20 minutes), and Henderson (25 minutes) straightforward. The southwest location offers multiple route options.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is new construction available in Mountains Edge?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, several builders offer new construction in Mountains Edge's expanding areas. BHHS provides free buyer representation on new construction purchases, helping buyers navigate builder contracts and negotiate upgrades.",
-      },
-    },
-  ],
-};
-
 export default function MountainsEdgePage() {
+  const mountainsEdgeFAQs = getFAQsForPage("mountains-edge");
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={mountainsEdgeFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -316,54 +279,11 @@ export default function MountainsEdgePage() {
           </section>
 
           {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About Mountains Edge
-            </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What is the current median home price in Mountains Edge?
-                </h3>
-                <p className="text-slate-600">
-                  As of January 2026, Mountains Edge's median home price is $475,000, up 4.5%
-                  year-over-year. Prices range from $380,000 for smaller homes to over $750,000
-                  for larger properties with mountain and Strip views.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What makes Mountains Edge different from other Las Vegas communities?
-                </h3>
-                <p className="text-slate-600">
-                  Mountains Edge offers the largest park in the Las Vegas Valley—the 120-acre
-                  Exploration Peak Park with stunning views—plus master-planned amenities at prices
-                  below Summerlin or Henderson. It's ideal for buyers seeking value without
-                  sacrificing lifestyle.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How is the commute from Mountains Edge?
-                </h3>
-                <p className="text-slate-600">
-                  Mountains Edge provides easy access to I-215 and I-15, making commutes to the
-                  Strip (15-20 minutes), airport (20 minutes), and Henderson (25 minutes)
-                  straightforward. The southwest location offers multiple route options.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Is new construction available in Mountains Edge?
-                </h3>
-                <p className="text-slate-600">
-                  Yes, several builders offer new construction in Mountains Edge's expanding areas.
-                  BHHS provides free buyer representation on new construction purchases, helping
-                  buyers navigate builder contracts and negotiate upgrades.
-                </p>
-              </div>
-            </div>
-          </section>
+          <FAQSection
+            faqs={mountainsEdgeFAQs}
+            title="Frequently Asked Questions About Mountains Edge"
+            subtitle="Common questions about affordable southwest Las Vegas living"
+          />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

@@ -18,6 +18,9 @@ import {
   HelpCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices New Construction Las Vegas | Buyer's Guide",
@@ -31,61 +34,6 @@ export const metadata: Metadata = {
     "Toll Brothers Las Vegas",
     "Lennar Las Vegas",
     "KB Home Las Vegas",
-  ],
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is buyer representation really free for new construction?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, 100% free to buyers. The builder pays the buyer's agent commission (typically 2-3%) as part of their marketing budget. You pay nothing extra, and you get professional representation to protect your interests.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Why do I need an agent when buying new construction?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Builder sales reps work for the builder, not you. A BHHS agent reviews contracts (often 50+ pages), negotiates upgrades and incentives, monitors construction quality, and ensures deadlines are met. Without representation, you're negotiating against experienced professionals alone.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I have to register Dr. Jan Duffy as my agent on the first visit?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, most builders require your agent to accompany you or be registered on your FIRST visit. If you visit alone and sign the guest registry, you may forfeit your right to free representation. Call (702) 500-1942 to register Dr. Jan Duffy as your buyer's agent before visiting any model home.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What builder incentives are currently available?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, builders are offering 4-6% toward closing costs, rate buydowns (some as low as 4.99%), free upgrades ($15K-$50K value), and appliance packages. Incentives change monthly. Dr. Jan tracks current offers across all builders.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I negotiate on new construction pricing?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Base prices are typically firm, but everything else is negotiable—upgrades, lot premiums, closing costs, and design center selections. A BHHS agent knows which builders negotiate and how to maximize your leverage, especially on standing inventory.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Should I use the builder's preferred lender?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Builder lenders often offer significant incentives ($10K-$30K) to use their services. Dr. Jan helps you compare: sometimes the incentive outweighs slightly higher rates, sometimes it doesn't. We ensure you make an informed decision.",
-      },
-    },
   ],
 };
 
@@ -229,12 +177,11 @@ const builders = [
 ];
 
 export default function NewConstructionPage() {
+  const newConstructionFAQs = getFAQsForPage("new-construction");
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={newConstructionFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -551,85 +498,11 @@ export default function NewConstructionPage() {
           </section>
 
           {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              New Construction FAQs
-            </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Is buyer representation really free for new construction?
-                </h3>
-                <p className="text-slate-600">
-                  Yes, 100% free to buyers. The builder pays the buyer's agent commission (typically
-                  2-3%) as part of their marketing budget. You pay nothing extra, and you get
-                  professional representation to protect your interests.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Why do I need an agent when buying new construction?
-                </h3>
-                <p className="text-slate-600">
-                  Builder sales reps work for the builder, not you. A BHHS agent reviews contracts
-                  (often 50+ pages), negotiates upgrades and incentives, monitors construction
-                  quality, and ensures deadlines are met. Without representation, you're negotiating
-                  against experienced professionals alone.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Do I have to register Dr. Jan Duffy as my agent on the first visit?
-                </h3>
-                <p className="text-slate-600">
-                  Yes, most builders require your agent to accompany you or be registered on your
-                  FIRST visit. If you visit alone and sign the guest registry, you may forfeit your
-                  right to free representation. Call{" "}
-                  <a href="tel:+17025001942" className="text-blue-600 font-semibold hover:underline">
-                    (702) 500-1942
-                  </a>{" "}
-                  to register Dr. Jan Duffy as your buyer's agent before visiting any model home.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  What builder incentives are currently available?
-                </h3>
-                <p className="text-slate-600">
-                  As of January 2026, builders are offering 4-6% toward closing costs, rate buydowns
-                  (some as low as 4.99%), free upgrades ($15K-$50K value), and appliance packages.
-                  Incentives change monthly. Dr. Jan tracks current offers across all builders.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Can I negotiate on new construction pricing?
-                </h3>
-                <p className="text-slate-600">
-                  Base prices are typically firm, but everything else is negotiable—upgrades, lot
-                  premiums, closing costs, and design center selections. A BHHS agent knows which
-                  builders negotiate and how to maximize your leverage, especially on standing
-                  inventory.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Should I use the builder's preferred lender?
-                </h3>
-                <p className="text-slate-600">
-                  Builder lenders often offer significant incentives ($10K-$30K) to use their
-                  services. Dr. Jan helps you compare: sometimes the incentive outweighs slightly
-                  higher rates, sometimes it doesn't. We ensure you make an informed decision.
-                </p>
-              </div>
-            </div>
-          </section>
+          <FAQSection
+            faqs={newConstructionFAQs}
+            title="New Construction FAQs"
+            subtitle="Common questions about buying new construction homes in Las Vegas"
+          />
 
           {/* What We Negotiate */}
           <section className="mb-16 max-w-5xl mx-auto">

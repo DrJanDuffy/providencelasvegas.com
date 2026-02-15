@@ -4,16 +4,9 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, TrendingUp, DollarSign, Building, BarChart, CheckCircle, Calculator } from "lucide-react";
 import type { Metadata } from "next";
-import { generateFAQSchema } from "@/lib/schema";
-
-const investmentFaqs = [
-  { question: "What returns can I expect from Las Vegas rental property?", answer: "Typical cap rates range from 4-6%, with appreciation adding another 4-5% annually in recent years. Total returns of 8-10% are achievable in the right neighborhoods. Dr. Jan provides detailed ROI analysis on any property you're considering." },
-  { question: "Do you help out-of-state investors?", answer: "Yes! Many of Dr. Jan's investment clients are out-of-state buyers. She provides video tours, detailed market analysis, and coordinates with property managers so you can invest remotely with confidence." },
-  { question: "Can you help with 1031 exchanges?", answer: "Absolutely. Dr. Jan works with qualified intermediaries and can help identify replacement properties within the 45-day identification window. Berkshire Hathaway's nationwide network is particularly valuable for exchanging into or out of Las Vegas." },
-  { question: "What's the best area for investment properties?", answer: "It depends on your strategy. North Las Vegas offers the best cap rates, while Summerlin provides stronger appreciation. Henderson balances both. Dr. Jan analyzes your goals to recommend the right areas." },
-];
-
-const investmentFaqSchema = generateFAQSchema(investmentFaqs);
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Las Vegas Investment Properties | Berkshire Hathaway HomeServices",
@@ -75,9 +68,11 @@ const investmentAreas = [
 ];
 
 export default function InvestmentPropertiesPage() {
+  const investmentFAQs = getFAQsForPage("investment-properties");
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(investmentFaqSchema) }} />
+      <FAQSchema faqs={investmentFAQs} />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -406,19 +401,11 @@ export default function InvestmentPropertiesPage() {
           </section>
 
           {/* FAQ */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Investment Property FAQs
-            </h2>
-            <div className="space-y-4">
-              {investmentFaqs.map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.question}</h3>
-                  <p className="text-slate-600">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          <FAQSection
+            faqs={investmentFAQs}
+            title="Investment Property FAQs"
+            subtitle="Common questions about Las Vegas real estate investing"
+          />
 
           {/* CTA */}
           <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

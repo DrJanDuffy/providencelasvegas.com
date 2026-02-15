@@ -133,8 +133,15 @@ export function ReviewSchema({
   }
 
   if (reviews && reviews.length > 0) {
+    const itemReviewed = {
+      "@type": "RealEstateAgent",
+      "@id": "https://www.providencelasvegas.com#organization",
+      name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+      url: "https://www.providencelasvegas.com",
+    };
     schema.review = reviews.map((review) => ({
       "@type": "Review",
+      itemReviewed,
       author: {
         "@type": "Person",
         name: review.author,
