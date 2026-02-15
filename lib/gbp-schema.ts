@@ -12,8 +12,8 @@ export const businessInfo = {
     addressCountry: "US",
   },
   phone: {
-    display: "(702) 919-7702",
-    tel: "+17029197702",
+    display: "(702) 744-2993",
+    tel: "+17027442993",
   },
   email: "DrDuffy@ProvidenceLasVegas.com",
   url: "https://www.providencelasvegas.com",
@@ -183,7 +183,7 @@ Dr. Jan's approach is simple: treat every client like family, know the market in
 
 55+ active adult community specialization covers Sun City Summerlin (Nevada's largest 55+ community), Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Investment property expertise spans single-family rentals, multi-family opportunities, and short-term rental analysis across the Las Vegas metro area.
 
-Office located at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Available Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm. Call (702) 919-7702 for a free consultation or visit www.providencelasvegas.com to start your Las Vegas real estate journey today.`,
+Office located at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Available Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm. Call (702) 744-2993 for a free consultation or visit www.providencelasvegas.com to start your Las Vegas real estate journey today.`,
 };
 
 // FAQ Schema for GBP Q&A section
@@ -194,7 +194,7 @@ export const gbpFAQs = [
   },
   {
     question: "Does Dr. Jan help buyers relocating from California?",
-    answer: "Yes! California relocation is a specialty. Dr. Jan helps CA buyers understand Nevada's 0% state income tax advantage, compare home values (40-60% lower than comparable CA properties), and find the perfect Las Vegas neighborhood. Call (702) 919-7702 for California relocation assistance.",
+    answer: "Yes! California relocation is a specialty. Dr. Jan helps CA buyers understand Nevada's 0% state income tax advantage, compare home values (40-60% lower than comparable CA properties), and find the perfect Las Vegas neighborhood. Call (702) 744-2993 for California relocation assistance.",
   },
   {
     question: "What 55+ communities does Dr. Jan specialize in?",
@@ -206,7 +206,7 @@ export const gbpFAQs = [
   },
   {
     question: "How does Dr. Jan help with probate or divorce real estate sales?",
-    answer: "Dr. Jan handles sensitive transactions with discretion and professionalism. For probate sales, she coordinates with estate attorneys and ensures court compliance. For divorce sales, she provides neutral representation and works with both parties' attorneys. Call (702) 919-7702 for a confidential consultation.",
+    answer: "Dr. Jan handles sensitive transactions with discretion and professionalism. For probate sales, she coordinates with estate attorneys and ensures court compliance. For divorce sales, she provides neutral representation and works with both parties' attorneys. Call (702) 744-2993 for a confidential consultation.",
   },
   {
     question: "What is the average home price in Las Vegas in 2026?",
@@ -222,11 +222,11 @@ export const gbpFAQs = [
   },
   {
     question: "How do I schedule a consultation with Dr. Jan Duffy?",
-    answer: "Call or text (702) 919-7702 for immediate assistance, or email DrDuffy@ProvidenceLasVegas.com. Office visits available at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm.",
+    answer: "Call or text (702) 744-2993 for immediate assistance, or email DrDuffy@ProvidenceLasVegas.com. Office visits available at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm.",
   },
   {
     question: "Does Dr. Jan help with investment properties in Las Vegas?",
-    answer: "Yes! Dr. Jan provides investment property consulting including rental property analysis, cap rate calculations, short-term rental regulations, and multi-family opportunities across the Las Vegas Valley. Contact (702) 919-7702 for investment property guidance.",
+    answer: "Yes! Dr. Jan provides investment property consulting including rental property analysis, cap rate calculations, short-term rental regulations, and multi-family opportunities across the Las Vegas Valley. Contact (702) 744-2993 for investment property guidance.",
   },
 ];
 

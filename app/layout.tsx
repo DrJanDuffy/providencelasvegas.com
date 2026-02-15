@@ -24,7 +24,7 @@ import {
 
 const title = "Providence Real Estate | Homes for Sale in Providence Las Vegas";
 const description =
-  "Providence Real Estate. Homes for sale in Providence Las Vegas and North Las Vegas. Real Estate Agency serving Providence, NV 89166. Call (702) 919-7702.";
+  "Providence Real Estate. Homes for sale in Providence Las Vegas and North Las Vegas. Real Estate Agency serving Providence, NV 89166. Call (702) 744-2993.";
 const url = "https://www.providencelasvegas.com";
 
 export const metadata: Metadata = {

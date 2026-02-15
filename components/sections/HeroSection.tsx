@@ -53,7 +53,7 @@ export default function HeroSection() {
           Homes for Sale in Providence Las Vegas
         </h1>
         <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl">
-          Providence Real Estate serves Providence and North Las Vegas, NV 89166. Buy or sell with expert local guidance. Call (702) 919-7702.
+          Providence Real Estate serves Providence and North Las Vegas, NV 89166. Buy or sell with expert local guidance. Call (702) 744-2993.
         </p>
 
         {/* RealScout Search Widget */}

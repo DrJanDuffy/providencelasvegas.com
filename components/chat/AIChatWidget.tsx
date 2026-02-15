@@ -80,7 +80,7 @@ export default function AIChatWidget() {
       const errorMessage: Message = {
         role: "assistant",
         content:
-          "I'm sorry, I'm having trouble connecting right now. Please try again or contact Dr. Jan Duffy directly at (702) 919-7702.",
+          "I'm sorry, I'm having trouble connecting right now. Please try again or contact Dr. Jan Duffy directly at (702) 744-2993.",
       };
       setMessages((prev) => [...prev, errorMessage]);
     } finally {
@@ -181,7 +181,7 @@ export default function AIChatWidget() {
               </Button>
             </div>
             <p className="text-xs text-slate-500 mt-2 text-center">
-              Powered by AI • Contact: (702) 919-7702
+              Powered by AI • Contact: (702) 744-2993
             </p>
           </div>
         </div>

@@ -40,7 +40,7 @@ export default function NotFound() {
           </Link>
         </div>
         <p className="text-sm text-slate-500 mt-8">
-          Providence Real Estate | (702) 919-7702
+          Providence Real Estate | (702) 744-2993
         </p>
       </div>
     </div>

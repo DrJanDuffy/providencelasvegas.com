@@ -95,7 +95,7 @@ export function generateRealEstateAgentSchema() {
     logo: `${BASE_URL}/agent1.jpg`,
     image: `${BASE_URL}/agent1.jpg`,
     description: siteConfig.description,
-    telephone: "+17029197702",
+    telephone: "+1-702-744-2993",
     email: agentInfo.email,
     priceRange: "$385K - $10M+",
     address: {

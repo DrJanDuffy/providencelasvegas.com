@@ -26,7 +26,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I contact Dr. Jan Duffy at Berkshire Hathaway HomeServices?",
       answer:
-        "You can reach Dr. Jan Duffy at (702) 919-7702 or email DrDuffy@ProvidenceLasVegas.com. Office located at 7181 N Hualapai Way #135, Las Vegas, NV 89166.",
+        "You can reach Dr. Jan Duffy at (702) 744-2993 or email DrDuffy@ProvidenceLasVegas.com. Office located at 7181 N Hualapai Way #135, Las Vegas, NV 89166.",
     },
     {
       question: "Does Berkshire Hathaway HomeServices help with new construction homes?",
@@ -74,7 +74,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How can I schedule a consultation with Dr. Jan Duffy?",
       answer:
-        "Call or text (702) 919-7702 for immediate assistance, or email DrDuffy@ProvidenceLasVegas.com. Office visits are available at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm.",
+        "Call or text (702) 744-2993 for immediate assistance, or email DrDuffy@ProvidenceLasVegas.com. Office visits are available at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm.",
     },
     {
       question: "What neighborhoods does Dr. Jan Duffy specialize in?",
@@ -87,7 +87,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "What is the best way to contact Dr. Jan Duffy?",
       answer:
-        "For immediate assistance, call or text (702) 919-7702. You can also email DrDuffy@ProvidenceLasVegas.com or use the contact form on this site. Dr. Jan typically responds within a few hours during business hours.",
+        "For immediate assistance, call or text (702) 744-2993. You can also email DrDuffy@ProvidenceLasVegas.com or use the contact form on this site. Dr. Jan typically responds within a few hours during business hours.",
     },
     {
       question: "What are Dr. Jan Duffy's office hours?",
@@ -97,7 +97,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "Can I get a free home valuation without visiting the office?",
       answer:
-        "Yes. You can request a free, no-obligation home valuation through the contact form or by calling (702) 919-7702. Dr. Jan uses current MLS data and comparable sales to provide an accurate estimate.",
+        "Yes. You can request a free, no-obligation home valuation through the contact form or by calling (702) 744-2993. Dr. Jan uses current MLS data and comparable sales to provide an accurate estimate.",
     },
     {
       question: "Does Dr. Jan Duffy work with out-of-state buyers?",
@@ -107,7 +107,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How quickly will I hear back after submitting the contact form?",
       answer:
-        "Dr. Jan typically responds to contact form submissions within 24 hours, often same-day during business hours. For urgent inquiries, calling (702) 919-7702 is the fastest option.",
+        "Dr. Jan typically responds to contact form submissions within 24 hours, often same-day during business hours. For urgent inquiries, calling (702) 744-2993 is the fastest option.",
     },
     {
       question: "Is there a fee for an initial consultation?",
@@ -140,7 +140,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I buy or sell a home in Providence?",
       answer:
-        "Dr. Jan Duffy at Berkshire Hathaway HomeServices knows all 27 Providence neighborhoods, the HOA resale process, and Design Review requirements. Call (702) 919-7702 for buyer or seller representation in any Providence community.",
+        "Dr. Jan Duffy at Berkshire Hathaway HomeServices knows all 27 Providence neighborhoods, the HOA resale process, and Design Review requirements. Call (702) 744-2993 for buyer or seller representation in any Providence community.",
     },
     {
       question: "Are there gated neighborhoods in Providence?",
@@ -173,7 +173,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I choose the right Las Vegas neighborhood?",
       answer:
-        "Consider schools, commute, amenities, HOA fees, and lifestyle. Dr. Jan offers neighborhood tours and can match you with communities that fit your budget, needs, and preferences. Call (702) 919-7702 to get started.",
+        "Consider schools, commute, amenities, HOA fees, and lifestyle. Dr. Jan offers neighborhood tours and can match you with communities that fit your budget, needs, and preferences. Call (702) 744-2993 to get started.",
     },
     {
       question: "Are there new construction communities in Las Vegas?",
@@ -203,7 +203,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "Are there homes for sale in {neighborhoodName}?",
       answer:
-        "Yes. Providence Las Vegas homes for sale in {neighborhoodName} are listed on the MLS and through this site. Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties specializes in Providence real estate. Call (702) 919-7702.",
+        "Yes. Providence Las Vegas homes for sale in {neighborhoodName} are listed on the MLS and through this site. Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties specializes in Providence real estate. Call (702) 744-2993.",
     },
     {
       question: "What amenities does {neighborhoodName} offer?",
@@ -213,7 +213,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I contact Dr. Jan Duffy about {neighborhoodName}?",
       answer:
-        "Call (702) 919-7702 or email DrDuffy@ProvidenceLasVegas.com. Dr. Jan offers free consultations and can schedule neighborhood tours, showings, or provide a home valuation for your {neighborhoodName} property.",
+        "Call (702) 744-2993 or email DrDuffy@ProvidenceLasVegas.com. Dr. Jan offers free consultations and can schedule neighborhood tours, showings, or provide a home valuation for your {neighborhoodName} property.",
     },
   ],
 
@@ -242,7 +242,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "What is the Summerlin real estate market like in 2026?",
       answer:
-        "Summerlin remains a strong seller's market with median prices around $625,000. Luxury homes in The Ridges average $2.5M+. Days on market average 22. Dr. Jan provides current market data—call (702) 919-7702.",
+        "Summerlin remains a strong seller's market with median prices around $625,000. Luxury homes in The Ridges average $2.5M+. Days on market average 22. Dr. Jan provides current market data—call (702) 744-2993.",
     },
   ],
 
@@ -255,7 +255,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "What are the best Henderson neighborhoods?",
       answer:
-        "Green Valley, Inspirada, MacDonald Highlands, and Seven Hills are popular. Each offers different amenities and price points. Dr. Jan Duffy knows Henderson inside and out—call (702) 919-7702 for neighborhood guidance.",
+        "Green Valley, Inspirada, MacDonald Highlands, and Seven Hills are popular. Each offers different amenities and price points. Dr. Jan Duffy knows Henderson inside and out—call (702) 744-2993 for neighborhood guidance.",
     },
     {
       question: "Are there 55+ communities in Henderson?",
@@ -293,7 +293,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I find homes for sale in Green Valley?",
       answer:
-        "Search on this site or call (702) 919-7702. Dr. Jan Duffy lists Green Valley homes through Berkshire Hathaway HomeServices and the MLS. She can set up automated alerts for new listings matching your criteria.",
+        "Search on this site or call (702) 744-2993. Dr. Jan Duffy lists Green Valley homes through Berkshire Hathaway HomeServices and the MLS. She can set up automated alerts for new listings matching your criteria.",
     },
   ],
 
@@ -316,7 +316,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I buy a luxury home in The Ridges?",
       answer:
-        "Dr. Jan Duffy has extensive experience with Ridges transactions. She understands the luxury buyer expectations, discretion requirements, and negotiation nuances. Call (702) 919-7702 for a confidential consultation.",
+        "Dr. Jan Duffy has extensive experience with Ridges transactions. She understands the luxury buyer expectations, discretion requirements, and negotiation nuances. Call (702) 744-2993 for a confidential consultation.",
     },
   ],
 
@@ -339,7 +339,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I contact a Southern Highlands real estate expert?",
       answer:
-        "Dr. Jan Duffy specializes in Southern Highlands and luxury Las Vegas real estate. Call (702) 919-7702 for listings, market insight, and representation for buying or selling in Southern Highlands.",
+        "Dr. Jan Duffy specializes in Southern Highlands and luxury Las Vegas real estate. Call (702) 744-2993 for listings, market insight, and representation for buying or selling in Southern Highlands.",
     },
   ],
 
@@ -380,12 +380,12 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "Is there new construction in Skye Canyon?",
       answer:
-        "Yes. Skye Canyon has active new construction from several builders. Dr. Jan Duffy provides free buyer representation for new construction purchases—call (702) 919-7702.",
+        "Yes. Skye Canyon has active new construction from several builders. Dr. Jan Duffy provides free buyer representation for new construction purchases—call (702) 744-2993.",
     },
     {
       question: "How do I find homes for sale in Skye Canyon?",
       answer:
-        "Search on this site or call (702) 919-7702. Dr. Jan knows Skye Canyon well and can show you resale and new construction options. She'll help you navigate builder contracts and negotiations.",
+        "Search on this site or call (702) 744-2993. Dr. Jan knows Skye Canyon well and can show you resale and new construction options. She'll help you navigate builder contracts and negotiations.",
     },
   ],
 
@@ -403,7 +403,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "What is the Centennial Hills real estate market like?",
       answer:
-        "Centennial Hills offers a mix of resale and some newer homes. Prices are generally more affordable than Summerlin. Dr. Jan Duffy provides current market data—call (702) 919-7702.",
+        "Centennial Hills offers a mix of resale and some newer homes. Prices are generally more affordable than Summerlin. Dr. Jan Duffy provides current market data—call (702) 744-2993.",
     },
   ],
 
@@ -426,7 +426,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I contact an Inspirada real estate expert?",
       answer:
-        "Dr. Jan Duffy knows Inspirada and Henderson real estate. Call (702) 919-7702 for listings, new construction options, and neighborhood guidance.",
+        "Dr. Jan Duffy knows Inspirada and Henderson real estate. Call (702) 744-2993 for listings, new construction options, and neighborhood guidance.",
     },
   ],
 
@@ -439,7 +439,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "What is the Mountains Edge real estate market like?",
       answer:
-        "Mountains Edge has a mix of resale and new construction. The area has grown significantly with added shopping and services. Dr. Jan Duffy provides current market data—call (702) 919-7702.",
+        "Mountains Edge has a mix of resale and new construction. The area has grown significantly with added shopping and services. Dr. Jan Duffy provides current market data—call (702) 744-2993.",
     },
     {
       question: "Is Mountains Edge good for families?",
@@ -478,7 +478,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I make an offer on a Las Vegas home?",
       answer:
-        "Dr. Jan prepares a competitive offer based on market data, comparable sales, and your budget. She handles negotiations, inspections, and contingencies. Call (702) 919-7702 to get started.",
+        "Dr. Jan prepares a competitive offer based on market data, comparable sales, and your budget. She handles negotiations, inspections, and contingencies. Call (702) 744-2993 to get started.",
     },
   ],
 
@@ -506,7 +506,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "What's the first step to buying my first home?",
       answer:
-        "Get pre-approved with a lender. Then call (702) 919-7702 to schedule a consultation with Dr. Jan Duffy. She'll discuss your needs, timeline, and neighborhoods—with zero pressure.",
+        "Get pre-approved with a lender. Then call (702) 744-2993 to schedule a consultation with Dr. Jan Duffy. She'll discuss your needs, timeline, and neighborhoods—with zero pressure.",
     },
   ],
 
@@ -534,7 +534,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I get started with my California to Las Vegas move?",
       answer:
-        "Call (702) 919-7702 or email DrDuffy@ProvidenceLasVegas.com. Dr. Jan offers free relocation consultations. She'll discuss neighborhoods, schools, timing, and create a customized plan for your move.",
+        "Call (702) 744-2993 or email DrDuffy@ProvidenceLasVegas.com. Dr. Jan offers free relocation consultations. She'll discuss neighborhoods, schools, timing, and create a customized plan for your move.",
     },
   ],
 
@@ -562,7 +562,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I schedule a luxury home viewing?",
       answer:
-        "Call (702) 919-7702 for a confidential consultation. Dr. Jan specializes in luxury Las Vegas real estate and can show you off-market and MLS listings in The Ridges, Southern Highlands, and beyond.",
+        "Call (702) 744-2993 for a confidential consultation. Dr. Jan specializes in luxury Las Vegas real estate and can show you off-market and MLS listings in The Ridges, Southern Highlands, and beyond.",
     },
   ],
 
@@ -596,7 +596,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I get a free home valuation?",
       answer:
-        "Call (702) 919-7702 or request one through this site. Dr. Jan provides free, no-obligation valuations using current market data. You'll receive a comprehensive analysis with no pressure.",
+        "Call (702) 744-2993 or request one through this site. Dr. Jan provides free, no-obligation valuations using current market data. You'll receive a comprehensive analysis with no pressure.",
     },
   ],
 
@@ -682,7 +682,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "Are there off-market luxury listings?",
       answer:
-        "Yes. Dr. Jan has access to off-market and pocket listings through the Berkshire Hathaway HomeServices network. Call (702) 919-7702 for a confidential discussion of your luxury home search.",
+        "Yes. Dr. Jan has access to off-market and pocket listings through the Berkshire Hathaway HomeServices network. Call (702) 744-2993 for a confidential discussion of your luxury home search.",
     },
   ],
 
@@ -772,7 +772,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "Is now a good time to buy or sell in Las Vegas?",
       answer:
-        "Market conditions change. Dr. Jan provides current data and honest advice. Generally, low inventory favors sellers; balanced markets give buyers more negotiating power. Call (702) 919-7702 for a market consultation.",
+        "Market conditions change. Dr. Jan provides current data and honest advice. Generally, low inventory favors sellers; balanced markets give buyers more negotiating power. Call (702) 744-2993 for a market consultation.",
     },
   ],
 
@@ -793,12 +793,12 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "What's the latest Las Vegas real estate market update?",
       answer:
-        "As of January 2026, the market shows a median of $450K, 28 days on market, and 4,850 active listings. Inventory is at 2.1 months. Dr. Jan provides ongoing market updates—call (702) 919-7702.",
+        "As of January 2026, the market shows a median of $450K, 28 days on market, and 4,850 active listings. Inventory is at 2.1 months. Dr. Jan provides ongoing market updates—call (702) 744-2993.",
     },
     {
       question: "Where can I get current Las Vegas market statistics?",
       answer:
-        "Dr. Jan Duffy provides market reports and insights. You can also check GLVAR (Greater Las Vegas Association of REALTORS) for official MLS statistics. Call (702) 919-7702 for a personalized market briefing.",
+        "Dr. Jan Duffy provides market reports and insights. You can also check GLVAR (Greater Las Vegas Association of REALTORS) for official MLS statistics. Call (702) 744-2993 for a personalized market briefing.",
     },
   ],
 
@@ -827,7 +827,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I choose the right 55+ community?",
       answer:
-        "Consider amenities, location, HOA fees, resale history, and lifestyle fit. Dr. Jan offers community tours and can match you with the right active adult community. Call (702) 919-7702.",
+        "Consider amenities, location, HOA fees, resale history, and lifestyle fit. Dr. Jan offers community tours and can match you with the right active adult community. Call (702) 744-2993.",
     },
   ],
 
@@ -840,7 +840,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "What are home prices in Sun City Summerlin?",
       answer:
-        "Prices vary by model, size, and condition. Dr. Jan provides current Sun City Summerlin market data and free home valuations. Call (702) 919-7702 for listings and price ranges.",
+        "Prices vary by model, size, and condition. Dr. Jan provides current Sun City Summerlin market data and free home valuations. Call (702) 744-2993 for listings and price ranges.",
     },
     {
       question: "What amenities does Sun City Summerlin have?",
@@ -912,7 +912,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I contact Dr. Jan Duffy?",
       answer:
-        "Call (702) 919-7702 or email DrDuffy@ProvidenceLasVegas.com. Office: 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm.",
+        "Call (702) 744-2993 or email DrDuffy@ProvidenceLasVegas.com. Office: 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm.",
     },
   ],
 
@@ -954,12 +954,12 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I search for Las Vegas homes for sale?",
       answer:
-        "Use the property search on this site or visit Dr. Jan's MLS portal. You can filter by price, beds, baths, and neighborhood. Call (702) 919-7702 to set up automated listing alerts.",
+        "Use the property search on this site or visit Dr. Jan's MLS portal. You can filter by price, beds, baths, and neighborhood. Call (702) 744-2993 to set up automated listing alerts.",
     },
     {
       question: "Are the listings on this site current?",
       answer:
-        "Listings are fed from the MLS and update regularly. For the most current information, call (702) 919-7702. Dr. Jan can also show you off-market and coming-soon listings.",
+        "Listings are fed from the MLS and update regularly. For the most current information, call (702) 744-2993. Dr. Jan can also show you off-market and coming-soon listings.",
     },
   ],
 };

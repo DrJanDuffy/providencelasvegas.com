@@ -27,7 +27,7 @@ import { realscoutUrls } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Home Buying Guide Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Looking to buy a home in Las Vegas? Dr. Jan Duffy with Berkshire Hathaway HomeServices Nevada Properties guides you through every step. Free buyer consultation. Call (702) 919-7702.",
+    "Looking to buy a home in Las Vegas? Dr. Jan Duffy with Berkshire Hathaway HomeServices Nevada Properties guides you through every step. Free buyer consultation. Call (702) 744-2993.",
   keywords: [
     "buy home Las Vegas",
     "Las Vegas home buyer",
@@ -46,7 +46,7 @@ const buyerSchema = {
   provider: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    telephone: "+17029197702",
+    telephone: "+17027442993",
   },
   areaServed: "Las Vegas, Henderson, Summerlin, Clark County NV",
   serviceType: "Buyer Representation",
@@ -405,7 +405,7 @@ export default function BuyersPage() {
           <FAQSection
             faqs={buyersFAQs}
             title="Frequently Asked Questions About Buying in Las Vegas"
-            subtitle="Get answers to the most common questions from Las Vegas home buyers. If you don't see your question here, call Dr. Jan Duffy at (702) 919-7702 for a free consultation."
+            subtitle="Get answers to the most common questions from Las Vegas home buyers. If you don't see your question here, call Dr. Jan Duffy at (702) 744-2993 for a free consultation."
           />
 
           {/* CTA */}
@@ -418,11 +418,11 @@ export default function BuyersPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17029197702"
+                href="tel:+17027442993"
                 className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 919-7702
+                Call (702) 744-2993
               </a>
               <Link
                 href="/contact"

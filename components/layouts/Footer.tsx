@@ -190,10 +190,10 @@ export default function Footer() {
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0" />
                 <Link
-                  href="tel:+17029197702"
+                  href="tel:+17027442993"
                   className="text-slate-300 hover:text-white transition-colors text-sm"
                 >
-                  (702) 919-7702
+                  (702) 744-2993
                 </Link>
               </li>
               <li className="flex items-center">
@@ -245,7 +245,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="text-slate-500 text-xs mt-4 text-center">
-            Providence Real Estate | 7181 N Hualapai Way #135, Las Vegas, NV 89166 | (702) 919-7702
+            © 2026 Providence Real Estate. All Rights Reserved. | Serving All 27 Providence Neighborhoods, Las Vegas NV 89166 | Dr. Jan Duffy, Team Leader | License S.0197614.LLC | (702) 744-2993
           </p>
           <p className="text-slate-600 text-xs mt-2 text-center max-w-3xl mx-auto">
             When you work with a Berkshire Hathaway HomeServices agent, you're backed by a name

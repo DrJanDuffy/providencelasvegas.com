@@ -11,7 +11,7 @@ import { getFAQsForPage } from "@/lib/faq-library";
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices Skye Canyon | Northwest Las Vegas",
   description:
-    "Find Skye Canyon homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this premier northwest community. Median price $550K. Call (702) 919-7702.",
+    "Find Skye Canyon homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this premier northwest community. Median price $550K. Call (702) 744-2993.",
   keywords: [
     "Berkshire Hathaway HomeServices Skye Canyon",
     "Skye Canyon homes for sale",
@@ -300,11 +300,11 @@ export default function SkyeCanyonPage() {
               for expert guidance on new construction and resale homes.
             </p>
             <a
-              href="tel:+17029197702"
+              href="tel:+17027442993"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 919-7702
+              Call (702) 744-2993
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties

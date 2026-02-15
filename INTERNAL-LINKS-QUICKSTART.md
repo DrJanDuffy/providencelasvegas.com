@@ -188,4 +188,4 @@ Look at `/app/providence/page.tsx` to see:
 
 ## 📞 Support
 
-Contact: Dr. Jan Duffy | DrDuffy@ProvidenceLasVegas.com | (702) 919-7702
+Contact: Dr. Jan Duffy | DrDuffy@ProvidenceLasVegas.com | (702) 744-2993

@@ -13,7 +13,7 @@ import { realscoutUrls } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Contact | Providence Real Estate | Providence Las Vegas",
   description:
-    "Contact Providence Real Estate. Schedule an appointment, get directions, or call (702) 919-7702. Providence, North Las Vegas, NV 89166.",
+    "Contact Providence Real Estate. Schedule an appointment, get directions, or call (702) 744-2993. Providence, North Las Vegas, NV 89166.",
   keywords: [
     "contact Providence Las Vegas real estate agent",
     "Dr. Jan Duffy Providence Las Vegas",
@@ -29,7 +29,7 @@ const contactSchema = {
   mainEntity: {
     "@type": "RealEstateAgent",
     name: "Providence Real Estate",
-    telephone: "+17029197702",
+    telephone: "+1-702-744-2993",
     email: "DrDuffy@ProvidenceLasVegas.com",
     address: {
       "@type": "PostalAddress",
@@ -101,10 +101,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Phone (Call or Text)</h3>
                     <a
-                      href="tel:+17029197702"
+                      href="tel:+17027442993"
                       className="text-2xl font-bold text-blue-600 hover:text-blue-700"
                     >
-                      (702) 919-7702
+                      (702) 744-2993
                     </a>
                     <p className="text-sm text-slate-500 mt-1">
                       Available Mon-Fri 8am-7pm, Sat 9am-5pm, Sun 10am-4pm
@@ -289,13 +289,13 @@ export default function ContactPage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <a
-                href="tel:+17029197702"
+                href="tel:+17027442993"
                 className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white p-6 rounded-xl transition-colors"
               >
                 <Phone className="h-8 w-8 mr-4" />
                 <div className="text-left">
                   <div className="font-bold text-lg">Call Now</div>
-                  <div className="text-blue-100">(702) 919-7702</div>
+                  <div className="text-blue-100">(702) 744-2993</div>
                 </div>
               </a>
               <a

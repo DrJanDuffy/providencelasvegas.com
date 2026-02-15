@@ -8,16 +8,16 @@ export const siteConfig = {
   shortName: "Providence Real Estate",
   url: "https://www.providencelasvegas.com",
   description:
-    "Providence Real Estate. Homes for sale in Providence Las Vegas and North Las Vegas. Real Estate Agency serving Providence, NV 89166. Call (702) 919-7702.",
+    "Providence Real Estate. Homes for sale in Providence Las Vegas and North Las Vegas. Real Estate Agency serving Providence, NV 89166. Call (702) 744-2993.",
 };
 
 export const agentInfo = {
   name: "Dr. Jan Duffy",
   title: "REALTOR®",
   license: "S.0197614.LLC",
-  phone: "(702) 919-7702",
-  phoneFormatted: "(702) 919-7702",
-  phoneTel: "tel:+17029197702",
+  phone: "(702) 744-2993",
+  phoneFormatted: "(702) 744-2993",
+  phoneTel: "tel:+17027442993",
   email: "DrDuffy@ProvidenceLasVegas.com",
   brokerage: "Providence Real Estate",
 };
@@ -35,8 +35,8 @@ export const officeInfo = {
     lat: 36.2889,
     lng: -115.2717,
   },
-  phone: "(702) 919-7702",
-  phoneTel: "tel:+17029197702",
+  phone: "(702) 744-2993",
+  phoneTel: "tel:+17027442993",
 };
 
 // GBP CTA URLs - Update placeId when you have your GBP Place ID
