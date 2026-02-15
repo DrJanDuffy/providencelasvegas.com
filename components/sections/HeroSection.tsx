@@ -33,6 +33,7 @@ export default function HeroSection() {
               src={src}
               alt={`Hero image ${index + 1}`}
               fill
+              sizes="100vw"
               className="object-cover"
               priority={index === 0}
             />

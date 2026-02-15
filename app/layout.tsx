@@ -85,12 +85,12 @@ export default function RootLayout({
       <head>
         {/* Site-wide JSON-LD Schema: RealEstateAgent + WebSite */}
         <SchemaScript schema={siteWideSchemas} id="site-schema" />
-        {/* Google tag (gtag.js) - Providence Las Vegas */}
+        {/* Google tag (gtag.js) - Providence Las Vegas - lazyOnload for performance */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-L5B3V7RE8R"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -98,16 +98,16 @@ export default function RootLayout({
             gtag('config', 'G-L5B3V7RE8R');
           `}
         </Script>
-        {/* RealScout Widget Script - loaded once globally */}
+        {/* RealScout Widget Script - loaded once globally - afterInteractive for performance */}
         <Script
           src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
           type="module"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
-        {/* Calendly Widget Script - loaded once globally */}
+        {/* Calendly Widget Script - loaded once globally - lazyOnload for performance */}
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
       </head>
       <body
