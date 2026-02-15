@@ -77,6 +77,8 @@ export default function FirstTimeBuyersPage() {
             </a>
           </div>
 
+          <RealScoutListings />
+
           {/* Financing Options */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
@@ -441,7 +443,6 @@ export default function FirstTimeBuyersPage() {
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
-      <RealScoutListings />
       <Footer />
     </>
   );

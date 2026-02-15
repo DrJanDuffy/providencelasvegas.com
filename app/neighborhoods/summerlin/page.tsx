@@ -83,6 +83,8 @@ export default function SummerlinPage() {
             </p>
           </div>
 
+          <RealScoutListings />
+
           {/* What's Summerlin like? / Expensive? / Good for families? - multi-question block */}
           <section className="mb-16 max-w-4xl mx-auto" aria-label="Summerlin overview">
             <h2 className="text-2xl font-bold text-slate-900 mb-6">What's Summerlin Like—and Is It Right for You?</h2>
@@ -334,7 +336,6 @@ export default function SummerlinPage() {
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
-      <RealScoutListings />
       <Footer />
     </>
   );

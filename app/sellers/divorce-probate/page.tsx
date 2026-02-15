@@ -73,6 +73,8 @@ export default function DivorceProbatePage() {
             </a>
           </div>
 
+          <RealScoutListings />
+
           {/* Situations We Help With */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
@@ -501,7 +503,6 @@ export default function DivorceProbatePage() {
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
-      <RealScoutListings />
       <Footer />
     </>
   );

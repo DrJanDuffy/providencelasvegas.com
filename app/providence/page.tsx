@@ -1,5 +1,6 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import RelatedPages from "@/components/navigation/RelatedPages";
 import FAQSection from "@/components/sections/FAQSection";
@@ -83,6 +84,8 @@ export default function ProvidencePage() {
             </section>
           </div>
         </section>
+
+        <RealScoutListings />
 
         <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4">

@@ -36,6 +36,7 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
+        <RealScoutListings />
 
         {/* Providence Las Vegas SEO intro - one H1 is in Hero; this section adds H2 + copy */}
         <section className="py-12 md:py-16 bg-white" aria-labelledby="why-providence">
@@ -164,8 +165,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <RealScoutListings />
 
         {/* The Neighborhoods of Providence */}
         <section className="py-16 md:py-20 bg-white">

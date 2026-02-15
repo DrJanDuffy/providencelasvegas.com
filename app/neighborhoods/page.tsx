@@ -54,6 +54,8 @@ export default function NeighborhoodsPage() {
             </p>
           </div>
 
+          <RealScoutListings />
+
           {/* Community Parks */}
           <section className="mb-12 max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-slate-900 mb-4 text-center">
@@ -175,10 +177,6 @@ export default function NeighborhoodsPage() {
               Properties
             </p>
           </section>
-        </div>
-
-        <div className="container mx-auto px-4 py-8">
-          <RealScoutListings />
         </div>
 
         {/* Last Updated */}

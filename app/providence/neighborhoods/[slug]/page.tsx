@@ -102,6 +102,8 @@ export default async function ProvidenceNeighborhoodPage({ params }: Props) {
           </div>
         </section>
 
+        <RealScoutListings />
+
         <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">
@@ -138,15 +140,6 @@ export default async function ProvidenceNeighborhoodPage({ params }: Props) {
               Providence HOA – Community Info
               <ExternalLink className="h-4 w-4" />
             </a>
-          </div>
-        </section>
-
-        <section className="py-12 md:py-16 bg-slate-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">
-              Homes for Sale in {neighborhood.name}
-            </h2>
-            <RealScoutListings />
           </div>
         </section>
 

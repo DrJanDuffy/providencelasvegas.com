@@ -99,6 +99,8 @@ export default function MarketUpdatePage() {
             </div>
           </div>
 
+          <RealScoutListings />
+
           {/* Key Statistics */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">
@@ -452,7 +454,6 @@ export default function MarketUpdatePage() {
           </p>
         </section>
       </main>
-      <RealScoutListings />
       <Footer />
     </>
   );
