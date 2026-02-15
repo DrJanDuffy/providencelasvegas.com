@@ -3,9 +3,16 @@
  * Defines internal linking relationships for SEO and user navigation
  */
 
+import { realscoutUrls } from "./site-config";
+
 export const relatedPagesMap = {
   // Homepage
   home: [
+    {
+      title: "Search Providence Homes",
+      description: "View current listings in Providence Las Vegas",
+      href: realscoutUrls.searchRelated,
+    },
     {
       title: "Providence Neighborhoods",
       description: "Explore all 27 neighborhoods in the Providence master-planned community",
@@ -25,6 +32,11 @@ export const relatedPagesMap = {
 
   // Providence pages
   providence: [
+    {
+      title: "Search Providence Homes",
+      description: "View current listings in Providence Las Vegas",
+      href: realscoutUrls.searchRelated,
+    },
     {
       title: "Why Berkshire Hathaway",
       description: "Learn about the BHHS advantage and Warren Buffett's real estate brand",
@@ -51,7 +63,7 @@ export const relatedPagesMap = {
     {
       title: "Search Providence Homes",
       description: "View current listings in Providence Las Vegas",
-      href: "http://drjanduffy.realscout.com/",
+      href: realscoutUrls.searchRelated,
     },
     {
       title: "Contact About This Neighborhood",
@@ -62,6 +74,11 @@ export const relatedPagesMap = {
 
   // Buyer pages
   buyers: [
+    {
+      title: "Search Providence Homes",
+      description: "View current listings in Providence Las Vegas",
+      href: realscoutUrls.searchRelated,
+    },
     {
       title: "First-Time Home Buyers",
       description: "Essential guide for first-time buyers in Las Vegas",
@@ -82,6 +99,11 @@ export const relatedPagesMap = {
   // Seller pages
   sellers: [
     {
+      title: "Search Providence Homes",
+      description: "Browse current listings in Providence Las Vegas",
+      href: realscoutUrls.searchRelated,
+    },
+    {
       title: "Move-Up Sellers",
       description: "Ready to upgrade? Learn how to sell and buy simultaneously",
       href: "/sellers/move-up",
@@ -101,6 +123,11 @@ export const relatedPagesMap = {
   // Service pages
   luxuryHomes: [
     {
+      title: "Search Providence Homes",
+      description: "View luxury and all listings in Providence Las Vegas",
+      href: realscoutUrls.searchRelated,
+    },
+    {
       title: "The Ridges Summerlin",
       description: "Ultra-luxury guard-gated community with celebrity homes",
       href: "/neighborhoods/the-ridges",
@@ -118,6 +145,11 @@ export const relatedPagesMap = {
   ],
 
   fiftyPlusCommunities: [
+    {
+      title: "Search 55+ Homes",
+      description: "Browse active adult and all listings in Las Vegas",
+      href: realscoutUrls.searchRelated,
+    },
     {
       title: "Sun City Summerlin",
       description: "Premier active adult community in Las Vegas",
@@ -137,6 +169,11 @@ export const relatedPagesMap = {
 
   newConstruction: [
     {
+      title: "Search New Construction",
+      description: "Browse new build and all Las Vegas listings",
+      href: realscoutUrls.searchRelated,
+    },
+    {
       title: "Skye Canyon",
       description: "Newer master-planned community with new construction homes",
       href: "/neighborhoods/skye-canyon",
@@ -155,6 +192,11 @@ export const relatedPagesMap = {
 
   // Neighborhood pages
   neighborhoods: [
+    {
+      title: "Search Providence Homes",
+      description: "View current listings across Las Vegas",
+      href: realscoutUrls.searchRelated,
+    },
     {
       title: "Providence Las Vegas",
       description: "Master-planned community with 27 neighborhoods",
@@ -211,6 +253,11 @@ export const relatedPagesMap = {
   // Market pages
   marketReport: [
     {
+      title: "Search Providence Homes",
+      description: "View current listings in Providence Las Vegas",
+      href: realscoutUrls.searchRelated,
+    },
+    {
       title: "Market Update",
       description: "Latest Las Vegas real estate market trends and news",
       href: "/market-update",
@@ -229,6 +276,11 @@ export const relatedPagesMap = {
 
   // About/Contact pages
   about: [
+    {
+      title: "Search Providence Homes",
+      description: "View current listings in Providence Las Vegas",
+      href: realscoutUrls.searchRelated,
+    },
     {
       title: "Why Berkshire Hathaway",
       description: "Learn about the BHHS brand and its Warren Buffett connection",
@@ -255,7 +307,7 @@ export const relatedPagesMap = {
     {
       title: "Search Properties",
       description: "Browse current listings in Las Vegas and Henderson",
-      href: "http://drjanduffy.realscout.com/",
+      href: realscoutUrls.searchRelated,
     },
     {
       title: "About Dr. Jan Duffy",

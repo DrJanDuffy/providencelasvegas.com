@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Bed, Bath, Square, MapPin, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, realscoutUrls } from "@/lib/site-config";
 import { generateBreadcrumbSchema, generateRealEstateListingSchema } from "@/lib/schema";
 
 type PropertyPageProps = {
@@ -18,11 +18,11 @@ export async function generateMetadata({ params }: PropertyPageProps): Promise<M
   const property = await getProperty(id);
   const listingUrl = `${siteConfig.url}/listings/${id}`;
   return {
-    title: `${property.name} | Las Vegas & Henderson Real Estate`,
+    title: `${property.name} | Providence Real Estate`,
     description: property.description.slice(0, 160),
     alternates: { canonical: listingUrl },
     openGraph: {
-      title: `${property.name} | BHHS Nevada Properties`,
+      title: `${property.name} | Providence Real Estate`,
       description: property.description.slice(0, 160),
       url: listingUrl,
       images: property.image ? [{ url: property.image.startsWith("http") ? property.image : `${siteConfig.url}${property.image}` }] : undefined,
@@ -86,7 +86,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
               </li>
               <li>/</li>
               <li>
-                <a href="http://drjanduffy.realscout.com/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                <a href={realscoutUrls.searchListingDetail} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
                   Properties
                 </a>
               </li>
@@ -167,11 +167,11 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
                 <h3 className="text-xl font-bold text-slate-900 mb-4">Contact Agent</h3>
                 <p className="text-slate-600 mb-4">Dr. Jan Duffy</p>
                 <p className="text-sm text-slate-600 mb-6">
-                  Berkshire Hathaway HomeServices Nevada Properties
+                  Providence Real Estate
                 </p>
                 <div className="space-y-3">
                   <Button asChild className="w-full bg-blue-600 hover:bg-blue-700">
-                    <a href="tel:+17025001942">Call (702) 500-1942</a>
+                    <a href="tel:+17029197702">Call (702) 919-7702</a>
                   </Button>
                   <Button asChild variant="outline" className="w-full">
                     <a href="/contact">Send Message</a>

@@ -3,39 +3,39 @@ import { Shield, TrendingUp, Users, Award, Clock, Home } from "lucide-react";
 const features = [
   {
     icon: Shield,
-    title: "Trusted Expertise in Providence Las Vegas",
+    title: "Services: Buy, Sell, Luxury, 55+",
     description:
-      "Serving Las Vegas since 2008 with proven results. Hyperlocal expertise in all 27 Providence Las Vegas neighborhoods.",
+      "Full service real estate—home buying, selling, luxury homes, 55+ communities, new construction, and relocation.",
   },
   {
     icon: TrendingUp,
-    title: "Providence Las Vegas Market Knowledge",
+    title: "Locations: Providence, North Las Vegas",
     description:
-      "Deep understanding of Providence Las Vegas real estate trends, HOA resale, and neighborhood insights.",
+      "Providence Real Estate serves Providence (27 neighborhoods) and North Las Vegas, NV 89166.",
   },
   {
     icon: Users,
-    title: "Personalized Providence Las Vegas Service",
+    title: "Personalized Service",
     description:
-      "Dedicated attention to every buyer and seller in Providence Las Vegas with customized solutions.",
+      "Dedicated attention to every buyer and seller with customized solutions for your needs.",
   },
   {
     icon: Award,
-    title: "Proven Results in Providence Las Vegas",
+    title: "Proven Results",
     description:
-      "500+ successful transactions and satisfied clients. Providence Las Vegas homes for sale and sold.",
+      "500+ successful transactions and satisfied clients across Las Vegas neighborhoods.",
   },
   {
     icon: Clock,
-    title: "Responsive Providence Las Vegas Agent",
+    title: "Responsive Agent",
     description:
-      "Quick response times and seamless communication for Providence Las Vegas real estate.",
+      "Quick response times and seamless communication for all Las Vegas real estate needs.",
   },
   {
     icon: Home,
-    title: "Full Service Providence Las Vegas Real Estate",
+    title: "Full Service Real Estate",
     description:
-      "Complete support from search to closing and beyond in Providence Las Vegas and all 27 neighborhoods.",
+      "Complete support from search to closing—services and locations across Las Vegas.",
   },
 ];
 
@@ -45,11 +45,10 @@ export default function WhyChooseUs() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            Why Choose Us for Providence Las Vegas Real Estate
+            Why Providence Real Estate
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Experience the difference of working with a trusted Providence Las Vegas real
-            estate professional. Dr. Jan Duffy knows every Providence neighborhood.
+            Providence Real Estate serves Providence and North Las Vegas, NV 89166. Expert local guidance for buying and selling homes in Providence Las Vegas.
           </p>
         </div>
 

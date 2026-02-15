@@ -2,6 +2,16 @@
 
 After the Schema Fix & FAQ Enhancement implementation, follow these steps.
 
+## Pre-Launch Checklist
+
+| Step | Action |
+| --- | --- |
+| GSC verification | Add `GOOGLE_SITE_VERIFICATION` in Vercel Project Settings → Environment Variables (production). Value = the `content` from the meta tag GSC provides. |
+| Schema validation | After deploy: `npm run schema:validate` |
+| Rich Results Test | Test `https://www.providencelasvegas.com`, `/about`, `/providence` at [Google Rich Results Test](https://search.google.com/test/rich-results) |
+| Submit sitemap | GSC → Sitemaps → Add `https://www.providencelasvegas.com/sitemap.xml` |
+| Request indexing | GSC → URL Inspection → Request indexing for homepage and 3–5 key pages |
+
 ## Deploy
 
 ### Option A: Vercel (recommended per project rules)

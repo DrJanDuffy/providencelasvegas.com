@@ -3,16 +3,17 @@ import Footer from "@/components/layouts/Footer";
 import FAQSection from "@/components/sections/FAQSection";
 import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import { Phone, Mail, MapPin, Clock, Calendar, Star, Users, Shield } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Calendar, Star, Users, Shield, Search } from "lucide-react";
 import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getFAQsForPage } from "@/lib/faq-library";
+import { realscoutUrls } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Contact Dr. Jan Duffy | Providence Las Vegas Real Estate | BHHS Nevada Properties",
+  title: "Contact | Providence Real Estate | Providence Las Vegas",
   description:
-    "Contact Dr. Jan Duffy for Providence Las Vegas real estate. Berkshire Hathaway HomeServices Nevada Properties. Schedule an appointment, get directions, or call (702) 500-1942. Providence Las Vegas real estate expert.",
+    "Contact Providence Real Estate. Schedule an appointment, get directions, or call (702) 919-7702. Providence, North Las Vegas, NV 89166.",
   keywords: [
     "contact Providence Las Vegas real estate agent",
     "Dr. Jan Duffy Providence Las Vegas",
@@ -27,8 +28,8 @@ const contactSchema = {
   "@type": "ContactPage",
   mainEntity: {
     "@type": "RealEstateAgent",
-    name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    telephone: "+17025001942",
+    name: "Providence Real Estate",
+    telephone: "+17029197702",
     email: "DrDuffy@ProvidenceLasVegas.com",
     address: {
       "@type": "PostalAddress",
@@ -57,16 +58,25 @@ export default function ContactPage() {
           {/* Hero */}
           <div className="text-center mb-12">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Berkshire Hathaway HomeServices Nevada Properties
+              Providence Real Estate
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Contact Dr. Jan Duffy for Providence Las Vegas Real Estate
+              Contact Providence Real Estate
             </h1>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-6">
               Questions about Providence Las Vegas real estate? Your{" "}
               <strong>Berkshire Hathaway HomeServices</strong> Providence Las Vegas expert is
               here to help. Schedule an appointment or reach out directly.
             </p>
+            <a
+              href={realscoutUrls.searchContact}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+            >
+              <Search className="h-5 w-5" />
+              Search Providence Homes
+            </a>
           </div>
 
           <RealScoutListings />
@@ -91,13 +101,13 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Phone (Call or Text)</h3>
                     <a
-                      href="tel:+17025001942"
+                      href="tel:+17029197702"
                       className="text-2xl font-bold text-blue-600 hover:text-blue-700"
                     >
-                      (702) 500-1942
+                      (702) 919-7702
                     </a>
                     <p className="text-sm text-slate-500 mt-1">
-                      Available 7 days a week, 9am-6pm
+                      Available Mon-Fri 8am-7pm, Sat 9am-5pm, Sun 10am-4pm
                     </p>
                   </div>
                 </div>
@@ -123,7 +133,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Office Address</h3>
                     <address className="not-italic text-slate-700">
-                      Berkshire Hathaway HomeServices Nevada Properties<br />
+                      Providence Real Estate<br />
                       7181 N Hualapai Way #135<br />
                       Las Vegas, NV 89166
                     </address>
@@ -155,7 +165,7 @@ export default function ContactPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Berkshire Hathaway HomeServices Nevada Properties - Office Location"
+                  title="Providence Real Estate - Office Location"
                   className="w-full"
                 />
               </div>
@@ -172,12 +182,20 @@ export default function ContactPage() {
                   Get Directions
                 </a>
                 <a
-                  href="https://maps.google.com/?q=Berkshire+Hathaway+HomeServices+Nevada+Properties+7181+N+Hualapai+Way+Las+Vegas+NV+89166"
+                  href="https://maps.google.com/?q=Providence+Real+Estate+7181+N+Hualapai+Way+Las+Vegas+NV+89166"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 inline-flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-3 rounded-lg font-medium transition-colors"
                 >
                   View on Google Maps
+                </a>
+                <a
+                  href="https://search.google.com/local/writereview?query=Providence+Real+Estate+Las+Vegas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center bg-amber-500 hover:bg-amber-600 text-white px-4 py-3 rounded-lg font-medium transition-colors"
+                >
+                  Leave a Review
                 </a>
               </div>
 
@@ -271,13 +289,13 @@ export default function ContactPage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <a
-                href="tel:+17025001942"
+                href="tel:+17029197702"
                 className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white p-6 rounded-xl transition-colors"
               >
                 <Phone className="h-8 w-8 mr-4" />
                 <div className="text-left">
                   <div className="font-bold text-lg">Call Now</div>
-                  <div className="text-blue-100">(702) 500-1942</div>
+                  <div className="text-blue-100">(702) 919-7702</div>
                 </div>
               </a>
               <a

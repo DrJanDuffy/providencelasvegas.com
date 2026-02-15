@@ -17,11 +17,12 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { getFAQsForPage } from "@/lib/faq-library";
+import { realscoutUrls } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Downsizing | Providence Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Ready to simplify? Dr. Jan Duffy helps Providence Las Vegas homeowners extract equity and transition to low-maintenance living. 55+ communities, condos, and more. Call (702) 500-1942.",
+    "Ready to simplify? Dr. Jan Duffy helps Providence Las Vegas homeowners extract equity and transition to low-maintenance living. 55+ communities, condos, and more. Call (702) 919-7702.",
   keywords: [
     "downsizing Providence Las Vegas",
     "downsizing Las Vegas",
@@ -67,11 +68,11 @@ export default function DownsizingPage() {
               Nevada community. Embrace your next chapter.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17029197702"
               className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Let's Talk About Your Options → (702) 500-1942
+              Let's Talk About Your Options → (702) 919-7702
             </a>
           </div>
 
@@ -147,12 +148,14 @@ export default function DownsizingPage() {
                   smaller yard, lower utility costs. Age-in-place features available.
                 </p>
                 <div className="text-blue-600 font-semibold">$400K - $600K</div>
-                <Link
-                  href="/contact"
+                <a
+                  href={realscoutUrls.searchDownsizing}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block mt-3 text-sm text-blue-600 hover:text-blue-700"
                 >
                   Search Single-Story Homes →
-                </Link>
+                </a>
               </div>
 
               <div className="bg-white border border-slate-200 rounded-xl p-6">
@@ -165,12 +168,14 @@ export default function DownsizingPage() {
                   Guard-gated options available in Summerlin and Henderson.
                 </p>
                 <div className="text-blue-600 font-semibold">$275K - $500K</div>
-                <Link
-                  href="/contact"
+                <a
+                  href={realscoutUrls.searchDownsizing}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block mt-3 text-sm text-blue-600 hover:text-blue-700"
                 >
                   View Condo Options →
-                </Link>
+                </a>
               </div>
             </div>
           </section>
@@ -436,11 +441,11 @@ export default function DownsizingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17025001942"
+                href="tel:+17029197702"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
+                Call (702) 919-7702
               </a>
               <Link
                 href="/home-valuation"

@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import { realscoutUrls } from "@/lib/site-config";
 
 export const revalidate = 3600;
 
@@ -30,7 +31,7 @@ const listingsBreadcrumbs = generateBreadcrumbSchema([
 export const metadata: Metadata = {
   title: "Las Vegas Homes for Sale | MLS Property Search | Berkshire Hathaway HomeServices",
   description:
-    "Browse all Las Vegas and Henderson homes for sale with live MLS listings. Search by neighborhood, price, and features. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 500-1942.",
+    "Browse all Las Vegas and Henderson homes for sale with live MLS listings. Search by neighborhood, price, and features. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 919-7702.",
   keywords: [
     "Las Vegas homes for sale",
     "Henderson real estate",
@@ -49,7 +50,7 @@ const listingsSchema = {
   provider: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    telephone: "+17025001942",
+    telephone: "+17029197702",
   },
   areaServed: [
     { "@type": "City", name: "Las Vegas, NV" },
@@ -138,11 +139,20 @@ export default function ListingsPage() {
               listings updated every 15 minutes. Find your dream home with expert guidance from 
               Dr. Jan Duffy at <strong>Berkshire Hathaway HomeServices</strong>.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500 mb-4">
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Live MLS Data</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Updated Every 15 Min</span>
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> 5,000+ Active Listings</span>
             </div>
+            <a
+              href={realscoutUrls.searchListingsPage}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold"
+            >
+              <Search className="h-4 w-4" />
+              Open full search in new tab →
+            </a>
           </div>
 
           {/* RealScout Widget - Live MLS Listings */}
@@ -487,11 +497,11 @@ export default function ListingsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17025001942"
+                href="tel:+17029197702"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
+                Call (702) 919-7702
               </a>
               <Link
                 href="/contact"

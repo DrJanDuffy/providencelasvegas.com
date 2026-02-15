@@ -220,4 +220,4 @@ import { getExternalResources } from "@/lib/external-resources";
 6. **Monitor GSC** for internal link increases
 
 ## 📞 Questions?
-Contact: Dr. Jan Duffy | DrDuffy@ProvidenceLasVegas.com | (702) 500-1942
+Contact: Dr. Jan Duffy | DrDuffy@ProvidenceLasVegas.com | (702) 919-7702

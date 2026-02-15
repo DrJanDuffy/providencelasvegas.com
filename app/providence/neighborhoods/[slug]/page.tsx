@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonical = `${siteConfig.url}/providence/neighborhoods/${slug}`;
   return {
     title: `${neighborhood.name} | Providence Las Vegas | Dr. Jan Duffy, REALTOR®`,
-    description: `Homes for sale in ${neighborhood.name}, Providence Las Vegas. Dr. Jan Duffy with BHHS Nevada Properties. Part of Providence's 27 neighborhoods. Call (702) 500-1942.`,
+    description: `Homes for sale in ${neighborhood.name}, Providence Las Vegas. Providence Real Estate serves Providence and North Las Vegas. Call (702) 919-7702.`,
     keywords: [
       `${neighborhood.name} Providence`,
       `${neighborhood.name} Las Vegas real estate`,
@@ -195,11 +195,11 @@ export default async function ProvidenceNeighborhoodPage({ params }: Props) {
               neighborhood.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17029197702"
               className="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-md font-semibold hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5" />
-              Call (702) 500-1942
+              Call (702) 919-7702
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Dr. Jan Duffy | License S.0197614.LLC | Berkshire Hathaway HomeServices Nevada

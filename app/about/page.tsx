@@ -1,6 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import FAQSection from "@/components/sections/FAQSection";
+import { realscoutUrls } from "@/lib/site-config";
 import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
@@ -25,7 +26,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Dr. Jan Duffy | Providence Las Vegas Real Estate | BHHS Nevada Properties",
   description:
-    "Meet Dr. Jan Duffy, your trusted Providence Las Vegas real estate agent. Berkshire Hathaway HomeServices Nevada Properties. Serving Las Vegas since 2008, $127M+ in transactions. Providence Las Vegas specialist. Call (702) 500-1942.",
+    "Meet Dr. Jan Duffy, your trusted Providence Las Vegas real estate agent. Berkshire Hathaway HomeServices Nevada Properties. Serving Las Vegas since 2008, $127M+ in transactions. Providence Las Vegas specialist. Call (702) 919-7702.",
   keywords: [
     "Dr. Jan Duffy",
     "Providence Las Vegas realtor",
@@ -44,7 +45,7 @@ const personSchema = {
   jobTitle: "REALTOR®",
   description:
     "Licensed real estate agent with Berkshire Hathaway HomeServices Nevada Properties, serving Las Vegas, Henderson, and Summerlin since 2008.",
-  telephone: "+17025001942",
+  telephone: "+17029197702",
   email: "DrDuffy@ProvidenceLasVegas.com",
   url: "https://www.providencelasvegas.com/about",
   worksFor: {
@@ -193,11 +194,11 @@ export default function AboutPage() {
                   <h3 className="font-bold text-slate-900 mb-4">Contact Dr. Jan Duffy</h3>
                   <div className="space-y-3">
                     <a
-                      href="tel:+17025001942"
+                      href="tel:+17029197702"
                       className="flex items-center text-slate-700 hover:text-blue-600"
                     >
                       <Phone className="h-5 w-5 mr-3 text-blue-600" />
-                      <span className="font-semibold">(702) 500-1942</span>
+                      <span className="font-semibold">(702) 919-7702</span>
                     </a>
                     <a
                       href="mailto:DrDuffy@ProvidenceLasVegas.com"
@@ -215,7 +216,7 @@ export default function AboutPage() {
                     </div>
                     <div className="flex items-center text-slate-700">
                       <Clock className="h-5 w-5 mr-3 text-blue-600" />
-                      Mon-Fri 9am-6pm, Sat 10am-4pm, Sun by appointment
+                      Mon-Fri 8am-7pm, Sat 9am-5pm, Sun 10am-4pm
                     </div>
                   </div>
                 </div>
@@ -286,7 +287,7 @@ export default function AboutPage() {
                       <ArrowRight className="h-4 w-4 mr-2 text-blue-600" />
                       Free Home Valuation
                     </Link>
-                    <a href="http://drjanduffy.realscout.com/" target="_blank" rel="noopener noreferrer" className="flex items-center text-slate-700 hover:text-blue-600">
+                    <a href={realscoutUrls.searchAbout} target="_blank" rel="noopener noreferrer" className="flex items-center text-slate-700 hover:text-blue-600">
                       <ArrowRight className="h-4 w-4 mr-2 text-blue-600" />
                       Browse Listings
                     </a>
@@ -460,11 +461,11 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17025001942"
+                href="tel:+17029197702"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
+                Call (702) 919-7702
               </a>
               <Link
                 href="/contact"

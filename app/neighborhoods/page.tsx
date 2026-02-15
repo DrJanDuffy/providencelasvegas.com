@@ -10,14 +10,15 @@ import { providenceNeighborhoods, providenceCommunity } from "@/lib/site-config"
 import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
-  title: "The Neighborhoods of Providence | Providence Las Vegas | Dr. Jan Duffy",
+  title: "Locations | Providence Real Estate | Providence Las Vegas",
   description:
-    "Explore all 27 neighborhoods of Providence, Las Vegas. Master-planned community with 5,600+ homes. Community parks, HOA info. Dr. Jan Duffy, BHHS Nevada Properties.",
+    "Providence Real Estate locations. Providence (27 neighborhoods), Summerlin, Henderson, North Las Vegas. Call (702) 919-7702.",
   keywords: [
-    "Providence Las Vegas neighborhoods",
-    "Providence community",
-    "27 neighborhoods Providence",
-    "Providence HOA",
+    "Las Vegas neighborhoods",
+    "Providence Las Vegas",
+    "Summerlin real estate",
+    "Henderson real estate",
+    "Green Valley Las Vegas",
   ],
 };
 
@@ -33,19 +34,17 @@ export default function NeighborhoodsPage() {
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-12">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Providence Las Vegas
+              Providence Real Estate
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              The Neighborhoods of Providence
+              Providence Real Estate | Neighborhoods
             </h1>
             <p className="text-xl text-slate-600 mb-4">
-              Providence Las Vegas is a master-planned community of{" "}
+              <strong>Providence Real Estate</strong> serves Providence Las Vegas—a master-planned community of{" "}
               <strong>{providenceCommunity.neighborhoodCount} neighborhoods</strong> and more than{" "}
               <strong>{providenceCommunity.homeCount} homes</strong>. Each Providence Las Vegas
               neighborhood has its own amenities. All Providence neighborhoods have access to
-              Knickerbocker Park, Huckleberry Park, and The Promenade. Your trusted partner for
-              Providence Las Vegas real estate: Dr. Jan Duffy, Berkshire Hathaway HomeServices
-              Nevada Properties.
+              Knickerbocker Park, Huckleberry Park, and The Promenade. Providence, North Las Vegas, NV 89166.
             </p>
             <p className="text-slate-600 max-w-2xl mx-auto">
               Whether you are buying or selling in Providence Las Vegas—from Oxford Commons and
@@ -166,11 +165,11 @@ export default function NeighborhoodsPage() {
               Dr. Jan Duffy knows every Providence neighborhood. Call for personalized guidance.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17029197702"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
+              Call (702) 919-7702
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Dr. Jan Duffy | License S.0197614.LLC | Berkshire Hathaway HomeServices Nevada

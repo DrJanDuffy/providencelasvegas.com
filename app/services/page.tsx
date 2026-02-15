@@ -22,18 +22,16 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Real Estate Services | Providence Las Vegas | Berkshire Hathaway HomeServices",
+  title: "Services | Providence Real Estate | Providence Las Vegas",
   description:
-    "Comprehensive Providence Las Vegas real estate services from Dr. Jan Duffy. Buying, selling, luxury, investment, relocation, 55+ communities, and new construction. BHHS Nevada Properties. Call (702) 500-1942.",
+    "Providence Real Estate services. Buying, selling, luxury homes, 55+ communities, relocation. Providence, North Las Vegas, NV 89166. Call (702) 919-7702.",
   keywords: [
-    "Providence Las Vegas real estate services",
-    "Providence Las Vegas homes",
-    "Berkshire Hathaway services",
+    "Las Vegas real estate services",
     "home buying Las Vegas",
     "home selling Henderson",
-    "luxury real estate services",
-    "55+ community specialist",
-    "California relocation Las Vegas",
+    "luxury real estate Las Vegas",
+    "55+ communities Las Vegas",
+    "relocation Las Vegas",
   ],
 };
 
@@ -42,10 +40,10 @@ const servicesSchema = {
   "@type": "Service",
   provider: {
     "@type": "RealEstateAgent",
-    name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    telephone: "+17025001942",
+    name: "Providence Real Estate",
+    telephone: "+17029197702",
   },
-  areaServed: "Las Vegas, Providence, Henderson, Summerlin, Clark County NV",
+  areaServed: "Providence, North Las Vegas, NV 89166",
   serviceType: "Real Estate Services",
 };
 
@@ -498,11 +496,11 @@ export default function ServicesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17025001942"
+                href="tel:+17029197702"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
+                Call (702) 919-7702
               </a>
               <Link
                 href="/contact"

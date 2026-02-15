@@ -3,52 +3,57 @@ import "./globals.css";
 import React from "react";
 import type { Metadata } from "next";
 import Script from "next/script";
+import dynamic from "next/dynamic";
 import { GeistSans } from "geist/font/sans";
 import { cn } from "lib/utils";
-import AIChatWidget from "@/components/chat/AIChatWidget";
-import CalendlyBadge from "@/components/calendly/CalendlyBadge";
 import SchemaScript from "@/components/SchemaScript";
+
+const AIChatWidget = dynamic(() => import("@/components/chat/AIChatWidget").then((m) => ({ default: m.default })), {
+  ssr: false,
+  loading: () => null,
+});
+const CalendlyBadge = dynamic(() => import("@/components/calendly/CalendlyBadge").then((m) => ({ default: m.default })), {
+  ssr: false,
+  loading: () => null,
+});
 import {
   generateRealEstateAgentSchema,
   generateWebSiteSchema,
   combineSchemas,
 } from "@/lib/schema";
 
-const title = "Providence Las Vegas | Dr. Jan Duffy, REALTOR®";
+const title = "Providence Real Estate | Homes for Sale in Providence Las Vegas";
 const description =
-  "Expert real estate in Providence, Las Vegas. Dr. Jan Duffy with BHHS Nevada Properties offers buying, selling, and investing—backed by Warren Buffett's legacy of trust.";
+  "Providence Real Estate. Homes for sale in Providence Las Vegas and North Las Vegas. Real Estate Agency serving Providence, NV 89166. Call (702) 919-7702.";
 const url = "https://www.providencelasvegas.com";
 
 export const metadata: Metadata = {
   title: {
     default: title,
-    template: "%s | Berkshire Hathaway HomeServices Nevada Properties",
+    template: "%s | Providence Real Estate",
   },
   description,
   metadataBase: new URL(url),
   keywords: [
+    "Providence Real Estate",
+    "homes for sale Providence Las Vegas",
     "Providence Las Vegas real estate",
-    "Berkshire Hathaway HomeServices Nevada Properties",
-    "Dr. Jan Duffy",
-    "Providence Las Vegas homes for sale",
-    "BHHS real estate agent",
-    "Las Vegas real estate",
-    "Providence neighborhood",
+    "North Las Vegas real estate",
   ],
   openGraph: {
     title,
     description,
     url,
-    siteName: "Providence Las Vegas | Berkshire Hathaway HomeServices Nevada Properties",
+    siteName: "Providence Real Estate | Homes for Sale in Providence Las Vegas",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/hero_bg_1.jpg", width: 1200, height: 630, alt: "Providence Las Vegas | Dr. Jan Duffy, REALTOR®" }],
+    images: [{ url: "/Image/hero_bg_1.jpg", width: 1200, height: 630, alt: "Providence Real Estate | Homes for Sale in Providence Las Vegas" }],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: ["/hero_bg_1.jpg"],
+    images: ["/Image/hero_bg_1.jpg"],
   },
   icons: {
     icon: "/favicon-32x32.png",

@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { realscoutUrls } from "@/lib/site-config";
 
 export default function RealScoutListings() {
   return (
@@ -17,7 +17,7 @@ export default function RealScoutListings() {
             </p>
           </div>
           <Button asChild variant="outline" className="mt-4 md:mt-0">
-            <a href="http://drjanduffy.realscout.com/" target="_blank" rel="noopener noreferrer">View All Properties</a>
+            <a href={realscoutUrls.searchListings} target="_blank" rel="noopener noreferrer">View All Properties</a>
           </Button>
         </div>
 

@@ -330,7 +330,7 @@ A: The components are self-contained and tested. They won't break existing funct
 If you need help:
 1. Check `INTERNAL-LINKS-QUICKSTART.md` for quick answers
 2. Review the Providence example page
-3. Contact: DrDuffy@ProvidenceLasVegas.com | (702) 500-1942
+3. Contact: DrDuffy@ProvidenceLasVegas.com | (702) 919-7702
 
 ---
 

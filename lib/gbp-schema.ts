@@ -2,8 +2,8 @@
 // Supports GBP ranking factors: Relevance, Distance, Prominence
 
 export const businessInfo = {
-  // NAP - Must match GBP exactly
-  name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+  // NAP - Must match GBP exactly (Providence Real Estate)
+  name: "Providence Real Estate",
   address: {
     streetAddress: "7181 N Hualapai Way #135",
     addressLocality: "Las Vegas",
@@ -12,8 +12,8 @@ export const businessInfo = {
     addressCountry: "US",
   },
   phone: {
-    display: "(702) 500-1942",
-    tel: "+17025001942",
+    display: "(702) 919-7702",
+    tel: "+17029197702",
   },
   email: "DrDuffy@ProvidenceLasVegas.com",
   url: "https://www.providencelasvegas.com",
@@ -22,40 +22,35 @@ export const businessInfo = {
   license: "S.0197614.LLC",
   priceRange: "$$",
 
-  // Hours - Match GBP exactly
+  // Hours - Best for Las Vegas realtors (extended for working clients, full weekends)
   hours: {
-    monday: "09:00-18:00",
-    tuesday: "09:00-18:00",
-    wednesday: "09:00-18:00",
-    thursday: "09:00-18:00",
-    friday: "09:00-18:00",
-    saturday: "10:00-16:00",
-    sunday: "By Appointment",
+    monday: "08:00-19:00",
+    tuesday: "08:00-19:00",
+    wednesday: "08:00-19:00",
+    thursday: "08:00-19:00",
+    friday: "08:00-19:00",
+    saturday: "09:00-17:00",
+    sunday: "10:00-16:00",
   },
 
-  // Geo coordinates for distance ranking (7181 N Hualapai Way #135)
+  // Geo coordinates (Providence, North Las Vegas area)
   geo: {
-    latitude: 36.2136,
-    longitude: -115.2702,
+    latitude: 36.2889,
+    longitude: -115.2717,
   },
 
-  // Service areas - Start focused, expand with prominence
+  // Service areas - GBP aligned
   serviceAreas: [
-    // Primary (immediate city)
-    "Las Vegas, NV",
-    "Summerlin, NV",
-    // Secondary (close ZIPs)
-    "Henderson, NV",
+    "Providence, North Las Vegas, NV 89166",
     "North Las Vegas, NV",
-    // Tertiary (county expansion)
-    "Clark County, NV",
+    "Las Vegas, NV",
   ],
 
-  // Categories - Primary + Secondary for GBP
+  // Categories - GBP Primary
   categories: {
-    primary: "Real Estate Agent",
+    primary: "Real Estate Agency",
     secondary: [
-      "Real Estate Agency",
+      "Real Estate Agent",
       "Real Estate Consultant",
     ],
   },
@@ -142,6 +137,33 @@ export const businessInfo = {
   foundingDate: "2010",
 };
 
+/**
+ * Opening hours for schema.org - generated from businessInfo.hours.
+ * Days with "By Appointment" are omitted (no fixed hours in schema).
+ */
+export const gbpOpeningHoursSpecification = (() => {
+  const dayMap: Record<string, string> = {
+    monday: "Monday",
+    tuesday: "Tuesday",
+    wednesday: "Wednesday",
+    thursday: "Thursday",
+    friday: "Friday",
+    saturday: "Saturday",
+    sunday: "Sunday",
+  };
+  return Object.entries(businessInfo.hours)
+    .filter(([, value]) => value !== "By Appointment")
+    .map(([day, value]) => {
+      const [opens, closes] = value.split("-");
+      return {
+        "@type": "OpeningHoursSpecification" as const,
+        dayOfWeek: dayMap[day],
+        opens: opens.trim(),
+        closes: closes.trim(),
+      };
+    });
+})();
+
 // 750-word GBP Description (3 sections)
 export const gbpDescription = {
   // Section 1: Who you are/mission (~250 words)
@@ -161,7 +183,7 @@ Dr. Jan's approach is simple: treat every client like family, know the market in
 
 55+ active adult community specialization covers Sun City Summerlin (Nevada's largest 55+ community), Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Investment property expertise spans single-family rentals, multi-family opportunities, and short-term rental analysis across the Las Vegas metro area.
 
-Office located at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Available Monday through Friday 9am-6pm, Saturday 10am-4pm, and Sunday by appointment. Call (702) 500-1942 for a free consultation or visit www.providencelasvegas.com to start your Las Vegas real estate journey today.`,
+Office located at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Available Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm. Call (702) 919-7702 for a free consultation or visit www.providencelasvegas.com to start your Las Vegas real estate journey today.`,
 };
 
 // FAQ Schema for GBP Q&A section
@@ -172,7 +194,7 @@ export const gbpFAQs = [
   },
   {
     question: "Does Dr. Jan help buyers relocating from California?",
-    answer: "Yes! California relocation is a specialty. Dr. Jan helps CA buyers understand Nevada's 0% state income tax advantage, compare home values (40-60% lower than comparable CA properties), and find the perfect Las Vegas neighborhood. Call (702) 500-1942 for California relocation assistance.",
+    answer: "Yes! California relocation is a specialty. Dr. Jan helps CA buyers understand Nevada's 0% state income tax advantage, compare home values (40-60% lower than comparable CA properties), and find the perfect Las Vegas neighborhood. Call (702) 919-7702 for California relocation assistance.",
   },
   {
     question: "What 55+ communities does Dr. Jan specialize in?",
@@ -184,7 +206,7 @@ export const gbpFAQs = [
   },
   {
     question: "How does Dr. Jan help with probate or divorce real estate sales?",
-    answer: "Dr. Jan handles sensitive transactions with discretion and professionalism. For probate sales, she coordinates with estate attorneys and ensures court compliance. For divorce sales, she provides neutral representation and works with both parties' attorneys. Call (702) 500-1942 for a confidential consultation.",
+    answer: "Dr. Jan handles sensitive transactions with discretion and professionalism. For probate sales, she coordinates with estate attorneys and ensures court compliance. For divorce sales, she provides neutral representation and works with both parties' attorneys. Call (702) 919-7702 for a confidential consultation.",
   },
   {
     question: "What is the average home price in Las Vegas in 2026?",
@@ -200,11 +222,11 @@ export const gbpFAQs = [
   },
   {
     question: "How do I schedule a consultation with Dr. Jan Duffy?",
-    answer: "Call or text (702) 500-1942 for immediate assistance, or email DrDuffy@ProvidenceLasVegas.com. Office visits available at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 9am-6pm, Saturday 10am-4pm, Sunday by appointment.",
+    answer: "Call or text (702) 919-7702 for immediate assistance, or email DrDuffy@ProvidenceLasVegas.com. Office visits available at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm.",
   },
   {
     question: "Does Dr. Jan help with investment properties in Las Vegas?",
-    answer: "Yes! Dr. Jan provides investment property consulting including rental property analysis, cap rate calculations, short-term rental regulations, and multi-family opportunities across the Las Vegas Valley. Contact (702) 500-1942 for investment property guidance.",
+    answer: "Yes! Dr. Jan provides investment property consulting including rental property analysis, cap rate calculations, short-term rental regulations, and multi-family opportunities across the Las Vegas Valley. Contact (702) 919-7702 for investment property guidance.",
   },
 ];
 

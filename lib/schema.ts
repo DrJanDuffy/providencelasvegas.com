@@ -7,6 +7,7 @@
  */
 
 import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
+import { gbpOpeningHoursSpecification } from "./gbp-schema";
 
 // ============================================================================
 // Types
@@ -85,17 +86,16 @@ export function generateRealEstateAgentSchema() {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     "@id": `${BASE_URL}#organization`,
-    name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+    name: "Providence Real Estate",
     alternateName: [
-      "HeyBerkshire",
-      "BHHS Nevada Properties",
-      "Berkshire Hathaway HomeServices",
+      "Providence Real Estate Las Vegas",
+      "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
     ],
     url: BASE_URL,
     logo: `${BASE_URL}/agent1.jpg`,
     image: `${BASE_URL}/agent1.jpg`,
     description: siteConfig.description,
-    telephone: "+1-702-500-1942",
+    telephone: "+17029197702",
     email: agentInfo.email,
     priceRange: "$385K - $10M+",
     address: {
@@ -114,40 +114,20 @@ export function generateRealEstateAgentSchema() {
     areaServed: [
       {
         "@type": "Place",
-        name: "Providence",
-        description: "Providence master-planned community, Las Vegas NV",
-      },
-      {
-        "@type": "City",
-        name: "Las Vegas",
-        sameAs: "https://en.wikipedia.org/wiki/Las_Vegas",
-      },
-      {
-        "@type": "City",
-        name: "Henderson",
-        sameAs: "https://en.wikipedia.org/wiki/Henderson,_Nevada",
-      },
-      {
-        "@type": "Place",
-        name: "Summerlin",
+        name: "Providence, North Las Vegas, NV 89166",
+        description: "Providence and North Las Vegas service area",
       },
       {
         "@type": "City",
         name: "North Las Vegas",
+        sameAs: "https://en.wikipedia.org/wiki/North_Las_Vegas,_Nevada",
       },
       {
         "@type": "Place",
-        name: "Green Valley",
+        name: "Providence Las Vegas",
       },
     ],
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        opens: "08:00",
-        closes: "20:00",
-      },
-    ],
+    openingHoursSpecification: gbpOpeningHoursSpecification,
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "Real Estate License",

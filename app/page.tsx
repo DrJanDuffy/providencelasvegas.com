@@ -1,6 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import RecentlySoldSection from "@/components/sections/RecentlySoldSection";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import FAQSection from "@/components/sections/FAQSection";
@@ -8,19 +9,20 @@ import Footer from "@/components/layouts/Footer";
 import FAQSchema from "@/components/schemas/FAQSchema";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Home as HomeIcon, TrendingUp, Shield, Users, Phone } from "lucide-react";
-import { providenceNeighborhoods, providenceCommunity } from "@/lib/site-config";
+import { Phone } from "lucide-react";
+import { providenceNeighborhoods, providenceCommunity, realscoutUrls } from "@/lib/site-config";
 import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
-  title: "Providence Las Vegas | Dr. Jan Duffy, REALTOR®",
+  title: "Providence Real Estate | Homes for Sale in Providence Las Vegas",
   description:
-    "Expert real estate in Providence, Las Vegas. Dr. Jan Duffy with BHHS Nevada Properties offers buying, selling, and investing. Call (702) 500-1942.",
+    "Providence Real Estate. Homes for sale in Providence Las Vegas and North Las Vegas. Real Estate Agency. Call (702) 919-7702.",
   keywords: [
-    "Providence Las Vegas real estate",
-    "Berkshire Hathaway HomeServices Nevada Properties",
-    "Dr. Jan Duffy realtor",
+    "Las Vegas real estate",
     "Providence Las Vegas homes",
+    "Summerlin real estate",
+    "Henderson real estate",
+    "hyperlocal Las Vegas",
   ],
 };
 
@@ -37,89 +39,55 @@ export default function Home() {
       <main>
         <HeroSection />
         <RealScoutListings />
+        <RecentlySoldSection />
 
-        {/* Providence Las Vegas SEO intro - one H1 is in Hero; this section adds H2 + copy */}
-        <section className="py-12 md:py-16 bg-white" aria-labelledby="why-providence">
-          <div className="container mx-auto px-4 max-w-4xl mx-auto">
-            <h2 id="why-providence" className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-              Why Providence Las Vegas Real Estate?
+        {/* Services + Locations - Providence Real Estate */}
+        <section className="py-12 md:py-16 bg-white" aria-labelledby="services-locations">
+          <div className="container mx-auto px-4">
+            <h2 id="services-locations" className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 text-center">
+              Services &amp; Locations
             </h2>
-            <p className="text-slate-700 leading-relaxed mb-4">
-              Providence Las Vegas is a master-planned community in the northwest Las Vegas Valley
-              with 27 neighborhoods and more than 5,600 homes. Whether you are buying or selling in
-              Providence, Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties
-              offers hyperlocal expertise in every Providence neighborhood—from Oxford Commons and
-              Saratoga Highlands to Auburn & Bradford and beyond. Providence residents enjoy three
-              community parks (The Promenade, Knickerbocker Park, and Huckleberry Park), and the
-              Providence Master HOA keeps the community well maintained. For Providence Las Vegas
-              homes for sale, market insights, and HOA resale guidance, contact Dr. Jan Duffy.
-            </p>
+            <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+              <div>
+                <h3 className="text-xl font-semibold text-slate-800 mb-4">Services</h3>
+                <ul className="space-y-2 text-slate-700">
+                  <li><Link href="/buyers" className="text-blue-600 hover:underline">Home Buying</Link></li>
+                  <li><Link href="/sellers" className="text-blue-600 hover:underline">Home Selling</Link></li>
+                  <li><Link href="/luxury-homes" className="text-blue-600 hover:underline">Luxury Homes</Link></li>
+                  <li><Link href="/55-plus-communities" className="text-blue-600 hover:underline">55+ Communities</Link></li>
+                  <li><Link href="/new-construction" className="text-blue-600 hover:underline">New Construction</Link></li>
+                  <li><Link href="/relocation" className="text-blue-600 hover:underline">Relocation</Link></li>
+                  <li><Link href="/home-valuation" className="text-blue-600 hover:underline">Home Valuation</Link></li>
+                  <li><a href={realscoutUrls.searchHomepageServices} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Search Providence Homes</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-800 mb-4">Locations</h3>
+                <ul className="space-y-2 text-slate-700">
+                  <li><Link href="/providence" className="text-blue-600 hover:underline">Providence (27 neighborhoods)</Link></li>
+                  <li><Link href="/neighborhoods/summerlin" className="text-blue-600 hover:underline">Summerlin</Link></li>
+                  <li><Link href="/neighborhoods/henderson" className="text-blue-600 hover:underline">Henderson</Link></li>
+                  <li><Link href="/neighborhoods/green-valley" className="text-blue-600 hover:underline">Green Valley</Link></li>
+                  <li><Link href="/neighborhoods/the-ridges" className="text-blue-600 hover:underline">The Ridges</Link></li>
+                  <li><Link href="/neighborhoods" className="text-blue-600 hover:underline">All Las Vegas Neighborhoods</Link></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Berkshire Hathaway Value Proposition Section */}
-        <section className="py-16 md:py-20 bg-white">
+        {/* Value Proposition - Providence Real Estate */}
+        <section className="py-12 md:py-16 bg-slate-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-12">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-                Why Choose Berkshire Hathaway HomeServices?
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                Providence Real Estate
               </h2>
-              <p className="text-lg text-slate-700 leading-relaxed">
-                When you work with a <strong>Berkshire Hathaway HomeServices</strong> agent, you're
-                backed by a name synonymous with trust, ethical standards, and financial
-                strength—the same principles that built Warren Buffett's empire.
+              <p className="text-slate-700 leading-relaxed">
+                <strong>Providence Real Estate</strong> serves Providence and North Las Vegas, NV 89166. 
+                Homes for sale in Providence Las Vegas. Buy or sell with expert local guidance. 
+                Dr. Jan Duffy | Berkshire Hathaway HomeServices Nevada Properties.
               </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              <div className="text-center p-6">
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Shield className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">Trusted Brand</h3>
-                <p className="text-slate-600 text-sm">
-                  Backed by Warren Buffett's Berkshire Hathaway Inc.—unmatched financial stability
-                </p>
-              </div>
-              <div className="text-center p-6">
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Users className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">Global Network</h3>
-                <p className="text-slate-600 text-sm">
-                  50,000+ agents worldwide for seamless referrals and relocations
-                </p>
-              </div>
-              <div className="text-center p-6">
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <TrendingUp className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">Market Expertise</h3>
-                <p className="text-slate-600 text-sm">
-                  Serving Las Vegas since 2008, $127M+ in closed transactions
-                </p>
-              </div>
-              <div className="text-center p-6">
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <HomeIcon className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">Full Service</h3>
-                <p className="text-slate-600 text-sm">
-                  Buying, selling, luxury, investment, relocation—we do it all
-                </p>
-              </div>
-            </div>
-
-            {/* Expert Quote */}
-            <div className="max-w-3xl mx-auto mt-12 bg-slate-50 rounded-lg p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "When clients ask why they should choose a Berkshire Hathaway HomeServices agent, I
-                tell them: you're not just getting me—you're getting a global network of 50,000
-                agents, world-class marketing, and a brand that's synonymous with trust."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, BHHS Nevada Properties
-              </cite>
             </div>
           </div>
         </section>
@@ -129,11 +97,10 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Providence & Las Vegas Real Estate Market | January 2026
+                Las Vegas Real Estate Market
               </h2>
               <p className="text-slate-300">
-                Current market data including Providence's 27 neighborhoods. Berkshire Hathaway
-                HomeServices Nevada Properties.
+                Current market data for Providence, Summerlin, Henderson, and Las Vegas.
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
@@ -230,8 +197,8 @@ export default function Home() {
         <WhyChooseUs />
         <ReviewsSection />
         <FAQSection
-          title="Frequently Asked Questions About Providence Las Vegas Real Estate"
-          subtitle="Common questions about buying, selling, and living in Providence Las Vegas"
+          title="Las Vegas Real Estate FAQs"
+          subtitle="Questions about services, locations, buying, and selling"
           faqs={homeFAQs}
         />
 
@@ -239,19 +206,18 @@ export default function Home() {
         <section className="py-16 md:py-20 bg-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Buy or Sell in Providence?
+              Providence Real Estate
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Whether you're buying, selling, or investing in Providence real estate, Dr. Jan Duffy
-              is here to help.
+              Homes for sale in Providence Las Vegas and North Las Vegas. Call (702) 919-7702.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17025001942"
+                href="tel:+17029197702"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
+                Call (702) 919-7702
               </a>
               <Link
                 href="/contact"
@@ -261,16 +227,14 @@ export default function Home() {
               </Link>
             </div>
             <p className="mt-6 text-blue-200 text-sm">
-              Dr. Jan Duffy | License S.0197614.LLC | Berkshire Hathaway HomeServices Nevada
-              Properties
+              Providence Real Estate | (702) 919-7702 | 7181 N Hualapai Way #135, Las Vegas, NV 89166
             </p>
           </div>
         </section>
 
         {/* Last Updated */}
         <div className="bg-slate-100 py-4 text-center text-sm text-slate-500">
-          Last Updated: January 2026 | Providence Las Vegas | Berkshire Hathaway HomeServices
-          Nevada Properties
+          Last Updated: January 2026 | Providence Real Estate | Providence, North Las Vegas
         </div>
       </main>
       <Footer />

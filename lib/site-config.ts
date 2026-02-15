@@ -1,29 +1,29 @@
-// Site Configuration - Providence Las Vegas
-// Berkshire Hathaway HomeServices Nevada Properties
+// Site Configuration - Providence Real Estate (GBP aligned)
+// Providence, North Las Vegas NV 89166
 
 export const siteConfig = {
-  name: "Providence Las Vegas",
-  fullName: "Berkshire Hathaway HomeServices Nevada Properties",
-  brandName: "Berkshire Hathaway HomeServices",
-  shortName: "BHHS",
+  name: "Providence Real Estate",
+  fullName: "Providence Real Estate | Homes for Sale in Providence Las Vegas",
+  brandName: "Providence Real Estate",
+  shortName: "Providence Real Estate",
   url: "https://www.providencelasvegas.com",
   description:
-    "Expert real estate services in Providence, Las Vegas, NV. Buy, sell, or invest with Dr. Jan Duffy, your trusted Berkshire Hathaway HomeServices Nevada Properties agent.",
+    "Providence Real Estate. Homes for sale in Providence Las Vegas and North Las Vegas. Real Estate Agency serving Providence, NV 89166. Call (702) 919-7702.",
 };
 
 export const agentInfo = {
   name: "Dr. Jan Duffy",
   title: "REALTOR®",
   license: "S.0197614.LLC",
-  phone: "(702) 500-1942",
-  phoneFormatted: "(702) 500-1942",
-  phoneTel: "tel:+17025001942",
+  phone: "(702) 919-7702",
+  phoneFormatted: "(702) 919-7702",
+  phoneTel: "tel:+17029197702",
   email: "DrDuffy@ProvidenceLasVegas.com",
-  brokerage: "Berkshire Hathaway HomeServices Nevada Properties",
+  brokerage: "Providence Real Estate",
 };
 
 export const officeInfo = {
-  name: "Berkshire Hathaway HomeServices Nevada Properties",
+  name: "Providence Real Estate",
   address: {
     street: "7181 N Hualapai Way #135",
     city: "Las Vegas",
@@ -32,11 +32,67 @@ export const officeInfo = {
     full: "7181 N Hualapai Way #135, Las Vegas, NV 89166",
   },
   coordinates: {
-    lat: 36.2136,
-    lng: -115.2702,
+    lat: 36.2889,
+    lng: -115.2717,
   },
-  phone: "(702) 500-1942",
-  phoneTel: "tel:+17025001942",
+  phone: "(702) 919-7702",
+  phoneTel: "tel:+17029197702",
+};
+
+// GBP CTA URLs - Update placeId when you have your GBP Place ID
+export const gbpUrls = {
+  directions: "https://www.google.com/maps/dir//7181+N+Hualapai+Way+%23135,+Las+Vegas,+NV+89166",
+  maps: "https://www.google.com/maps/search/?api=1&query=7181+N+Hualapai+Way+%23135+Las+Vegas+NV+89166",
+  // Leave review: Add ?placeid=YOUR_PLACE_ID when you have it from GBP
+  review: "https://search.google.com/local/writereview?query=Providence+Real+Estate+Las+Vegas",
+};
+
+// RealScout shared search link - Create Search Link from RealScout dashboard
+const REALSCOUT_SHARED_SEARCH_BASE =
+  "https://drjanduffy.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xODE0Mw==";
+const UTM_BASE =
+  "utm_campaign=providence_search&utm_source=providencelasvegas&utm_medium=website";
+
+/** Get RealScout shared search URL with UTM tracking. Use different content per placement. */
+export function getRealScoutSearchUrl(utmContent: string): string {
+  return `${REALSCOUT_SHARED_SEARCH_BASE}?${UTM_BASE}&utm_content=${utmContent}`;
+}
+
+export const realscoutUrls = {
+  /** Main RealScout site (no shared search) */
+  main: "https://drjanduffy.realscout.com/",
+  /** Shared search - hero placement */
+  searchHero: getRealScoutSearchUrl("hero"),
+  /** Shared search - footer placement */
+  searchFooter: getRealScoutSearchUrl("footer"),
+  /** Shared search - listings section */
+  searchListings: getRealScoutSearchUrl("listings"),
+  /** Shared search - navbar */
+  searchNavbar: getRealScoutSearchUrl("navbar"),
+  /** Shared search - about page */
+  searchAbout: getRealScoutSearchUrl("about"),
+  /** Shared search - CTA section */
+  searchCta: getRealScoutSearchUrl("cta"),
+  /** Shared search - 55+ communities */
+  search55Plus: getRealScoutSearchUrl("55_plus"),
+  /** Shared search - listing detail page */
+  searchListingDetail: getRealScoutSearchUrl("listing_detail"),
+  /** Shared search - featured properties */
+  searchFeatured: getRealScoutSearchUrl("featured"),
+  /** Shared search - related pages */
+  searchRelated: getRealScoutSearchUrl("related"),
+  /** Shared search - listings page */
+  searchListingsPage: getRealScoutSearchUrl("listings_page"),
+  /** Shared search - contact page */
+  searchContact: getRealScoutSearchUrl("contact"),
+  /** Shared search - buyers page */
+  searchBuyers: getRealScoutSearchUrl("buyers"),
+  /** Shared search - homepage services section */
+  searchHomepageServices: getRealScoutSearchUrl("homepage_services"),
+  /** Shared search - downsizing page (single-story, 55+) */
+  searchDownsizing: getRealScoutSearchUrl("downsizing"),
+  /** Shared search - relocation page */
+  searchRelocation: getRealScoutSearchUrl("relocation"),
 };
 
 // Providence community (from providencelvhoa.com)
@@ -119,6 +175,18 @@ export const marketStats = {
     pricePerSqFt: 385,
   },
 };
+
+// Recent sales - add new entries as you close (link to BHHSNV listing)
+export const recentSales = [
+  {
+    address: "10559 Pelican Island Avenue",
+    city: "Las Vegas",
+    state: "NV",
+    zip: "89166",
+    area: "Providence",
+    listingUrl: "https://www.bhhsnv.com/single-family/glv/2754305/10559-pelican-island-avenue-las-vegas-nv-89166",
+  },
+];
 
 // Agent Stats
 export const agentStats = {

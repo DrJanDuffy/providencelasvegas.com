@@ -394,4 +394,4 @@ A: Prioritize Phase 1 (homepage, about, contact, market report, Providence hub).
 ---
 
 **Questions?**
-Contact: Dr. Jan Duffy | DrDuffy@ProvidenceLasVegas.com | (702) 500-1942
+Contact: Dr. Jan Duffy | DrDuffy@ProvidenceLasVegas.com | (702) 919-7702

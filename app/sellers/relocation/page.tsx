@@ -17,11 +17,12 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { getFAQsForPage } from "@/lib/faq-library";
+import { realscoutUrls } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Relocation Home Sales | Providence Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Leaving Providence Las Vegas for a new opportunity? Dr. Jan Duffy helps relocating homeowners sell fast and coordinates with BHHS offices nationwide. Call (702) 500-1942.",
+    "Leaving Providence Las Vegas for a new opportunity? Dr. Jan Duffy helps relocating homeowners sell fast and coordinates with BHHS offices nationwide. Call (702) 919-7702.",
   keywords: [
     "relocation sale Providence Las Vegas",
     "relocation sale Las Vegas",
@@ -67,11 +68,11 @@ export default function RelocationPage() {
               we coordinate both ends of your move.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17029197702"
               className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Start Your Relocation → (702) 500-1942
+              Start Your Relocation → (702) 919-7702
             </a>
           </div>
 
@@ -451,7 +452,7 @@ export default function RelocationPage() {
                 </ul>
               </div>
               <p className="text-green-800 font-medium mt-4">
-                Moving to Las Vegas? <Link href="/contact" className="underline">Contact Dr. Jan</Link> to start your home search.
+                Moving to Las Vegas? <Link href="/contact" className="underline">Contact Dr. Jan</Link> or <a href={realscoutUrls.searchRelocation} target="_blank" rel="noopener noreferrer" className="underline">search Providence homes</a> to get started.
               </p>
             </div>
           </section>
@@ -481,13 +482,21 @@ export default function RelocationPage() {
               Let's create a relocation plan that works with your timeline.
               Dr. Jan will coordinate everything so you can focus on your new opportunity.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
               <a
-                href="tel:+17025001942"
+                href="tel:+17029197702"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
+                Call (702) 919-7702
+              </a>
+              <a
+                href={realscoutUrls.searchRelocation}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
+              >
+                Search Providence Homes
               </a>
               <Link
                 href="/home-valuation"
