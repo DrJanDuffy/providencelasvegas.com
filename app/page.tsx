@@ -1,7 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import RecentlySoldSection from "@/components/sections/RecentlySoldSection";
+import RealScoutInContractSection from "@/components/sections/RealScoutInContractSection";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import FAQSection from "@/components/sections/FAQSection";
@@ -39,7 +39,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <RealScoutListings />
-        <RecentlySoldSection />
+        <RealScoutInContractSection />
 
         {/* Services + Locations - Providence Real Estate */}
         <section className="py-12 md:py-16 bg-white" aria-labelledby="services-locations">

@@ -53,6 +53,12 @@ realscout-office-listings {
   width: 100%;
 }
 
+/* RealScout In Contract section (homepage) - user-specified divider color */
+.realscout-in-contract realscout-office-listings {
+  --rs-listing-divider-color: #0e64c8;
+  width: 100%;
+}
+
 /* RealScout container wrapper */
 .realscout-wrapper {
   display: flex;
