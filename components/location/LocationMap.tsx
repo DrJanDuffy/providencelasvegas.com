@@ -38,18 +38,16 @@ export default function LocationMap({
   theme = "light",
   className = "",
 }: LocationMapProps) {
-  const fullAddress = `${businessInfo.address.streetAddress}, ${businessInfo.address.addressLocality}, ${businessInfo.address.addressRegion} ${businessInfo.address.postalCode}`;
-  const directionsUrl = `https://www.google.com/maps/dir//${encodeURIComponent(fullAddress)}`;
-  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    `${businessInfo.name} ${fullAddress}`
-  )}`;
+  const directionsUrl = gbpUrls.directions;
+  const mapsUrl = gbpUrls.maps;
   const reviewUrl = gbpUrls.review;
 
-  const embedUrl = getMapEmbedUrl();
+  // Prefer static embed (highlights Providence Real Estate, no API key). Fallback to Embed API if no mapEmbed.
+  const embedUrl = gbpUrls.mapEmbed ?? getMapEmbedUrl();
   const [embedLoaded, setEmbedLoaded] = useState(false);
   const [embedFailed, setEmbedFailed] = useState(false);
 
-  // If embed never loads (e.g. invalid API key, network), show fallback link instead of blank box
+  // If embed never loads (e.g. network), show fallback link instead of blank box
   useEffect(() => {
     if (!embedUrl) return;
     const t = setTimeout(() => {

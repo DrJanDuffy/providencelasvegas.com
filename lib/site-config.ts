@@ -43,8 +43,12 @@ export const officeInfo = {
 export const gbpUrls = {
   profile: "https://g.page/r/Ca9gwAWH5oLcEBM",
   directions: "https://www.google.com/maps/dir//7181+N+Hualapai+Way+%23135,+Las+Vegas,+NV+89166",
-  maps: "https://www.google.com/maps/search/?api=1&query=7181+N+Hualapai+Way+%23135+Las+Vegas+NV+89166",
+  /** Place link (View on Google Maps) – short URL to Providence Real Estate on Google Maps */
+  maps: "https://maps.app.goo.gl/mDMRBtoF7WSJSdkZ7",
   review: "https://g.page/r/Ca9gwAWH5oLcEBM/review",
+  /** iframe embed URL – highlights Providence Real Estate, no API key required */
+  mapEmbed:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d205815.2009312783!2d-115.62090050546874!3d36.2913857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c89382173c649b%3A0xdc82e68705c060af!2sProvidence%20Real%20Estate!5e0!3m2!1sen!2sus!4v1771252456301!5m2!1sen!2sus",
 };
 
 // RealScout shared search link - Create Search Link from RealScout dashboard
