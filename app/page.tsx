@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "Providence Real Estate | Homes for Sale in Providence Las Vegas",
   description:
     "Providence Real Estate. Homes for sale in Providence Las Vegas and North Las Vegas. Real Estate Agency. Call (702) 744-2993.",
+  alternates: {
+    canonical: "https://www.providencelasvegas.com",
+  },
   keywords: [
     "Providence Las Vegas real estate",
     "Providence Las Vegas homes",
@@ -51,11 +54,14 @@ export default function Home() {
               <div>
                 <h3 className="text-xl font-semibold text-slate-800 mb-4">Providence Services</h3>
                 <ul className="space-y-2 text-slate-700">
+                  <li><Link href="/listings" className="text-blue-600 hover:underline">Providence Homes for Sale</Link></li>
                   <li><Link href="/buyers" className="text-blue-600 hover:underline">Buy in Providence</Link></li>
                   <li><Link href="/sellers" className="text-blue-600 hover:underline">Sell Your Providence Home</Link></li>
+                  <li><Link href="/luxury-homes" className="text-blue-600 hover:underline">Premium Providence Homes</Link></li>
                   <li><Link href="/new-construction" className="text-blue-600 hover:underline">Providence New Construction</Link></li>
                   <li><Link href="/55-plus-communities" className="text-blue-600 hover:underline">Providence 55+ Options</Link></li>
                   <li><Link href="/home-valuation" className="text-blue-600 hover:underline">Home Valuation</Link></li>
+                  <li><Link href="/services" className="text-blue-600 hover:underline">All Services</Link></li>
                   <li><a href={realscoutUrls.searchHomepageServices} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Search Providence Homes</a></li>
                 </ul>
               </div>

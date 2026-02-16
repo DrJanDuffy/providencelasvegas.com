@@ -32,6 +32,7 @@ export const metadata: Metadata = {
   title: "Dr. Jan Duffy, Providence Las Vegas REALTOR® | Berkshire Hathaway HomeServices",
   description:
     "Dr. Jan Duffy is the Providence Las Vegas real estate expert with Berkshire Hathaway HomeServices Nevada Properties. Specializing in all 27 Providence neighborhoods, California-to-Providence relocation, and premium homes. Call (702) 744-2993.",
+  alternates: { canonical: "https://www.providencelasvegas.com/google-business" },
   keywords: [
     "Dr. Jan Duffy Providence realtor",
     "Providence Las Vegas real estate agent",
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     "California to Providence Las Vegas",
   ],
   openGraph: {
-    title: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+    title: "Providence Real Estate",
     description: "Providence Las Vegas real estate expert serving since 2008. All 27 Providence neighborhoods, premium homes, California relocation.",
     url: "https://www.providencelasvegas.com/google-business",
     type: "profile",

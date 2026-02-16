@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: "Active Adult Living Near Providence | Age-Restricted Options",
   description:
     "Providence has no dedicated 55+ communities. Nearby options include Sun City Aliante (5 mi north) and Del Webb properties. Providence single-story, low-maintenance homes for downsizers. Dr. Jan Duffy. Call (702) 744-2993.",
+  alternates: { canonical: "https://www.providencelasvegas.com/55-plus-communities" },
   keywords: [
     "55+ near Providence Las Vegas",
     "active adult living near Providence",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
-  name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+  name: "Providence Real Estate",
   description:
     "Providence Las Vegas real estate expert. Helps downsizers and active adults find single-story and low-maintenance homes in Providence and nearby 55+ options.",
   telephone: "(702) 744-2993",

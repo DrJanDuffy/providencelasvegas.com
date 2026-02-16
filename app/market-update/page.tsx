@@ -43,7 +43,7 @@ const articleSchema = {
   dateModified: "2026-01-24",
   author: {
     "@type": "Person",
-    name: "Dr. Jan Duffy",
+    name: "Providence Real Estate",
     jobTitle: "REALTOR®",
     worksFor: {
       "@type": "RealEstateAgent",

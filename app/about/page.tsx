@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   title: "About Dr. Jan Duffy | Providence Las Vegas Real Estate | BHHS Nevada Properties",
   description:
     "Meet Dr. Jan Duffy, the leading Providence Las Vegas real estate expert. Berkshire Hathaway HomeServices Nevada Properties. Specializing in all 27 Providence neighborhoods since 2008. Providence HOA, new construction, and neighborhood market expertise. Call (702) 744-2993.",
+  alternates: { canonical: "https://www.providencelasvegas.com/about" },
   keywords: [
     "Dr. Jan Duffy",
     "Providence Las Vegas realtor",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
-  name: "Dr. Jan Duffy",
+  name: "Providence Real Estate",
   jobTitle: "REALTOR®",
   description:
     "Licensed real estate agent with Berkshire Hathaway HomeServices Nevada Properties, specializing in all 27 Providence Las Vegas neighborhoods since 2008.",
@@ -209,7 +210,7 @@ export default function AboutPage() {
                     </div>
                     <div className="flex items-center text-slate-700">
                       <Clock className="h-5 w-5 mr-3 text-blue-600" />
-                      Mon-Fri 8am-7pm, Sat 9am-5pm, Sun 10am-4pm
+                      Mon-Fri 9am-6pm, Sat 10am-4pm, Sun By Appointment
                     </div>
                   </div>
                 </div>

@@ -57,7 +57,7 @@ const sampleReviewSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   "@id": "https://www.providencelasvegas.com#organization",
-  name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+  name: "Providence Real Estate",
   url: "https://www.providencelasvegas.com",
   review: [
     {
@@ -65,7 +65,7 @@ const sampleReviewSchema = {
       itemReviewed: {
         "@type": "RealEstateAgent",
         "@id": "https://www.providencelasvegas.com#organization",
-        name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+        name: "Providence Real Estate",
         url: "https://www.providencelasvegas.com",
       },
       author: { "@type": "Person", name: "Test Client" },

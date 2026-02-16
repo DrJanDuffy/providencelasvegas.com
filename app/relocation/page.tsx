@@ -45,7 +45,7 @@ const relocationSchema = {
   name: "Las Vegas Relocation Services",
   provider: {
     "@type": "RealEstateAgent",
-    name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+    name: "Providence Real Estate",
     telephone: "+17027442993",
   },
   areaServed: "Las Vegas, Henderson, Summerlin, Clark County NV",

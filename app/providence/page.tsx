@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: "Providence Las Vegas Community | Dr. Jan Duffy, REALTOR®",
   description:
     "Providence is a master-planned community in Las Vegas with 27 neighborhoods and 5,600+ homes. Community parks, HOA info, and real estate with Dr. Jan Duffy, BHHS Nevada Properties.",
+  alternates: { canonical: "https://www.providencelasvegas.com/providence" },
   keywords: [
     "Providence Las Vegas",
     "Providence community",
@@ -58,10 +59,11 @@ export default function ProvidencePage() {
               Whether you are{" "}
               <InlineLink href="/buyers">buying</InlineLink> or{" "}
               <InlineLink href="/sellers">selling</InlineLink> a home in Providence Las Vegas,
-              from <InlineLink href="/providence/neighborhoods/oxford-commons">Oxford Commons</InlineLink> to{" "}
+              <InlineLink href="/listings">browse current listings</InlineLink> or explore from{" "}
+              <InlineLink href="/providence/neighborhoods/oxford-commons">Oxford Commons</InlineLink> to{" "}
               <InlineLink href="/providence/neighborhoods/saratoga-highlands">Saratoga Highlands</InlineLink> to{" "}
               <InlineLink href="/providence/neighborhoods/auburn-bradford">Auburn & Bradford</InlineLink> and all 27
-              neighborhoods, <InlineLink href="/about">Dr. Jan Duffy</InlineLink> offers hyperlocal
+              neighborhoods. <InlineLink href="/about">Dr. Jan Duffy</InlineLink> offers hyperlocal
               expertise and HOA resale guidance for Providence Las Vegas.
             </p>
 
@@ -170,6 +172,8 @@ export default function ProvidencePage() {
               <InlineLink href="/about">Dr. Jan Duffy</InlineLink> can help you{" "}
               <InlineLink href="/buyers">buy</InlineLink> or{" "}
               <InlineLink href="/sellers">sell</InlineLink> in any Providence neighborhood. 
+              For downsizers, see{" "}
+              <InlineLink href="/55-plus-communities">55+ options near Providence</InlineLink>.
               Familiar with Providence Master HOA resale requirements and Design Review so your 
               Providence Las Vegas transaction stays on track.
             </p>
@@ -185,8 +189,9 @@ export default function ProvidencePage() {
             <h3 className="text-xl font-semibold text-slate-900 mb-2">Design Review & Documents</h3>
             <p className="text-slate-700 mb-6 max-w-2xl">
               The Providence Master HOA oversees design review for exterior changes. For
-              guidelines, Realtors/Resale info, and community documents, visit the official
-              Providence HOA website. Have questions?{" "}
+              guidelines, Realtors/Resale info, and community documents, visit{" "}
+              <InlineLink href="/providence/hoa-info">our Providence HOA information page</InlineLink> or the
+              official Providence HOA website. Have questions?{" "}
               <InlineLink href="/contact">Contact Dr. Jan Duffy</InlineLink> for expert guidance.
             </p>
             <ul className="space-y-2 text-slate-700 max-w-2xl list-disc list-inside">

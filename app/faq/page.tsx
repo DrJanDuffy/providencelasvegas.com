@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "FAQ | Providence Las Vegas Real Estate | Berkshire Hathaway HomeServices",
   description:
     "Frequently asked questions about Providence Las Vegas real estate, Berkshire Hathaway HomeServices, buying, selling, and working with Dr. Jan Duffy at BHHS Nevada Properties.",
+  alternates: { canonical: "https://www.providencelasvegas.com/faq" },
   keywords: [
     "Berkshire Hathaway HomeServices FAQ",
     "Providence Las Vegas real estate questions",

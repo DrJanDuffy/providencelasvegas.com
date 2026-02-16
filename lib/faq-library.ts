@@ -74,7 +74,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How can I schedule a consultation with Dr. Jan Duffy?",
       answer:
-        "Call or text (702) 744-2993 for immediate assistance, or email DrDuffy@ProvidenceLasVegas.com. Office visits are available at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm.",
+        "Call or text (702) 744-2993 for immediate assistance, or email DrDuffy@ProvidenceLasVegas.com. Office visits are available at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 9am-6pm, Saturday 10am-4pm, Sunday By Appointment.",
     },
     {
       question: "What neighborhoods does Dr. Jan Duffy specialize in?",
@@ -92,7 +92,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "What are Dr. Jan Duffy's office hours?",
       answer:
-        "Office hours are Monday-Friday 8am-7pm, Saturday 9am-5pm, and Sunday 10am-4pm. The office is located at 7181 N Hualapai Way #135, Las Vegas, NV 89166.",
+        "Office hours are Monday-Friday 9am-6pm, Saturday 10am-4pm, Sunday By Appointment. The office is located at 7181 N Hualapai Way #135, Las Vegas, NV 89166.",
     },
     {
       question: "Can I get a free home valuation without visiting the office?",
@@ -113,6 +113,29 @@ const faqLibrary: Record<string, FAQItem[]> = {
       question: "Is there a fee for an initial consultation?",
       answer:
         "No. Initial consultations with Dr. Jan Duffy are free and come with no obligation. She offers complimentary home valuations for sellers and buyer consultations to discuss your needs and timeline.",
+    },
+  ],
+
+  "providence/hoa-info": [
+    {
+      question: "Where can I find Providence HOA documents and assessment due dates?",
+      answer:
+        "Providence Master HOA assessments are due January 1, April 1, July 1, and October 1. The official HOA website at providencelvhoa.com has Design Review, Realtors/Resale, Community Info, and Documents. Dr. Jan Duffy is familiar with the resale process.",
+    },
+    {
+      question: "What does the Providence HOA cover?",
+      answer:
+        "The Providence Master HOA oversees community standards, Design Review for modifications, common areas, and maintains the three community parks: The Promenade, Knickerbocker Park, and Huckleberry Park.",
+    },
+    {
+      question: "How do I get a resale certificate for my Providence home?",
+      answer:
+        "Resale certificates are obtained through the Providence Master HOA. Dr. Jan Duffy guides buyers and sellers through the resale process. Visit providencelvhoa.com or call (702) 744-2993 for assistance.",
+    },
+    {
+      question: "Do I need Design Review approval for home modifications in Providence?",
+      answer:
+        "Yes. Many modifications require Design Review approval from the Providence HOA. Dr. Jan can explain the process and help you understand what's required when buying or selling in Providence.",
     },
   ],
 
@@ -757,7 +780,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "How do I contact Dr. Jan Duffy?",
       answer:
-        "Call (702) 744-2993 or email DrDuffy@ProvidenceLasVegas.com. Office: 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm.",
+        "Call (702) 744-2993 or email DrDuffy@ProvidenceLasVegas.com. Office: 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 9am-6pm, Saturday 10am-4pm, Sunday By Appointment.",
     },
   ],
 
@@ -805,6 +828,26 @@ const faqLibrary: Record<string, FAQItem[]> = {
       question: "Are the listings on this site current?",
       answer:
         "Listings are fed from the MLS and update regularly. For the most current information, call (702) 744-2993. Dr. Jan can also show you off-market and coming-soon listings.",
+    },
+    {
+      question: "How competitive is the Providence housing market in 2026?",
+      answer:
+        "The Providence market is moderately competitive with 2.1 months of inventory—a slight seller's market. Well-priced Providence homes in desirable neighborhoods often receive multiple offers within the first week. Having a pre-approval and experienced agent gives you a significant advantage.",
+    },
+    {
+      question: "What's the best time of year to buy a home in Providence?",
+      answer:
+        "Providence has a year-round real estate market, but inventory typically peaks in spring (March-May) while competition is lowest in winter (November-January). The best time depends on your priorities: more selection in spring, potentially better deals in winter.",
+    },
+    {
+      question: "How much do I need for a down payment in Providence?",
+      answer:
+        "Down payment requirements vary by loan type: FHA loans require 3.5%, conventional loans typically 3-20%, VA loans 0% for eligible veterans. Nevada also offers down payment assistance programs for first-time buyers. Dr. Jan can connect you with lenders who specialize in various loan programs.",
+    },
+    {
+      question: "Are Providence HOA fees expensive?",
+      answer:
+        "HOA fees in Providence range from $25/month for basic community maintenance to $400+/month for guard-gated communities with extensive amenities. Most standard Providence neighborhoods fall between $50-$150/month. Dr. Jan always reviews HOA documents to ensure you understand what's included.",
     },
   ],
 };

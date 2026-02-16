@@ -119,7 +119,7 @@ export function ReviewSchema({
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     "@id": "https://www.providencelasvegas.com#organization",
-    name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+    name: "Providence Real Estate",
   };
 
   if (aggregateRating) {
@@ -136,7 +136,7 @@ export function ReviewSchema({
     const itemReviewed = {
       "@type": "RealEstateAgent",
       "@id": "https://www.providencelasvegas.com#organization",
-      name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+      name: "Providence Real Estate",
       url: "https://www.providencelasvegas.com",
     };
     schema.review = reviews.map((review) => ({

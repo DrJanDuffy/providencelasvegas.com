@@ -1,5 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
@@ -20,11 +22,13 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Services | Providence Real Estate | Providence Las Vegas",
   description:
     "Providence Real Estate services. Buying, selling, premium homes, 55+ options, relocation. Providence, North Las Vegas, NV 89166. Call (702) 744-2993.",
+  alternates: { canonical: "https://www.providencelasvegas.com/services" },
   keywords: [
     "Providence real estate services",
     "Providence home buying",
@@ -162,8 +166,11 @@ const sellerTypes = [
 ];
 
 export default function ServicesPage() {
+  const servicesFAQs = getFAQsForPage("services");
+
   return (
     <>
+      <FAQSchema faqs={servicesFAQs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
@@ -484,6 +491,12 @@ export default function ServicesPage() {
               </div>
             </div>
           </section>
+
+          <FAQSection
+            faqs={servicesFAQs}
+            title="Frequently Asked Questions About Providence Real Estate Services"
+            subtitle="Common questions about buying, selling, and working with Dr. Jan Duffy"
+          />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

@@ -22,15 +22,15 @@ export const businessInfo = {
   license: "S.0197614.LLC",
   priceRange: "$$",
 
-  // Hours - Best for Las Vegas realtors (extended for working clients, full weekends)
+  // Hours - GBP single source of truth: M-F 9-6, Sat 10-4, Sun By Appointment
   hours: {
-    monday: "08:00-19:00",
-    tuesday: "08:00-19:00",
-    wednesday: "08:00-19:00",
-    thursday: "08:00-19:00",
-    friday: "08:00-19:00",
-    saturday: "09:00-17:00",
-    sunday: "10:00-16:00",
+    monday: "09:00-18:00",
+    tuesday: "09:00-18:00",
+    wednesday: "09:00-18:00",
+    thursday: "09:00-18:00",
+    friday: "09:00-18:00",
+    saturday: "10:00-16:00",
+    sunday: "By Appointment",
   },
 
   // Geo coordinates (Providence, North Las Vegas area)
@@ -183,7 +183,7 @@ Dr. Jan's approach is simple: treat every client like family, know the market in
 
 For age-restricted options, Sun City Aliante (5 mi north of Providence) and Del Webb communities are nearby. Dr. Jan provides expertise in Providence HOA resale certificates, Design Review, new construction, and neighborhood comparisons.
 
-Office located at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Available Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm. Call (702) 744-2993 for a free consultation or visit www.providencelasvegas.com to start your Providence real estate journey today.`,
+Office located at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Available Monday-Friday 9am-6pm, Saturday 10am-4pm, Sunday By Appointment. Call (702) 744-2993 for a free consultation or visit www.providencelasvegas.com to start your Providence real estate journey today.`,
 };
 
 // FAQ Schema for GBP Q&A section
@@ -222,7 +222,7 @@ export const gbpFAQs = [
   },
   {
     question: "How do I schedule a consultation with Dr. Jan Duffy?",
-    answer: "Call or text (702) 744-2993 for immediate assistance, or email DrDuffy@ProvidenceLasVegas.com. Office visits available at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm.",
+    answer: "Call or text (702) 744-2993 for immediate assistance, or email DrDuffy@ProvidenceLasVegas.com. Office visits available at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Monday-Friday 9am-6pm, Saturday 10am-4pm, Sunday By Appointment.",
   },
   {
     question: "Does Dr. Jan help with investment properties in Las Vegas?",
@@ -251,14 +251,7 @@ export function generateLocalBusinessSchema() {
       latitude: businessInfo.geo.latitude,
       longitude: businessInfo.geo.longitude,
     },
-    openingHoursSpecification: [
-      { "@type": "OpeningHoursSpecification", dayOfWeek: "Monday", opens: "09:00", closes: "18:00" },
-      { "@type": "OpeningHoursSpecification", dayOfWeek: "Tuesday", opens: "09:00", closes: "18:00" },
-      { "@type": "OpeningHoursSpecification", dayOfWeek: "Wednesday", opens: "09:00", closes: "18:00" },
-      { "@type": "OpeningHoursSpecification", dayOfWeek: "Thursday", opens: "09:00", closes: "18:00" },
-      { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "09:00", closes: "18:00" },
-      { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "10:00", closes: "16:00" },
-    ],
+    openingHoursSpecification: gbpOpeningHoursSpecification,
     areaServed: businessInfo.serviceAreas.map((area) => ({
       "@type": "City",
       name: area,

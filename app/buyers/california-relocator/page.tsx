@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 const realEstateAgentSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
-  name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+  name: "Providence Real Estate",
   telephone: "+17027442993",
   url: "https://www.providencelasvegas.com/buyers/california-relocator",
   address: {

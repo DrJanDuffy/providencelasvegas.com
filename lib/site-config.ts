@@ -12,7 +12,7 @@ export const siteConfig = {
 };
 
 export const agentInfo = {
-  name: "Dr. Jan Duffy",
+  name: "Providence Real Estate",
   title: "REALTOR®",
   license: "S.0197614.LLC",
   phone: "(702) 744-2993",

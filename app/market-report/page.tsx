@@ -32,7 +32,7 @@ const reportSchema = {
   name: "Las Vegas Real Estate Market Report - January 2026",
   author: {
     "@type": "RealEstateAgent",
-    name: "Dr. Jan Duffy",
+    name: "Providence Real Estate",
     worksFor: "Berkshire Hathaway HomeServices Nevada Properties",
   },
   datePublished: "2026-01-23",

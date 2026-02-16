@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "All 27 Providence Neighborhoods | Providence Las Vegas Real Estate",
   description:
     "Providence Real Estate serves all 27 Providence Las Vegas neighborhoods. Oxford Commons, Saratoga Highlands, Auburn & Bradford and more. Call (702) 744-2993.",
+  alternates: { canonical: "https://www.providencelasvegas.com/neighborhoods" },
   keywords: [
     "Providence neighborhoods",
     "Providence Las Vegas",

@@ -3,7 +3,7 @@
 import { Star, Quote } from "lucide-react";
 import Image from "next/image";
 
-const ITEM_REVIEWED_NAME = "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties";
+const ITEM_REVIEWED_NAME = "Providence Real Estate";
 const ITEM_REVIEWED_URL = "https://www.providencelasvegas.com";
 
 export interface Review {
@@ -135,8 +135,8 @@ export default function ReviewsSection({
                   )}
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900" itemProp="author">
-                    {review.name}
+                  <h3 className="font-bold text-slate-900" itemProp="author" itemScope itemType="https://schema.org/Person">
+                    <span itemProp="name">{review.name}</span>
                   </h3>
                   <p className="text-sm text-slate-600">{review.location}</p>
                 </div>

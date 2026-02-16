@@ -1,5 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import Link from "next/link";
 import {
   Phone,
@@ -20,6 +22,7 @@ import {
 import type { Metadata } from "next";
 import { generateBreadcrumbSchema } from "@/lib/schema";
 import { realscoutUrls, providenceNeighborhoods, marketStats } from "@/lib/site-config";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const revalidate = 3600;
 
@@ -32,6 +35,7 @@ export const metadata: Metadata = {
   title: "Providence Homes for Sale | MLS Property Search | Dr. Jan Duffy",
   description:
     "Browse Providence Las Vegas homes for sale with live MLS listings. All 27 Providence neighborhoods. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 744-2993.",
+  alternates: { canonical: "https://www.providencelasvegas.com/listings" },
   keywords: [
     "Providence homes for sale",
     "Providence Las Vegas real estate",
@@ -48,7 +52,7 @@ const listingsSchema = {
   description: "Live MLS property listings for Providence Las Vegas homes for sale",
   provider: {
     "@type": "RealEstateAgent",
-    name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+    name: "Providence Real Estate",
     telephone: "+17027442993",
   },
   areaServed: [{ "@type": "Place", name: "Providence, North Las Vegas, NV 89166" }],
@@ -80,8 +84,11 @@ const neighborhoods = providenceNeighborhoods.slice(0, 6).map((n) => ({
 }));
 
 export default function ListingsPage() {
+  const listingsFAQs = getFAQsForPage("listings");
+
   return (
     <>
+      <FAQSchema faqs={listingsFAQs} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listingsBreadcrumbs) }} />
       <script
         type="application/ld+json"
@@ -395,58 +402,11 @@ export default function ListingsPage() {
             </div>
           </section>
 
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About Providence Las Vegas Real Estate
-            </h2>
-            <div className="space-y-4">
-              <div className="bg-slate-50 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How competitive is the Providence housing market in 2026?
-                </h3>
-                <p className="text-slate-600">
-                  The Providence market is moderately competitive with 2.1 months of inventory—a 
-                  slight seller's market. Well-priced Providence homes in desirable neighborhoods 
-                  often receive multiple offers within the first week. Having a 
-                  pre-approval and experienced agent gives you a significant advantage.
-                </p>
-              </div>
-              <div className="bg-slate-50 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What's the best time of year to buy a home in Providence?
-                </h3>
-                <p className="text-slate-600">
-                  Providence has a year-round real estate market, but inventory typically peaks in 
-                  spring (March-May) while competition is lowest in winter (November-January). The 
-                  best time depends on your priorities: more selection in spring, potentially better 
-                  deals in winter.
-                </p>
-              </div>
-              <div className="bg-slate-50 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How much do I need for a down payment in Providence?
-                </h3>
-                <p className="text-slate-600">
-                  Down payment requirements vary by loan type: FHA loans require 3.5%, conventional 
-                  loans typically 3-20%, VA loans 0% for eligible veterans. Nevada also offers down 
-                  payment assistance programs for first-time buyers. Dr. Jan can connect you with 
-                  lenders who specialize in various loan programs.
-                </p>
-              </div>
-              <div className="bg-slate-50 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Are Providence HOA fees expensive?
-                </h3>
-                <p className="text-slate-600">
-                  HOA fees in Providence range from $25/month for basic community maintenance to 
-                  $400+/month for guard-gated communities with extensive amenities. Most 
-                  standard Providence neighborhoods fall between $50-$150/month. Dr. Jan always reviews HOA 
-                  documents to ensure you understand what's included and any special assessments.
-                </p>
-              </div>
-            </div>
-          </section>
+          <FAQSection
+            faqs={listingsFAQs}
+            title="Frequently Asked Questions About Providence Las Vegas Real Estate"
+            subtitle="Common questions about searching for and buying Providence homes"
+          />
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

@@ -1,9 +1,12 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Shield, Users, Globe, Award, TrendingUp, CheckCircle, Phone } from "lucide-react";
 import type { Metadata } from "next";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Why Choose Berkshire Hathaway HomeServices | Providence Las Vegas Real Estate",
@@ -35,8 +38,11 @@ const organizationSchema = {
 };
 
 export default function WhyBerkshireHathawayPage() {
+  const bhhsFAQs = getFAQsForPage("why-berkshire-hathaway");
+
   return (
     <>
+      <FAQSchema faqs={bhhsFAQs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -238,36 +244,11 @@ export default function WhyBerkshireHathawayPage() {
           </section>
 
           {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About BHHS
-            </h2>
-            <div className="space-y-4">
-              {[
-                {
-                  q: "Is Berkshire Hathaway HomeServices owned by Warren Buffett?",
-                  a: "Berkshire Hathaway HomeServices is part of HSF Affiliates LLC, which is a joint venture of Berkshire Hathaway Inc. (Warren Buffett's company) and HomeServices of America. The brand carries the trusted Berkshire Hathaway name and upholds its values of integrity and excellence.",
-                },
-                {
-                  q: "What makes BHHS different from other real estate companies?",
-                  a: "BHHS is the only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This provides unmatched financial stability, a global network of 50,000+ agents, world-class marketing resources, and a commitment to ethical standards that goes beyond industry requirements.",
-                },
-                {
-                  q: "Does using a Berkshire Hathaway agent cost more?",
-                  a: "No. Commission rates are negotiable and comparable to other brokerages. The value you receive—global marketing exposure, trusted brand recognition, and experienced agents—often helps homes sell faster and for more money.",
-                },
-                {
-                  q: "Can BHHS help with relocations to Las Vegas?",
-                  a: "Yes! Our global network makes relocations seamless. Dr. Jan Duffy can coordinate with BHHS agents in your current city while providing expert guidance on Providence Las Vegas, Las Vegas neighborhoods, schools, and communities.",
-                },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          <FAQSection
+            faqs={bhhsFAQs}
+            title="Frequently Asked Questions About BHHS"
+            subtitle="Common questions about Berkshire Hathaway HomeServices and why it's the right choice for Providence Las Vegas real estate"
+          />
 
           {/* CTA */}
           <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">

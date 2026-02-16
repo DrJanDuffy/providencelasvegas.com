@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   title: "Sell Your Providence Home | Providence Las Vegas Real Estate",
   description:
     "Sell your Providence Las Vegas home with Dr. Jan Duffy. Providence-specific market data, HOA resale certificate process, expert pricing. Free home valuation. Call (702) 744-2993.",
+  alternates: { canonical: "https://www.providencelasvegas.com/sellers" },
   keywords: [
     "sell Providence home",
     "Providence Las Vegas listing agent",
@@ -42,7 +43,7 @@ const sellerSchema = {
   name: "Providence Home Selling Services",
   provider: {
     "@type": "RealEstateAgent",
-    name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+    name: "Providence Real Estate",
     telephone: "+17027442993",
   },
   areaServed: "Providence, North Las Vegas, NV 89166",

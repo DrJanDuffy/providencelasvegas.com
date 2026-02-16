@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "Contact | Providence Real Estate | Providence Las Vegas",
   description:
     "Contact Providence Real Estate. Schedule an appointment, get directions, or call (702) 744-2993. Providence, North Las Vegas, NV 89166.",
+  alternates: { canonical: "https://www.providencelasvegas.com/contact" },
   keywords: [
     "contact Providence Las Vegas real estate agent",
     "Dr. Jan Duffy Providence Las Vegas",
@@ -108,7 +109,7 @@ export default function ContactPage() {
                       (702) 744-2993
                     </a>
                     <p className="text-sm text-slate-500 mt-1">
-                      Available Mon-Fri 8am-7pm, Sat 9am-5pm, Sun 10am-4pm
+                      Available Mon-Fri 9am-6pm, Sat 10am-4pm, Sun By Appointment
                     </p>
                   </div>
                 </div>
@@ -147,7 +148,8 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-slate-900 mb-1">Office Hours</h3>
                     <p className="text-slate-700">
                       Monday - Friday: 9:00 AM - 6:00 PM<br />
-                      Saturday - Sunday: 10:00 AM - 4:00 PM
+                      Saturday: 10:00 AM - 4:00 PM<br />
+                      Sunday: By Appointment
                     </p>
                     <p className="text-sm text-slate-500 mt-1">
                       Available by appointment outside these hours

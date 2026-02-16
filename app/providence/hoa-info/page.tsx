@@ -1,5 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import FAQSection from "@/components/sections/FAQSection";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import RelatedPages from "@/components/navigation/RelatedPages";
 import InlineLink from "@/components/content/InlineLink";
@@ -8,11 +10,13 @@ import type { Metadata } from "next";
 import { Phone, ExternalLink } from "lucide-react";
 import { providenceCommunity } from "@/lib/site-config";
 import { getRelatedPages } from "@/lib/related-pages";
+import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
   title: "Providence HOA Information | Providence Las Vegas Real Estate",
   description:
     "Providence Las Vegas HOA info: resale certificate process, Design Review, assessment due dates, and neighborhood requirements. Official Providence HOA link and expert guidance from Dr. Jan Duffy.",
+  alternates: { canonical: "https://www.providencelasvegas.com/providence/hoa-info" },
   keywords: [
     "Providence HOA",
     "Providence Las Vegas HOA",
@@ -23,8 +27,11 @@ export const metadata: Metadata = {
 };
 
 export default function ProvidenceHOAInfoPage() {
+  const hoaFAQs = getFAQsForPage("providence/hoa-info");
+
   return (
     <>
+      <FAQSchema faqs={hoaFAQs} />
       <Navbar />
       <Breadcrumbs items={[{ label: "Providence Las Vegas", href: "/providence" }, { label: "HOA Information" }]} />
       <main className="pt-24 pb-16">
@@ -133,6 +140,12 @@ export default function ProvidenceHOAInfoPage() {
           <RelatedPages
             title="You May Also Be Interested In"
             pages={getRelatedPages("providence")}
+          />
+
+          <FAQSection
+            faqs={hoaFAQs}
+            title="Frequently Asked Questions About Providence HOA"
+            subtitle="Common questions about HOA assessments, resale certificates, and Design Review"
           />
 
           <section className="py-12 bg-blue-600 text-white rounded-xl text-center">

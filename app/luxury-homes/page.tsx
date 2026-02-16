@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: "Premium Providence Homes | Providence Las Vegas Real Estate",
   description:
     "Discover Providence's finest properties in Oxford Commons, Saratoga Highlands, and premier neighborhoods. Custom upgrades, larger lots, move-in ready homes. Dr. Jan Duffy, BHHS. Call (702) 744-2993.",
+  alternates: { canonical: "https://www.providencelasvegas.com/luxury-homes" },
   keywords: [
     "Premium Providence homes",
     "Oxford Commons homes",
@@ -34,7 +35,7 @@ const luxurySchema = {
   name: "Premium Providence Home Services",
   provider: {
     "@type": "RealEstateAgent",
-    name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+    name: "Providence Real Estate",
     telephone: "+17027442993",
   },
   areaServed: "Providence, North Las Vegas, NV 89166",

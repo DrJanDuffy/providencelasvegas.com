@@ -67,9 +67,6 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: "index, follow",
   },
-  alternates: {
-    canonical: url,
-  },
   // Add your Google Search Console verification code in .env as GOOGLE_SITE_VERIFICATION
   ...(process.env.GOOGLE_SITE_VERIFICATION && {
     verification: {
