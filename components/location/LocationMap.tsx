@@ -62,12 +62,11 @@ export default function LocationMap({
           src={MAP_EMBED_URL}
           width="100%"
           height="100%"
-          className="border-0"
+          className="border-0 absolute inset-0 w-full h-full"
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           title="Providence Real Estate - Office Location"
-          className="absolute inset-0 w-full h-full"
         />
       </div>
       {variant === "full" && (
