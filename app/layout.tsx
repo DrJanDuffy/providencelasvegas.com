@@ -95,12 +95,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://assets.calendly.com" />
         {/* Site-wide JSON-LD Schema: RealEstateAgent + WebSite */}
         <SchemaScript schema={siteWideSchemas} id="site-schema" />
-        {/* Google tag (gtag.js) - Providence Las Vegas - lazyOnload for performance */}
+        {/* Google tag (gtag.js) - Providence Las Vegas - afterInteractive so GA4 receives data */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRG4ZVGKDK"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="lazyOnload">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
