@@ -94,12 +94,39 @@ export default function LocationMap({
           <>
             {!embedLoaded && (
               <div
-                className={`absolute inset-0 flex flex-col items-center justify-center gap-2 z-10 ${
+                className={`absolute inset-0 flex flex-col items-center justify-center gap-4 z-10 p-6 ${
                   isDark ? "bg-slate-800 text-slate-300" : "bg-slate-100 text-slate-600"
                 }`}
                 aria-live="polite"
               >
-                <span className="text-sm font-medium">Loading map…</span>
+                <div className="text-center">
+                  <p className={`font-semibold ${isDark ? "text-white" : "text-slate-900"}`}>
+                    {businessInfo.name}
+                  </p>
+                  <p className="text-sm mt-1">
+                    {businessInfo.address.streetAddress}, {businessInfo.address.addressLocality},{" "}
+                    {businessInfo.address.addressRegion} {businessInfo.address.postalCode}
+                  </p>
+                  <p className="text-sm mt-0.5">
+                    <a href={`tel:${businessInfo.phone.tel}`} className={linkClass}>
+                      {businessInfo.phone.display}
+                    </a>
+                  </p>
+                </div>
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
+                    isDark
+                      ? "bg-slate-700 text-white hover:bg-slate-600"
+                      : "bg-white text-slate-800 border border-slate-200 hover:bg-slate-50"
+                  }`}
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  View on Google Maps
+                </a>
+                <span className="text-xs opacity-80">Loading map…</span>
               </div>
             )}
             <iframe
