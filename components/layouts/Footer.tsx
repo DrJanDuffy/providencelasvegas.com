@@ -148,6 +148,14 @@ export default function Footer() {
               >
                 Leave us a review
               </a>
+              <a
+                href="https://www.facebook.com/ProvidenceLasVegasRealEstate"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-white transition-colors"
+              >
+                Follow us on Facebook
+              </a>
             </div>
           </div>
         </div>

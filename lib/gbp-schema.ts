@@ -120,7 +120,7 @@ export const businessInfo = {
 
   // Social profiles for sameAs schema
   socialProfiles: [
-    "https://www.facebook.com/drjanduffy",
+    "https://www.facebook.com/ProvidenceLasVegasRealEstate",
     "https://www.instagram.com/drjanduffy",
     "https://www.linkedin.com/in/drjanduffy",
     "https://www.youtube.com/@drjanduffy",
@@ -275,7 +275,7 @@ export function generateLocalBusinessSchema() {
       bestRating: "5",
     },
     sameAs: [
-      "https://www.facebook.com/drjanduffy",
+      "https://www.facebook.com/ProvidenceLasVegasRealEstate",
       "https://www.instagram.com/drjanduffy",
       "https://www.linkedin.com/in/drjanduffy",
     ],

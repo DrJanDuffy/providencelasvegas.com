@@ -68,7 +68,7 @@ const BASE_URL = siteConfig.url;
 
 // Social media profiles (to be updated with actual URLs)
 export const socialProfiles = {
-  facebook: "https://www.facebook.com/heyberkshire",
+  facebook: "https://www.facebook.com/ProvidenceLasVegasRealEstate",
   instagram: "https://www.instagram.com/heyberkshire",
   linkedin: "https://www.linkedin.com/in/drjanduffy",
   tiktok: "https://www.tiktok.com/@heyberkshire",
