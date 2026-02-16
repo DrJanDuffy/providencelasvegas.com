@@ -232,7 +232,7 @@ export default function AboutPage() {
                 <div className="relative aspect-square rounded-lg overflow-hidden border border-slate-200 shadow-md">
                   <Image
                     src="/agent1.jpg"
-                    alt="Dr. Jan Duffy, REALTOR® - Berkshire Hathaway HomeServices Nevada Properties"
+                    alt="Dr. Jan Duffy, Providence Las Vegas REALTOR® - Berkshire Hathaway HomeServices Nevada Properties"
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"
                     className="object-cover"

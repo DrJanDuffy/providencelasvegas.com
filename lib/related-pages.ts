@@ -130,17 +130,17 @@ export const relatedPagesMap = {
     {
       title: "Oxford Commons Providence",
       description: "Premier Providence neighborhood with modern homes",
-      href: "/providence/oxford-commons",
+      href: "/providence/neighborhoods/oxford-commons",
     },
     {
       title: "Saratoga Highlands Providence",
       description: "Upscale Providence neighborhood with desirable floor plans",
-      href: "/providence/saratoga-highlands",
+      href: "/providence/neighborhoods/saratoga-highlands",
     },
     {
       title: "Auburn & Bradford Providence",
       description: "Family-friendly Providence neighborhood with great schools",
-      href: "/providence/auburn-bradford",
+      href: "/providence/neighborhoods/auburn-bradford",
     },
   ],
 
@@ -176,12 +176,12 @@ export const relatedPagesMap = {
     {
       title: "Oxford Commons Providence",
       description: "Providence neighborhood with new construction inventory",
-      href: "/providence/oxford-commons",
+      href: "/providence/neighborhoods/oxford-commons",
     },
     {
       title: "Saratoga Highlands Providence",
       description: "Providence neighborhood with builder homes",
-      href: "/providence/saratoga-highlands",
+      href: "/providence/neighborhoods/saratoga-highlands",
     },
     {
       title: "All 27 Providence Neighborhoods",
@@ -194,7 +194,7 @@ export const relatedPagesMap = {
   neighborhoods: [
     {
       title: "Search Providence Homes",
-      description: "View current listings across Las Vegas",
+      description: "View current listings across Providence Las Vegas",
       href: realscoutUrls.searchRelated,
     },
     {
@@ -205,17 +205,17 @@ export const relatedPagesMap = {
     {
       title: "Auburn & Bradford Providence",
       description: "Family-friendly Providence neighborhood",
-      href: "/providence/auburn-bradford",
+      href: "/providence/neighborhoods/auburn-bradford",
     },
     {
       title: "Oxford Commons Providence",
       description: "Premier Providence neighborhood",
-      href: "/providence/oxford-commons",
+      href: "/providence/neighborhoods/oxford-commons",
     },
     {
       title: "Saratoga Highlands Providence",
       description: "Upscale Providence neighborhood",
-      href: "/providence/saratoga-highlands",
+      href: "/providence/neighborhoods/saratoga-highlands",
     },
   ],
 
@@ -240,12 +240,12 @@ export const relatedPagesMap = {
     },
     {
       title: "Market Update",
-      description: "Latest Las Vegas real estate market trends and news",
+      description: "Latest Providence Las Vegas real estate market trends and news",
       href: "/market-update",
     },
     {
       title: "Market Insights",
-      description: "In-depth analysis of Las Vegas market conditions",
+      description: "In-depth analysis of Providence market conditions",
       href: "/market-insights",
     },
     {

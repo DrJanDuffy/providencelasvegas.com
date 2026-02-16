@@ -24,7 +24,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Services | Providence Real Estate | Providence Las Vegas",
   description:
-    "Providence Real Estate services. Buying, selling, luxury homes, 55+ communities, relocation. Providence, North Las Vegas, NV 89166. Call (702) 744-2993.",
+    "Providence Real Estate services. Buying, selling, premium homes, 55+ options, relocation. Providence, North Las Vegas, NV 89166. Call (702) 744-2993.",
   keywords: [
     "Providence real estate services",
     "Providence home buying",
@@ -189,7 +189,7 @@ export default function ServicesPage() {
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <div className="flex items-center">
                 <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                <span>Serving Las Vegas Since 2008</span>
+                <span>Serving Providence Las Vegas Since 2008</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
@@ -216,7 +216,7 @@ export default function ServicesPage() {
               Core Real Estate Services
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              These foundational services cover the majority of real estate transactions in Las Vegas. 
+              These foundational services cover the majority of real estate transactions in Providence. 
               Each service is delivered with the professionalism, resources, and ethical standards 
               that define Berkshire Hathaway HomeServices—the only real estate brand backed by 
               Warren Buffett's Berkshire Hathaway Inc.
@@ -386,7 +386,7 @@ export default function ServicesPage() {
               </div>
               <div>
                 <div className="text-3xl font-bold text-blue-400 mb-2">Since 2008</div>
-                <div className="text-slate-300 text-sm">Serving Las Vegas</div>
+                <div className="text-slate-300 text-sm">Serving Providence Las Vegas</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-blue-400 mb-2">$127M+</div>

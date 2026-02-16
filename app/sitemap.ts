@@ -38,7 +38,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const buyerPersonaPages = [
     { url: `${baseUrl}/buyers/california-relocator`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/buyers/first-time-buyers`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${baseUrl}/buyers/luxury-homes-las-vegas`, priority: 0.8, changeFrequency: "monthly" as const },
   ];
 
   // Seller persona pages
@@ -49,15 +48,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/sellers/relocation`, priority: 0.8, changeFrequency: "monthly" as const },
   ];
 
-  // 55+ community sub-pages
-  const fiftyPlusCommunityPages = [
-    { url: `${baseUrl}/55-plus-communities/sun-city-summerlin`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${baseUrl}/55-plus-communities/sun-city-anthem`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${baseUrl}/55-plus-communities/del-webb-lake-las-vegas`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${baseUrl}/55-plus-communities/sun-city-aliante`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${baseUrl}/55-plus-communities/heritage-stonebridge`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${baseUrl}/55-plus-communities/solera-anthem`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${baseUrl}/55-plus-communities/trilogy-summerlin`, priority: 0.8, changeFrequency: "monthly" as const },
+  // Providence HOA info
+  const providenceHoaPage = [
+    { url: `${baseUrl}/providence/hoa-info`, priority: 0.85, changeFrequency: "monthly" as const },
   ];
 
   // Providence Las Vegas: hub + 27 neighborhood pages
@@ -69,28 +62,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
-  // Other neighborhood pages (non-Providence)
-  const neighborhoodPages = [
-    { url: `${baseUrl}/neighborhoods/summerlin`, priority: 0.8, changeFrequency: "weekly" as const },
-    { url: `${baseUrl}/neighborhoods/henderson`, priority: 0.8, changeFrequency: "weekly" as const },
-    { url: `${baseUrl}/neighborhoods/green-valley`, priority: 0.7, changeFrequency: "weekly" as const },
-    { url: `${baseUrl}/neighborhoods/the-ridges`, priority: 0.8, changeFrequency: "weekly" as const },
-    { url: `${baseUrl}/neighborhoods/southern-highlands`, priority: 0.7, changeFrequency: "weekly" as const },
-    { url: `${baseUrl}/neighborhoods/north-las-vegas`, priority: 0.7, changeFrequency: "weekly" as const },
-    { url: `${baseUrl}/neighborhoods/skye-canyon`, priority: 0.7, changeFrequency: "weekly" as const },
-    { url: `${baseUrl}/neighborhoods/centennial-hills`, priority: 0.7, changeFrequency: "weekly" as const },
-    { url: `${baseUrl}/neighborhoods/inspirada`, priority: 0.7, changeFrequency: "weekly" as const },
-    { url: `${baseUrl}/neighborhoods/mountains-edge`, priority: 0.7, changeFrequency: "weekly" as const },
-  ];
-
   const allPages = [
     ...corePages,
     ...servicePages,
     ...buyerPersonaPages,
     ...sellerPersonaPages,
-    ...fiftyPlusCommunityPages,
+    ...providenceHoaPage,
     ...providencePages,
-    ...neighborhoodPages,
   ];
 
   return allPages.map((page) => ({

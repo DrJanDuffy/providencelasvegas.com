@@ -32,7 +32,7 @@ export default function HeroSection() {
           >
             <Image
               src={src}
-              alt={index === 0 ? "Providence Real Estate - Homes for Sale in Providence Las Vegas" : `Providence Real Estate hero image ${index + 1}`}
+              alt={index === 0 ? "Providence Las Vegas homes for sale - Providence Real Estate" : `Providence Las Vegas real estate hero - homes across 27 Providence neighborhoods ${index + 1}`}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1920px"
               className="object-cover"

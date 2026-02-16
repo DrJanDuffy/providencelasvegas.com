@@ -261,7 +261,7 @@ export default function NewConstructionPage() {
           {/* Builders Grid */}
           <section className="mb-16 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Las Vegas New Home Builders
+              Providence New Home Builders
             </h2>
             <div className="grid lg:grid-cols-2 gap-6">
               {builders.map((builder) => (
@@ -428,7 +428,7 @@ export default function NewConstructionPage() {
           <FAQSection
             faqs={newConstructionFAQs}
             title="New Construction FAQs"
-            subtitle="Common questions about buying new construction homes in Las Vegas"
+            subtitle="Common questions about buying new construction homes in Providence Las Vegas"
           />
 
           {/* What We Negotiate */}

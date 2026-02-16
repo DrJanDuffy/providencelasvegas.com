@@ -62,8 +62,8 @@ export const businessInfo = {
     { name: "Seller Representation", description: "List and sell your home for top dollar" },
     { name: "Luxury Home Sales", description: "High-end properties $1M+" },
     // Niche Services (trigger intent phrases)
-    { name: "California Relocation Services", description: "Helping CA buyers transition to Las Vegas" },
-    { name: "55+ Community Specialist", description: "Sun City, Anthem, Del Webb communities" },
+    { name: "California Relocation Services", description: "Helping CA buyers transition to Providence Las Vegas" },
+    { name: "55+ Options Near Providence", description: "Single-story Providence homes, Sun City Aliante, Del Webb" },
     { name: "First-Time Home Buyer Guidance", description: "FHA, VA, down payment assistance" },
     { name: "Probate Real Estate Sales", description: "Estate and probate property transactions" },
     { name: "Divorce Real Estate Sales", description: "Neutral representation for marital asset division" },

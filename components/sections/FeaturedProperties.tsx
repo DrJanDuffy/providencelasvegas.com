@@ -22,7 +22,7 @@ const PropertyCard = ({ property }: { property: Property }) => (
     <div className="relative h-48 md:h-64">
       <Image
         src={property.image}
-        alt={property.name}
+        alt={`${property.name} - Providence Las Vegas home in ${property.location}`}
         fill
         className="object-cover"
       />

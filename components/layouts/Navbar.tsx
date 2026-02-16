@@ -32,7 +32,7 @@ export default function Navbar() {
     { href: "/new-construction", label: "Providence New Construction" },
     { href: "/home-valuation", label: "Free Home Valuation" },
     { href: "/providence/hoa-info", label: "HOA & Resale Info" },
-    { href: "/luxury-homes", label: "Providence Luxury Homes" },
+    { href: "/luxury-homes", label: "Premium Providence Homes" },
     { href: "/55-plus-communities", label: "Providence 55+ Living" },
   ];
 

@@ -80,7 +80,7 @@ const buyingSteps = [
     icon: Key,
     title: "Close & Get Your Keys",
     description:
-      "Dr. Jan coordinates with lenders, title, and escrow to ensure a smooth closing. The typical closing process takes 30-45 days from offer acceptance—then you get the keys to your new Las Vegas home!",
+      "Dr. Jan coordinates with lenders, title, and escrow to ensure a smooth closing. The typical closing process takes 30-45 days from offer acceptance—then you get the keys to your new Providence home!",
   },
 ];
 
@@ -161,7 +161,7 @@ export default function BuyersPage() {
                   transaction—from the first showing to the closing table and beyond.
                 </p>
                 <div className="text-sm text-slate-500">
-                  Serving Las Vegas since 2008 | $127M+ in transactions
+                  Serving Providence Las Vegas since 2008 | $127M+ in transactions
                 </div>
               </div>
             </div>
@@ -170,12 +170,12 @@ export default function BuyersPage() {
           {/* Buying Process */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              The Home Buying Process in Las Vegas
+              The Home Buying Process in Providence
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-4">
               Buying a home is one of the most significant financial decisions you'll make. 
               Understanding the process helps reduce stress and ensures you're prepared at each 
-              step. Here's what to expect when purchasing a home in Las Vegas with Dr. Jan Duffy 
+              step. Here's what to expect when purchasing a home in Providence Las Vegas with Dr. Jan Duffy 
               and Berkshire Hathaway HomeServices.
             </p>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
@@ -334,7 +334,7 @@ export default function BuyersPage() {
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">Local Expertise</h3>
                 <p className="text-slate-600 text-sm">
-                  Dr. Jan has served Las Vegas since 2008 with $127M+ in transactions
+                  Dr. Jan has served Providence Las Vegas since 2008 with $127M+ in transactions
                 </p>
               </div>
               <div className="text-center">
@@ -359,7 +359,7 @@ export default function BuyersPage() {
                 every client like family and won't stop until we find the right home for your needs."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas Since 2008
+                — Dr. Jan Duffy, BHHS Nevada Properties | Serving Providence Las Vegas Since 2008
               </cite>
             </div>
           </section>
@@ -367,12 +367,12 @@ export default function BuyersPage() {
           {/* Market Stats */}
           <section className="mb-16 bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-4 text-center">
-              Las Vegas Buyer Market Statistics | January 2026
+              Providence Buyer Market Statistics | January 2026
             </h2>
             <p className="text-blue-100 text-center max-w-3xl mx-auto mb-8">
               Understanding the current market helps you make informed decisions about timing, 
               pricing, and negotiation strategies. Here's a snapshot of what buyers are facing 
-              in the Las Vegas market right now.
+              in the Providence market right now.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -397,15 +397,15 @@ export default function BuyersPage() {
           {/* FAQ */}
           <FAQSection
             faqs={buyersFAQs}
-            title="Frequently Asked Questions About Buying in Las Vegas"
-            subtitle="Get answers to the most common questions from Las Vegas home buyers. If you don't see your question here, call Dr. Jan Duffy at (702) 744-2993 for a free consultation."
+            title="Frequently Asked Questions About Buying in Providence"
+            subtitle="Get answers to the most common questions from Providence home buyers. If you don't see your question here, call Dr. Jan Duffy at (702) 744-2993 for a free consultation."
           />
 
           {/* CTA */}
           <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Find Your Las Vegas Home?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Find Your Providence Home?</h2>
             <p className="text-xl text-slate-300 mb-8">
-              Questions about buying in Las Vegas? Call or text Dr. Jan Duffy for a free buyer
+              Questions about buying in Providence? Call or text Dr. Jan Duffy for a free buyer
               consultation. Get expert guidance backed by Berkshire Hathaway HomeServices—the 
               seller pays the commission, so representation is free for you.
             </p>

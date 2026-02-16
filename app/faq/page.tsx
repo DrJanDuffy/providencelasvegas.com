@@ -13,14 +13,14 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "FAQ | Berkshire Hathaway HomeServices Las Vegas Real Estate",
+  title: "FAQ | Providence Las Vegas Real Estate | Berkshire Hathaway HomeServices",
   description:
-    "Frequently asked questions about Las Vegas real estate, Berkshire Hathaway HomeServices, buying, selling, and working with Dr. Jan Duffy at BHHS Nevada Properties.",
+    "Frequently asked questions about Providence Las Vegas real estate, Berkshire Hathaway HomeServices, buying, selling, and working with Dr. Jan Duffy at BHHS Nevada Properties.",
   keywords: [
     "Berkshire Hathaway HomeServices FAQ",
-    "Las Vegas real estate questions",
-    "buying a home Las Vegas",
-    "selling a home Henderson",
+    "Providence Las Vegas real estate questions",
+    "buying a home Providence",
+    "selling a home Providence",
     "BHHS agent questions",
   ],
 };
@@ -45,7 +45,7 @@ const faqCategories = [
       },
       {
         q: "What areas does BHHS Nevada Properties serve?",
-        a: "BHHS Nevada Properties serves all of Las Vegas, Henderson, North Las Vegas, and surrounding areas, with specialized expertise in Summerlin, The Ridges, Skye Canyon, Southern Highlands, Green Valley, Inspirada, and all Henderson communities.",
+        a: "BHHS Nevada Properties serves Providence Las Vegas and all 27 Providence neighborhoods. Dr. Jan Duffy specializes in Providence HOA resale certificates, Design Review, new construction, and neighborhood comparisons across Oxford Commons, Saratoga Highlands, Auburn & Bradford, and every Providence community.",
       },
       {
         q: "Does using a Berkshire Hathaway agent cost more?",
@@ -54,7 +54,7 @@ const faqCategories = [
     ],
   },
   {
-    title: "Buying a Home in Las Vegas",
+    title: "Buying a Home in Providence",
     faqs: [
       {
         q: "How long does the home buying process take?",
@@ -69,7 +69,7 @@ const faqCategories = [
         a: "Down payment requirements vary: FHA loans require 3.5%, conventional loans typically 3-20%, and VA/USDA loans may require 0% down. Dr. Jan can connect you with lenders who specialize in various loan programs.",
       },
       {
-        q: "Is now a good time to buy in Las Vegas?",
+        q: "Is now a good time to buy in Providence?",
         a: "Yes. With more inventory, returning negotiating power, and stable interest rates, buyers have more options than they've had in years. Well-priced homes still move quickly, but you won't face the bidding wars of 2021-2022.",
       },
       {
@@ -83,11 +83,11 @@ const faqCategories = [
     faqs: [
       {
         q: "What is my home worth in today's market?",
-        a: "Home values depend on location, condition, size, and recent comparable sales. Dr. Jan provides free, comprehensive home valuations using current MLS data and her expertise serving Las Vegas since 2008.",
+        a: "Home values depend on location, condition, size, and recent comparable sales. Dr. Jan provides free, comprehensive Providence home valuations using current MLS data and her expertise serving Providence Las Vegas since 2008.",
       },
       {
         q: "How long will it take to sell my home?",
-        a: "Currently, well-priced homes in Las Vegas are selling in an average of 28 days. Luxury homes may take longer (45+ days). Pricing strategy is crucial—overpriced homes can sit for months.",
+        a: "Currently, well-priced Providence homes are selling in an average of 28 days. Premium homes may take longer (45+ days). Pricing strategy is crucial—overpriced homes can sit for months.",
       },
       {
         q: "What do I need to do to prepare my home for sale?",
@@ -107,12 +107,12 @@ const faqCategories = [
     title: "Investment Properties",
     faqs: [
       {
-        q: "Is Las Vegas good for real estate investing?",
-        a: "Yes. Las Vegas offers strong rental yields, appreciation potential, no state income tax, and a growing population. However, not all areas perform equally—Dr. Jan can identify neighborhoods with the best investment potential.",
+        q: "Is Providence good for real estate investing?",
+        a: "Yes. Providence Las Vegas offers strong rental yields, appreciation potential, no state income tax, and a growing population. Dr. Jan can identify Providence neighborhoods with the best investment potential.",
       },
       {
         q: "What kind of returns can I expect?",
-        a: "Returns vary by property type and location. Typical Las Vegas rental properties generate 5-8% cash-on-cash returns. Dr. Jan can analyze specific opportunities and provide realistic projections.",
+        a: "Returns vary by property type and location. Typical Providence Las Vegas rental properties generate 5-8% cash-on-cash returns. Dr. Jan can analyze specific opportunities and provide realistic projections.",
       },
       {
         q: "Does BHHS help with rental properties?",
@@ -121,19 +121,19 @@ const faqCategories = [
     ],
   },
   {
-    title: "Relocating to Las Vegas",
+    title: "Relocating to Providence Las Vegas",
     faqs: [
       {
         q: "Can BHHS help with relocations?",
-        a: "Absolutely! Our global network of 50,000+ agents makes relocations seamless. Dr. Jan can coordinate with BHHS agents in your current city while providing expert guidance on Las Vegas neighborhoods, schools, and communities.",
+        a: "Absolutely! Our global network of 50,000+ agents makes relocations seamless. Dr. Jan can coordinate with BHHS agents in your current city while providing expert guidance on Providence Las Vegas neighborhoods, schools, and communities.",
       },
       {
-        q: "What are the best neighborhoods for families?",
-        a: "Summerlin, Henderson (Green Valley, Inspirada), and Centennial Hills are top choices for families, offering excellent schools, parks, and community amenities. Dr. Jan can match you with the right neighborhood based on your priorities.",
+        q: "What are the best Providence neighborhoods for families?",
+        a: "Providence has 27 diverse neighborhoods—Oxford Commons, Saratoga Highlands, Auburn & Bradford, and more—each with its own amenities. All offer access to three community parks. Dr. Jan can match you with the right Providence neighborhood based on your priorities.",
       },
       {
-        q: "How is the cost of living in Las Vegas?",
-        a: "Las Vegas offers lower costs than most major metros, especially California. No state income tax, affordable housing compared to coastal cities, and reasonable utility costs make it attractive for relocators.",
+        q: "How is the cost of living in Providence Las Vegas?",
+        a: "Providence Las Vegas offers lower costs than most major metros, especially California. No state income tax, affordable housing compared to coastal cities ($300K–$700K range), and reasonable utility costs make it attractive for relocators.",
       },
     ],
   },
@@ -142,7 +142,7 @@ const faqCategories = [
     faqs: [
       {
         q: "What is Dr. Jan Duffy's experience?",
-        a: "Dr. Jan has been serving Las Vegas since 2008, with $127M+ in closed transactions and 500+ satisfied clients. She specializes in residential, luxury, investment, and relocation services throughout Southern Nevada.",
+        a: "Dr. Jan has been serving Providence Las Vegas since 2008, with $127M+ in closed transactions and 500+ satisfied clients. She specializes in all 27 Providence neighborhoods—residential, premium homes, investment, and relocation.",
       },
       {
         q: "How do I contact Dr. Jan Duffy?",
@@ -150,7 +150,7 @@ const faqCategories = [
       },
       {
         q: "What areas does Dr. Jan cover?",
-        a: "Dr. Jan serves all of Las Vegas, Henderson, Summerlin, Green Valley, North Las Vegas, Southern Highlands, Skye Canyon, Centennial Hills, The Ridges, and surrounding communities.",
+        a: "Dr. Jan serves all 27 Providence Las Vegas neighborhoods—Oxford Commons, Saratoga Highlands, Auburn & Bradford, and more—plus North Las Vegas (89166). She specializes in Providence HOA, new construction, and resale.",
       },
     ],
   },
@@ -168,9 +168,9 @@ const allFaqs = faqCategories.flatMap((category) =>
 const pageSchemas = combineSchemas(
   generateBreadcrumbSchema(breadcrumbs),
   generateWebPageSchema({
-    name: "Frequently Asked Questions | Berkshire Hathaway HomeServices Las Vegas",
+    name: "Frequently Asked Questions | Providence Las Vegas Real Estate",
     description:
-      "Comprehensive FAQ about Las Vegas real estate, buying, selling, investing, and working with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties.",
+      "Comprehensive FAQ about Providence Las Vegas real estate, buying, selling, investing, and working with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties.",
     url: "/faq",
     dateModified: "2026-01-25",
   }),

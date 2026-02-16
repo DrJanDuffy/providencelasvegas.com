@@ -3,7 +3,8 @@ import Footer from "@/components/layouts/Footer";
 import FAQSection from "@/components/sections/FAQSection";
 import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
-import { Phone, Mail, MapPin, Clock, Calendar, Star, Users, Shield, Search } from "lucide-react";
+import LocationMap from "@/components/location/LocationMap";
+import { Phone, Mail, MapPin, Clock, Calendar, Users, Shield, Search } from "lucide-react";
 import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -155,49 +156,8 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Google Map Embed */}
-              <div className="rounded-xl overflow-hidden shadow-md mb-4">
-                <iframe
-                  src="https://maps.google.com/maps?q=7181+N+Hualapai+Way+%23135,+Las+Vegas,+NV+89166&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Providence Real Estate - Office Location"
-                  className="w-full"
-                />
-              </div>
-              
-              {/* Map Action Buttons */}
-              <div className="flex gap-3 mb-8">
-                <a
-                  href="https://www.google.com/maps/dir//7181+N+Hualapai+Way+%23135,+Las+Vegas,+NV+89166"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors"
-                >
-                  <MapPin className="h-4 w-4 mr-2" />
-                  Get Directions
-                </a>
-                <a
-                  href="https://maps.google.com/?q=Providence+Real+Estate+7181+N+Hualapai+Way+Las+Vegas+NV+89166"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-3 rounded-lg font-medium transition-colors"
-                >
-                  View on Google Maps
-                </a>
-                <a
-                  href="https://search.google.com/local/writereview?query=Providence+Real+Estate+Las+Vegas"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center bg-amber-500 hover:bg-amber-600 text-white px-4 py-3 rounded-lg font-medium transition-colors"
-                >
-                  Leave a Review
-                </a>
-              </div>
+              {/* Google Map Embed + Call, Directions, Reviews CTAs */}
+              <LocationMap variant="full" className="mb-8" />
 
               {/* Credentials */}
               <div className="p-4 bg-blue-50 rounded-lg">

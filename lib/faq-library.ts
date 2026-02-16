@@ -14,7 +14,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
   // ============ Core Pages ============
   home: [
     {
-      question: "Why should I choose a Berkshire Hathaway HomeServices agent in Las Vegas?",
+      question: "Why should I choose a Berkshire Hathaway HomeServices agent in Providence Las Vegas?",
       answer:
         "Berkshire Hathaway HomeServices is the only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This means unmatched financial stability, ethical standards, and a global referral network of 50,000+ agents. When you're making the biggest purchase of your life, that trust matters.",
     },
@@ -34,7 +34,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
         "Yes! BHHS agents provide free buyer representation for new construction purchases from builders like Toll Brothers, Lennar, and Century Communities—the builder pays the commission, not you.",
     },
     {
-      question: "What is the current Las Vegas real estate market like in 2026?",
+      question: "What is the current Providence Las Vegas real estate market like in 2026?",
       answer:
         "As of January 2026, the Providence and North Las Vegas median home price is approximately $450,000 (+4.2% YoY), with homes selling in an average of 28 days. The Providence market remains competitive but balanced.",
     },
@@ -52,12 +52,12 @@ const faqLibrary: Record<string, FAQItem[]> = {
 
   about: [
     {
-      question: "How long has Dr. Jan Duffy been serving Las Vegas real estate?",
+      question: "How long has Dr. Jan Duffy been serving Providence Las Vegas real estate?",
       answer:
-        "Dr. Jan Duffy has been serving the Las Vegas real estate market since 2008, with over $127 million in closed transactions and 500+ satisfied clients. Her expertise spans residential, luxury, investment, and new construction properties throughout Southern Nevada.",
+        "Dr. Jan Duffy has been serving Providence Las Vegas since 2008, with over $127 million in closed transactions and 500+ satisfied clients. Her expertise spans all 27 Providence neighborhoods—residential, premium homes, investment, and new construction.",
     },
     {
-      question: "Why choose Dr. Jan Duffy over other Las Vegas realtors?",
+      question: "Why choose Dr. Jan Duffy over other Providence Las Vegas realtors?",
       answer:
         "Dr. Jan combines deep local market knowledge with the global resources of Berkshire Hathaway HomeServices. She offers personalized service, expert negotiation, and a commitment to educating clients—not sales pressure. Her track record speaks for itself.",
     },

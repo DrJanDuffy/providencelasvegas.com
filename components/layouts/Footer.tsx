@@ -1,12 +1,19 @@
 import Link from "next/link";
 import { MapPin, Search } from "lucide-react";
 import { realscoutUrls } from "@/lib/site-config";
+import LocationMap from "@/components/location/LocationMap";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-slate-900 text-white">
+      {/* Location Map - Help customers find us on every page */}
+      <div className="border-b border-slate-800">
+        <div className="container mx-auto px-4 py-8">
+          <LocationMap variant="compact" theme="dark" />
+        </div>
+      </div>
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Footer Brand */}
@@ -32,7 +39,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/buyers" className="text-slate-300 hover:text-white transition-colors text-sm">
-                  Buy in Providence
+                  Buy a Providence Home
                 </Link>
               </li>
               <li>
@@ -42,17 +49,27 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/new-construction" className="text-slate-300 hover:text-white transition-colors text-sm">
-                  New Construction
+                  Providence New Construction
+                </Link>
+              </li>
+              <li>
+                <Link href="/55-plus-communities" className="text-slate-300 hover:text-white transition-colors text-sm">
+                  Providence 55+ Options
                 </Link>
               </li>
               <li>
                 <Link href="/home-valuation" className="text-slate-300 hover:text-white transition-colors text-sm">
-                  Home Valuation
+                  Providence Home Valuation
+                </Link>
+              </li>
+              <li>
+                <Link href="/market-insights" className="text-slate-300 hover:text-white transition-colors text-sm">
+                  Providence Market Insights
                 </Link>
               </li>
               <li>
                 <Link href="/providence/hoa-info" className="text-slate-300 hover:text-white transition-colors text-sm">
-                  HOA Information
+                  Providence HOA Information
                 </Link>
               </li>
             </ul>

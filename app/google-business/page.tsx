@@ -1,5 +1,6 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import LocationMap from "@/components/location/LocationMap";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -28,21 +29,21 @@ import {
 } from "@/lib/gbp-schema";
 
 export const metadata: Metadata = {
-  title: "Dr. Jan Duffy, REALTOR® Las Vegas | Berkshire Hathaway HomeServices",
+  title: "Dr. Jan Duffy, Providence Las Vegas REALTOR® | Berkshire Hathaway HomeServices",
   description:
-    "Dr. Jan Duffy is a trusted Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Specializing in Summerlin, Henderson, 55+ communities, California relocation, and luxury homes. Call (702) 744-2993.",
+    "Dr. Jan Duffy is the Providence Las Vegas real estate expert with Berkshire Hathaway HomeServices Nevada Properties. Specializing in all 27 Providence neighborhoods, California-to-Providence relocation, and premium homes. Call (702) 744-2993.",
   keywords: [
-    "Dr. Jan Duffy realtor",
-    "Las Vegas real estate agent",
-    "Berkshire Hathaway HomeServices Las Vegas",
-    "Summerlin realtor",
-    "Henderson real estate agent",
-    "55+ communities Las Vegas",
-    "California relocation Las Vegas",
+    "Dr. Jan Duffy Providence realtor",
+    "Providence Las Vegas real estate agent",
+    "Berkshire Hathaway HomeServices Providence",
+    "Oxford Commons realtor",
+    "Saratoga Highlands real estate agent",
+    "55+ options near Providence",
+    "California to Providence Las Vegas",
   ],
   openGraph: {
     title: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    description: "Trusted Las Vegas REALTOR® serving since 2008. Summerlin, Henderson, luxury homes, 55+ communities.",
+    description: "Providence Las Vegas real estate expert serving since 2008. All 27 Providence neighborhoods, premium homes, California relocation.",
     url: "https://www.providencelasvegas.com/google-business",
     type: "profile",
   },
@@ -154,6 +155,11 @@ export default function GoogleBusinessPage() {
             </div>
           </section>
 
+          {/* Office Location Map - GBP CTA: Directions, Call, Reviews */}
+          <section className="max-w-5xl mx-auto mb-16">
+            <LocationMap variant="full" />
+          </section>
+
           {/* About - 750 Word Description Structure */}
           <section className="max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">About Dr. Jan Duffy</h2>
@@ -204,47 +210,42 @@ export default function GoogleBusinessPage() {
             </div>
           </section>
 
-          {/* Service Areas - Distance factor */}
+          {/* Service Areas - Providence focus */}
           <section className="max-w-5xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Service Areas</h2>
             <div className="bg-blue-50 rounded-xl p-8">
               <div className="grid md:grid-cols-3 gap-8">
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-3">Primary Markets</h3>
+                  <h3 className="font-bold text-slate-900 mb-3">Primary Market</h3>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-blue-600" /> Las Vegas, NV</li>
-                    <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-blue-600" /> Summerlin, NV</li>
+                    <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-blue-600" /> Providence, Las Vegas NV</li>
+                    <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-blue-600" /> North Las Vegas (89166)</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-3">Secondary Markets</h3>
+                  <h3 className="font-bold text-slate-900 mb-3">Featured Neighborhoods</h3>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-blue-600" /> Henderson, NV</li>
-                    <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-blue-600" /> North Las Vegas, NV</li>
+                    <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-blue-600" /> Oxford Commons</li>
+                    <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-blue-600" /> Saratoga Highlands</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-3">Full Coverage</h3>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-blue-600" /> Clark County, NV</li>
-                    <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-blue-600" /> All Las Vegas Valley</li>
+                    <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-blue-600" /> Auburn & Bradford</li>
+                    <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-blue-600" /> All 27 Providence Neighborhoods</li>
                   </ul>
                 </div>
               </div>
               
               {/* Neighborhood Specialties */}
               <div className="mt-8 pt-8 border-t border-blue-200">
-                <h3 className="font-bold text-slate-900 mb-4">Neighborhood Expertise</h3>
+                <h3 className="font-bold text-slate-900 mb-4">Providence Neighborhood Expertise</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Summerlin", "Henderson", "Green Valley", "The Ridges", "Southern Highlands", "Centennial Hills", "Skye Canyon", "Inspirada", "Mountains Edge", "North Las Vegas"].map((area) => (
-                    <Link
-                      key={area}
-                      href={`/neighborhoods/${area.toLowerCase().replace(/\s+/g, "-")}`}
-                      className="bg-white px-3 py-1 rounded-full text-sm text-slate-700 hover:bg-blue-100 transition-colors"
-                    >
-                      {area}
-                    </Link>
-                  ))}
+                  <Link href="/providence/neighborhoods/oxford-commons" className="bg-white px-3 py-1 rounded-full text-sm text-slate-700 hover:bg-blue-100 transition-colors">Oxford Commons</Link>
+                  <Link href="/providence/neighborhoods/saratoga-highlands" className="bg-white px-3 py-1 rounded-full text-sm text-slate-700 hover:bg-blue-100 transition-colors">Saratoga Highlands</Link>
+                  <Link href="/providence/neighborhoods/auburn-bradford" className="bg-white px-3 py-1 rounded-full text-sm text-slate-700 hover:bg-blue-100 transition-colors">Auburn & Bradford</Link>
+                  <Link href="/providence" className="bg-white px-3 py-1 rounded-full text-sm text-slate-700 hover:bg-blue-100 transition-colors">All 27 Neighborhoods</Link>
                 </div>
               </div>
             </div>

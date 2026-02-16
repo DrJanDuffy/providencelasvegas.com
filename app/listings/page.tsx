@@ -138,7 +138,7 @@ export default function ListingsPage() {
           {/* Popular Searches Section */}
           <section className="mb-16 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Popular Property Searches in Las Vegas
+              Popular Property Searches in Providence
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Providence offers 27 diverse neighborhoods for every lifestyle and budget. Whether you're 
@@ -169,10 +169,10 @@ export default function ListingsPage() {
           {/* Price Range Guide */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Las Vegas Home Price Guide
+              Providence Home Price Guide
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              The Las Vegas real estate market offers exceptional value compared to California and 
+              The Providence Las Vegas real estate market offers exceptional value compared to California and 
               other western states. With no state income tax and housing prices 40-60% lower than 
               coastal cities, your dollar stretches further in Southern Nevada. Here's what you can 
               expect at different price points in the current January 2026 market.
@@ -199,7 +199,7 @@ export default function ListingsPage() {
           {/* Neighborhood Overview */}
           <section className="mb-16 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Las Vegas Neighborhoods & Communities
+              Providence Neighborhoods & Communities
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Each of the 27 Providence neighborhoods offers a unique lifestyle. From Oxford Commons 
@@ -242,7 +242,7 @@ export default function ListingsPage() {
               In today's competitive Providence market, having expert representation can mean the 
               difference between winning your dream home and losing out. Dr. Jan Duffy brings 
               the resources of Berkshire Hathaway HomeServices—the most trusted name in real estate—
-              combined with deep local market knowledge from serving Las Vegas since 2008.
+              combined with deep local market knowledge from serving Providence since 2008.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
@@ -287,13 +287,13 @@ export default function ListingsPage() {
           {/* Market Stats */}
           <section className="mb-16 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Las Vegas Real Estate Market Statistics
+              Providence Real Estate Market Statistics
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              The Las Vegas housing market remains strong heading into 2026, with steady appreciation 
+              The Providence housing market remains strong heading into 2026, with steady appreciation 
               and healthy inventory levels. Understanding current market conditions helps buyers 
               make informed decisions about timing, pricing, and negotiation strategies. Here's a 
-              snapshot of the current market as of January 2026.
+              snapshot of the current Providence market as of January 2026.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="bg-blue-50 rounded-lg p-6 text-center">
@@ -318,12 +318,12 @@ export default function ListingsPage() {
           {/* Home Buying Process */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              The Home Buying Process in Las Vegas
+              The Home Buying Process in Providence Las Vegas
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Buying a home is one of the most significant financial decisions you'll make. 
               Understanding the process helps reduce stress and ensures you're prepared at each 
-              step. Here's what to expect when purchasing a home in Las Vegas with Dr. Jan Duffy 
+              step. Here's what to expect when purchasing a home in Providence Las Vegas with Dr. Jan Duffy 
               and Berkshire Hathaway HomeServices.
             </p>
             <div className="space-y-6">
@@ -387,7 +387,7 @@ export default function ListingsPage() {
                   <h3 className="font-bold text-slate-900 mb-1">Close & Get Your Keys</h3>
                   <p className="text-slate-600 text-sm">
                     The closing process typically takes 30-45 days from offer acceptance. You'll 
-                    sign final documents, transfer funds, and receive the keys to your new Las Vegas 
+                    sign final documents, transfer funds, and receive the keys to your new Providence 
                     home. Dr. Jan remains available for any questions even after closing.
                   </p>
                 </div>
@@ -398,12 +398,12 @@ export default function ListingsPage() {
           {/* FAQ Section */}
           <section className="mb-16 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Frequently Asked Questions About Las Vegas Real Estate
+              Frequently Asked Questions About Providence Las Vegas Real Estate
             </h2>
             <div className="space-y-4">
               <div className="bg-slate-50 rounded-lg p-6">
                 <h3 className="font-bold text-slate-900 mb-2">
-                  How competitive is the Las Vegas housing market in 2026?
+                  How competitive is the Providence housing market in 2026?
                 </h3>
                 <p className="text-slate-600">
                   The Providence market is moderately competitive with 2.1 months of inventory—a 
@@ -414,10 +414,10 @@ export default function ListingsPage() {
               </div>
               <div className="bg-slate-50 rounded-lg p-6">
                 <h3 className="font-bold text-slate-900 mb-2">
-                  What's the best time of year to buy a home in Las Vegas?
+                  What's the best time of year to buy a home in Providence?
                 </h3>
                 <p className="text-slate-600">
-                  Las Vegas has a year-round real estate market, but inventory typically peaks in 
+                  Providence has a year-round real estate market, but inventory typically peaks in 
                   spring (March-May) while competition is lowest in winter (November-January). The 
                   best time depends on your priorities: more selection in spring, potentially better 
                   deals in winter.
@@ -425,7 +425,7 @@ export default function ListingsPage() {
               </div>
               <div className="bg-slate-50 rounded-lg p-6">
                 <h3 className="font-bold text-slate-900 mb-2">
-                  How much do I need for a down payment in Las Vegas?
+                  How much do I need for a down payment in Providence?
                 </h3>
                 <p className="text-slate-600">
                   Down payment requirements vary by loan type: FHA loans require 3.5%, conventional 
@@ -436,12 +436,12 @@ export default function ListingsPage() {
               </div>
               <div className="bg-slate-50 rounded-lg p-6">
                 <h3 className="font-bold text-slate-900 mb-2">
-                  Are Las Vegas HOA fees expensive?
+                  Are Providence HOA fees expensive?
                 </h3>
                 <p className="text-slate-600">
-                  HOA fees in Las Vegas range from $25/month for basic community maintenance to 
-                  $400+/month for guard-gated luxury communities with extensive amenities. Most 
-                  standard neighborhoods fall between $50-$150/month. Dr. Jan always reviews HOA 
+                  HOA fees in Providence range from $25/month for basic community maintenance to 
+                  $400+/month for guard-gated communities with extensive amenities. Most 
+                  standard Providence neighborhoods fall between $50-$150/month. Dr. Jan always reviews HOA 
                   documents to ensure you understand what's included and any special assessments.
                 </p>
               </div>
@@ -451,7 +451,7 @@ export default function ListingsPage() {
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Find Your Las Vegas Home?
+              Ready to Find Your Providence Home?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Contact Dr. Jan Duffy for personalized guidance, off-market listings, and expert 
