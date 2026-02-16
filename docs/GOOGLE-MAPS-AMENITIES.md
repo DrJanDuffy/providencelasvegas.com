@@ -42,13 +42,24 @@ Google provides **$200/month free credit** for Maps Platform. The **Maps Embed A
    - Application restrictions: HTTP referrers → `https://www.providencelasvegas.com/*` (and `http://localhost:3000/*` for dev)
    - API restrictions: restrict to Maps Embed API, Maps JavaScript API, Places API (New), Directions API, and Geocoding API
 
-### 3. Add Environment Variable
+### 3. Add Environment Variables
 
 Add to your `.env.local` (and Vercel → Project Settings → Environment Variables):
 
 ```
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_api_key_here
 ```
+
+**Optional – so the map highlights Providence Real Estate (not another business at the same address):**
+
+If the embed shows the wrong business (e.g. "Dream Homes Portfolio Realty"), add your Google Place ID:
+
+```
+NEXT_PUBLIC_GOOGLE_MAPS_PLACE_ID=ChIJxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+- Get the Place ID: [Place ID finder](https://developers.google.com/maps/documentation/places/web-service/place-id) — search for "Providence Real Estate" and your address, then copy the Place ID (starts with `ChIJ...`).
+- Or from Google Business Profile: open your listing on Google Maps and check the URL or use the finder with your business name and address.
 
 ### 4. Deploy
 

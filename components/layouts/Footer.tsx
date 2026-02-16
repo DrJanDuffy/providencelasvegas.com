@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Search } from "lucide-react";
+import { MapPin, Search, ExternalLink } from "lucide-react";
 import { realscoutUrls, gbpUrls } from "@/lib/site-config";
 import LocationMap from "@/components/location/LocationMap";
 
@@ -136,14 +136,27 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-white transition-colors"
+                aria-label="View our Google Business Profile"
               >
+                <ExternalLink className="h-4 w-4" />
                 View on Google
+              </a>
+              <a
+                href={gbpUrls.maps}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-white transition-colors"
+                aria-label="View office location on Google Maps"
+              >
+                <MapPin className="h-4 w-4" />
+                View on Google Maps
               </a>
               <a
                 href={gbpUrls.directions}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-white transition-colors"
+                aria-label="Get directions to our office"
               >
                 <MapPin className="h-4 w-4" />
                 Get directions
