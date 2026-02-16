@@ -27,6 +27,7 @@ import {
   generateLocalBusinessSchema,
   generateFAQSchema,
 } from "@/lib/gbp-schema";
+import { gbpUrls } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Dr. Jan Duffy, Providence Las Vegas REALTOR® | Berkshire Hathaway HomeServices",
@@ -282,7 +283,7 @@ export default function GoogleBusinessPage() {
                 Mention your neighborhood, type of transaction, and what made the experience valuable.
               </p>
               <a
-                href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK/review"
+                href={gbpUrls.review}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"

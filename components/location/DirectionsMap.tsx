@@ -26,6 +26,7 @@ export default function DirectionsMap({
   className = "",
 }: DirectionsMapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
+  const originInputRef = useRef<HTMLInputElement>(null);
   const [origin, setOrigin] = useState(defaultOrigin);
   const [travelMode, setTravelMode] = useState<"DRIVING" | "WALKING" | "TRANSIT" | "BICYCLING">("DRIVING");
   const [duration, setDuration] = useState<string | null>(null);
@@ -59,6 +60,24 @@ export default function DirectionsMap({
           map,
           suppressMarkers: false,
         });
+
+        // Places Autocomplete on origin input (supports GBP Get Directions CTA)
+        if (!cancelled && originInputRef.current) {
+          const { Autocomplete } = (await google.maps.importLibrary(
+            "places"
+          )) as google.maps.PlacesLibrary;
+          const autocomplete = new Autocomplete(originInputRef.current, {
+            types: ["address"],
+            componentRestrictions: { country: "us" },
+          });
+          autocomplete.addListener("place_changed", () => {
+            const place = autocomplete.getPlace();
+            if (place.formatted_address) {
+              setOrigin(place.formatted_address);
+              calculateRoute(place.formatted_address);
+            }
+          });
+        }
       })
       .catch((err) => {
         if (!cancelled) {
@@ -159,6 +178,7 @@ export default function DirectionsMap({
           </label>
           <div className="flex gap-2">
             <input
+              ref={originInputRef}
               id="directions-origin"
               type="text"
               value={origin}

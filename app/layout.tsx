@@ -89,6 +89,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth antialiased">
       <head>
+        {/* Preconnect to critical third-party origins (Lighthouse performance) */}
+        <link rel="preconnect" href="https://em.realscout.com" />
+        <link rel="preconnect" href="https://www.realscout.com" />
+        <link rel="preconnect" href="https://assets.calendly.com" />
         {/* Site-wide JSON-LD Schema: RealEstateAgent + WebSite */}
         <SchemaScript schema={siteWideSchemas} id="site-schema" />
         {/* Google tag (gtag.js) - Providence Las Vegas - lazyOnload for performance */}
@@ -104,11 +108,11 @@ export default function RootLayout({
             gtag('config', 'G-L5B3V7RE8R');
           `}
         </Script>
-        {/* RealScout Widget Script - loaded once globally - afterInteractive for performance */}
+        {/* RealScout Widget Script - loaded once globally - lazyOnload to avoid blocking LCP */}
         <Script
           src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
           type="module"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         {/* Calendly Widget Script - loaded once globally - lazyOnload for performance */}
         <Script

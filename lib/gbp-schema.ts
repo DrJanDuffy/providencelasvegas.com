@@ -275,6 +275,7 @@ export function generateLocalBusinessSchema() {
       bestRating: "5",
     },
     sameAs: [
+      "https://g.page/r/Ca9gwAWH5oLcEBM", // GBP profile – links site to Business Profile
       "https://www.facebook.com/ProvidenceLasVegasRealEstate",
       "https://www.instagram.com/drjanduffy",
       "https://www.linkedin.com/in/drjanduffy",

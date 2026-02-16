@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MapPin, Search } from "lucide-react";
-import { realscoutUrls } from "@/lib/site-config";
+import { realscoutUrls, gbpUrls } from "@/lib/site-config";
 import LocationMap from "@/components/location/LocationMap";
 
 export default function Footer() {
@@ -132,7 +132,15 @@ export default function Footer() {
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
               <a
-                href="https://www.google.com/maps/dir//7181+N+Hualapai+Way+%23135,+Las+Vegas,+NV+89166"
+                href={gbpUrls.profile}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-white transition-colors"
+              >
+                View on Google
+              </a>
+              <a
+                href={gbpUrls.directions}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-white transition-colors"
@@ -141,7 +149,7 @@ export default function Footer() {
                 Get directions
               </a>
               <a
-                href="https://search.google.com/local/writereview?query=Providence+Real+Estate+Las+Vegas"
+                href={gbpUrls.review}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-white transition-colors"
@@ -184,6 +192,9 @@ export default function Footer() {
             </Link>
             <Link href="/contact" className="text-slate-400 hover:text-white transition-colors">
               Contact
+            </Link>
+            <Link href="/google-business" className="text-slate-400 hover:text-white transition-colors">
+              Client Reviews
             </Link>
             <Link href="/faq" className="text-slate-400 hover:text-white transition-colors">
               FAQ

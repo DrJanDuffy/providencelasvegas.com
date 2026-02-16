@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: PropertyPageProps): Promise<M
     title: `${property.name} | Providence Real Estate`,
     description: property.description.slice(0, 160),
     alternates: { canonical: listingUrl },
+    robots: { index: false, follow: true },
     openGraph: {
       title: `${property.name} | Providence Real Estate`,
       description: property.description.slice(0, 160),
@@ -31,11 +32,11 @@ export async function generateMetadata({ params }: PropertyPageProps): Promise<M
 }
 
 // Placeholder: replace with RealScout API when wired. When real data exists, add evidence-dense blocks: key specs, price history, neighborhood link, school ratings (see plan Phase 1.6).
-async function getProperty(id: string) {
+async function getProperty(_id: string) {
   return {
-    id,
-    name: "Modern Luxury Home",
-    location: "Summerlin, Las Vegas, NV",
+    id: _id,
+    name: "Providence Las Vegas Home",
+    location: "Providence, North Las Vegas, NV 89166",
     price: "$850,000",
     priceNumber: 850000,
     image: "/Image/hero_bg_1.jpg",
@@ -44,7 +45,7 @@ async function getProperty(id: string) {
     squareFeet: 3200,
     yearBuilt: 2018,
     description:
-      "Stunning modern home in desirable Summerlin community. Features open floor plan, updated kitchen, and beautiful backyard. Close to schools, shopping, and entertainment.",
+      "Spacious home in Providence master-planned community. Open floor plan, updated kitchen, and backyard. Close to Providence parks, schools, and shopping. Dr. Jan Duffy, Providence Las Vegas real estate.",
   };
 }
 
@@ -61,7 +62,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
     name: property.name,
     description: property.description,
     price: (property.priceNumber ?? parseInt(property.price.replace(/[^0-9]/g, ""), 10)) || 0,
-    address: { street: "See listing", city: "Las Vegas", state: "NV", zip: "89135" },
+    address: { street: "See listing", city: "North Las Vegas", state: "NV", zip: "89166" },
     bedrooms: property.bedrooms,
     bathrooms: property.bathrooms,
     sqft: property.squareFeet,

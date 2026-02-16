@@ -3,11 +3,11 @@ import Footer from "@/components/layouts/Footer";
 import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import RelatedPages from "@/components/navigation/RelatedPages";
 import dynamic from "next/dynamic";
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock, Star } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getRelatedPages } from "@/lib/related-pages";
-import { officeInfo } from "@/lib/site-config";
+import { officeInfo, gbpUrls } from "@/lib/site-config";
 
 const DirectionsMap = dynamic(
   () =>
@@ -124,7 +124,10 @@ export default function DirectionsPage() {
             <p className="text-blue-100 mb-6 max-w-xl mx-auto">
               Schedule an appointment before you come, or give us a call when you&apos;re on your way.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <p className="text-blue-200 text-sm mb-6 max-w-xl mx-auto">
+              After your visit, help others find us—leave a Google review.
+            </p>
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-md font-semibold hover:bg-blue-50 transition-colors"
@@ -137,6 +140,15 @@ export default function DirectionsPage() {
               >
                 <Phone className="h-5 w-5" />
                 Call (702) 744-2993
+              </a>
+              <a
+                href={gbpUrls.review}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-md font-semibold transition-colors"
+              >
+                <Star className="h-5 w-5" />
+                Leave us a review
               </a>
             </div>
           </div>

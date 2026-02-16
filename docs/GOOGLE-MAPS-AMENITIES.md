@@ -2,14 +2,25 @@
 
 The site uses Google Maps Platform for:
 
+- **Location Map** (Footer, Contact page) – Office location embed via Maps Embed API (place mode)
 - **Amenity Map** (`/amenities`) – Nearby restaurants, parks, parking, etc.
-- **Directions** (`/directions`) – Plan your visit with driving, walking, transit, or cycling routes.
+- **Directions** (`/directions`) – Plan your visit with driving, walking, transit, or cycling routes. Uses Places Autocomplete on the origin input to support the GBP "Get Directions" CTA.
 
-Both components share a centralized loader (`lib/google-maps-loader.ts`) that loads the Maps JavaScript API once via `@googlemaps/js-api-loader`. Only map pages (`/amenities`, `/directions`) trigger the load when their components mount.
+## APIs Required
+
+| API | Used By | Required |
+|-----|---------|----------|
+| **Maps Embed API** | LocationMap (iframe on every page) | Yes – footer/contact map |
+| **Maps JavaScript API** | AmenityMap, DirectionsMap | Yes |
+| **Places API (New)** | AmenityMap, DirectionsMap (Autocomplete) | Yes |
+| **Directions API** | DirectionsMap | Yes |
+| **Geocoding API** | DirectionsMap "My Location" | Yes |
+
+Both AmenityMap and DirectionsMap share a centralized loader (`lib/google-maps-loader.ts`). LocationMap uses the Maps Embed API iframe (no JavaScript loader).
 
 ## Get Started at No Cost
 
-Google provides **$200/month free credit** for Maps Platform. For a typical real estate site, this usually covers moderate traffic at no charge.
+Google provides **$200/month free credit** for Maps Platform. The **Maps Embed API is free with unlimited usage**. For a typical real estate site, the free tier usually covers moderate traffic at no charge.
 
 ## Setup Steps
 
@@ -18,6 +29,7 @@ Google provides **$200/month free credit** for Maps Platform. For a typical real
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
 2. Create a project or select an existing one
 3. Enable these APIs:
+   - **Maps Embed API** (for LocationMap footer/contact iframe)
    - **Maps JavaScript API**
    - **Places API (New)** (for amenity map)
    - **Directions API** (for directions page)
@@ -28,7 +40,7 @@ Google provides **$200/month free credit** for Maps Platform. For a typical real
 1. APIs & Services → Credentials → Create Credentials → API Key
 2. Restrict the key (recommended):
    - Application restrictions: HTTP referrers → `https://www.providencelasvegas.com/*` (and `http://localhost:3000/*` for dev)
-   - API restrictions: restrict to Maps JavaScript API, Places API (New), Directions API, and Geocoding API
+   - API restrictions: restrict to Maps Embed API, Maps JavaScript API, Places API (New), Directions API, and Geocoding API
 
 ### 3. Add Environment Variable
 
@@ -40,7 +52,12 @@ NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_api_key_here
 
 ### 4. Deploy
 
-The amenity map loads on `/amenities` and the directions map on `/directions`. If the key is missing, a helpful error message with setup instructions is shown. The loader uses `loadGoogleMaps()` from `lib/google-maps-loader.ts`; navigating between map pages reuses the same script load.
+- **LocationMap** (Footer, Contact): When the API key is set and Maps Embed API is enabled, the office location map loads as an iframe. If the key is missing, a "View on Google Maps" fallback card is shown instead.
+- **AmenityMap** (`/amenities`) and **DirectionsMap** (`/directions`): If the key is missing, a helpful error message with setup instructions is shown. The loader uses `loadGoogleMaps()` from `lib/google-maps-loader.ts`; navigating between map pages reuses the same script load.
+
+### Legacy `output=embed` Format
+
+The old URL format (`maps.google.com/maps?q=...&output=embed`) is no longer reliably supported. The site now uses the official Maps Embed API (`https://www.google.com/maps/embed/v1/place?key=...&q=...`) which requires an API key and Maps Embed API to be enabled.
 
 ## Centralized Loader
 
@@ -69,6 +86,10 @@ const AmenityMap = dynamic(
 ## Place Types Available
 
 The map supports: Restaurants, Cafes, Parks, Parking, Grocery Stores, Gyms, Schools, Shopping Malls, Pharmacies, Banks, Gas Stations, Libraries.
+
+## GBP Review Link
+
+The "Leave a review" links use the official Google-provided review URL from your Business Profile. Get it from: **GBP → Business → Reviews → Get more reviews** (or **Share your reviews**). The link format is `https://g.page/r/YOUR_ID/review` and is set in `lib/site-config.ts` as `gbpUrls.review`.
 
 ## Future Considerations
 

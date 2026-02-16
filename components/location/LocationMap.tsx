@@ -1,11 +1,8 @@
 "use client";
 
-import { MapPin, Phone, Star } from "lucide-react";
+import { MapPin, Phone, Star, ExternalLink } from "lucide-react";
 import { businessInfo } from "@/lib/gbp-schema";
-
-// Centralized map embed URL from GBP address
-const MAP_EMBED_URL =
-  "https://maps.google.com/maps?q=7181+N+Hualapai+Way+%23135,+Las+Vegas,+NV+89166&t=&z=15&ie=UTF8&iwloc=&output=embed";
+import { gbpUrls } from "@/lib/site-config";
 
 type LocationMapVariant = "full" | "compact" | "embed-only";
 type LocationMapTheme = "light" | "dark";
@@ -16,6 +13,20 @@ type LocationMapProps = {
   className?: string;
 };
 
+/**
+ * Build Maps Embed API URL (place mode).
+ * Requires Maps Embed API enabled in Google Cloud + NEXT_PUBLIC_GOOGLE_MAPS_API_KEY.
+ * @see https://developers.google.com/maps/documentation/embed/embedding-map
+ */
+function getMapEmbedUrl(): string | null {
+  const key = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  if (!key) return null;
+  const q = encodeURIComponent(
+    `${businessInfo.name}, ${businessInfo.address.streetAddress}, ${businessInfo.address.addressLocality}, ${businessInfo.address.addressRegion} ${businessInfo.address.postalCode}`
+  );
+  return `https://www.google.com/maps/embed/v1/place?key=${key}&q=${q}&zoom=15`;
+}
+
 export default function LocationMap({
   variant = "full",
   theme = "light",
@@ -23,11 +34,12 @@ export default function LocationMap({
 }: LocationMapProps) {
   const fullAddress = `${businessInfo.address.streetAddress}, ${businessInfo.address.addressLocality}, ${businessInfo.address.addressRegion} ${businessInfo.address.postalCode}`;
   const directionsUrl = `https://www.google.com/maps/dir//${encodeURIComponent(fullAddress)}`;
-  const mapsUrl = `https://maps.google.com/?q=${encodeURIComponent(
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     `${businessInfo.name} ${fullAddress}`
   )}`;
-  const reviewUrl =
-    "https://search.google.com/local/writereview?query=Providence+Real+Estate+Las+Vegas";
+  const reviewUrl = gbpUrls.review;
+
+  const embedUrl = getMapEmbedUrl();
 
   const isDark = theme === "dark";
   const sectionClass = isDark
@@ -58,16 +70,33 @@ export default function LocationMap({
         </div>
       )}
       <div className="relative w-full aspect-[16/10] min-h-[200px] md:min-h-[280px]">
-        <iframe
-          src={MAP_EMBED_URL}
-          width="100%"
-          height="100%"
-          className="border-0 absolute inset-0 w-full h-full"
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Providence Real Estate - Office Location"
-        />
+        {embedUrl ? (
+          <iframe
+            src={embedUrl}
+            width="100%"
+            height="100%"
+            className="border-0 absolute inset-0 w-full h-full"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Providence Real Estate - Office Location"
+          />
+        ) : (
+          <a
+            href={mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`absolute inset-0 flex flex-col items-center justify-center gap-3 transition-colors ${
+              isDark ? "bg-slate-800 hover:bg-slate-700/80" : "bg-slate-100 hover:bg-slate-200"
+            }`}
+          >
+            <MapPin className={`h-12 w-12 ${isDark ? "text-slate-400" : "text-slate-500"}`} />
+            <span className={`font-medium ${isDark ? "text-slate-300" : "text-slate-700"}`}>
+              View on Google Maps
+            </span>
+            <ExternalLink className={`h-5 w-5 ${isDark ? "text-slate-400" : "text-slate-500"}`} />
+          </a>
+        )}
       </div>
       {variant === "full" && (
         <div className="p-4 md:p-6 flex flex-wrap gap-3">

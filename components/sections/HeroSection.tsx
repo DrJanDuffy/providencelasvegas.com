@@ -38,7 +38,7 @@ export default function HeroSection() {
               className="object-cover"
               priority={index === 0}
               fetchPriority={index === 0 ? "high" : "low"}
-              quality={80}
+              quality={75}
             />
             <div className="absolute inset-0 bg-black/40" />
           </div>

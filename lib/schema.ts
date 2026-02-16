@@ -6,7 +6,7 @@
  * @see https://developers.google.com/search/docs/appearance/structured-data
  */
 
-import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
+import { siteConfig, agentInfo, officeInfo, agentStats, gbpUrls } from "./site-config";
 import { gbpOpeningHoursSpecification } from "./gbp-schema";
 
 // ============================================================================
@@ -97,7 +97,7 @@ export function generateRealEstateAgentSchema() {
     logo: `${BASE_URL}/agent1.jpg`,
     image: `${BASE_URL}/agent1.jpg`,
     description: "Providence Las Vegas real estate specialist serving all 27 Providence neighborhoods",
-    telephone: "+1-702-744-2993",
+    telephone: officeInfo.phoneTel.replace(/^tel:/, ""),
     email: agentInfo.email,
     priceRange: "$385K - $10M+",
     address: {
@@ -139,7 +139,7 @@ export function generateRealEstateAgentSchema() {
       },
       identifier: agentInfo.license,
     },
-    sameAs: Object.values(socialProfiles),
+    sameAs: [gbpUrls.profile, ...Object.values(socialProfiles)],
     parentOrganization: {
       "@type": "Organization",
       "@id": `${BASE_URL}#parent-organization`,

@@ -39,12 +39,12 @@ export const officeInfo = {
   phoneTel: "tel:+17027442993",
 };
 
-// GBP CTA URLs - Update placeId when you have your GBP Place ID
+// GBP CTA URLs – from Google Business Profile
 export const gbpUrls = {
+  profile: "https://g.page/r/Ca9gwAWH5oLcEBM",
   directions: "https://www.google.com/maps/dir//7181+N+Hualapai+Way+%23135,+Las+Vegas,+NV+89166",
   maps: "https://www.google.com/maps/search/?api=1&query=7181+N+Hualapai+Way+%23135+Las+Vegas+NV+89166",
-  // Leave review: Add ?placeid=YOUR_PLACE_ID when you have it from GBP
-  review: "https://search.google.com/local/writereview?query=Providence+Real+Estate+Las+Vegas",
+  review: "https://g.page/r/Ca9gwAWH5oLcEBM/review",
 };
 
 // RealScout shared search link - Create Search Link from RealScout dashboard
