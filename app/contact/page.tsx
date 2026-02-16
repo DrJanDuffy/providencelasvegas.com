@@ -6,7 +6,9 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import LocationMap from "@/components/location/LocationMap";
 import { Phone, Mail, MapPin, Clock, Calendar, Star, Users, Shield, Search } from "lucide-react";
 import CalendlyWidget from "@/components/calendly/CalendlyWidget";
+import RelatedPages from "@/components/navigation/RelatedPages";
 import Link from "next/link";
+import { getRelatedPages } from "@/lib/related-pages";
 import type { Metadata } from "next";
 import { getFAQsForPage } from "@/lib/faq-library";
 import { realscoutUrls } from "@/lib/site-config";
@@ -139,6 +141,13 @@ export default function ContactPage() {
                       7181 N Hualapai Way #135<br />
                       Las Vegas, NV 89166
                     </address>
+                    <Link
+                      href="/directions"
+                      className="inline-flex items-center gap-2 mt-2 text-blue-600 hover:text-blue-700 font-medium text-sm"
+                    >
+                      <MapPin className="h-4 w-4" />
+                      Get directions (driving, walking, transit)
+                    </Link>
                   </div>
                 </div>
 
@@ -272,6 +281,11 @@ export default function ContactPage() {
               </a>
             </div>
           </section>
+
+          <RelatedPages
+            title="You May Also Be Interested In"
+            pages={getRelatedPages("contact")}
+          />
 
           {/* FAQ Section */}
           <FAQSection

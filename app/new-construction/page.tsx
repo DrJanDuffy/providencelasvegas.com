@@ -1,7 +1,9 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import RelatedPages from "@/components/navigation/RelatedPages";
 import Link from "next/link";
+import { getRelatedPages } from "@/lib/related-pages";
 import {
   Phone,
   Building2,
@@ -423,6 +425,11 @@ export default function NewConstructionPage() {
               </cite>
             </div>
           </section>
+
+          <RelatedPages
+            title="You May Also Be Interested In"
+            pages={getRelatedPages("newConstruction")}
+          />
 
           {/* FAQ Section */}
           <FAQSection

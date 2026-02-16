@@ -125,6 +125,12 @@ export default function ProvidencePage() {
               Community park info – Providence HOA
               <ExternalLink className="h-4 w-4" />
             </a>
+            <p className="mt-4">
+              <InlineLink href="/amenities">
+                View our amenity map
+              </InlineLink>{" "}
+              to explore restaurants, parks, shopping, and more nearby Providence Las Vegas.
+            </p>
           </div>
         </section>
 

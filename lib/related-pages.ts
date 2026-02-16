@@ -19,6 +19,11 @@ export const relatedPagesMap = {
       href: "/providence",
     },
     {
+      title: "Nearby Amenities Map",
+      description: "Restaurants, parks, shopping, and more near Providence Las Vegas",
+      href: "/amenities",
+    },
+    {
       title: "Premium Providence Homes",
       description: "Oxford Commons, Saratoga Highlands, and premier Providence neighborhoods",
       href: "/luxury-homes",
@@ -28,6 +33,11 @@ export const relatedPagesMap = {
       description: "Current Providence real estate market statistics and trends",
       href: "/market-report",
     },
+    {
+      title: "Contact Dr. Jan Duffy",
+      description: "Schedule a consultation for buying or selling in Providence",
+      href: "/contact",
+    },
   ],
 
   // Providence pages
@@ -36,6 +46,16 @@ export const relatedPagesMap = {
       title: "Search Providence Homes",
       description: "View current listings in Providence Las Vegas",
       href: realscoutUrls.searchRelated,
+    },
+    {
+      title: "Nearby Amenities Map",
+      description: "Restaurants, parks, shopping, and more near Providence Las Vegas",
+      href: "/amenities",
+    },
+    {
+      title: "Get Directions",
+      description: "Plan your visit with driving, walking, transit, or cycling routes",
+      href: "/directions",
     },
     {
       title: "Why Berkshire Hathaway",
@@ -61,9 +81,24 @@ export const relatedPagesMap = {
       href: "/providence",
     },
     {
+      title: "Nearby Amenities Map",
+      description: "Restaurants, parks, shopping, and more near Providence Las Vegas",
+      href: "/amenities",
+    },
+    {
+      title: "Get Directions",
+      description: "Plan your visit with driving, walking, transit, or cycling routes",
+      href: "/directions",
+    },
+    {
       title: "Search Providence Homes",
       description: "View current listings in Providence Las Vegas",
       href: realscoutUrls.searchRelated,
+    },
+    {
+      title: "Providence HOA Information",
+      description: "Resale certificates, Design Review, and HOA process",
+      href: "/providence/hoa-info",
     },
     {
       title: "Contact About This Neighborhood",
@@ -80,6 +115,11 @@ export const relatedPagesMap = {
       href: realscoutUrls.searchRelated,
     },
     {
+      title: "Providence Neighborhoods",
+      description: "Explore all 27 neighborhoods in the Providence community",
+      href: "/providence",
+    },
+    {
       title: "First-Time Home Buyers",
       description: "Essential guide for first-time buyers in Providence",
       href: "/buyers/first-time-buyers",
@@ -94,6 +134,11 @@ export const relatedPagesMap = {
       description: "Oxford Commons, Saratoga Highlands, and premier Providence neighborhoods",
       href: "/luxury-homes",
     },
+    {
+      title: "Nearby Amenities Map",
+      description: "Restaurants, parks, shopping near Providence Las Vegas",
+      href: "/amenities",
+    },
   ],
 
   // Seller pages
@@ -102,6 +147,11 @@ export const relatedPagesMap = {
       title: "Search Providence Homes",
       description: "Browse current listings in Providence Las Vegas",
       href: realscoutUrls.searchRelated,
+    },
+    {
+      title: "Free Home Valuation",
+      description: "Get a free estimate of your home's current market value",
+      href: "/home-valuation",
     },
     {
       title: "Move-Up Sellers",
@@ -117,6 +167,11 @@ export const relatedPagesMap = {
       title: "Relocation Sellers",
       description: "Selling your home due to relocation? We can help",
       href: "/sellers/relocation",
+    },
+    {
+      title: "Providence HOA Information",
+      description: "Resale certificates and Design Review process",
+      href: "/providence/hoa-info",
     },
   ],
 
@@ -263,6 +318,11 @@ export const relatedPagesMap = {
       href: realscoutUrls.searchRelated,
     },
     {
+      title: "Providence Neighborhoods",
+      description: "Explore all 27 neighborhoods in the Providence community",
+      href: "/providence",
+    },
+    {
       title: "Why Berkshire Hathaway",
       description: "Learn about the BHHS brand and its Warren Buffett connection",
       href: "/why-berkshire-hathaway",
@@ -277,9 +337,24 @@ export const relatedPagesMap = {
       description: "See what clients say about working with Dr. Jan Duffy",
       href: "/google-business",
     },
+    {
+      title: "Get Directions",
+      description: "Plan your visit to our Providence office",
+      href: "/directions",
+    },
   ],
 
   contact: [
+    {
+      title: "Get Directions",
+      description: "Plan your visit with driving, walking, transit, or cycling directions",
+      href: "/directions",
+    },
+    {
+      title: "Nearby Amenities Map",
+      description: "Restaurants, parks, shopping near our Providence office",
+      href: "/amenities",
+    },
     {
       title: "Free Home Valuation",
       description: "Find out what your home is worth in today's market",
@@ -294,6 +369,62 @@ export const relatedPagesMap = {
       title: "About Dr. Jan Duffy",
       description: "Learn about your BHHS Nevada Properties agent",
       href: "/about",
+    },
+    {
+      title: "Providence Neighborhoods",
+      description: "Explore all 27 Providence Las Vegas neighborhoods",
+      href: "/providence",
+    },
+  ],
+
+  amenities: [
+    {
+      title: "Get Directions",
+      description: "Plan your visit to our Providence office",
+      href: "/directions",
+    },
+    {
+      title: "Providence Neighborhoods",
+      description: "Explore all 27 neighborhoods in Providence Las Vegas",
+      href: "/providence",
+    },
+    {
+      title: "Contact Dr. Jan Duffy",
+      description: "Schedule a consultation for buying or selling in Providence",
+      href: "/contact",
+    },
+    {
+      title: "Search Providence Homes",
+      description: "View current listings in Providence Las Vegas",
+      href: realscoutUrls.searchRelated,
+    },
+    {
+      title: "Providence HOA Information",
+      description: "Community parks and HOA details",
+      href: "/providence/hoa-info",
+    },
+  ],
+
+  directions: [
+    {
+      title: "Nearby Amenities Map",
+      description: "Restaurants, parks, shopping near Providence Las Vegas",
+      href: "/amenities",
+    },
+    {
+      title: "Contact Dr. Jan Duffy",
+      description: "Schedule an appointment before you visit",
+      href: "/contact",
+    },
+    {
+      title: "Providence Neighborhoods",
+      description: "Explore all 27 Providence Las Vegas neighborhoods",
+      href: "/providence",
+    },
+    {
+      title: "Search Providence Homes",
+      description: "View current listings in Providence Las Vegas",
+      href: realscoutUrls.searchRelated,
     },
   ],
 };

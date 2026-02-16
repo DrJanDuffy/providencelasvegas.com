@@ -3,7 +3,9 @@ import Footer from "@/components/layouts/Footer";
 import FAQSection from "@/components/sections/FAQSection";
 import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import RelatedPages from "@/components/navigation/RelatedPages";
 import Link from "next/link";
+import { getRelatedPages } from "@/lib/related-pages";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Phone, MapPin, ExternalLink } from "lucide-react";
@@ -74,17 +76,30 @@ export default async function ProvidenceNeighborhoodPage({ params }: Props) {
               {neighborhood.name} is one of {providenceCommunity.neighborhoodCount} neighborhoods
               in Providence Las Vegas, a master-planned community in the northwest Las Vegas
               Valley with more than {providenceCommunity.homeCount} homes. Each Providence Las
-              Vegas neighborhood has its own amenities and character. Buying or selling in{" "}
-              {neighborhood.name} means access to Providence's three community parks, strong HOA,
+              Vegas neighborhood has its own amenities and character. Explore{" "}
+              <Link href="/amenities" className="text-blue-600 hover:text-blue-700 font-medium">
+                nearby restaurants, parks, and shopping
+              </Link>{" "}
+              or{" "}
+              <Link href="/directions" className="text-blue-600 hover:text-blue-700 font-medium">
+                get directions
+              </Link>{" "}
+              to our office. Buying or selling in {neighborhood.name} means access to Providence&apos;s three community parks, strong HOA,
               and well-maintained streetscapes. Dr. Jan Duffy at Berkshire Hathaway HomeServices
-              Nevada Properties specializes in Providence Las Vegas real estate and can guide you
+              Nevada Properties specializes in Providence Las Vegas real estate and can{" "}
+              <Link href="/contact" className="text-blue-600 hover:text-blue-700 font-medium">
+                guide you
+              </Link>{" "}
               through {neighborhood.name} and every Providence neighborhood.
             </p>
             <p className="text-slate-700 max-w-3xl">
               Providence Las Vegas homes for sale in {neighborhood.name} are listed on the MLS
               and through this site. For HOA resale information, Design Review, or community
-              documents for {neighborhood.name}, the Providence Master HOA website has the
-              latest. HOA assessments for Providence are due {providenceCommunity.hoaAssessmentDueDates}{" "}
+              documents for {neighborhood.name}, see our{" "}
+              <Link href="/providence/hoa-info" className="text-blue-600 hover:text-blue-700 font-medium">
+                Providence HOA information
+              </Link>{" "}
+              and the Providence Master HOA website. HOA assessments for Providence are due {providenceCommunity.hoaAssessmentDueDates}{" "}
               of each year.
             </p>
 
@@ -183,6 +198,11 @@ export default async function ProvidenceNeighborhoodPage({ params }: Props) {
           faqs={providenceFaqs}
           title={`Frequently Asked Questions About ${neighborhood.name}`}
           subtitle={`Common questions about the ${neighborhood.name} neighborhood in Providence Las Vegas`}
+        />
+
+        <RelatedPages
+          title="Explore Providence Las Vegas"
+          pages={getRelatedPages("providenceNeighborhood")}
         />
 
         <section className="py-12 md:py-16 bg-blue-600 text-white">

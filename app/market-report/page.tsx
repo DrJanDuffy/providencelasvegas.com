@@ -1,7 +1,9 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import RelatedPages from "@/components/navigation/RelatedPages";
 import Link from "next/link";
+import { getRelatedPages } from "@/lib/related-pages";
 import { TrendingUp, TrendingDown, Home, Calendar, DollarSign, BarChart, Phone } from "lucide-react";
 import type { Metadata } from "next";
 import { marketStats } from "@/lib/site-config";
@@ -278,6 +280,11 @@ export default function MarketReportPage() {
               </div>
             </div>
           </section>
+
+          <RelatedPages
+            title="You May Also Be Interested In"
+            pages={getRelatedPages("marketReport")}
+          />
 
           {/* FAQ */}
           <FAQSection

@@ -4,7 +4,9 @@ import FAQSection from "@/components/sections/FAQSection";
 import { realscoutUrls } from "@/lib/site-config";
 import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import RelatedPages from "@/components/navigation/RelatedPages";
 import Link from "next/link";
+import { getRelatedPages } from "@/lib/related-pages";
 import { getFAQsForPage } from "@/lib/faq-library";
 import Image from "next/image";
 import { 
@@ -437,6 +439,11 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
+
+          <RelatedPages
+            title="You May Also Be Interested In"
+            pages={getRelatedPages("about")}
+          />
 
           {/* FAQ Section */}
           <FAQSection

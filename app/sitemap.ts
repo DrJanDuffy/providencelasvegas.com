@@ -22,6 +22,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/faq`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/providence`, priority: 0.95, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/neighborhoods`, priority: 0.9, changeFrequency: "weekly" as const },
+    { url: `${baseUrl}/amenities`, priority: 0.85, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/directions`, priority: 0.9, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/site-map`, priority: 0.6, changeFrequency: "monthly" as const },
   ];
 
   // Service pages

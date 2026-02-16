@@ -72,6 +72,16 @@ export default function Footer() {
                   Providence HOA Information
                 </Link>
               </li>
+              <li>
+                <Link href="/amenities" className="text-slate-300 hover:text-white transition-colors text-sm">
+                  Nearby Amenities Map
+                </Link>
+              </li>
+              <li>
+                <Link href="/directions" className="text-slate-300 hover:text-white transition-colors text-sm">
+                  Get Directions
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -170,8 +180,8 @@ export default function Footer() {
             <Link href="/faq" className="text-slate-400 hover:text-white transition-colors">
               FAQ
             </Link>
-            <Link href="/sitemap.xml" className="text-slate-400 hover:text-white transition-colors">
-              Sitemap
+            <Link href="/site-map" className="text-slate-400 hover:text-white transition-colors">
+              Site Map
             </Link>
           </div>
         </div>

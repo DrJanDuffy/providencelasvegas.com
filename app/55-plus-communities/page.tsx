@@ -3,7 +3,9 @@ import Footer from "@/components/layouts/Footer";
 import FAQSection from "@/components/sections/FAQSection";
 import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import RelatedPages from "@/components/navigation/RelatedPages";
 import Link from "next/link";
+import { getRelatedPages } from "@/lib/related-pages";
 import {
   Phone,
   Sun,
@@ -184,6 +186,11 @@ export default function FiftyFiveCommunitiesPage() {
               </li>
             </ul>
           </section>
+
+          <RelatedPages
+            title="You May Also Be Interested In"
+            pages={getRelatedPages("fiftyPlusCommunities")}
+          />
 
           <FAQSection
             faqs={fiftyPlusFAQs}
