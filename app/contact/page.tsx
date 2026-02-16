@@ -4,7 +4,7 @@ import FAQSection from "@/components/sections/FAQSection";
 import FAQSchema from "@/components/schemas/FAQSchema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import LocationMap from "@/components/location/LocationMap";
-import { Phone, Mail, MapPin, Clock, Calendar, Users, Shield, Search } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Calendar, Star, Users, Shield, Search } from "lucide-react";
 import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import Link from "next/link";
 import type { Metadata } from "next";
