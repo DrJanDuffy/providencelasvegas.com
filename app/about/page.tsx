@@ -26,7 +26,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Dr. Jan Duffy | Providence Las Vegas Real Estate | BHHS Nevada Properties",
   description:
-    "Meet Dr. Jan Duffy, your trusted Providence Las Vegas real estate agent. Berkshire Hathaway HomeServices Nevada Properties. Serving Las Vegas since 2008, $127M+ in transactions. Providence Las Vegas specialist. Call (702) 744-2993.",
+    "Meet Dr. Jan Duffy, the leading Providence Las Vegas real estate expert. Berkshire Hathaway HomeServices Nevada Properties. Specializing in all 27 Providence neighborhoods since 2008. Providence HOA, new construction, and neighborhood market expertise. Call (702) 744-2993.",
   keywords: [
     "Dr. Jan Duffy",
     "Providence Las Vegas realtor",
@@ -44,7 +44,7 @@ const personSchema = {
   name: "Dr. Jan Duffy",
   jobTitle: "REALTOR®",
   description:
-    "Licensed real estate agent with Berkshire Hathaway HomeServices Nevada Properties, serving Las Vegas, Henderson, and Summerlin since 2008.",
+    "Licensed real estate agent with Berkshire Hathaway HomeServices Nevada Properties, specializing in all 27 Providence Las Vegas neighborhoods since 2008.",
   telephone: "+17027442993",
   email: "DrDuffy@ProvidenceLasVegas.com",
   url: "https://www.providencelasvegas.com/about",
@@ -65,56 +65,50 @@ const personSchema = {
     credentialNumber: "S.0197614.LLC",
   },
   knowsAbout: [
-    "Las Vegas real estate",
-    "Henderson properties",
-    "Summerlin homes",
-    "Luxury real estate",
-    "Investment properties",
-    "55+ communities",
-    "California relocation",
+    "Providence Las Vegas real estate",
+    "Providence master-planned community",
+    "Providence HOA resale certificates",
+    "Providence neighborhood comparisons",
+    "Oxford Commons",
+    "Saratoga Highlands",
+    "All 27 Providence neighborhoods",
   ],
 };
 
 const specializations = [
   {
-    title: "Residential Home Sales",
-    description: "Single-family homes, condos, and townhomes throughout Las Vegas and Henderson",
+    title: "Providence Residential Sales",
+    description: "Single-family homes, condos, and townhomes across all 27 Providence neighborhoods",
   },
   {
-    title: "Luxury Properties ($1M+)",
-    description: "The Ridges, MacDonald Highlands, Southern Highlands, and exclusive communities",
+    title: "Premium Providence Homes",
+    description: "Oxford Commons, Saratoga Highlands, Auburn & Bradford, and premier Providence communities",
   },
   {
-    title: "New Construction",
-    description: "Free buyer representation with Toll Brothers, Lennar, Century Communities, and more",
+    title: "Providence New Construction",
+    description: "Free buyer representation on new construction in Providence Las Vegas",
   },
   {
-    title: "Investment Properties",
-    description: "Rental properties, fix-and-flip opportunities, and portfolio building",
+    title: "Providence Investment Properties",
+    description: "Rental properties and portfolio building in Providence",
   },
   {
-    title: "55+ Active Adult Communities",
-    description: "Sun City Summerlin, Sun City Anthem, Del Webb Lake Las Vegas expertise",
+    title: "55+ and Downsizing",
+    description: "Providence single-story and low-maintenance options; nearby Sun City Aliante",
   },
   {
-    title: "California Relocation",
-    description: "Helping CA families transition to Nevada's tax advantages and lower costs",
+    title: "California to Providence",
+    description: "Helping CA families transition to Providence's value and Nevada tax advantages",
   },
 ];
 
 const areasServed = [
-  "Las Vegas",
-  "Henderson",
-  "Summerlin",
-  "Green Valley",
-  "North Las Vegas",
-  "Southern Highlands",
-  "Skye Canyon",
-  "Centennial Hills",
-  "The Ridges",
-  "Inspirada",
-  "Mountains Edge",
-  "Spring Valley",
+  "Providence Las Vegas",
+  "Oxford Commons",
+  "Saratoga Highlands",
+  "Auburn & Bradford",
+  "All 27 Providence neighborhoods",
+  "North Las Vegas (89166)",
 ];
 
 export default function AboutPage() {
@@ -139,10 +133,10 @@ export default function AboutPage() {
               Your Providence Las Vegas Real Estate Agent
             </h1>
             <p className="text-xl text-slate-600">
-              Dr. Jan Duffy has been serving Las Vegas since 2008—backed by the most
-              trusted name in real estate. Your Providence Las Vegas specialist for buying,
-              selling, investing, or relocating in Providence and its 27 neighborhoods.
-              Expert guidance with integrity and professionalism.
+              Dr. Jan Duffy is the leading Providence Las Vegas real estate expert, specializing
+              in all 27 Providence neighborhoods since 2008. Providence HOA requirements, new
+              construction options, and neighborhood-specific market trends—backed by Berkshire
+              Hathaway HomeServices. Expert guidance with integrity and professionalism.
             </p>
           </div>
 
@@ -161,16 +155,15 @@ export default function AboutPage() {
                   <p>
                     When you choose to work with <strong>Berkshire Hathaway HomeServices</strong>,
                     you're choosing a legacy of trust, integrity, and excellence. I'm proud to
-                    represent this iconic brand in the Las Vegas real estate market, bringing 
-                    world-class resources and local expertise to every client I serve.
+                    represent this iconic brand in Providence Las Vegas real estate, bringing 
+                    world-class resources and hyperlocal expertise to every client I serve.
                   </p>
                   <p>
                     Since 2008, I've closed $127 million in transactions and
-                    helped hundreds of families find their perfect home in Las Vegas, Providence,
-                    Henderson, Summerlin, and throughout Southern Nevada. My expertise spans luxury
-                    properties in Providence Las Vegas and beyond,
-                    new construction, investment real estate, 55+ active adult communities, and 
-                    relocations—particularly for California families seeking Nevada's tax advantages.
+                    helped hundreds of families find their perfect home across all 27 Providence
+                    neighborhoods. My expertise spans Providence HOA resale certificates, Design
+                    Review, new construction in Providence Las Vegas, investment real estate,
+                    single-story and downsizing options, and California-to-Providence relocations.
                   </p>
                   <p>
                     What sets <strong>Berkshire Hathaway HomeServices Nevada Properties</strong>{" "}
@@ -255,7 +248,7 @@ export default function AboutPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-blue-50 rounded-lg p-6 text-center">
                     <div className="text-3xl font-bold text-blue-600 mb-1">Since 2008</div>
-                    <div className="text-sm text-slate-600">Serving Las Vegas</div>
+                    <div className="text-sm text-slate-600">Serving Providence Las Vegas</div>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-6 text-center">
                     <div className="text-3xl font-bold text-blue-600 mb-1">$127M+</div>
@@ -378,10 +371,10 @@ export default function AboutPage() {
               Areas Served by BHHS Nevada Properties
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Dr. Jan Duffy serves the entire Las Vegas Valley with specialized knowledge of each 
-              neighborhood's unique characteristics, price points, and lifestyle offerings. From 
-              luxury estates in The Ridges to affordable new construction in North Las Vegas, 
-              she provides expert guidance wherever you want to buy or sell.
+              Dr. Jan Duffy serves all 27 Providence neighborhoods with specialized knowledge of each 
+              community&apos;s unique characteristics, price points, and lifestyle offerings. From 
+              Oxford Commons and Saratoga Highlands to Auburn & Bradford and beyond, 
+              she provides expert Providence HOA and market guidance for buying or selling.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {areasServed.map((area) => (
@@ -393,10 +386,10 @@ export default function AboutPage() {
             </div>
             <div className="text-center mt-6">
               <Link
-                href="/neighborhoods"
+                href="/providence"
                 className="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center"
               >
-                Explore All Neighborhoods <ArrowRight className="h-4 w-4 ml-2" />
+                Explore All 27 Providence Neighborhoods <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
             </div>
           </section>
@@ -420,11 +413,11 @@ export default function AboutPage() {
                   <Star className="h-5 w-5 text-yellow-400" />
                 </div>
                 <p className="text-slate-600 italic mb-3">
-                  "Dr. Jan made our California to Las Vegas relocation seamless. She understood 
-                  exactly what we were looking for and found us the perfect home in Summerlin. 
-                  Her knowledge of the market is exceptional."
+                  "Dr. Jan made our California to Providence relocation seamless. She understood 
+                  exactly what we were looking for and found us the perfect home in Oxford Commons. 
+                  Her knowledge of the Providence market is exceptional."
                 </p>
-                <p className="text-slate-900 font-semibold">— Michael & Sarah T., Summerlin</p>
+                <p className="text-slate-900 font-semibold">— Michael & Sarah T., Oxford Commons, Providence</p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
                 <div className="flex items-center mb-3">
@@ -439,7 +432,7 @@ export default function AboutPage() {
                   us through every step, explained everything clearly, and helped us get a great 
                   deal. Highly recommend!"
                 </p>
-                <p className="text-slate-900 font-semibold">— Jennifer & David K., Henderson</p>
+                <p className="text-slate-900 font-semibold">— Jennifer & David K., Saratoga Highlands, Providence</p>
               </div>
             </div>
           </section>
@@ -455,9 +448,9 @@ export default function AboutPage() {
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
             <p className="text-xl text-blue-100 mb-8">
-              Questions about buying or selling in Las Vegas? Call or text Dr. Jan Duffy today 
-              for a free consultation. Whether you're ready to start your search or just exploring 
-              options, she's here to help.
+              Questions about buying or selling in Providence Las Vegas? Call or text Dr. Jan Duffy today 
+              for a free consultation. Whether you&apos;re ready to start your search or just exploring 
+              options, she&apos;s here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

@@ -22,23 +22,27 @@ import {
   combineSchemas,
 } from "@/lib/schema";
 
-const title = "Providence Real Estate | Homes for Sale in Providence Las Vegas";
+const title = "Providence Las Vegas Real Estate | All 27 Neighborhoods | Dr. Jan Duffy";
 const description =
-  "Providence Real Estate. Homes for sale in Providence Las Vegas and North Las Vegas. Real Estate Agency serving Providence, NV 89166. Call (702) 744-2993.";
+  "Providence Las Vegas master-planned community expert. 27 neighborhoods, 5,600+ homes, 3 parks. Buy, sell, or invest in Providence with Dr. Jan Duffy, BHHS Nevada Properties.";
 const url = "https://www.providencelasvegas.com";
 
 export const metadata: Metadata = {
   title: {
     default: title,
-    template: "%s | Providence Real Estate",
+    template: "%s | Providence Las Vegas Real Estate",
   },
   description,
   metadataBase: new URL(url),
   keywords: [
-    "Providence Real Estate",
-    "homes for sale Providence Las Vegas",
-    "Providence Las Vegas real estate",
-    "North Las Vegas real estate",
+    "Providence Las Vegas",
+    "Providence real estate",
+    "Providence homes for sale",
+    "Providence neighborhoods",
+    "89166 homes",
+    "Oxford Commons",
+    "Saratoga Highlands",
+    "Providence HOA",
   ],
   openGraph: {
     title,

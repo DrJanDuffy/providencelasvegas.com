@@ -20,65 +20,64 @@ export const gbpPostTemplates: GBPPost[] = [
   {
     id: "market-update-jan-2026",
     type: "update",
-    title: "Las Vegas Real Estate Market Update - January 2026",
-    content: `The Las Vegas housing market remains strong heading into 2026! Here's what buyers and sellers need to know:
+    title: "Providence Las Vegas Real Estate Market Update - January 2026",
+    content: `The Providence housing market remains strong heading into 2026! Here's what buyers and sellers need to know:
 
-📊 Median home price: $450,000 (+4.2% YoY)
-🏠 Active listings: 4,850 homes
+📊 Median home price: ~$450,000 (+4.2% YoY)
+🏠 27 Providence neighborhoods
 ⏱️ Average days on market: 28 days
-📈 Inventory: 2.1 months (seller's market)
+📈 Well-priced homes sell quickly
 
-Whether you're buying your first home in Henderson, selling in Summerlin, or looking at 55+ communities like Sun City, now is a great time to make your move.
+Whether you're buying your first Providence home, selling in Oxford Commons or Saratoga Highlands, or exploring single-story options, now is a great time to make your move.
 
-Call Dr. Jan Duffy at (702) 744-2993 for a free market analysis of your home or neighborhood.`,
+Call Dr. Jan Duffy at (702) 744-2993 for a free Providence market analysis.`,
     cta: {
       text: "Get Free Market Analysis",
       url: "https://www.providencelasvegas.com/home-valuation",
     },
     publishDate: "2026-01-20",
-    keywords: ["Las Vegas real estate", "Henderson homes", "Summerlin", "55+ communities", "market update"],
+    keywords: ["Providence real estate", "Providence homes", "89166", "market update"],
   },
   {
     id: "california-relocation",
     type: "update",
-    title: "California Buyers: Your Home Equity Goes Further in Las Vegas",
-    content: `Thinking about relocating from California to Las Vegas? Here's why 37% of Las Vegas home buyers come from CA:
+    title: "California Buyers: Your Home Equity Goes Further in Providence",
+    content: `Thinking about relocating from California to Providence Las Vegas? Here's why California buyers love Providence:
 
 ✅ 0% state income tax (save thousands annually)
-✅ 40-60% lower home prices vs. comparable CA properties
-✅ Same-quality schools, better affordability
-✅ 4-hour drive to LA, easy flights everywhere
+✅ $300K–$700K vs $1M+ in comparable CA markets
+✅ Master-planned, 27 neighborhoods, 3 community parks
+✅ I-15 access, 4-hour drive to LA, easy flights everywhere
 
-A $1.2M California home could buy you a luxury property in Summerlin or The Ridges. Dr. Jan Duffy specializes in California-to-Nevada relocations and can help you maximize your equity.
+Providence offers modern construction, low maintenance, and California-quality living at Nevada prices. Dr. Jan Duffy specializes in California-to-Providence relocations.
 
 Call (702) 744-2993 for a free California equity comparison.`,
     cta: {
-      text: "California Relocation Guide",
+      text: "California to Providence Guide",
       url: "https://www.providencelasvegas.com/buyers/california-relocator",
     },
     publishDate: "2026-01-13",
-    keywords: ["California relocation", "Las Vegas", "no state income tax", "Summerlin", "The Ridges"],
+    keywords: ["California relocation", "Providence Las Vegas", "no state income tax", "89166"],
   },
   {
     id: "55-plus-spotlight",
     type: "update",
-    title: "55+ Active Adult Communities in Las Vegas - Your Options",
-    content: `Looking for 55+ living in the Las Vegas Valley? Here are the top communities:
+    title: "Age-Restricted Options Near Providence Las Vegas",
+    content: `Looking for 55+ or single-story living near Providence?
 
-🏌️ Sun City Summerlin - Nevada's largest 55+ community (7,700+ homes, 3 golf courses)
-🌄 Sun City Anthem - Henderson location with mountain views
-🌊 Del Webb Lake Las Vegas - Resort-style lakefront living
-⛳ Solera at Anthem - Boutique community feel
+Providence has no dedicated 55+ community. Nearby options:
+🏌️ Sun City Aliante - 5 mi north, active adult living
+🌄 Del Webb communities - Resort-style options
 
-Each offers different amenities, price points, and lifestyles. Dr. Jan Duffy specializes in 55+ communities and can help you find the perfect fit.
+For single-story, low-maintenance living IN Providence, search across all 27 neighborhoods. Dr. Jan Duffy can help you find the right fit.
 
-Schedule a community tour: (702) 744-2993`,
+Schedule a consultation: (702) 744-2993`,
     cta: {
-      text: "Explore 55+ Communities",
+      text: "Age-Restricted Near Providence",
       url: "https://www.providencelasvegas.com/55-plus-communities",
     },
     publishDate: "2026-01-06",
-    keywords: ["55+ communities", "Sun City Summerlin", "Sun City Anthem", "Del Webb", "active adult"],
+    keywords: ["55+ near Providence", "Sun City Aliante", "single-story Providence", "active adult"],
   },
   {
     id: "first-time-buyer",
@@ -93,23 +92,22 @@ Schedule a community tour: (702) 744-2993`,
 
 Dr. Jan Duffy guides first-time buyers through every step—from pre-approval to keys. Free consultation, no pressure.
 
-Popular first-time buyer neighborhoods:
-- North Las Vegas (median $385K)
-- Mountains Edge (median $475K)
-- Centennial Hills (median $495K)
+Popular Providence neighborhoods for first-time buyers:
+- Oxford Commons, Saratoga Highlands, Auburn & Bradford
+- All 27 Providence neighborhoods with a range of price points
 
-Call (702) 744-2993 to start your homeownership journey.`,
+Call (702) 744-2993 to start your Providence homeownership journey.`,
     cta: {
       text: "First-Time Buyer Guide",
       url: "https://www.providencelasvegas.com/buyers/first-time-buyers",
     },
     publishDate: "2025-12-30",
-    keywords: ["first-time buyer", "down payment assistance", "FHA", "VA loan", "Las Vegas"],
+    keywords: ["first-time buyer", "down payment assistance", "FHA", "VA loan", "Providence Las Vegas"],
   },
   {
     id: "seller-tips",
     type: "update",
-    title: "Selling Your Las Vegas Home? 5 Tips for Top Dollar",
+    title: "Selling Your Providence Home? 5 Tips for Top Dollar",
     content: `Thinking about selling? Here's how to maximize your sale price:
 
 1️⃣ Price right from day one (overpriced homes sit)
@@ -129,32 +127,31 @@ Get a free home valuation from Dr. Jan Duffy: (702) 744-2993`,
       url: "https://www.providencelasvegas.com/home-valuation",
     },
     publishDate: "2025-12-23",
-    keywords: ["sell home Las Vegas", "home valuation", "listing agent", "Summerlin", "Henderson"],
+    keywords: ["sell Providence home", "home valuation", "listing agent", "Providence Las Vegas"],
   },
   {
     id: "luxury-homes",
     type: "update",
-    title: "Luxury Living in Las Vegas: The Ridges, MacDonald Highlands & More",
-    content: `Las Vegas luxury real estate offers world-class living at Nevada prices:
+    title: "Premium Providence Homes: Oxford Commons, Saratoga Highlands & More",
+    content: `Providence's finest homes offer exceptional living at Nevada prices:
 
-🏔️ The Ridges, Summerlin - Guard-gated, custom estates from $2M+
-⛰️ MacDonald Highlands - Henderson hillside luxury with Strip views
-🌆 Strip High-Rises - Waldorf, Veer, Panorama condos
-🌳 Southern Highlands - Golf course living from $800K+
+🏔️ Oxford Commons - Premier Providence neighborhood, custom upgrades
+⛰️ Saratoga Highlands - Upscale floor plans, desirable lots
+🌳 Auburn & Bradford - Family-friendly, great schools
 
-Why luxury buyers choose Las Vegas:
+Why buyers choose premium Providence:
 ✅ No state income tax
-✅ Privacy and discretion
-✅ World-class dining, entertainment, golf
-✅ 40-60% lower than comparable CA/NY properties
+✅ Master-planned, 27 neighborhoods, 3 community parks
+✅ Modern construction, low maintenance
+✅ $300K–$700K vs $1M+ in comparable CA markets
 
-Confidential luxury home search: (702) 744-2993`,
+Premium Providence home search: (702) 744-2993`,
     cta: {
-      text: "Luxury Home Search",
-      url: "https://www.providencelasvegas.com/buyers/luxury-homes-las-vegas",
+      text: "Premium Providence Homes",
+      url: "https://www.providencelasvegas.com/luxury-homes",
     },
     publishDate: "2025-12-16",
-    keywords: ["luxury homes Las Vegas", "The Ridges", "MacDonald Highlands", "high-rise condos"],
+    keywords: ["premium Providence homes", "Oxford Commons", "Saratoga Highlands", "Providence luxury"],
   },
 ];
 
@@ -241,8 +238,8 @@ export const photoCategories = [
   },
   {
     category: "Neighborhoods",
-    description: "Local area photos showing geography expertise",
-    examples: ["Summerlin views", "Henderson parks", "Las Vegas Strip", "Red Rock Canyon"],
+    description: "Providence area photos showing geography expertise",
+    examples: ["Providence parks", "Oxford Commons", "Saratoga Highlands", "The Promenade"],
     count: "10-15 photos",
   },
   {
@@ -253,14 +250,14 @@ export const photoCategories = [
   },
   {
     category: "55+ Communities",
-    description: "Community amenities, clubhouses, golf courses",
-    examples: ["Sun City clubhouse", "Golf courses", "Recreation centers", "Community pools"],
+    description: "Nearby 55+ amenities, Providence single-story options",
+    examples: ["Sun City Aliante", "Providence single-story", "Community pools", "Low-maintenance homes"],
     count: "10-15 photos",
   },
   {
-    category: "Luxury Properties",
-    description: "High-end listings and neighborhoods",
-    examples: ["The Ridges homes", "Custom estates", "Strip views", "Pool/backyard features"],
+    category: "Premium Providence",
+    description: "Oxford Commons, Saratoga Highlands, Auburn & Bradford listings",
+    examples: ["Oxford Commons homes", "Providence custom upgrades", "Community features", "Pool/backyard"],
     count: "10-15 photos",
   },
 ];

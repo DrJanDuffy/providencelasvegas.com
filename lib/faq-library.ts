@@ -21,7 +21,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "What areas does Berkshire Hathaway HomeServices Nevada Properties serve?",
       answer:
-        "BHHS Nevada Properties serves all of Las Vegas, Henderson, North Las Vegas, and surrounding areas, with specialized expertise in Summerlin, The Ridges, Skye Canyon, Southern Highlands, Green Valley, Providence, and all Henderson communities.",
+        "BHHS Nevada Properties serves Providence Las Vegas and all 27 Providence neighborhoods. Dr. Jan Duffy specializes in Providence HOA resale certificates, Design Review, new construction, and neighborhood comparisons across Oxford Commons, Saratoga Highlands, Auburn & Bradford, and every Providence community.",
     },
     {
       question: "How do I contact Dr. Jan Duffy at Berkshire Hathaway HomeServices?",
@@ -36,7 +36,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "What is the current Las Vegas real estate market like in 2026?",
       answer:
-        "As of January 2026, the Las Vegas median home price is $450,000 (+4.2% YoY), with homes selling in an average of 28 days. Henderson's median is slightly higher at $485,000. The market remains competitive but balanced.",
+        "As of January 2026, the Providence and North Las Vegas median home price is approximately $450,000 (+4.2% YoY), with homes selling in an average of 28 days. The Providence market remains competitive but balanced.",
     },
     {
       question: "What is Providence, Las Vegas?",
@@ -79,7 +79,7 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "What neighborhoods does Dr. Jan Duffy specialize in?",
       answer:
-        "Dr. Jan has specialized expertise in Providence, Summerlin, The Ridges, Southern Highlands, Henderson, Green Valley, Skye Canyon, Centennial Hills, Inspirada, and North Las Vegas. She serves the entire Las Vegas Valley.",
+        "Dr. Jan has specialized expertise in all 27 Providence Las Vegas neighborhoods—Oxford Commons, Saratoga Highlands, Auburn & Bradford, and more. She serves Providence and North Las Vegas (89166) with deep knowledge of Providence HOA, new construction, and resale processes.",
     },
   ],
 
@@ -151,34 +151,34 @@ const faqLibrary: Record<string, FAQItem[]> = {
 
   neighborhoods: [
     {
-      question: "What Las Vegas neighborhoods does Dr. Jan Duffy serve?",
+      question: "What Providence neighborhoods does Dr. Jan Duffy serve?",
       answer:
-        "Dr. Jan serves Providence, Summerlin, Henderson, Green Valley, The Ridges, Southern Highlands, North Las Vegas, Skye Canyon, Centennial Hills, Inspirada, Mountains Edge, and all of Clark County. She has deep expertise in master-planned communities.",
+        "Dr. Jan serves all 27 Providence Las Vegas neighborhoods—Oxford Commons, Saratoga Highlands, Auburn & Bradford, and more. She has deep expertise in Providence HOA resale certificates, Design Review, new construction, and neighborhood comparisons.",
     },
     {
-      question: "Which Las Vegas neighborhood is best for families?",
+      question: "Which Providence neighborhood is best for families?",
       answer:
-        "Summerlin, Henderson, Green Valley, and Inspirada are popular for families due to top-rated schools, parks, and community amenities. Dr. Jan can help you compare neighborhoods based on your priorities.",
+        "Oxford Commons, Saratoga Highlands, Auburn & Bradford, and many other Providence neighborhoods are popular for families due to top-rated schools, three community parks, and family-friendly amenities. Dr. Jan can help you compare Providence neighborhoods based on your priorities.",
     },
     {
-      question: "Where are the luxury neighborhoods in Las Vegas?",
+      question: "Where are the premium Providence neighborhoods?",
       answer:
-        "The Ridges in Summerlin, Southern Highlands, and MacDonald Highlands in Henderson are Las Vegas's premier luxury communities. These offer guard-gated living, celebrity homes, and world-class amenities.",
+        "Oxford Commons, Saratoga Highlands, and Auburn & Bradford offer some of Providence's finest homes with custom upgrades, larger lots, and move-in-ready options. Dr. Jan specializes in premium Providence real estate.",
     },
     {
-      question: "What neighborhoods have the most affordable homes?",
+      question: "What Providence neighborhoods have the most affordable homes?",
       answer:
-        "North Las Vegas, Mountains Edge, and some areas of Henderson offer more affordable options. Dr. Jan can show you current inventory and help you find value in your price range.",
+        "Providence offers a range of price points across its 27 neighborhoods. Dr. Jan can show you current inventory and help you find value in your price range. Call (702) 744-2993 for a free consultation.",
     },
     {
-      question: "How do I choose the right Las Vegas neighborhood?",
+      question: "How do I choose the right Providence neighborhood?",
       answer:
-        "Consider schools, commute, amenities, HOA fees, and lifestyle. Dr. Jan offers neighborhood tours and can match you with communities that fit your budget, needs, and preferences. Call (702) 744-2993 to get started.",
+        "Consider schools, commute, amenities, HOA fees, and lifestyle. Dr. Jan offers neighborhood tours and can match you with Providence communities that fit your budget, needs, and preferences. Call (702) 744-2993 to get started.",
     },
     {
-      question: "Are there new construction communities in Las Vegas?",
+      question: "Are there new construction communities in Providence?",
       answer:
-        "Yes. Skye Canyon, Inspirada, North Las Vegas, and several other areas have active new construction from builders like Toll Brothers, Lennar, and Century Communities. Dr. Jan provides free buyer representation for new construction.",
+        "Yes. Providence has active new construction in several neighborhoods. Dr. Jan provides free buyer representation for new construction and can guide you through builder contracts and Design Review. Visit /new-construction for details.",
     },
   ],
 
@@ -217,216 +217,76 @@ const faqLibrary: Record<string, FAQItem[]> = {
     },
   ],
 
-  // ============ Other Neighborhoods ============
+  // ============ Other Neighborhoods (reframed for Providence focus) ============
   summerlin: [
     {
-      question: "What is Summerlin, Las Vegas?",
+      question: "Looking for Summerlin?",
       answer:
-        "Summerlin is Las Vegas's premier master-planned community in the northwest valley. It features 150+ parks, top-rated schools, Red Rock Canyon access, and multiple villages. The median home price is around $625,000 with luxury options in The Ridges.",
-    },
-    {
-      question: "What are the best neighborhoods in Summerlin for families?",
-      answer:
-        "Summerlin's villages offer excellent schools, parks, and family amenities. The Trails, Stonebridge, and The Mesa are popular. Dr. Jan Duffy can help you compare villages based on schools, lifestyle, and budget.",
-    },
-    {
-      question: "Is The Ridges part of Summerlin?",
-      answer:
-        "Yes. The Ridges is an ultra-luxury guard-gated community within Summerlin, known for celebrity homes and Bear's Best Golf. Median prices exceed $2.5 million. Dr. Jan specializes in luxury Summerlin real estate.",
-    },
-    {
-      question: "How long does it take to close on a Summerlin home?",
-      answer:
-        "Typically 30-45 days from offer acceptance. Cash purchases can close in 7-14 days. Dr. Jan Duffy guides you through financing, inspections, and HOA requirements to ensure a smooth Summerlin transaction.",
-    },
-    {
-      question: "What is the Summerlin real estate market like in 2026?",
-      answer:
-        "Summerlin remains a strong seller's market with median prices around $625,000. Luxury homes in The Ridges average $2.5M+. Days on market average 22. Dr. Jan provides current market data—call (702) 744-2993.",
+        "Dr. Jan specializes exclusively in Providence Las Vegas—a master-planned community with 27 neighborhoods, three parks, and 5,600+ homes. Visit /providence or call (702) 744-2993 for Providence listings.",
     },
   ],
 
   henderson: [
     {
-      question: "Why buy a home in Henderson, Nevada?",
+      question: "Looking for Henderson?",
       answer:
-        "Henderson is Nevada's second-largest city with excellent schools, low crime, Lake Las Vegas, and family-friendly communities. Median home price is $485,000. Many California relocators choose Henderson for its quality of life.",
-    },
-    {
-      question: "What are the best Henderson neighborhoods?",
-      answer:
-        "Green Valley, Inspirada, MacDonald Highlands, and Seven Hills are popular. Each offers different amenities and price points. Dr. Jan Duffy knows Henderson inside and out—call (702) 744-2993 for neighborhood guidance.",
-    },
-    {
-      question: "Are there 55+ communities in Henderson?",
-      answer:
-        "Yes. Sun City Anthem, Solera at Anthem, and Del Webb Lake Las Vegas are premier active adult communities in Henderson. Dr. Jan specializes in 55+ real estate and can help you find the right fit.",
-    },
-    {
-      question: "How does Henderson compare to Las Vegas for commuting?",
-      answer:
-        "Henderson is southeast of the Strip. Commute to downtown Las Vegas is typically 20-30 minutes. Many Henderson residents work remotely or in Henderson's growing employment centers. Dr. Jan can discuss commute options.",
-    },
-    {
-      question: "What schools serve Henderson neighborhoods?",
-      answer:
-        "Henderson is served by the Clark County School District. Some areas have top-rated schools. Dr. Jan can provide school information for specific neighborhoods and connect you with resources for school research.",
+        "Dr. Jan specializes exclusively in Providence Las Vegas—27 neighborhoods, three parks, 5,600+ homes. Visit /providence or call (702) 744-2993 for Providence listings.",
     },
   ],
 
   "green-valley": [
     {
-      question: "What is Green Valley, Henderson?",
+      question: "Looking for Green Valley?",
       answer:
-        "Green Valley is an established Henderson community with mature landscaping, golf courses, and excellent schools. Median home prices are around $520,000. It offers a mix of resale and some newer construction.",
-    },
-    {
-      question: "Is Green Valley a good place for families?",
-      answer:
-        "Yes. Green Valley has top-rated schools, parks, walking trails, and family-friendly amenities. The community is known for its safe neighborhoods and strong sense of community.",
-    },
-    {
-      question: "What are home prices like in Green Valley?",
-      answer:
-        "As of 2026, Green Valley median is around $520,000. Prices vary by neighborhood, size, and condition. Dr. Jan Duffy provides free home valuations and can show you current Green Valley listings.",
-    },
-    {
-      question: "How do I find homes for sale in Green Valley?",
-      answer:
-        "Search on this site or call (702) 744-2993. Dr. Jan Duffy lists Green Valley homes through Berkshire Hathaway HomeServices and the MLS. She can set up automated alerts for new listings matching your criteria.",
+        "Dr. Jan specializes exclusively in Providence Las Vegas. Visit /providence for all 27 neighborhoods or call (702) 744-2993.",
     },
   ],
 
   "the-ridges": [
     {
-      question: "What is The Ridges in Summerlin?",
+      question: "Looking for premium homes?",
       answer:
-        "The Ridges is an ultra-luxury guard-gated community in Summerlin with celebrity homes, custom estates, and Bear's Best Golf. Median prices exceed $2.5 million. It offers Strip views and Red Rock Canyon proximity.",
-    },
-    {
-      question: "What are the entry requirements for The Ridges?",
-      answer:
-        "The Ridges is guard-gated with strict access control. Buyers typically need proof of funds or pre-approval for luxury financing. Dr. Jan Duffy specializes in Ridges real estate and can guide you through the process.",
-    },
-    {
-      question: "What amenities does The Ridges offer?",
-      answer:
-        "Bear's Best Golf Course, clubhouse, fitness, and stunning mountain and Strip views. The community emphasizes privacy and luxury. Visit The Ridges Village Association website for official amenity details.",
-    },
-    {
-      question: "How do I buy a luxury home in The Ridges?",
-      answer:
-        "Dr. Jan Duffy has extensive experience with Ridges transactions. She understands the luxury buyer expectations, discretion requirements, and negotiation nuances. Call (702) 744-2993 for a confidential consultation.",
+        "Dr. Jan specializes in Providence's finest—Oxford Commons, Saratoga Highlands, Auburn & Bradford. Visit /luxury-homes or call (702) 744-2993.",
     },
   ],
 
   "southern-highlands": [
     {
-      question: "What is Southern Highlands, Las Vegas?",
+      question: "Looking for luxury communities?",
       answer:
-        "Southern Highlands is a master-planned luxury community in south Las Vegas with championship golf, guard-gated neighborhoods, and mountain views. Median prices are around $750,000.",
-    },
-    {
-      question: "What golf courses are in Southern Highlands?",
-      answer:
-        "Southern Highlands Golf Club is the centerpiece—a private championship course. The community offers resort-style living with golf, pools, and premium amenities.",
-    },
-    {
-      question: "Are Southern Highlands homes guard-gated?",
-      answer:
-        "Many Southern Highlands neighborhoods are guard-gated. The community emphasizes security and exclusivity. Dr. Jan Duffy can explain the different villages and their access requirements.",
-    },
-    {
-      question: "How do I contact a Southern Highlands real estate expert?",
-      answer:
-        "Dr. Jan Duffy specializes in Southern Highlands and luxury Las Vegas real estate. Call (702) 744-2993 for listings, market insight, and representation for buying or selling in Southern Highlands.",
+        "Dr. Jan specializes in Providence's premium neighborhoods—Oxford Commons, Saratoga Highlands, Auburn & Bradford. Visit /luxury-homes or call (702) 744-2993.",
     },
   ],
 
   "north-las-vegas": [
     {
-      question: "Is North Las Vegas a good place to buy a home?",
+      question: "Providence and North Las Vegas",
       answer:
-        "North Las Vegas offers some of the most affordable new construction in the Las Vegas Valley. Median price is around $385,000. The area is rapidly growing with new amenities and employment centers.",
-    },
-    {
-      question: "What new construction is available in North Las Vegas?",
-      answer:
-        "Several builders have active communities in North Las Vegas including Lennar, KB Home, and others. Dr. Jan provides free buyer representation for new construction—the builder pays her commission.",
-    },
-    {
-      question: "How far is North Las Vegas from the Las Vegas Strip?",
-      answer:
-        "North Las Vegas is approximately 20-30 minutes north of the Strip depending on traffic. It offers a more suburban, family-oriented environment with good value.",
-    },
-    {
-      question: "What schools serve North Las Vegas?",
-      answer:
-        "North Las Vegas is in the Clark County School District. Dr. Jan can provide school information for specific neighborhoods and help you find areas that match your family's needs.",
+        "Providence (89166) is in North Las Vegas. Dr. Jan specializes in all 27 Providence neighborhoods. Visit /providence or call (702) 744-2993.",
     },
   ],
 
   "skye-canyon": [
     {
-      question: "What is Skye Canyon, Las Vegas?",
+      question: "Looking for new construction?",
       answer:
-        "Skye Canyon is a newer master-planned community in northwest Las Vegas with mountain views, modern amenities, and new construction. Median prices are around $550,000. It appeals to families and outdoor enthusiasts.",
-    },
-    {
-      question: "What amenities does Skye Canyon offer?",
-      answer:
-        "Skye Canyon features parks, trails, a community center, splash pads, and mountain proximity. The community has a focus on outdoor recreation and modern lifestyle.",
-    },
-    {
-      question: "Is there new construction in Skye Canyon?",
-      answer:
-        "Yes. Skye Canyon has active new construction from several builders. Dr. Jan Duffy provides free buyer representation for new construction purchases—call (702) 744-2993.",
-    },
-    {
-      question: "How do I find homes for sale in Skye Canyon?",
-      answer:
-        "Search on this site or call (702) 744-2993. Dr. Jan knows Skye Canyon well and can show you resale and new construction options. She'll help you navigate builder contracts and negotiations.",
+        "Dr. Jan specializes in Providence Las Vegas new construction. Visit /new-construction or call (702) 744-2993 for Providence builder options.",
     },
   ],
 
   "centennial-hills": [
     {
-      question: "What is Centennial Hills, Las Vegas?",
+      question: "Looking for Northwest Las Vegas?",
       answer:
-        "Centennial Hills is a northwest Las Vegas community with mountain access, parks, shopping, and family-friendly neighborhoods. Median prices are around $495,000. It offers good value with suburban amenities.",
-    },
-    {
-      question: "Is Centennial Hills near the mountains?",
-      answer:
-        "Yes. Centennial Hills is close to the Spring Mountains and offers easy access to hiking and outdoor recreation. Mt. Charleston is within driving distance for skiing and mountain activities.",
-    },
-    {
-      question: "What is the Centennial Hills real estate market like?",
-      answer:
-        "Centennial Hills offers a mix of resale and some newer homes. Prices are generally more affordable than Summerlin. Dr. Jan Duffy provides current market data—call (702) 744-2993.",
+        "Dr. Jan specializes in Providence Las Vegas (89166). Visit /providence for 27 neighborhoods or call (702) 744-2993.",
     },
   ],
 
   inspirada: [
     {
-      question: "What is Inspirada, Henderson?",
+      question: "Looking for Inspirada?",
       answer:
-        "Inspirada is a master-planned Henderson community with resort-style pools, walking trails, and new construction. Median prices are around $525,000. It's popular with families and relocators.",
-    },
-    {
-      question: "What amenities does Inspirada offer?",
-      answer:
-        "Inspirada features multiple resort-style pools, splash pads, parks, walking trails, and community events. The lifestyle is active and family-focused.",
-    },
-    {
-      question: "Is there new construction in Inspirada?",
-      answer:
-        "Yes. Inspirada has active new construction from several builders. Dr. Jan Duffy provides free buyer representation for new construction. The builder pays her commission—you get expert representation at no cost.",
-    },
-    {
-      question: "How do I contact an Inspirada real estate expert?",
-      answer:
-        "Dr. Jan Duffy knows Inspirada and Henderson real estate. Call (702) 744-2993 for listings, new construction options, and neighborhood guidance.",
+        "Dr. Jan specializes exclusively in Providence Las Vegas. Visit /providence for all 27 neighborhoods or call (702) 744-2993.",
     },
   ],
 
@@ -527,9 +387,9 @@ const faqLibrary: Record<string, FAQItem[]> = {
         "It depends on your equity, timeline, and risk tolerance. Dr. Jan can discuss options including bridge loans, rent-back agreements, and timing strategies. Every situation is different.",
     },
     {
-      question: "What Las Vegas neighborhoods do California relocators prefer?",
+      question: "Why do California relocators choose Providence?",
       answer:
-        "Summerlin, Henderson, Green Valley, and Inspirada are popular. Factors include schools, commute, amenities, and vibe. Dr. Jan helps you narrow down based on your lifestyle and budget.",
+        "Providence is popular with California buyers for its master-planned design, 27 neighborhoods, modern construction, low maintenance, three community parks, and I-15 access. Price points ($300K–$700K) compare favorably to $1M+ in many California markets. Dr. Jan helps you find the right Providence neighborhood.",
     },
     {
       question: "How do I get started with my California to Las Vegas move?",
@@ -540,17 +400,17 @@ const faqLibrary: Record<string, FAQItem[]> = {
 
   "buyers/luxury-homes-las-vegas": [
     {
-      question: "What defines a luxury home in Las Vegas?",
+      question: "What defines a premium Providence home?",
       answer:
-        "Luxury typically starts around $1M+ in Las Vegas. The Ridges, Southern Highlands, and MacDonald Highlands are premier luxury communities. Luxury buyers expect discretion, expertise, and flawless execution.",
+        "Premium Providence homes include Oxford Commons, Saratoga Highlands, and Auburn & Bradford offerings with custom upgrades, larger lots, and move-in-ready finishes. Dr. Jan specializes in Providence's finest listings.",
     },
     {
-      question: "What are the best luxury neighborhoods in Las Vegas?",
+      question: "What are the best premium neighborhoods in Providence?",
       answer:
-        "The Ridges (Summerlin), Southern Highlands, MacDonald Highlands (Henderson), and certain Summerlin and Henderson estates. Each offers different lifestyles—guard-gated, golf, views, or privacy.",
+        "Oxford Commons, Saratoga Highlands, and Auburn & Bradford are Providence's premier neighborhoods. Each offers different lifestyles, lot sizes, and amenities. Dr. Jan helps you find the right fit.",
     },
     {
-      question: "How does buying a luxury home differ?",
+      question: "How does buying a premium Providence home differ?",
       answer:
         "Luxury transactions require discretion, strong negotiation, and attention to detail. One wrong move can cost hundreds of thousands. Dr. Jan Duffy has $127M+ in closed transactions and understands luxury buyer expectations.",
     },
@@ -560,23 +420,23 @@ const faqLibrary: Record<string, FAQItem[]> = {
         "For cash purchases, yes. For financing, you'll need a jumbo loan pre-approval. Dr. Jan works with luxury lenders and can guide you through the requirements for high-end transactions.",
     },
     {
-      question: "How do I schedule a luxury home viewing?",
+      question: "How do I schedule a premium Providence home viewing?",
       answer:
-        "Call (702) 744-2993 for a confidential consultation. Dr. Jan specializes in luxury Las Vegas real estate and can show you off-market and MLS listings in The Ridges, Southern Highlands, and beyond.",
+        "Call (702) 744-2993 for a confidential consultation. Dr. Jan specializes in Providence Las Vegas real estate and can show you MLS listings across Oxford Commons, Saratoga Highlands, Auburn & Bradford, and all 27 Providence neighborhoods.",
     },
   ],
 
   // ============ Seller Service Pages ============
   sellers: [
     {
-      question: "What is my home worth in today's Las Vegas market?",
+      question: "What is my Providence home worth in today's market?",
       answer:
-        "Home values depend on location, condition, size, and recent comparable sales. Dr. Jan provides free, comprehensive home valuations using current MLS data and her expertise serving Las Vegas since 2008.",
+        "Home values depend on location, condition, size, and recent comparable sales. Dr. Jan provides free, comprehensive Providence home valuations using current MLS data and her expertise serving Providence Las Vegas since 2008.",
     },
     {
-      question: "How long will it take to sell my home?",
+      question: "How long will it take to sell my Providence home?",
       answer:
-        "Currently, well-priced homes in Las Vegas sell in an average of 28 days. Luxury homes may take 45+ days. Pricing strategy is crucial—overpriced homes sit for months. Dr. Jan's pricing gets results.",
+        "Currently, well-priced Providence homes sell in an average of 28 days. Premium homes may take 45+ days. Pricing strategy is crucial—overpriced homes sit for months. Dr. Jan's pricing gets results.",
     },
     {
       question: "What do I need to do to prepare my home for sale?",
@@ -625,9 +485,9 @@ const faqLibrary: Record<string, FAQItem[]> = {
         "Dr. Jan helps you declutter, stage, and price your current home while identifying smaller properties that fit your new lifestyle. Many downsizers choose 55+ communities or maintenance-free condos.",
     },
     {
-      question: "What are good downsizing options in Las Vegas?",
+      question: "What are good downsizing options near Providence?",
       answer:
-        "55+ communities (Sun City Summerlin, Sun City Anthem), condos, townhomes, and smaller single-family homes. Dr. Jan specializes in 55+ and can help you find low-maintenance living.",
+        "Providence offers single-story and low-maintenance homes. Nearby 55+ options include Sun City Aliante (5 mi north) and Del Webb communities. Dr. Jan can help you find the right fit. Call (702) 744-2993.",
     },
     {
       question: "How do I handle excess belongings when downsizing?",
@@ -670,9 +530,9 @@ const faqLibrary: Record<string, FAQItem[]> = {
   // ============ Other Service Pages ============
   "luxury-homes": [
     {
-      question: "What Las Vegas neighborhoods have luxury homes?",
+      question: "What Providence neighborhoods have premium homes?",
       answer:
-        "The Ridges (Summerlin), Southern Highlands, MacDonald Highlands (Henderson), and select Summerlin and Henderson estates. Median luxury prices range from $1.2M to $2.5M+ in premier communities.",
+        "Oxford Commons, Saratoga Highlands, and Auburn & Bradford offer Providence's finest homes—custom upgrades, larger lots, move-in-ready options. Dr. Jan specializes in premium Providence real estate.",
     },
     {
       question: "What should I expect when buying a luxury home?",
@@ -693,9 +553,9 @@ const faqLibrary: Record<string, FAQItem[]> = {
         "Yes. The builder pays the buyer's agent commission. You get Dr. Jan's expertise at no cost. She negotiates upgrades, reviews contracts, and protects your interests—the builder's agent works for the builder, not you.",
     },
     {
-      question: "Which Las Vegas areas have new construction?",
+      question: "Which Providence areas have new construction?",
       answer:
-        "Skye Canyon, Inspirada, North Las Vegas, and several other communities. Builders include Toll Brothers, Lennar, Century Communities, KB Home, and others. Dr. Jan represents you with every builder.",
+        "Providence has active new construction in several neighborhoods. Dr. Jan represents you with every builder—free buyer representation. Visit /new-construction for current inventory and builder information.",
     },
     {
       question: "Should I use the builder's sales agent?",
@@ -706,14 +566,14 @@ const faqLibrary: Record<string, FAQItem[]> = {
 
   "investment-properties": [
     {
-      question: "What are good Las Vegas neighborhoods for investment properties?",
+      question: "Are Providence homes good for investment?",
       answer:
-        "North Las Vegas, certain Henderson areas, and established Las Vegas neighborhoods often offer favorable rental yields. Dr. Jan analyzes cap rates, appreciation potential, and rental demand for each area.",
+        "Providence offers a range of investment opportunities. Dr. Jan analyzes cap rates, appreciation potential, and rental demand for Providence neighborhoods. Call (702) 744-2993 for investment guidance.",
     },
     {
-      question: "What is the average rental yield in Las Vegas?",
+      question: "What is the average rental yield in Providence?",
       answer:
-        "Las Vegas rental yields vary by neighborhood but can be competitive with national averages. Dr. Jan provides investment analysis including cap rates, cash flow projections, and market trends.",
+        "Providence and North Las Vegas rental yields vary by neighborhood. Dr. Jan provides investment analysis including cap rates, cash flow projections, and market trends for the 89166 area.",
     },
     {
       question: "Are short-term rentals allowed in Las Vegas?",
@@ -760,27 +620,27 @@ const faqLibrary: Record<string, FAQItem[]> = {
 
   "market-report": [
     {
-      question: "What is the Las Vegas median home price in 2026?",
+      question: "What is the Providence median home price in 2026?",
       answer:
-        "As of January 2026, the Las Vegas median home price is $450,000, up 4.2% year-over-year. Henderson's median is $485,000. Summerlin luxury averages $625,000 with The Ridges at $2.5M+.",
+        "As of January 2026, the Providence and North Las Vegas median home price is approximately $450,000, up 4.2% year-over-year. Dr. Jan provides current Providence market data. Call (702) 744-2993.",
     },
     {
-      question: "How long do homes sit on the market in Las Vegas?",
+      question: "How long do Providence homes sit on the market?",
       answer:
-        "Well-priced homes sell in an average of 28 days. Luxury homes may take 45+ days. Overpriced homes sit for months. Pricing correctly from day one is the key to a successful sale.",
+        "Well-priced Providence homes sell in an average of 28 days. Premium homes may take 45+ days. Overpriced homes sit for months. Pricing correctly from day one is the key to a successful sale.",
     },
     {
-      question: "Is now a good time to buy or sell in Las Vegas?",
+      question: "Is now a good time to buy or sell in Providence?",
       answer:
-        "Market conditions change. Dr. Jan provides current data and honest advice. Generally, low inventory favors sellers; balanced markets give buyers more negotiating power. Call (702) 744-2993 for a market consultation.",
+        "Market conditions change. Dr. Jan provides current Providence data and honest advice. Generally, low inventory favors sellers; balanced markets give buyers more negotiating power. Call (702) 744-2993 for a market consultation.",
     },
   ],
 
   "market-insights": [
     {
-      question: "What drives Las Vegas real estate prices?",
+      question: "What drives Providence real estate prices?",
       answer:
-        "Employment, population growth, interest rates, and housing inventory. Las Vegas benefits from no state income tax, tourism, and a growing diversifying economy. Dr. Jan monitors trends and provides insights.",
+        "Employment, population growth, interest rates, and housing inventory. Providence and North Las Vegas benefit from no state income tax, master-planned amenities, and a growing local economy. Dr. Jan monitors trends and provides insights.",
     },
     {
       question: "How do interest rates affect Las Vegas home prices?",
@@ -791,23 +651,23 @@ const faqLibrary: Record<string, FAQItem[]> = {
 
   "market-update": [
     {
-      question: "What's the latest Las Vegas real estate market update?",
+      question: "What's the latest Providence real estate market update?",
       answer:
-        "As of January 2026, the market shows a median of $450K, 28 days on market, and 4,850 active listings. Inventory is at 2.1 months. Dr. Jan provides ongoing market updates—call (702) 744-2993.",
+        "As of January 2026, the Providence and North Las Vegas market shows a median of approximately $450K, 28 days on market. Dr. Jan provides ongoing Providence market updates—call (702) 744-2993.",
     },
     {
-      question: "Where can I get current Las Vegas market statistics?",
+      question: "Where can I get current Providence market statistics?",
       answer:
-        "Dr. Jan Duffy provides market reports and insights. You can also check GLVAR (Greater Las Vegas Association of REALTORS) for official MLS statistics. Call (702) 744-2993 for a personalized market briefing.",
+        "Dr. Jan Duffy provides Providence market reports and insights. GLVAR (Greater Las Vegas Association of REALTORS) provides official MLS statistics. Call (702) 744-2993 for a personalized Providence market briefing.",
     },
   ],
 
   // ============ 55+ Communities ============
   fiftyPlusCommunities: [
     {
-      question: "What 55+ communities does Dr. Jan Duffy specialize in?",
+      question: "Are there 55+ communities in Providence?",
       answer:
-        "Sun City Summerlin, Sun City Anthem, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera at Anthem, and Trilogy Summerlin. Each offers different amenities, price points, and lifestyles.",
+        "Providence has no dedicated 55+ community. Nearby options include Sun City Aliante (5 mi north) and Del Webb communities. For single-story, low-maintenance living in Providence, search Providence homes or call (702) 744-2993.",
     },
     {
       question: "What is the age requirement for 55+ communities?",
@@ -815,9 +675,9 @@ const faqLibrary: Record<string, FAQItem[]> = {
         "At least one resident must be 55 or older. Some communities allow 18+ in the household under certain rules. Each community has specific age restriction details—Dr. Jan can explain the rules for any community.",
     },
     {
-      question: "What amenities do Las Vegas 55+ communities offer?",
+      question: "What amenities do nearby 55+ communities offer?",
       answer:
-        "Pools, fitness centers, clubs, golf, pickleball, and social activities. Sun City Summerlin has 7,700+ homes and multiple recreation centers. Del Webb communities offer resort-style amenities.",
+        "Sun City Aliante and Del Webb communities offer pools, fitness centers, clubs, golf, pickleball, and social activities. Providence residents seeking low-maintenance living can also find single-story options across all 27 neighborhoods.",
     },
     {
       question: "Are 55+ community homes good investments?",
@@ -833,32 +693,17 @@ const faqLibrary: Record<string, FAQItem[]> = {
 
   "sun-city-summerlin": [
     {
-      question: "What is Sun City Summerlin?",
+      question: "Looking for 55+ living?",
       answer:
-        "Sun City Summerlin is Nevada's largest 55+ community with 7,700+ homes in Summerlin. It offers multiple recreation centers, golf, pools, clubs, and active adult living. Built by Del Webb.",
-    },
-    {
-      question: "What are home prices in Sun City Summerlin?",
-      answer:
-        "Prices vary by model, size, and condition. Dr. Jan provides current Sun City Summerlin market data and free home valuations. Call (702) 744-2993 for listings and price ranges.",
-    },
-    {
-      question: "What amenities does Sun City Summerlin have?",
-      answer:
-        "Multiple recreation centers, golf courses, pools, fitness, pickleball, clubs, and social activities. The community is designed for active adults 55 and older.",
+        "Dr. Jan specializes in Providence Las Vegas. Providence has no dedicated 55+ community. Nearby options include Sun City Aliante (5 mi north) and Del Webb communities. For single-story Providence homes, visit /55-plus-communities or call (702) 744-2993.",
     },
   ],
 
   "sun-city-anthem": [
     {
-      question: "What is Sun City Anthem?",
+      question: "Looking for 55+ living near Providence?",
       answer:
-        "Sun City Anthem is a 55+ community in Henderson's Black Mountain area. It offers recreation centers, golf, pools, and active adult living with views of the Las Vegas valley.",
-    },
-    {
-      question: "How does Sun City Anthem compare to Sun City Summerlin?",
-      answer:
-        "Sun City Anthem is in Henderson; Sun City Summerlin is in Las Vegas/Summerlin. Each has different amenities, price points, and vibes. Dr. Jan can tour you through both to help you decide.",
+        "Providence has no 55+ community. Sun City Aliante is 5 miles north of Providence. For age-restricted options and single-story Providence homes, visit /55-plus-communities or call (702) 744-2993.",
     },
   ],
 
@@ -866,46 +711,46 @@ const faqLibrary: Record<string, FAQItem[]> = {
     {
       question: "What is Sun City Aliante?",
       answer:
-        "Sun City Aliante is a 55+ community in North Las Vegas. It offers active adult living with recreation centers, pools, and amenities at a typically lower price point than Sun City Summerlin or Anthem.",
+        "Sun City Aliante is a 55+ community about 5 miles north of Providence. It offers active adult living with recreation centers, pools, and amenities. Dr. Jan can discuss Providence and nearby 55+ options—call (702) 744-2993.",
     },
   ],
 
   "heritage-stonebridge": [
     {
-      question: "What is Heritage at Stonebridge?",
+      question: "Looking for 55+ living?",
       answer:
-        "Heritage at Stonebridge is a gated 55+ community in northwest Las Vegas. It offers active adult living with a focus on community and low-maintenance homes.",
+        "Dr. Jan focuses on Providence Las Vegas. For single-story, low-maintenance options in Providence or nearby 55+ communities like Sun City Aliante, visit /55-plus-communities or call (702) 744-2993.",
     },
   ],
 
   "solera-anthem": [
     {
-      question: "What is Solera at Anthem?",
+      question: "Looking for 55+ living?",
       answer:
-        "Solera at Anthem is a 55+ community in Henderson. It offers active adult living with modern amenities and a range of home styles.",
+        "Dr. Jan specializes in Providence Las Vegas. For single-story Providence homes or nearby 55+ communities like Sun City Aliante, visit /55-plus-communities or call (702) 744-2993.",
     },
   ],
 
   "trilogy-summerlin": [
     {
-      question: "What is Trilogy Summerlin?",
+      question: "Looking for 55+ living?",
       answer:
-        "Trilogy Summerlin is a 55+ community in Summerlin offering active adult living with resort-style amenities and a focus on an active lifestyle.",
+        "Dr. Jan focuses on Providence Las Vegas. For age-restricted options near Providence or single-story homes in all 27 Providence neighborhoods, visit /55-plus-communities or call (702) 744-2993.",
     },
   ],
 
   "del-webb-lake-las-vegas": [
     {
-      question: "What is Del Webb Lake Las Vegas?",
+      question: "Looking for 55+ living?",
       answer:
-        "Del Webb Lake Las Vegas is a 55+ community near Lake Las Vegas in Henderson. It offers active adult living with access to lake amenities and recreation.",
+        "Dr. Jan specializes in Providence Las Vegas. Providence has no 55+ community. Nearby options include Sun City Aliante and Del Webb communities. Visit /55-plus-communities or call (702) 744-2993.",
     },
   ],
 
   // ============ Misc Pages ============
   faq: [
     {
-      question: "Why choose Berkshire Hathaway HomeServices for Las Vegas real estate?",
+      question: "Why choose Berkshire Hathaway HomeServices for Providence real estate?",
       answer:
         "BHHS is backed by Warren Buffett's Berkshire Hathaway Inc.—unmatched trust and financial stability. You get a global network of 50,000+ agents, world-class marketing, and a brand synonymous with integrity.",
     },
@@ -939,9 +784,9 @@ const faqLibrary: Record<string, FAQItem[]> = {
 
   services: [
     {
-      question: "What real estate services does Dr. Jan Duffy offer?",
+      question: "What real estate services does Dr. Jan Duffy offer in Providence?",
       answer:
-        "Buyer and seller representation, luxury homes, new construction, investment properties, 55+ communities, California relocation, probate and divorce sales, first-time buyer guidance, and home valuations.",
+        "Buyer and seller representation, premium Providence homes, new construction, investment properties, age-restricted options near Providence, California to Providence relocation, probate and divorce sales, and home valuations.",
     },
     {
       question: "Are buyer services free?",
@@ -952,9 +797,9 @@ const faqLibrary: Record<string, FAQItem[]> = {
 
   listings: [
     {
-      question: "How do I search for Las Vegas homes for sale?",
+      question: "How do I search for Providence homes for sale?",
       answer:
-        "Use the property search on this site or visit Dr. Jan's MLS portal. You can filter by price, beds, baths, and neighborhood. Call (702) 744-2993 to set up automated listing alerts.",
+        "Use the property search on this site or visit Dr. Jan's MLS portal. You can filter by price, beds, baths, and Providence neighborhood. Call (702) 744-2993 to set up automated Providence listing alerts.",
     },
     {
       question: "Are the listings on this site current?",

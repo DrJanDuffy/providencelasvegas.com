@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Search } from "lucide-react";
+import { MapPin, Search } from "lucide-react";
 import { realscoutUrls } from "@/lib/site-config";
 
 export default function Footer() {
@@ -9,11 +9,11 @@ export default function Footer() {
     <footer className="bg-slate-900 text-white">
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Company Info */}
+          {/* Footer Brand */}
           <div>
-            <h3 className="font-bold text-xl mb-4">Providence Real Estate</h3>
+            <h3 className="font-bold text-xl mb-4">Providence Las Vegas Real Estate</h3>
             <p className="text-slate-300 mb-4 text-sm">
-              Homes for sale in Providence Las Vegas and North Las Vegas. Real Estate Agency serving Providence, NV 89166.
+              Your trusted expert for all 27 Providence neighborhoods. Master-planned community specialist since 2008.
             </p>
             <a
               href={realscoutUrls.searchFooter}
@@ -24,189 +24,85 @@ export default function Footer() {
               <Search className="h-4 w-4" />
               Search Providence Homes
             </a>
-            <div className="flex space-x-4 mt-4">
-              <a
-                href={realscoutUrls.searchFooter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-white transition-colors"
-                aria-label="Search Providence homes on RealScout"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href={realscoutUrls.searchFooter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-white transition-colors"
-                aria-label="Search Providence homes on RealScout"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href={realscoutUrls.searchFooter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-white transition-colors"
-                aria-label="Search Providence homes on RealScout"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
-          {/* Locations */}
+          {/* Providence Services */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Locations</h3>
+            <h3 className="font-bold text-lg mb-4">Providence Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link
-                  href="/providence"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
-                  Providence
+                <Link href="/buyers" className="text-slate-300 hover:text-white transition-colors text-sm">
+                  Buy in Providence
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/neighborhoods"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
-                  All Neighborhoods
+                <Link href="/sellers" className="text-slate-300 hover:text-white transition-colors text-sm">
+                  Sell Your Providence Home
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/neighborhoods/summerlin"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
-                  Summerlin
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/neighborhoods/henderson"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
-                  Henderson
-                </Link>
-              </li>
-              <li>
-                <a
-                  href={realscoutUrls.searchFooter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
-                  Search All Properties
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="font-bold text-lg mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/buyers"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
-                  Home Buying
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/buyers/california-relocator"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
-                  California Relocators
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/sellers"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
-                  Home Selling
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/luxury-homes"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
-                  Luxury Homes
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/55-plus-communities"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
-                  55+ Communities
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/new-construction"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
+                <Link href="/new-construction" className="text-slate-300 hover:text-white transition-colors text-sm">
                   New Construction
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/market-insights"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
-                  Market Insights
+                <Link href="/home-valuation" className="text-slate-300 hover:text-white transition-colors text-sm">
+                  Home Valuation
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/contact"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
-                  Contact
+                <Link href="/providence/hoa-info" className="text-slate-300 hover:text-white transition-colors text-sm">
+                  HOA Information
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact Info - NAP (must match GBP exactly) */}
+          {/* Featured Neighborhoods */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Providence Real Estate</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0 mt-0.5" />
-                <span className="text-slate-300 text-sm">
-                  7181 N Hualapai Way #135
-                  <br />
-                  Las Vegas, NV 89166
-                </span>
-              </li>
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0" />
-                <Link
-                  href="tel:+17027442993"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
-                  (702) 744-2993
+            <h3 className="font-bold text-lg mb-4">Featured Neighborhoods</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/providence/neighborhoods/oxford-commons" className="text-slate-300 hover:text-white transition-colors text-sm">
+                  Oxford Commons
                 </Link>
               </li>
-              <li className="flex items-center">
-                <Mail className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0" />
-                <Link
-                  href="mailto:DrDuffy@ProvidenceLasVegas.com"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
-                  DrDuffy@ProvidenceLasVegas.com
+              <li>
+                <Link href="/providence/neighborhoods/saratoga-highlands" className="text-slate-300 hover:text-white transition-colors text-sm">
+                  Saratoga Highlands
+                </Link>
+              </li>
+              <li>
+                <Link href="/providence/neighborhoods/auburn-bradford" className="text-slate-300 hover:text-white transition-colors text-sm">
+                  Auburn & Bradford
+                </Link>
+              </li>
+              <li>
+                <Link href="/providence" className="text-slate-300 hover:text-white transition-colors text-sm font-medium">
+                  View All 27 →
                 </Link>
               </li>
             </ul>
-            {/* GBP CTA Buttons */}
+          </div>
+
+          {/* Contact - NAP (must match GBP exactly) */}
+          <div>
+            <h3 className="font-bold text-lg mb-4">Contact Dr. Jan Duffy</h3>
+            <p className="text-slate-300 text-sm mb-2">
+              7181 N Hualapai Way #135
+              <br />
+              Las Vegas, NV 89166
+            </p>
+            <p className="mb-2">
+              <Link href="tel:+17027442993" className="text-slate-300 hover:text-white transition-colors text-sm">
+                (702) 744-2993
+              </Link>
+            </p>
+            <p>
+              <Link href="mailto:DrDuffy@ProvidenceLasVegas.com" className="text-slate-300 hover:text-white transition-colors text-sm">
+                DrDuffy@ProvidenceLasVegas.com
+              </Link>
+            </p>
             <div className="mt-4 flex flex-wrap gap-3">
               <a
                 href="https://www.google.com/maps/dir//7181+N+Hualapai+Way+%23135,+Las+Vegas,+NV+89166"
@@ -229,27 +125,47 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Quick Links - secondary row */}
+        <div className="border-t border-slate-800 mt-8 pt-8">
+          <h4 className="font-semibold text-slate-300 text-sm mb-3">Quick Links</h4>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <a href={realscoutUrls.searchFooter} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+              Search Providence Homes
+            </a>
+            <Link href="/providence" className="text-slate-400 hover:text-white transition-colors">
+              All 27 Providence Neighborhoods
+            </Link>
+            <a href="https://www.providencelvhoa.com/home/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+              Providence HOA
+            </a>
+            <Link href="/why-berkshire-hathaway" className="text-slate-400 hover:text-white transition-colors">
+              Why Choose BHHS
+            </Link>
+            <Link href="/market-report" className="text-slate-400 hover:text-white transition-colors">
+              Providence Market Report
+            </Link>
+            <Link href="/about" className="text-slate-400 hover:text-white transition-colors">
+              About Dr. Jan
+            </Link>
+            <Link href="/contact" className="text-slate-400 hover:text-white transition-colors">
+              Contact
+            </Link>
+            <Link href="/faq" className="text-slate-400 hover:text-white transition-colors">
+              FAQ
+            </Link>
+            <Link href="/sitemap.xml" className="text-slate-400 hover:text-white transition-colors">
+              Sitemap
+            </Link>
+          </div>
+        </div>
+
         {/* Copyright */}
         <div className="border-t border-slate-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-slate-400 text-sm text-center md:text-left">
-              © {currentYear} Providence Real Estate. All Rights Reserved.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <Link href="/faq" className="text-slate-400 hover:text-white transition-colors">
-                FAQ
-              </Link>
-              <Link href="/sitemap.xml" className="text-slate-400 hover:text-white transition-colors">
-                Sitemap
-              </Link>
-            </div>
-          </div>
-          <p className="text-slate-500 text-xs mt-4 text-center">
-            © 2026 Providence Real Estate. All Rights Reserved. | Serving All 27 Providence Neighborhoods, Las Vegas NV 89166 | Dr. Jan Duffy, Team Leader | License S.0197614.LLC | (702) 744-2993
+          <p className="text-slate-500 text-xs text-center">
+            © {currentYear} Providence Real Estate. All Rights Reserved. | Serving All 27 Providence Neighborhoods, Las Vegas NV 89166 | Dr. Jan Duffy, Team Leader | License S.0197614.LLC | (702) 744-2993
           </p>
           <p className="text-slate-600 text-xs mt-2 text-center max-w-3xl mx-auto">
-            When you work with a Berkshire Hathaway HomeServices agent, you're backed by a name
-            synonymous with trust, ethical standards, and financial strength.
+            Dr. Jan Duffy, REALTOR® | Berkshire Hathaway HomeServices Nevada Properties | Equal Housing Opportunity
           </p>
         </div>
       </div>

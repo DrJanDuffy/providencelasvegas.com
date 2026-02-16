@@ -23,30 +23,29 @@ import type { Metadata } from "next";
 import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
-  title: "Sell Your Providence Las Vegas Home | Berkshire Hathaway HomeServices",
+  title: "Sell Your Providence Home | Providence Las Vegas Real Estate",
   description:
-    "Sell your Providence Las Vegas home or any of its 27 neighborhoods for top dollar with Dr. Jan Duffy. BHHS Nevada Properties. Free home valuation. World-class marketing. Call (702) 744-2993.",
+    "Sell your Providence Las Vegas home with Dr. Jan Duffy. Providence-specific market data, HOA resale certificate process, expert pricing. Free home valuation. Call (702) 744-2993.",
   keywords: [
-    "sell home Providence Las Vegas",
+    "sell Providence home",
     "Providence Las Vegas listing agent",
-    "Berkshire Hathaway sell house",
-    "Henderson home selling",
-    "what is my home worth Las Vegas",
-    "Las Vegas real estate agent",
-    "Summerlin home selling",
+    "Providence HOA resale certificate",
+    "Providence home valuation",
+    "Providence real estate agent",
+    "sell home Providence Las Vegas",
   ],
 };
 
 const sellerSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Home Selling Services Providence Las Vegas",
+  name: "Providence Home Selling Services",
   provider: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
     telephone: "+17027442993",
   },
-  areaServed: "Las Vegas, Providence, Henderson, Summerlin, Clark County NV",
+  areaServed: "Providence, North Las Vegas, NV 89166",
   serviceType: "Seller Representation",
 };
 
@@ -61,13 +60,13 @@ const sellingBenefits = [
     icon: Users,
     title: "Global Buyer Network",
     description:
-      "Berkshire Hathaway's 50,000+ agents worldwide means your listing reaches qualified buyers from across the globe—especially important for Las Vegas's strong relocation and international buyer markets.",
+      "Berkshire Hathaway's 50,000+ agents worldwide means your Providence listing reaches qualified buyers from across the globe—especially California relocators and out-of-state buyers.",
   },
   {
     icon: BarChart,
     title: "Expert Pricing Strategy",
     description:
-      "Dr. Jan has been serving Las Vegas since 2008, which means accurate pricing that attracts buyers without leaving money on the table. Overpriced homes sit and lose value; well-priced homes generate competition and sell for more.",
+      "Dr. Jan has been serving Providence Las Vegas since 2008, which means accurate pricing that attracts buyers without leaving money on the table. Overpriced homes sit and lose value; well-priced Providence homes generate competition and sell for more.",
   },
   {
     icon: DollarSign,
@@ -171,10 +170,10 @@ export default function SellersPage() {
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-4 text-center">
-              Las Vegas Seller Market Statistics | January 2026
+              Providence Seller Market Statistics | January 2026
             </h2>
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              The Las Vegas housing market remains favorable for sellers with low inventory and 
+              The Providence housing market remains favorable for sellers with low inventory and 
               steady demand. Well-priced homes are selling quickly, and appreciation continues 
               to outpace national averages. Here's what sellers need to know about current conditions.
             </p>
@@ -331,11 +330,11 @@ export default function SellersPage() {
                 "Pricing your home correctly from day one is the single most important factor in
                 getting top dollar. Overpriced homes sit on the market, and every day on market costs 
                 you money—both in carrying costs and buyer perception. That's why I use comprehensive 
-                market analysis and my experience serving Las Vegas since 2008 to price homes right 
+                market analysis and my experience serving Providence Las Vegas since 2008 to price homes right 
                 the first time. The result? My listings typically sell within 2% of asking price."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas Since 2008
+                — Dr. Jan Duffy, BHHS Nevada Properties | Serving Providence Las Vegas Since 2008
               </cite>
             </div>
           </section>
@@ -367,7 +366,7 @@ export default function SellersPage() {
                 <h2 className="text-3xl font-bold mb-4">What's Your Home Worth?</h2>
                 <p className="text-blue-100 mb-6">
                   Get a free, no-obligation home valuation from Dr. Jan Duffy. Using current MLS
-                  data and expertise serving Las Vegas since 2008, you'll know exactly what your 
+                  data and expertise serving Providence Las Vegas since 2008, you'll know exactly what your 
                   home could sell for in today's market. No algorithms—just real analysis from 
                   a local expert.
                 </p>
@@ -390,7 +389,7 @@ export default function SellersPage() {
           {/* FAQ */}
           <FAQSection
             faqs={sellersFAQs}
-            title="Frequently Asked Questions About Selling in Las Vegas"
+            title="Frequently Asked Questions About Selling in Providence Las Vegas"
             subtitle="Selling your home raises many questions. For more, see our full FAQ or get a free home valuation."
           />
 

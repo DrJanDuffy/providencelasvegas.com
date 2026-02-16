@@ -23,7 +23,7 @@ const features = [
     icon: Award,
     title: "Proven Results",
     description:
-      "500+ successful transactions and satisfied clients across Las Vegas neighborhoods.",
+      "500+ successful transactions and satisfied clients across Providence neighborhoods.",
   },
   {
     icon: Clock,

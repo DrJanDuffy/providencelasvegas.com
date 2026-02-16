@@ -26,12 +26,11 @@ export const metadata: Metadata = {
   description:
     "Providence Real Estate services. Buying, selling, luxury homes, 55+ communities, relocation. Providence, North Las Vegas, NV 89166. Call (702) 744-2993.",
   keywords: [
-    "Las Vegas real estate services",
-    "home buying Las Vegas",
-    "home selling Henderson",
-    "luxury real estate Las Vegas",
-    "55+ communities Las Vegas",
-    "relocation Las Vegas",
+    "Providence real estate services",
+    "Providence home buying",
+    "Providence home selling",
+    "Providence new construction",
+    "Providence 55+ options",
   ],
 };
 
@@ -62,18 +61,18 @@ const coreServices = [
     title: "Home Selling Services",
     slug: "sellers",
     description:
-      "Maximize your home's value in Providence Las Vegas and beyond with professional marketing, accurate pricing, and expert negotiation from Berkshire Hathaway HomeServices—the most trusted name in real estate.",
+      "Maximize your home's value in Providence Las Vegas with professional marketing, accurate pricing, and expert negotiation from Berkshire Hathaway HomeServices—the most trusted name in real estate.",
     highlights: ["World-class marketing", "Accurate pricing", "Global exposure", "Staging guidance"],
     stats: { label: "Homes Sold", value: "500+" },
   },
   {
     icon: Star,
-    title: "Luxury Home Services",
+    title: "Premium Providence Home Services",
     slug: "luxury-homes",
     description:
-      "Specialized expertise in Las Vegas luxury real estate. The Ridges, MacDonald Highlands, Southern Highlands, and the most prestigious communities in Southern Nevada.",
-    highlights: ["Discretion", "Global buyer network", "White-glove service", "Premium marketing"],
-    stats: { label: "Luxury Volume", value: "$45M+" },
+      "Providence's finest properties in Oxford Commons, Saratoga Highlands, and premier neighborhoods. Custom upgrades, larger lots, move-in ready homes.",
+    highlights: ["Oxford Commons", "Saratoga Highlands", "White-glove service", "Premium marketing"],
+    stats: { label: "Providence Volume", value: "$45M+" },
   },
   {
     icon: Building,
@@ -92,7 +91,7 @@ const specializedServices = [
     title: "Investment Property Consulting",
     slug: "investment-properties",
     description:
-      "Strategic consulting for rental properties, fix-and-flip opportunities, and portfolio building. Las Vegas offers some of the best rental yields in the country.",
+      "Strategic consulting for rental properties and portfolio building in Providence. Dr. Jan provides Providence-specific market analysis and ROI guidance.",
     highlights: ["ROI analysis", "Market research", "1031 exchange help", "Property management referrals"],
   },
   {
@@ -100,32 +99,32 @@ const specializedServices = [
     title: "Relocation Services",
     slug: "relocation",
     description:
-      "Comprehensive relocation assistance for moves to Las Vegas. Berkshire Hathaway HomeServices' global network of 50,000+ agents makes interstate transitions seamless.",
+      "Comprehensive relocation assistance for moves to Providence Las Vegas. Berkshire Hathaway HomeServices' global network makes California-to-Providence transitions seamless.",
     highlights: ["Neighborhood matching", "School research", "Remote buying", "Moving coordination"],
   },
   {
     icon: Users,
-    title: "55+ Community Specialist",
+    title: "55+ and Downsizing",
     slug: "55-plus-communities",
     description:
-      "Expert guidance for active adult communities including Sun City Summerlin, Sun City Anthem, Del Webb Lake Las Vegas, and other premier 55+ communities in Las Vegas.",
-    highlights: ["Community tours", "HOA analysis", "Amenity comparisons", "Resale insights"],
+      "Providence single-story and low-maintenance options. Nearby Sun City Aliante and Del Webb. Expert guidance for downsizers and active adults.",
+    highlights: ["Providence single-story", "Sun City Aliante nearby", "Downsizing expertise", "Low-maintenance homes"],
   },
   {
     icon: Calculator,
     title: "Home Valuation Services",
     slug: "home-valuation",
     description:
-      "Free, no-obligation home valuations using current MLS data, recent comparable sales, and deep local market knowledge from serving Las Vegas since 2008.",
+      "Free, no-obligation Providence home valuations using current MLS data, recent comparable sales, and deep Providence market knowledge since 2008.",
     highlights: ["Accurate pricing", "No obligation", "Detailed analysis", "Market trends"],
   },
 ];
 
 const buyerTypes = [
   {
-    title: "California Relocators",
+    title: "California to Providence",
     href: "/buyers/california-relocator",
-    description: "Moving from CA? Save on state income tax and enjoy 40-60% lower home prices.",
+    description: "Moving from CA? $300K–$700K Providence vs $1M+ in CA. Zero state income tax.",
   },
   {
     title: "First-Time Home Buyers",
@@ -133,9 +132,9 @@ const buyerTypes = [
     description: "FHA, VA, down payment assistance, and step-by-step guidance for your first purchase.",
   },
   {
-    title: "Luxury Home Buyers",
-    href: "/buyers/luxury-homes-las-vegas",
-    description: "Guard-gated estates, Strip views, custom builds, and discrete representation.",
+    title: "Premium Providence Homes",
+    href: "/luxury-homes",
+    description: "Oxford Commons, Saratoga Highlands, custom upgrades, larger lots.",
   },
 ];
 

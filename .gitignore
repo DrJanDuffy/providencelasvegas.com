@@ -34,3 +34,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# asset source files (keep optimized web assets)
+public/**/*.psd
+public/**/*.psb
+public/**/*.ai
+public/**/*.xd
+public/**/*.sketch
+public/**/*.raw
+public/**/*.cr2
+public/**/*.nef

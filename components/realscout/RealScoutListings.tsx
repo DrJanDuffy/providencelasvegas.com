@@ -10,14 +10,14 @@ export default function RealScoutListings() {
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-              Featured Properties
+              Featured Properties in Providence
             </h2>
             <p className="text-slate-600 text-lg">
-              Discover exceptional homes in Las Vegas and Henderson
+              Discover exceptional homes across all 27 Providence neighborhoods
             </p>
           </div>
           <Button asChild variant="outline" className="mt-4 md:mt-0">
-            <a href={realscoutUrls.searchListings} target="_blank" rel="noopener noreferrer">View All Properties</a>
+            <a href={realscoutUrls.searchListings} target="_blank" rel="noopener noreferrer">View All Providence Homes</a>
           </Button>
         </div>
 

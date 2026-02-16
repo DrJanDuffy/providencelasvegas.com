@@ -171,9 +171,7 @@ export default function ProvidencePage() {
               <InlineLink href="/buyers">buy</InlineLink> or{" "}
               <InlineLink href="/sellers">sell</InlineLink> in any Providence neighborhood. 
               Familiar with Providence Master HOA resale requirements and Design Review so your 
-              Providence Las Vegas transaction stays on track. Looking for nearby communities? 
-              Check out <InlineLink href="/neighborhoods/summerlin">Summerlin</InlineLink> or{" "}
-              <InlineLink href="/neighborhoods/centennial-hills">Centennial Hills</InlineLink>.
+              Providence Las Vegas transaction stays on track.
             </p>
             <h3 className="text-xl font-semibold text-slate-900 mb-2">HOA Assessments for Providence</h3>
             <p className="text-slate-700 mb-6 max-w-2xl">

@@ -56,6 +56,8 @@ export interface SeniorCommunityData {
   longitude?: number;
   hoaFees?: string;
   ageRestriction?: string;
+  /** City/locality (e.g. "North Las Vegas" for Sun City Aliante) */
+  addressLocality?: string;
 }
 
 // ============================================================================
@@ -94,7 +96,7 @@ export function generateRealEstateAgentSchema() {
     url: BASE_URL,
     logo: `${BASE_URL}/agent1.jpg`,
     image: `${BASE_URL}/agent1.jpg`,
-    description: siteConfig.description,
+    description: "Providence Las Vegas real estate specialist serving all 27 Providence neighborhoods",
     telephone: "+1-702-744-2993",
     email: agentInfo.email,
     priceRange: "$385K - $10M+",
@@ -111,22 +113,18 @@ export function generateRealEstateAgentSchema() {
       latitude: officeInfo.coordinates.lat,
       longitude: officeInfo.coordinates.lng,
     },
-    areaServed: [
-      {
-        "@type": "Place",
-        name: "Providence, North Las Vegas, NV 89166",
-        description: "Providence and North Las Vegas service area",
-      },
-      {
+    areaServed: {
+      "@type": "City",
+      name: "Providence",
+      containedIn: {
         "@type": "City",
-        name: "North Las Vegas",
-        sameAs: "https://en.wikipedia.org/wiki/North_Las_Vegas,_Nevada",
+        name: "Las Vegas",
+        containedIn: {
+          "@type": "State",
+          name: "Nevada",
+        },
       },
-      {
-        "@type": "Place",
-        name: "Providence Las Vegas",
-      },
-    ],
+    },
     openingHoursSpecification: gbpOpeningHoursSpecification,
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
@@ -162,17 +160,16 @@ export function generateRealEstateAgentSchema() {
       worstRating: "1",
     },
     knowsAbout: [
-      "Las Vegas real estate",
-      "Henderson homes",
-      "Summerlin properties",
-      "Luxury homes",
-      "New construction",
-      "Investment properties",
-      "Relocation services",
-      "55+ communities",
-      "First-time homebuyers",
+      "Providence Las Vegas real estate",
+      "Providence master-planned community",
+      "Providence HOA resale certificates",
+      "Providence neighborhood comparisons",
+      "Oxford Commons",
+      "Saratoga Highlands",
+      "Auburn & Bradford",
+      "All 27 Providence neighborhoods",
     ],
-    slogan: "Your Berkshire Hathaway HomeServices expert in Las Vegas",
+    slogan: "Your Providence Las Vegas real estate expert",
   };
 }
 
@@ -379,7 +376,7 @@ export function generateSeniorCommunitySchema(community: SeniorCommunityData) {
     description: community.description,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Henderson",
+      addressLocality: community.addressLocality || "North Las Vegas",
       addressRegion: "NV",
       addressCountry: "US",
     },
@@ -559,7 +556,7 @@ export function generateServiceSchema(service: {
     provider: {
       "@id": `${BASE_URL}#organization`,
     },
-    areaServed: service.areaServed || ["Las Vegas", "Henderson", "Summerlin", "North Las Vegas"],
+    areaServed: service.areaServed || ["Providence, North Las Vegas, NV 89166"],
     serviceType: "Real Estate Services",
   };
 }

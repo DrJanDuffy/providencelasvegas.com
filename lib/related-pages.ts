@@ -19,13 +19,13 @@ export const relatedPagesMap = {
       href: "/providence",
     },
     {
-      title: "Luxury Homes in Las Vegas",
-      description: "View luxury properties in Summerlin, The Ridges, and Southern Highlands",
+      title: "Premium Providence Homes",
+      description: "Oxford Commons, Saratoga Highlands, and premier Providence neighborhoods",
       href: "/luxury-homes",
     },
     {
-      title: "Market Report",
-      description: "Current Las Vegas real estate market statistics and trends",
+      title: "Providence Market Report",
+      description: "Current Providence real estate market statistics and trends",
       href: "/market-report",
     },
   ],
@@ -48,8 +48,8 @@ export const relatedPagesMap = {
       href: "/contact",
     },
     {
-      title: "Market Insights",
-      description: "Providence and Las Vegas market trends and analysis",
+      title: "Providence Market Insights",
+      description: "Providence market trends and analysis",
       href: "/market-insights",
     },
   ],
@@ -81,18 +81,18 @@ export const relatedPagesMap = {
     },
     {
       title: "First-Time Home Buyers",
-      description: "Essential guide for first-time buyers in Las Vegas",
+      description: "Essential guide for first-time buyers in Providence",
       href: "/buyers/first-time-buyers",
     },
     {
-      title: "California Relocators",
-      description: "Moving from California? Learn about the Las Vegas advantage",
+      title: "California to Providence",
+      description: "Moving from California? Why Providence is perfect for CA relocators",
       href: "/buyers/california-relocator",
     },
     {
-      title: "Luxury Homes Las Vegas",
-      description: "Explore high-end properties in premier Las Vegas communities",
-      href: "/buyers/luxury-homes-las-vegas",
+      title: "Premium Providence Homes",
+      description: "Oxford Commons, Saratoga Highlands, and premier Providence neighborhoods",
+      href: "/luxury-homes",
     },
   ],
 
@@ -128,65 +128,65 @@ export const relatedPagesMap = {
       href: realscoutUrls.searchRelated,
     },
     {
-      title: "The Ridges Summerlin",
-      description: "Ultra-luxury guard-gated community with celebrity homes",
-      href: "/neighborhoods/the-ridges",
+      title: "Oxford Commons Providence",
+      description: "Premier Providence neighborhood with modern homes",
+      href: "/providence/oxford-commons",
     },
     {
-      title: "Southern Highlands",
-      description: "Master-planned luxury community with championship golf",
-      href: "/neighborhoods/southern-highlands",
+      title: "Saratoga Highlands Providence",
+      description: "Upscale Providence neighborhood with desirable floor plans",
+      href: "/providence/saratoga-highlands",
     },
     {
-      title: "Summerlin Luxury Real Estate",
-      description: "Explore luxury properties in master-planned Summerlin",
-      href: "/neighborhoods/summerlin",
+      title: "Auburn & Bradford Providence",
+      description: "Family-friendly Providence neighborhood with great schools",
+      href: "/providence/auburn-bradford",
     },
   ],
 
   fiftyPlusCommunities: [
     {
-      title: "Search 55+ Homes",
-      description: "Browse active adult and all listings in Las Vegas",
+      title: "Search Providence Homes",
+      description: "Browse single-story and low-maintenance options in Providence",
       href: realscoutUrls.searchRelated,
     },
     {
-      title: "Sun City Summerlin",
-      description: "Premier active adult community in Las Vegas",
-      href: "/55-plus-communities/sun-city-summerlin",
+      title: "Age-Restricted Options Near Providence",
+      description: "55+ communities within driving distance of Providence",
+      href: "/55-plus-communities",
     },
     {
-      title: "Heritage at Stonebridge",
-      description: "Gated 55+ community in northwest Las Vegas",
-      href: "/55-plus-communities/heritage-stonebridge",
+      title: "Providence New Construction",
+      description: "New build options across Providence neighborhoods",
+      href: "/new-construction",
     },
     {
-      title: "Sun City Anthem Henderson",
-      description: "Active adult living in Henderson's Black Mountain area",
-      href: "/55-plus-communities/sun-city-anthem",
+      title: "Providence HOA Information",
+      description: "Resale certificates, Design Review, and HOA process",
+      href: "/providence/hoa-info",
     },
   ],
 
   newConstruction: [
     {
-      title: "Search New Construction",
-      description: "Browse new build and all Las Vegas listings",
+      title: "Search Providence New Construction",
+      description: "Browse new build and all Providence listings",
       href: realscoutUrls.searchRelated,
     },
     {
-      title: "Skye Canyon",
-      description: "Newer master-planned community with new construction homes",
-      href: "/neighborhoods/skye-canyon",
+      title: "Oxford Commons Providence",
+      description: "Providence neighborhood with new construction inventory",
+      href: "/providence/oxford-commons",
     },
     {
-      title: "Inspirada Henderson",
-      description: "Henderson master-planned community with resort-style living",
-      href: "/neighborhoods/inspirada",
+      title: "Saratoga Highlands Providence",
+      description: "Providence neighborhood with builder homes",
+      href: "/providence/saratoga-highlands",
     },
     {
-      title: "North Las Vegas",
-      description: "Rapidly growing area with affordable new construction",
-      href: "/neighborhoods/north-las-vegas",
+      title: "All 27 Providence Neighborhoods",
+      description: "Explore every Providence community",
+      href: "/providence",
     },
   ],
 
@@ -203,51 +203,32 @@ export const relatedPagesMap = {
       href: "/providence",
     },
     {
-      title: "Summerlin Real Estate",
-      description: "Las Vegas's premier master-planned community",
-      href: "/neighborhoods/summerlin",
+      title: "Auburn & Bradford Providence",
+      description: "Family-friendly Providence neighborhood",
+      href: "/providence/auburn-bradford",
     },
     {
-      title: "Henderson Neighborhoods",
-      description: "Family-friendly communities in Nevada's second-largest city",
-      href: "/neighborhoods/henderson",
+      title: "Oxford Commons Providence",
+      description: "Premier Providence neighborhood",
+      href: "/providence/oxford-commons",
+    },
+    {
+      title: "Saratoga Highlands Providence",
+      description: "Upscale Providence neighborhood",
+      href: "/providence/saratoga-highlands",
     },
   ],
 
   summerlin: [
-    {
-      title: "The Ridges",
-      description: "Ultra-luxury guard-gated community in Summerlin",
-      href: "/neighborhoods/the-ridges",
-    },
-    {
-      title: "Skye Canyon",
-      description: "Newer master-planned community in northwest Las Vegas",
-      href: "/neighborhoods/skye-canyon",
-    },
-    {
-      title: "Luxury Homes in Las Vegas",
-      description: "View all luxury properties across Las Vegas",
-      href: "/luxury-homes",
-    },
+    { title: "Providence Las Vegas", description: "Master-planned community with 27 neighborhoods", href: "/providence" },
+    { title: "Search Providence Homes", description: "View all Providence listings", href: realscoutUrls.searchRelated },
+    { title: "Premium Providence Homes", description: "Oxford Commons, Saratoga Highlands, custom upgrades", href: "/luxury-homes" },
   ],
 
   henderson: [
-    {
-      title: "Green Valley Henderson",
-      description: "Established community with mature landscaping",
-      href: "/neighborhoods/green-valley",
-    },
-    {
-      title: "Inspirada",
-      description: "Henderson master-planned community with resort-style living",
-      href: "/neighborhoods/inspirada",
-    },
-    {
-      title: "55+ Communities in Henderson",
-      description: "Active adult living options in Henderson",
-      href: "/55-plus-communities",
-    },
+    { title: "Providence Las Vegas", description: "Master-planned community with 27 neighborhoods", href: "/providence" },
+    { title: "Search Providence Homes", description: "View all Providence listings", href: realscoutUrls.searchRelated },
+    { title: "Age-Restricted Options Near Providence", description: "55+ communities near Providence", href: "/55-plus-communities" },
   ],
 
   // Market pages
@@ -306,7 +287,7 @@ export const relatedPagesMap = {
     },
     {
       title: "Search Properties",
-      description: "Browse current listings in Las Vegas and Henderson",
+      description: "Browse current Providence Las Vegas listings",
       href: realscoutUrls.searchRelated,
     },
     {

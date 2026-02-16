@@ -5,7 +5,28 @@ const nextConfig = {
     deviceSizes: [390, 640, 750, 828, 1080, 1200, 1920, 2048],
   },
   async redirects() {
+    const providenceRedirects = [
+      { source: '/neighborhoods/summerlin', destination: '/providence', permanent: true },
+      { source: '/neighborhoods/henderson', destination: '/providence', permanent: true },
+      { source: '/neighborhoods/green-valley', destination: '/providence', permanent: true },
+      { source: '/neighborhoods/the-ridges', destination: '/providence', permanent: true },
+      { source: '/neighborhoods/skye-canyon', destination: '/providence', permanent: true },
+      { source: '/neighborhoods/southern-highlands', destination: '/providence', permanent: true },
+      { source: '/neighborhoods/north-las-vegas', destination: '/providence', permanent: true },
+      { source: '/neighborhoods/inspirada', destination: '/providence', permanent: true },
+      { source: '/neighborhoods/mountains-edge', destination: '/providence', permanent: true },
+      { source: '/neighborhoods/centennial-hills', destination: '/providence', permanent: true },
+      { source: '/buyers/luxury-homes-las-vegas', destination: '/luxury-homes', permanent: true },
+      { source: '/55-plus-communities/trilogy-summerlin', destination: '/55-plus-communities', permanent: true },
+      { source: '/55-plus-communities/sun-city-summerlin', destination: '/55-plus-communities', permanent: true },
+      { source: '/55-plus-communities/sun-city-anthem', destination: '/55-plus-communities', permanent: true },
+      { source: '/55-plus-communities/sun-city-aliante', destination: '/55-plus-communities', permanent: true },
+      { source: '/55-plus-communities/solera-anthem', destination: '/55-plus-communities', permanent: true },
+      { source: '/55-plus-communities/heritage-stonebridge', destination: '/55-plus-communities', permanent: true },
+      { source: '/55-plus-communities/del-webb-lake-las-vegas', destination: '/55-plus-communities', permanent: true },
+    ];
     return [
+      ...providenceRedirects,
       {
         source: '/:path*',
         has: [

@@ -21,16 +21,16 @@ export const defaultReviews: Review[] = [
   {
     id: 1,
     name: "Tom Sanders",
-    location: "Las Vegas, NV",
+    location: "Oxford Commons, Providence",
     rating: 5,
-    text: "Dr. Duffy made our home buying experience seamless. Her knowledge of the Las Vegas market is unmatched, and she guided us through every step with professionalism and care.",
+    text: "Dr. Duffy made our home buying experience seamless. Her knowledge of the Providence market is unmatched, and she guided us through every step with professionalism and care.",
     image: "/Image/person1.jpeg",
     date: "2025-11-15",
   },
   {
     id: 2,
     name: "Vitor Palmer",
-    location: "Henderson, NV",
+    location: "Saratoga Highlands, Providence",
     rating: 5,
     text: "We couldn't be happier with our new home! The entire process was smooth, and Dr. Duffy's attention to detail and negotiation skills saved us thousands. Highly recommend!",
     image: "/Image/person_2-min.jpg",
@@ -39,7 +39,7 @@ export const defaultReviews: Review[] = [
   {
     id: 3,
     name: "Emily Rodriguez",
-    location: "Summerlin, NV",
+    location: "Auburn & Bradford, Providence",
     rating: 5,
     text: "As first-time homebuyers, we were nervous about the process. Dr. Duffy patiently explained everything and helped us find the perfect home in our budget. Thank you!",
     image: "/Image/person_4-min.jpg",
@@ -71,7 +71,7 @@ interface ReviewsSectionProps {
 export default function ReviewsSection({
   reviews = defaultReviews,
   title = "What Our Clients Say",
-  subtitle = "Real testimonials from satisfied clients across Las Vegas and Henderson",
+  subtitle = "Real testimonials from satisfied Providence homeowners",
   googleReviewsUrl = "https://g.page/r/heyberkshire/review",
   className = "",
 }: ReviewsSectionProps) {

@@ -23,29 +23,26 @@ import FAQSchema from "@/components/schemas/FAQSchema";
 import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
-  title: "Berkshire Hathaway HomeServices New Construction Las Vegas | Buyer's Guide",
+  title: "Providence New Construction | Providence Las Vegas Real Estate",
   description:
-    "Free buyer representation on new construction homes in Las Vegas. Dr. Jan Duffy helps you navigate builder contracts, negotiate upgrades, and secure incentives. Call (702) 744-2993.",
+    "Providence new construction homes. Active builders in Providence neighborhoods, current inventory, builder incentives. Free buyer representation. Dr. Jan Duffy. Call (702) 744-2993.",
   keywords: [
-    "Berkshire Hathaway HomeServices new construction Las Vegas",
-    "new homes Las Vegas",
-    "new construction Henderson",
-    "Las Vegas builders",
-    "Toll Brothers Las Vegas",
-    "Lennar Las Vegas",
-    "KB Home Las Vegas",
+    "Providence new construction",
+    "new homes Providence Las Vegas",
+    "Providence builders",
+    "new construction Providence",
   ],
 };
 
 const builders = [
   {
-    name: "Toll Brothers",
-    segment: "Luxury",
-    priceRange: "$600,000 - $2,500,000+",
+    name: "Active Providence Builders",
+    segment: "Providence",
+    priceRange: "Varies by neighborhood",
     communities: [
-      "Summerlin (Mesa Ridge, Reverence)",
-      "Henderson (Inspirada, Lake Las Vegas)",
-      "The Ridges",
+      "Providence Las Vegas neighborhoods",
+      "Oxford Commons, Saratoga Highlands",
+      "Contact for current inventory",
     ],
     currentIncentives: "Up to $50K in design studio credits on select inventory",
     incentiveDeadline: "February 28, 2026",
@@ -56,122 +53,50 @@ const builders = [
     ],
   },
   {
-    name: "Lennar",
-    segment: "Production",
-    priceRange: "$380,000 - $900,000",
+    name: "Providence New vs Resale",
+    segment: "Providence",
+    priceRange: "Varies by neighborhood",
     communities: [
-      "Summerlin (various)",
-      "Henderson (Cadence, Inspirada)",
-      "North Las Vegas (Valley Vista)",
-      "Southwest (Skye Hills)",
+      "Oxford Commons, Saratoga Highlands",
+      "All 27 Providence neighborhoods",
+      "Contact for current new construction",
     ],
-    currentIncentives: "4.99% rate buydown + $25K toward closing with Lennar Mortgage",
-    incentiveDeadline: "January 31, 2026",
-    highlights: [
-      "Everything's Included® packages",
-      "Smart home technology standard",
-      "Wide price range",
-    ],
-  },
-  {
-    name: "KB Home",
-    segment: "Entry-Level to Mid-Range",
-    priceRange: "$350,000 - $650,000",
-    communities: [
-      "North Las Vegas (multiple)",
-      "Southwest Las Vegas",
-      "Henderson",
-    ],
-    currentIncentives: "Up to 6% closing cost credit + free premium lot on select homes",
-    incentiveDeadline: "February 15, 2026",
-    highlights: [
-      "Built to Order™ customization",
-      "Energy-efficient construction",
-      "First-time buyer friendly",
-    ],
-  },
-  {
-    name: "Taylor Morrison",
-    segment: "Mid-Range to Luxury",
-    priceRange: "$450,000 - $1,200,000",
-    communities: [
-      "Summerlin",
-      "Henderson (Cadence, Lake Las Vegas)",
-      "Mountains Edge",
-    ],
-    currentIncentives: "$30K flex credit on quick move-in homes",
-    incentiveDeadline: "Rolling (inventory dependent)",
-    highlights: [
-      "Award-winning designs",
-      "Strong energy efficiency",
-      "Quality construction reputation",
-    ],
-  },
-  {
-    name: "Pulte Homes",
-    segment: "Mid-Range",
-    priceRange: "$400,000 - $800,000",
-    communities: [
-      "Henderson (Inspirada)",
-      "North Las Vegas",
-      "Southwest Las Vegas",
-    ],
-    currentIncentives: "Up to $20K design center credit + rate buydown",
-    incentiveDeadline: "January 31, 2026",
-    highlights: [
-      "Life Tested® floor plans",
-      "Consumer-focused designs",
-      "Strong warranty program",
-    ],
-  },
-  {
-    name: "Richmond American",
-    segment: "Entry-Level to Mid-Range",
-    priceRange: "$380,000 - $700,000",
-    communities: [
-      "North Las Vegas",
-      "Henderson",
-      "Southwest Las Vegas",
-    ],
-    currentIncentives: "Up to $15K HomeGallery credit + 5.25% rate with preferred lender",
-    incentiveDeadline: "February 28, 2026",
-    highlights: [
-      "PersonalizedSM options",
-      "Wide community selection",
-      "Flexible designs",
-    ],
-  },
-  {
-    name: "Shea Homes",
-    segment: "55+ & Luxury",
-    priceRange: "$500,000 - $1,100,000",
-    communities: [
-      "Trilogy at Summerlin (55+)",
-      "Trilogy at Inspirada (55+)",
-    ],
-    currentIncentives: "Resort membership included + up to $40K in upgrades",
+    currentIncentives: "Free buyer representation—builder pays",
     incentiveDeadline: "Ongoing",
     highlights: [
-      "Award-winning 55+ communities",
-      "Resort-style amenities",
-      "Innovative designs",
+      "Contract review and upgrade negotiation",
+      "Construction oversight",
+      "Providence HOA coordination",
     ],
   },
   {
-    name: "Century Communities",
-    segment: "Entry-Level",
-    priceRange: "$320,000 - $550,000",
+    name: "Builder Incentives",
+    segment: "Providence",
+    priceRange: "Contact for specifics",
     communities: [
-      "North Las Vegas",
-      "Southwest Las Vegas",
-      "Pahrump",
+      "Providence neighborhoods",
     ],
-    currentIncentives: "Up to 5% closing costs + appliance package",
-    incentiveDeadline: "January 31, 2026",
+    currentIncentives: "Rate buydowns, design credits often available",
+    incentiveDeadline: "Varies by builder",
     highlights: [
-      "Most affordable new construction",
-      "First-time buyer programs",
-      "Quick move-in inventory",
+      "Dr. Jan negotiates on your behalf",
+      "No cost to you—builder pays commission",
+      "Providence market expertise",
+    ],
+  },
+  {
+    name: "Contact for Current Inventory",
+    segment: "Providence",
+    priceRange: "Current availability",
+    communities: [
+      "Providence Las Vegas neighborhoods",
+    ],
+    currentIncentives: "Contact Dr. Jan for active builder incentives",
+    incentiveDeadline: "Varies",
+    highlights: [
+      "Current Providence new construction",
+      "Builder-specific incentives",
+      "Free representation",
     ],
   },
 ];
@@ -202,11 +127,11 @@ export default function NewConstructionPage() {
               Free Buyer Representation
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Berkshire Hathaway HomeServices New Construction Las Vegas
+              Providence New Construction Homes
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              Your complete buyer's guide to new homes in Las Vegas. Free representation,
-              expert contract review, and insider knowledge of builder incentives.
+              Your guide to new construction in Providence Las Vegas. Free buyer representation,
+              expert contract review, and builder incentive negotiation for Providence neighborhoods.
             </p>
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-left max-w-2xl mx-auto">
               <div className="flex items-start">

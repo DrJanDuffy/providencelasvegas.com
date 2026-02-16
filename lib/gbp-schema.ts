@@ -167,38 +167,38 @@ export const gbpOpeningHoursSpecification = (() => {
 // 750-word GBP Description (3 sections)
 export const gbpDescription = {
   // Section 1: Who you are/mission (~250 words)
-  whoWeAre: `Dr. Jan Duffy is a trusted REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, serving the Las Vegas real estate market since 2008. Backed by Warren Buffett's Berkshire Hathaway—the most recognized name in real estate—Dr. Jan combines local expertise with world-class resources to deliver exceptional results for buyers and sellers alike.
+  whoWeAre: `Dr. Jan Duffy is a trusted REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, serving Providence Las Vegas real estate since 2008. Backed by Warren Buffett's Berkshire Hathaway—the most recognized name in real estate—Dr. Jan combines local expertise with world-class resources to deliver exceptional results for buyers and sellers alike.
 
-With $127 million in closed transactions and hundreds of satisfied clients, Dr. Jan has earned a reputation for integrity, market knowledge, and personalized service. Whether you're a first-time buyer navigating the process, a luxury home seeker exploring The Ridges or MacDonald Highlands, or a California family relocating for Nevada's tax advantages, Dr. Jan provides the guidance you need to make confident real estate decisions.`,
+With $127 million in closed transactions and hundreds of satisfied clients, Dr. Jan has earned a reputation for integrity, market knowledge, and personalized service. Whether you're a first-time buyer navigating the process, a premium home seeker exploring Oxford Commons or Saratoga Highlands, or a California family relocating to Providence for Nevada's tax advantages, Dr. Jan provides the guidance you need to make confident real estate decisions.`,
 
   // Section 2: What/why - Value proposition (~250 words)
   whatWeDo: `What sets Dr. Jan apart is a commitment to education and advocacy. Clients receive comprehensive market analysis, expert negotiation, and honest advice—not sales pressure. As a Berkshire Hathaway HomeServices agent, Dr. Jan offers access to a global network of 50,000+ agents, world-class marketing for sellers, and off-market opportunities for buyers.
 
-Specialized services include: buyer and seller representation, luxury home sales, 55+ active adult community expertise (Sun City Summerlin, Sun City Anthem, Del Webb Lake Las Vegas), California relocation assistance, probate and divorce real estate, investment property consulting, new construction representation, and first-time buyer programs including FHA, VA, and down payment assistance guidance.
+Specialized services include: buyer and seller representation, premium Providence home sales, age-restricted options near Providence (Sun City Aliante, Del Webb communities), California to Providence relocation assistance, probate and divorce real estate, investment property consulting, Providence new construction representation, and first-time buyer programs including FHA, VA, and down payment assistance guidance.
 
 Dr. Jan's approach is simple: treat every client like family, know the market inside and out, and never stop working until the deal closes successfully.`,
 
   // Section 3: Where - Areas served (~250 words)
-  whereWeServe: `Dr. Jan serves the entire Las Vegas Valley with specialized knowledge of Las Vegas, Summerlin, Henderson, North Las Vegas, and all of Clark County. Neighborhood expertise includes Summerlin's master-planned communities, Henderson's Green Valley and Inspirada, the luxury enclaves of The Ridges and Southern Highlands, family-friendly Centennial Hills and Skye Canyon, and affordable options in Mountains Edge and North Las Vegas.
+  whereWeServe: `Dr. Jan serves Providence Las Vegas exclusively—all 27 Providence neighborhoods including Oxford Commons, Saratoga Highlands, Auburn & Bradford, and every Providence community. Providence is a master-planned community in North Las Vegas (89166) with 5,600+ homes, three community parks, and comprehensive HOA services.
 
-55+ active adult community specialization covers Sun City Summerlin (Nevada's largest 55+ community), Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Investment property expertise spans single-family rentals, multi-family opportunities, and short-term rental analysis across the Las Vegas metro area.
+For age-restricted options, Sun City Aliante (5 mi north of Providence) and Del Webb communities are nearby. Dr. Jan provides expertise in Providence HOA resale certificates, Design Review, new construction, and neighborhood comparisons.
 
-Office located at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Available Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm. Call (702) 744-2993 for a free consultation or visit www.providencelasvegas.com to start your Las Vegas real estate journey today.`,
+Office located at 7181 N Hualapai Way #135, Las Vegas, NV 89166. Available Monday-Friday 8am-7pm, Saturday 9am-5pm, Sunday 10am-4pm. Call (702) 744-2993 for a free consultation or visit www.providencelasvegas.com to start your Providence real estate journey today.`,
 };
 
 // FAQ Schema for GBP Q&A section
 export const gbpFAQs = [
   {
-    question: "What areas does Dr. Jan Duffy serve in Las Vegas?",
-    answer: "Dr. Jan serves all of Las Vegas, Summerlin, Henderson, North Las Vegas, and Clark County. Specialized neighborhood expertise includes Summerlin, Green Valley, The Ridges, Southern Highlands, Centennial Hills, Skye Canyon, Inspirada, and Mountains Edge.",
+    question: "What areas does Dr. Jan Duffy serve?",
+    answer: "Dr. Jan serves Providence Las Vegas exclusively—all 27 Providence neighborhoods including Oxford Commons, Saratoga Highlands, Auburn & Bradford. Providence is in North Las Vegas (89166).",
   },
   {
     question: "Does Dr. Jan help buyers relocating from California?",
-    answer: "Yes! California relocation is a specialty. Dr. Jan helps CA buyers understand Nevada's 0% state income tax advantage, compare home values (40-60% lower than comparable CA properties), and find the perfect Las Vegas neighborhood. Call (702) 744-2993 for California relocation assistance.",
+    answer: "Yes! California to Providence relocation is a specialty. Dr. Jan helps CA buyers understand Nevada's 0% state income tax advantage, compare home values (Providence $300K–$700K vs $1M+ in CA), and find the right Providence neighborhood. Call (702) 744-2993 for California to Providence assistance.",
   },
   {
-    question: "What 55+ communities does Dr. Jan specialize in?",
-    answer: "Dr. Jan specializes in Sun City Summerlin (Nevada's largest 55+ community with 7,700+ homes), Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Each community offers different amenities and price points for active adult living.",
+    question: "Are there 55+ communities in Providence?",
+    answer: "Providence has no dedicated 55+ community. Nearby options include Sun City Aliante (5 mi north) and Del Webb communities. Dr. Jan can help with single-story, low-maintenance Providence homes or nearby 55+ options. Call (702) 744-2993.",
   },
   {
     question: "Does Berkshire Hathaway HomeServices help with new construction?",
@@ -209,8 +209,8 @@ export const gbpFAQs = [
     answer: "Dr. Jan handles sensitive transactions with discretion and professionalism. For probate sales, she coordinates with estate attorneys and ensures court compliance. For divorce sales, she provides neutral representation and works with both parties' attorneys. Call (702) 744-2993 for a confidential consultation.",
   },
   {
-    question: "What is the average home price in Las Vegas in 2026?",
-    answer: "As of January 2026, the Las Vegas median home price is $450,000, up 4.2% year-over-year. Henderson's median is slightly higher at $485,000. Luxury communities like Summerlin average $625,000, while The Ridges averages $2.5 million. Contact Dr. Jan for current market data.",
+    question: "What is the average home price in Providence in 2026?",
+    answer: "As of January 2026, the Providence and North Las Vegas median home price is approximately $450,000, up 4.2% year-over-year. Contact Dr. Jan for current Providence market data. Call (702) 744-2993.",
   },
   {
     question: "Does Dr. Jan work with first-time home buyers?",

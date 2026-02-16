@@ -6,32 +6,25 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
   Phone,
-  DollarSign,
   Sun,
   Home as HomeIcon,
-  Briefcase,
-  Plane,
-  GraduationCap,
-  Heart,
-  Calculator,
-  MapPin,
   CheckCircle,
-  TrendingUp,
+  MapPin,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { realscoutUrls } from "@/lib/site-config";
 import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
-  title: "Relocating from California to Las Vegas | Berkshire Hathaway HomeServices",
+  title: "California to Providence, Las Vegas | Relocate to Providence",
   description:
-    "Moving from California to Las Vegas? Zero state income tax, 40-60% lower home prices, same sunshine. Dr. Jan Duffy helps CA relocators find their perfect Las Vegas home. Call (702) 744-2993.",
+    "Why California buyers love Providence Las Vegas: master-planned community, 27 neighborhoods, $300K–$700K price range vs $1M+ in CA. Dr. Jan Duffy helps CA relocators find their Providence home. Call (702) 744-2993.",
   keywords: [
-    "California to Las Vegas relocation",
-    "moving from California to Nevada",
-    "California relocator Las Vegas",
-    "no state income tax Nevada",
-    "Las Vegas homes California buyers",
-    "Berkshire Hathaway HomeServices relocation",
+    "California to Providence Las Vegas",
+    "moving from California to Providence",
+    "California relocator Providence",
+    "Providence master-planned community",
+    "Providence homes California buyers",
   ],
 };
 
@@ -48,8 +41,8 @@ const realEstateAgentSchema = {
     addressRegion: "NV",
     postalCode: "89166",
   },
-  areaServed: ["Las Vegas", "Henderson", "Summerlin", "North Las Vegas"],
-  priceRange: "$350,000 - $10,000,000+",
+  areaServed: "Providence, North Las Vegas, NV 89166",
+  priceRange: "$300,000 - $700,000",
 };
 
 export default function CaliforniaRelocatorPage() {
@@ -65,317 +58,134 @@ export default function CaliforniaRelocatorPage() {
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
             <nav className="text-sm text-slate-500">
               <Link href="/" className="hover:text-blue-600">Home</Link>
               {" / "}
               <Link href="/buyers" className="hover:text-blue-600">Buyers</Link>
               {" / "}
-              <span className="text-slate-900">California Relocator</span>
+              <span className="text-slate-900">California to Providence</span>
             </nav>
           </div>
 
-          {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Sun className="h-4 w-4 mr-2" />
-              37% of Las Vegas Buyers Are From California
+              California Buyers Love Providence
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Relocating from California?<br />
-              <span className="text-blue-600">Welcome Home to Las Vegas</span>
+              California to Providence, Las Vegas
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 mb-8">
-              Zero state income tax. 40-60% lower home prices. Same sunshine.
+              Why California buyers choose Providence: master-planned community feel, 27 neighborhoods, 
+              $300K–$700K price range (vs $1M+ in CA), modern construction, and low maintenance.
             </p>
-            <a
-              href="tel:+17027442993"
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Start Your Tax-Free Life → (702) 744-2993
-            </a>
-            <div className="mt-10 max-w-2xl mx-auto bg-slate-50 rounded-xl p-6 border-l-4 border-amber-500">
-              <blockquote className="text-slate-700 italic">
-                "Most of my California clients are shocked by how far their equity goes here. They sell in Irvine or the Bay Area and buy something bigger in Summerlin or Henderson—and keep six figures in the bank. The quality of life is what keeps them."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold not-italic block mt-2">— Dr. Jan Duffy, BHHS Nevada Properties</cite>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+17027442993"
+                className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
+              >
+                <Phone className="h-5 w-5 mr-2" />
+                Call (702) 744-2993
+              </a>
+              <a
+                href={realscoutUrls.searchRelated}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-slate-100 text-slate-900 px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-200 transition-colors"
+              >
+                Search Providence Homes
+              </a>
             </div>
           </div>
 
           <RealScoutListings />
 
-          {/* Tax Savings Comparison */}
-          <section className="mb-16 bg-gradient-to-br from-green-600 to-green-700 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <div className="flex items-center justify-center mb-6">
-              <Calculator className="h-10 w-10 mr-3" />
-              <h2 className="text-3xl font-bold">California vs. Nevada: The Numbers</h2>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div className="text-center bg-white/10 rounded-xl p-6">
-                <div className="text-4xl font-bold mb-2">0%</div>
-                <div className="text-green-100">Nevada State Income Tax</div>
-                <div className="text-sm text-green-200 mt-2">vs. CA 9.3%-13.3%</div>
-              </div>
-              <div className="text-center bg-white/10 rounded-xl p-6">
-                <div className="text-4xl font-bold mb-2">40-60%</div>
-                <div className="text-green-100">Lower Home Prices</div>
-                <div className="text-sm text-green-200 mt-2">Similar quality homes</div>
-              </div>
-              <div className="text-center bg-white/10 rounded-xl p-6">
-                <div className="text-4xl font-bold mb-2">$150K+</div>
-                <div className="text-green-100">5-Year Savings</div>
-                <div className="text-sm text-green-200 mt-2">$200K income example</div>
-              </div>
-            </div>
-            <div className="text-center">
-              <p className="text-green-100 text-lg">
-                A California family earning $250,000/year saves <strong>$25,000+ annually</strong> in state income tax alone by moving to Nevada.
-              </p>
-            </div>
-          </section>
-
-          {/* What Your CA Equity Buys */}
           <section className="mb-16 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              What Your California Equity Buys in Las Vegas
+              Why California Buyers Love Providence
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-red-50 border border-red-200 rounded-xl p-6">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <div className="flex items-center mb-4">
-                  <MapPin className="h-6 w-6 text-red-600 mr-2" />
-                  <h3 className="font-bold text-lg text-red-900">In California</h3>
+                  <HomeIcon className="h-6 w-6 text-blue-600 mr-2" />
+                  <h3 className="font-bold text-lg text-slate-900">Master-Planned Community Feel</h3>
                 </div>
-                <ul className="space-y-3 text-red-800">
-                  <li className="flex items-start">
-                    <span className="font-bold mr-2">$1.2M:</span>
-                    <span>3BR/2BA 1,800 sq ft in decent suburb</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-bold mr-2">$800K:</span>
-                    <span>2BR condo or older townhome</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-bold mr-2">$600K:</span>
-                    <span>Fixer-upper or long commute</span>
-                  </li>
-                </ul>
+                <p className="text-slate-600">
+                  Providence offers the same master-planned lifestyle Californians expect—parks, trails, 
+                  community amenities—at a fraction of the cost. 27 neighborhoods to choose from.
+                </p>
               </div>
-              <div className="bg-green-50 border border-green-200 rounded-xl p-6">
+              <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <div className="flex items-center mb-4">
                   <MapPin className="h-6 w-6 text-green-600 mr-2" />
-                  <h3 className="font-bold text-lg text-green-900">In Las Vegas</h3>
+                  <h3 className="font-bold text-lg text-slate-900">$300K–$700K Price Range</h3>
                 </div>
-                <ul className="space-y-3 text-green-800">
-                  <li className="flex items-start">
-                    <span className="font-bold mr-2">$700K:</span>
-                    <span>4BR/3BA 3,000 sq ft in Summerlin + $500K pocket</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-bold mr-2">$550K:</span>
-                    <span>Beautiful 4BR in Henderson + cash left over</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-bold mr-2">$450K:</span>
-                    <span>Brand new construction, turnkey ready</span>
-                  </li>
-                </ul>
+                <p className="text-slate-600">
+                  Providence homes typically sell for $300K–$700K—compared to $1M+ for similar 
+                  quality in California. Keep six figures in the bank.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="h-6 w-6 text-blue-600 mr-2" />
+                  <h3 className="font-bold text-lg text-slate-900">Modern Construction, Low Maintenance</h3>
+                </div>
+                <p className="text-slate-600">
+                  Many Providence homes are newer construction with modern finishes. HOA handles 
+                  exterior maintenance so you can enjoy retirement or work remotely.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <Sun className="h-6 w-6 text-amber-500 mr-2" />
+                  <h3 className="font-bold text-lg text-slate-900">Easy I-15 Access to California</h3>
+                </div>
+                <p className="text-slate-600">
+                  Providence is minutes from I-15. Direct flights from Las Vegas to LAX, SFO, 
+                  and San Diego make it easy to visit family or return for work when needed.
+                </p>
               </div>
             </div>
           </section>
 
-          {/* Top Neighborhoods for CA Relocators */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Top 3 Neighborhoods for California Relocators
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-                <div className="bg-blue-600 text-white p-4">
-                  <h3 className="font-bold text-xl">Summerlin</h3>
-                  <p className="text-blue-100 text-sm">Median: $726K</p>
-                </div>
-                <div className="p-6">
-                  <p className="text-slate-600 mb-4">
-                    "The Irvine of Las Vegas" - Master-planned perfection with top schools,
-                    Downtown Summerlin shopping, and Red Rock Canyon views.
-                  </p>
-                  <div className="text-sm text-slate-500 mb-4">
-                    <strong>Best for:</strong> Families from Orange County, coastal CA
-                  </div>
-                  <ul className="text-sm space-y-1 text-slate-700">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Top-rated schools
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      150+ parks & trails
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Upscale dining & shopping
-                    </li>
-                  </ul>
-                  <Link
-                    href="/neighborhoods/summerlin"
-                    className="block mt-4 text-blue-600 font-semibold hover:text-blue-700"
-                  >
-                    Explore Summerlin →
-                  </Link>
-                </div>
-              </div>
-
-              <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-                <div className="bg-green-600 text-white p-4">
-                  <h3 className="font-bold text-xl">Henderson / Inspirada</h3>
-                  <p className="text-green-100 text-sm">Median: $530K</p>
-                </div>
-                <div className="p-6">
-                  <p className="text-slate-600 mb-4">
-                    Henderson = San Diego suburbs meets tech corridor. Google's data center,
-                    top schools, and "America's Safest City" accolades.
-                  </p>
-                  <div className="text-sm text-slate-500 mb-4">
-                    <strong>Best for:</strong> Tech workers, young families, San Diego relocators
-                  </div>
-                  <ul className="text-sm space-y-1 text-slate-700">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Tech job growth
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Lowest crime rates
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      New construction options
-                    </li>
-                  </ul>
-                  <Link
-                    href="/neighborhoods/henderson"
-                    className="block mt-4 text-blue-600 font-semibold hover:text-blue-700"
-                  >
-                    Explore Henderson →
-                  </Link>
-                </div>
-              </div>
-
-              <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-                <div className="bg-purple-600 text-white p-4">
-                  <h3 className="font-bold text-xl">The Ridges</h3>
-                  <p className="text-purple-100 text-sm">$1.5M - $10M+</p>
-                </div>
-                <div className="p-6">
-                  <p className="text-slate-600 mb-4">
-                    Newport Coast quality, Vegas prices. Guard-gated luxury with Strip views,
-                    celebrity neighbors, and custom estates.
-                  </p>
-                  <div className="text-sm text-slate-500 mb-4">
-                    <strong>Best for:</strong> Beverly Hills/Newport Beach luxury buyers
-                  </div>
-                  <ul className="text-sm space-y-1 text-slate-700">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Guard-gated privacy
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Custom home sites
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Red Rock Canyon access
-                    </li>
-                  </ul>
-                  <Link
-                    href="/neighborhoods/the-ridges"
-                    className="block mt-4 text-blue-600 font-semibold hover:text-blue-700"
-                  >
-                    Explore The Ridges →
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Remote Work Lifestyle */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <div className="flex items-center mb-6">
-              <Briefcase className="h-8 w-8 text-blue-600 mr-3" />
-              <h2 className="text-3xl font-bold text-slate-900">Remote Work, Vegas Lifestyle</h2>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <p className="text-slate-700 mb-4">
-                  Keep your California salary, lose the California taxes. Thousands of tech workers,
-                  executives, and entrepreneurs have discovered that Las Vegas offers the perfect
-                  remote work base:
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <TrendingUp className="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span><strong>Same income, lower costs:</strong> Keep your Bay Area salary while paying Nevada prices</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Plane className="h-5 w-5 text-blue-600 mr-2 mt-1 flex-shrink-0" />
-                    <span><strong>Easy travel:</strong> Direct flights to SFO, LAX, SJC for when you need to be in-office</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Sun className="h-5 w-5 text-amber-500 mr-2 mt-1 flex-shrink-0" />
-                    <span><strong>Work-life balance:</strong> Golf at 2pm, hike Red Rock after work, world-class dining</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-4">Henderson Tech Corridor</h3>
-                <p className="text-slate-600 mb-4">
-                  Google's $600M data center. Amazon Web Services. Switch Supernap. Henderson is
-                  becoming a legitimate tech hub, with companies attracted by zero corporate
-                  income tax and quality of life.
-                </p>
-                <p className="text-sm text-slate-500">
-                  Many California tech workers find themselves with <em>more</em> local job options
-                  after moving to Vegas than they expected.
-                </p>
-              </div>
-            </div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4 text-center">
+              Providence at a Glance
+            </h2>
+            <ul className="grid md:grid-cols-2 gap-4 text-slate-700 max-w-2xl mx-auto">
+              <li className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                27 neighborhoods
+              </li>
+              <li className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                Three community parks
+              </li>
+              <li className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                5,600+ homes
+              </li>
+              <li className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                Zero Nevada state income tax
+              </li>
+            </ul>
           </section>
 
-          {/* FAQ Section */}
           <FAQSection
             faqs={californiaRelocatorFAQs}
-            title="California Relocator FAQs"
-            subtitle="Common questions about moving from California to Las Vegas"
+            title="California to Providence FAQs"
+            subtitle="Common questions about moving from California to Providence Las Vegas"
           />
 
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "I've helped hundreds of California families make the move to Las Vegas. The most
-                common reaction? 'Why didn't we do this sooner?' Between the tax savings, the space,
-                and the lifestyle, most clients can't believe what their California equity buys here.
-                As a <strong>Berkshire Hathaway HomeServices</strong> agent, I coordinate with our
-                California offices to make the transition seamless—you don't have to figure this
-                out alone."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
-
-          {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Start Your Tax-Free Life?
+              Ready to Explore Providence?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Get a personalized relocation consultation with Dr. Jan Duffy. She'll show you exactly
-              what your California equity buys in Las Vegas and help you find the perfect neighborhood.
+              Dr. Jan Duffy helps California relocators find their perfect Providence home. 
+              Zero state income tax. More home for your money.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -383,17 +193,19 @@ export default function CaliforniaRelocatorPage() {
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call/Text (702) 744-2993
+                Call (702) 744-2993
               </a>
-              <Link
-                href="/contact"
+              <a
+                href={realscoutUrls.searchRelated}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
               >
-                Schedule Consultation
-              </Link>
+                Search Providence Homes
+              </a>
             </div>
             <p className="mt-6 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
+              Dr. Jan Duffy | Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>

@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { generateBreadcrumbSchema } from "@/lib/schema";
-import { realscoutUrls } from "@/lib/site-config";
+import { realscoutUrls, providenceNeighborhoods, marketStats } from "@/lib/site-config";
 
 export const revalidate = 3600;
 
@@ -29,43 +29,38 @@ const listingsBreadcrumbs = generateBreadcrumbSchema([
 ]);
 
 export const metadata: Metadata = {
-  title: "Las Vegas Homes for Sale | MLS Property Search | Berkshire Hathaway HomeServices",
+  title: "Providence Homes for Sale | MLS Property Search | Dr. Jan Duffy",
   description:
-    "Browse all Las Vegas and Henderson homes for sale with live MLS listings. Search by neighborhood, price, and features. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 744-2993.",
+    "Browse Providence Las Vegas homes for sale with live MLS listings. All 27 Providence neighborhoods. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 744-2993.",
   keywords: [
-    "Las Vegas homes for sale",
-    "Henderson real estate",
-    "MLS listings Las Vegas",
-    "Summerlin homes",
-    "houses for sale Las Vegas",
-    "Berkshire Hathaway listings",
+    "Providence homes for sale",
+    "Providence Las Vegas real estate",
+    "MLS listings Providence",
+    "Oxford Commons homes",
+    "Saratoga Highlands",
   ],
 };
 
 const listingsSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateListing",
-  name: "Las Vegas MLS Property Listings",
-  description: "Live MLS property listings for Las Vegas, Henderson, and Summerlin homes for sale",
+  name: "Providence Las Vegas MLS Property Listings",
+  description: "Live MLS property listings for Providence Las Vegas homes for sale",
   provider: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
     telephone: "+17027442993",
   },
-  areaServed: [
-    { "@type": "City", name: "Las Vegas, NV" },
-    { "@type": "City", name: "Henderson, NV" },
-    { "@type": "City", name: "Summerlin, NV" },
-  ],
+  areaServed: [{ "@type": "Place", name: "Providence, North Las Vegas, NV 89166" }],
 };
 
 const popularSearches = [
-  { name: "Summerlin Homes", href: "/neighborhoods/summerlin", count: "1,200+" },
-  { name: "Henderson Properties", href: "/neighborhoods/henderson", count: "980+" },
-  { name: "Green Valley", href: "/neighborhoods/green-valley", count: "450+" },
-  { name: "The Ridges Luxury", href: "/neighborhoods/the-ridges", count: "85+" },
-  { name: "55+ Communities", href: "/55-plus-communities", count: "320+" },
-  { name: "New Construction", href: "/new-construction", count: "600+" },
+  { name: "Oxford Commons", href: "/providence/neighborhoods/oxford-commons", count: "Providence" },
+  { name: "Saratoga Highlands", href: "/providence/neighborhoods/saratoga-highlands", count: "Providence" },
+  { name: "Auburn & Bradford", href: "/providence/neighborhoods/auburn-bradford", count: "Providence" },
+  { name: "55+ Options", href: "/55-plus-communities", count: "Near Providence" },
+  { name: "New Construction", href: "/new-construction", count: "Providence" },
+  { name: "All 27 Neighborhoods", href: "/providence", count: "Providence" },
 ];
 
 const priceRanges = [
@@ -76,44 +71,13 @@ const priceRanges = [
   { range: "$2M+", description: "Ultra-luxury estates, custom builds", count: "180+" },
 ];
 
-const neighborhoods = [
-  {
-    name: "Summerlin",
-    description: "Master-planned community with Red Rock views, top schools, and 150+ parks",
-    medianPrice: "$625,000",
-    daysOnMarket: 22,
-  },
-  {
-    name: "Henderson",
-    description: "Nevada's second-largest city with family-friendly communities and low crime",
-    medianPrice: "$485,000",
-    daysOnMarket: 24,
-  },
-  {
-    name: "Green Valley",
-    description: "Established Henderson community with mature landscaping and golf courses",
-    medianPrice: "$520,000",
-    daysOnMarket: 26,
-  },
-  {
-    name: "Southern Highlands",
-    description: "Guard-gated luxury community with championship golf and mountain views",
-    medianPrice: "$750,000",
-    daysOnMarket: 32,
-  },
-  {
-    name: "North Las Vegas",
-    description: "Affordable new construction and growing infrastructure",
-    medianPrice: "$385,000",
-    daysOnMarket: 18,
-  },
-  {
-    name: "Skye Canyon",
-    description: "Newer master-planned community with modern amenities and mountain access",
-    medianPrice: "$550,000",
-    daysOnMarket: 20,
-  },
-];
+const neighborhoods = providenceNeighborhoods.slice(0, 6).map((n) => ({
+  name: n.name,
+  slug: n.slug,
+  description: "Providence Las Vegas neighborhood with access to three community parks",
+  medianPrice: marketStats.lasVegas.medianPriceFormatted,
+  daysOnMarket: marketStats.lasVegas.daysOnMarket,
+}));
 
 export default function ListingsPage() {
   return (
@@ -132,12 +96,12 @@ export default function ListingsPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Las Vegas Homes for Sale
+              Providence Homes for Sale
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              Search thousands of Las Vegas, Henderson, and Summerlin properties with live MLS 
-              listings updated every 15 minutes. Find your dream home with expert guidance from 
-              Dr. Jan Duffy at <strong>Berkshire Hathaway HomeServices</strong>.
+              Search Providence Las Vegas properties across all 27 neighborhoods with live MLS 
+              listings. Find your dream home with expert guidance from Dr. Jan Duffy at 
+              <strong> Berkshire Hathaway HomeServices</strong>.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500 mb-4">
               <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Live MLS Data</span>
@@ -177,7 +141,7 @@ export default function ListingsPage() {
               Popular Property Searches in Las Vegas
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Las Vegas offers diverse neighborhoods for every lifestyle and budget. Whether you're 
+              Providence offers 27 diverse neighborhoods for every lifestyle and budget. Whether you're 
               seeking luxury estates in guard-gated communities, family homes near top-rated schools, 
               or affordable new construction, our comprehensive search tools help you find exactly 
               what you're looking for. Browse the most popular searches below or use the advanced 
@@ -238,34 +202,33 @@ export default function ListingsPage() {
               Las Vegas Neighborhoods & Communities
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Each Las Vegas neighborhood offers a unique lifestyle, from the resort-style living 
-              of Summerlin to the family-friendly communities of Henderson. Understanding these 
-              differences is crucial to finding a home that fits your needs. As a Berkshire 
-              Hathaway HomeServices agent serving Las Vegas since 2008, Dr. Jan Duffy provides 
-              expert guidance on which neighborhoods match your priorities—whether that's schools, 
-              commute times, amenities, or investment potential.
+              Each of the 27 Providence neighborhoods offers a unique lifestyle. From Oxford Commons 
+              and Saratoga Highlands to Auburn & Bradford and beyond, all Providence neighborhoods 
+              have access to three community parks. Dr. Jan Duffy provides expert guidance on which 
+              Providence neighborhood matches your priorities—amenities, floor plans, HOA, or investment potential.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {neighborhoods.map((neighborhood) => (
-                <div
+                <Link
                   key={neighborhood.name}
-                  className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                  href={`/providence/neighborhoods/${neighborhood.slug}`}
+                  className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg hover:border-blue-300 transition-all block"
                 >
                   <h3 className="font-bold text-lg text-slate-900 mb-2">{neighborhood.name}</h3>
                   <p className="text-slate-600 text-sm mb-4">{neighborhood.description}</p>
                   <div className="flex justify-between text-sm">
-                    <span className="text-slate-500">Median: <strong className="text-slate-900">{neighborhood.medianPrice}</strong></span>
+                    <span className="text-slate-500">Providence median: <strong className="text-slate-900">{neighborhood.medianPrice}</strong></span>
                     <span className="text-slate-500">DOM: <strong className="text-slate-900">{neighborhood.daysOnMarket} days</strong></span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
             <div className="text-center mt-8">
               <Link
-                href="/neighborhoods"
+                href="/providence"
                 className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
               >
-                Explore All Neighborhoods <ArrowRight className="h-4 w-4 ml-2" />
+                Explore All 27 Providence Neighborhoods <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
             </div>
           </section>
@@ -276,7 +239,7 @@ export default function ListingsPage() {
               Why Work With a Berkshire Hathaway HomeServices Agent
             </h2>
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              In today's competitive Las Vegas market, having expert representation can mean the 
+              In today's competitive Providence market, having expert representation can mean the 
               difference between winning your dream home and losing out. Dr. Jan Duffy brings 
               the resources of Berkshire Hathaway HomeServices—the most trusted name in real estate—
               combined with deep local market knowledge from serving Las Vegas since 2008.
@@ -385,7 +348,7 @@ export default function ListingsPage() {
                   <h3 className="font-bold text-slate-900 mb-1">Define Your Priorities & Search</h3>
                   <p className="text-slate-600 text-sm">
                     Location, size, features, and budget all factor into your search. Dr. Jan helps 
-                    you identify which Las Vegas neighborhoods match your lifestyle while setting 
+                    you identify which Providence neighborhoods match your lifestyle while setting 
                     up automated MLS alerts so you never miss a new listing.
                   </p>
                 </div>
@@ -443,9 +406,9 @@ export default function ListingsPage() {
                   How competitive is the Las Vegas housing market in 2026?
                 </h3>
                 <p className="text-slate-600">
-                  The Las Vegas market is moderately competitive with 2.1 months of inventory—a 
-                  slight seller's market. Well-priced homes in desirable areas like Summerlin and 
-                  Henderson often receive multiple offers within the first week. Having a 
+                  The Providence market is moderately competitive with 2.1 months of inventory—a 
+                  slight seller's market. Well-priced Providence homes in desirable neighborhoods 
+                  often receive multiple offers within the first week. Having a 
                   pre-approval and experienced agent gives you a significant advantage.
                 </p>
               </div>

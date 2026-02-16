@@ -60,7 +60,7 @@ const properties: Property[] = [
   {
     id: 1,
     name: "Modern Luxury Home",
-    location: "Summerlin, Las Vegas, NV",
+    location: "Oxford Commons, Providence, NV",
     price: "$850,000",
     image: "/Image/hero_bg_1.jpg",
     bedrooms: 4,
@@ -70,7 +70,7 @@ const properties: Property[] = [
   {
     id: 2,
     name: "Spacious Family Home",
-    location: "Henderson, NV",
+    location: "Saratoga Highlands, Providence, NV",
     price: "$625,000",
     image: "/Image/hero_bg_2.jpg",
     bedrooms: 3,
@@ -80,7 +80,7 @@ const properties: Property[] = [
   {
     id: 3,
     name: "Elegant Estate",
-    location: "Green Valley, Henderson, NV",
+    location: "Auburn & Bradford, Providence, NV",
     price: "$1,200,000",
     image: "/Image/hero_bg_3.jpg",
     bedrooms: 5,
@@ -99,7 +99,7 @@ export default function FeaturedProperties() {
               Featured Properties
             </h2>
             <p className="text-slate-600 text-lg">
-              Discover exceptional homes in Las Vegas and Henderson
+              Discover exceptional homes in Providence Las Vegas
             </p>
           </div>
           <Button asChild variant="outline" className="mt-4 md:mt-0">

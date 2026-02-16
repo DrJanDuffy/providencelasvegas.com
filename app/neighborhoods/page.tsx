@@ -10,15 +10,15 @@ import { providenceNeighborhoods, providenceCommunity } from "@/lib/site-config"
 import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
-  title: "Locations | Providence Real Estate | Providence Las Vegas",
+  title: "All 27 Providence Neighborhoods | Providence Las Vegas Real Estate",
   description:
-    "Providence Real Estate locations. Providence (27 neighborhoods), Summerlin, Henderson, North Las Vegas. Call (702) 744-2993.",
+    "Providence Real Estate serves all 27 Providence Las Vegas neighborhoods. Oxford Commons, Saratoga Highlands, Auburn & Bradford and more. Call (702) 744-2993.",
   keywords: [
-    "Las Vegas neighborhoods",
+    "Providence neighborhoods",
     "Providence Las Vegas",
-    "Summerlin real estate",
-    "Henderson real estate",
-    "Green Valley Las Vegas",
+    "Oxford Commons",
+    "Saratoga Highlands",
+    "Providence community",
   ],
 };
 
@@ -137,8 +137,8 @@ export default function NeighborhoodsPage() {
           {/* FAQ Section */}
           <FAQSection
             faqs={neighborhoodsFAQs}
-            title="Frequently Asked Questions About Las Vegas Neighborhoods"
-            subtitle="Common questions about neighborhoods, areas served, and finding the right community"
+            title="Frequently Asked Questions About Providence Neighborhoods"
+            subtitle="Common questions about Providence neighborhoods and finding the right community"
           />
 
           {/* Expert Quote */}

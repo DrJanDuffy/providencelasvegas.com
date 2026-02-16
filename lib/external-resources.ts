@@ -124,13 +124,13 @@ export const externalResources = {
     },
   ],
 
-  // 55+ Community Resources
+  // 55+ Community Resources (near Providence)
   seniorResources: [
     {
-      title: "Sun City Summerlin Community Association",
-      url: "https://www.suncitysum.com/",
-      description: "Official website for Sun City Summerlin residents",
-      source: "Sun City Summerlin",
+      title: "Sun City Aliante",
+      url: "https://www.suncityaliante.com/",
+      description: "55+ community 5 miles north of Providence",
+      source: "Sun City Aliante",
     },
     {
       title: "Del Webb Communities",
@@ -140,13 +140,13 @@ export const externalResources = {
     },
   ],
 
-  // Luxury Home Resources
+  // Premium Providence Resources
   luxuryResources: [
     {
-      title: "The Ridges Village Association",
-      url: "https://www.theridgesvillage.com/",
-      description: "Official website for The Ridges luxury community",
-      source: "The Ridges",
+      title: "Providence Master HOA",
+      url: "https://www.providencelvhoa.com/home/",
+      description: "Official Providence Las Vegas HOA - Design Review, resale certificates",
+      source: "Providence HOA",
     },
     {
       title: "Luxury Home Magazine - Las Vegas",

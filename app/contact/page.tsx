@@ -256,24 +256,24 @@ export default function ContactPage() {
               Areas We Serve
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Dr. Jan Duffy provides expert real estate services throughout the Las Vegas Valley. 
-              Whether you're buying, selling, or investing in any of these communities, contact us 
+              Dr. Jan Duffy provides expert real estate services throughout Providence Las Vegas. 
+              Whether you're buying, selling, or investing in any of these Providence neighborhoods, contact us 
               for personalized guidance backed by Berkshire Hathaway HomeServices.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                "Las Vegas",
-                "Henderson",
-                "Summerlin",
-                "Green Valley",
+                "Providence",
+                "Oxford Commons",
+                "Saratoga Highlands",
+                "Auburn & Bradford",
                 "North Las Vegas",
-                "Southern Highlands",
-                "Skye Canyon",
-                "Centennial Hills",
-                "The Ridges",
-                "Inspirada",
-                "Mountains Edge",
-                "Spring Valley",
+                "Cambridge",
+                "Somerset",
+                "Manchester Park",
+                "Franklin Park",
+                "Barrington Manor",
+                "Kensington",
+                "Easton Place",
               ].map((area) => (
                 <div key={area} className="bg-slate-50 rounded-lg p-3 text-center hover:bg-blue-50 transition-colors">
                   <span className="text-slate-700 font-medium text-sm">{area}</span>

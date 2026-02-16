@@ -21,20 +21,19 @@ export default function Navbar() {
   const mainNavLinks = [
     { href: "/", label: "Home", external: false },
     { href: "/services", label: "Services", external: false },
-    { href: "/neighborhoods", label: "Locations", external: false },
-    { href: "/providence", label: "Providence", external: false },
+    { href: "/providence", label: "Neighborhoods", external: false },
     { href: realscoutUrls.searchNavbar, label: "Properties", external: true },
     { href: "/contact", label: "Contact", external: false },
   ];
 
   const serviceLinks = [
-    { href: "/buyers", label: "Home Buying" },
-    { href: "/sellers", label: "Home Selling" },
-    { href: "/luxury-homes", label: "Luxury Homes" },
-    { href: "/55-plus-communities", label: "55+ Communities" },
-    { href: "/new-construction", label: "New Construction" },
-    { href: "/relocation", label: "Relocation" },
-    { href: "/home-valuation", label: "Home Valuation" },
+    { href: "/buyers", label: "Buy in Providence" },
+    { href: "/sellers", label: "Sell Your Providence Home" },
+    { href: "/new-construction", label: "Providence New Construction" },
+    { href: "/home-valuation", label: "Free Home Valuation" },
+    { href: "/providence/hoa-info", label: "HOA & Resale Info" },
+    { href: "/luxury-homes", label: "Providence Luxury Homes" },
+    { href: "/55-plus-communities", label: "Providence 55+ Living" },
   ];
 
   return (
@@ -131,10 +130,10 @@ export default function Navbar() {
                 )
               )}
 
-              {/* Services - focus on services + locations */}
+              {/* Providence Services */}
               <div className="border-t border-slate-200 pt-2 mt-2">
                 <span className="text-xs font-semibold text-slate-500 px-3 uppercase">
-                  Services &amp; Locations
+                  Providence Services
                 </span>
                 {serviceLinks.map((link) => (
                   <Link

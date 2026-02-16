@@ -10,17 +10,17 @@ import FAQSchema from "@/components/schemas/FAQSchema";
 import { getFAQsForPage } from "@/lib/faq-library";
 
 export const metadata: Metadata = {
-  title: "Free Home Valuation Las Vegas | What's Your Home Worth? | Berkshire Hathaway HomeServices",
+  title: "Free Providence Home Valuation | What's Your Home Worth? | Dr. Jan Duffy",
   description:
-    "Get a free, accurate home valuation in Las Vegas from Dr. Jan Duffy at Berkshire Hathaway HomeServices. Expert CMA analysis for Summerlin, Henderson, Green Valley & all Las Vegas neighborhoods. Call (702) 744-2993.",
+    "Get a free, accurate Providence home valuation from Dr. Jan Duffy at Berkshire Hathaway HomeServices. Expert CMA analysis for all 27 Providence Las Vegas neighborhoods. Call (702) 744-2993.",
   keywords: [
-    "home valuation Las Vegas",
-    "what is my home worth Las Vegas",
-    "free home value estimate",
-    "CMA Las Vegas",
+    "Providence home valuation",
+    "what is my Providence home worth",
+    "free home value estimate 89166",
+    "Providence CMA",
     "Berkshire Hathaway home valuation",
-    "Summerlin home value",
-    "Henderson home value",
+    "Oxford Commons home value",
+    "Saratoga Highlands home value",
   ],
 };
 
@@ -49,12 +49,12 @@ export default function HomeValuationPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              What's Your Las Vegas Home Worth?
+              What's Your Providence Home Worth?
             </h1>
             <p className="text-xl text-slate-600">
               Get a free, no-obligation home valuation from Dr. Jan Duffy at{" "}
               <strong>Berkshire Hathaway HomeServices</strong>. Accurate pricing backed by 17+ years
-              of Las Vegas market expertise and $127M+ in closed transactions.
+              of Providence Las Vegas market expertise and $127M+ in closed transactions.
             </p>
           </div>
 
@@ -82,9 +82,9 @@ export default function HomeValuationPage() {
                 <h2 className="text-2xl font-bold mb-4">Why Request a BHHS Valuation?</h2>
                 <p className="text-slate-300 mb-6">
                   Online estimators like Zillow's "Zestimate" can be off by 10% or more—that's
-                  $45,000+ on a typical Las Vegas home. Dr. Jan Duffy provides a comprehensive
+                  $45,000+ on a typical Providence home. Dr. Jan Duffy provides a comprehensive
                   market analysis using current MLS data, recent comparable sales, and her expertise
-                  serving Las Vegas since 2008. The result? Accurate pricing that helps you sell
+                  serving Providence Las Vegas since 2008. The result? Accurate pricing that helps you sell
                   faster and for more money.
                 </p>
                 <div className="space-y-3">
@@ -237,15 +237,15 @@ export default function HomeValuationPage() {
           {/* Factors Affecting Value */}
           <section className="max-w-5xl mx-auto mb-16 bg-slate-50 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Key Factors That Affect Your Las Vegas Home's Value
+              Key Factors That Affect Your Providence Home's Value
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg p-6 shadow-sm">
                 <MapPin className="h-8 w-8 text-blue-600 mb-4" />
                 <h3 className="font-bold text-slate-900 mb-2">Location & Neighborhood</h3>
                 <p className="text-slate-600 text-sm">
-                  Summerlin commands 20-40% premiums over comparable homes in other areas. School
-                  zones, HOA quality, and proximity to amenities significantly impact value.
+                  Oxford Commons, Saratoga Highlands, and other premier Providence neighborhoods command premiums. School
+                  zones, HOA quality, and proximity to the three community parks significantly impact value.
                 </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
@@ -294,7 +294,7 @@ export default function HomeValuationPage() {
           {/* Neighborhood Values */}
           <section className="max-w-5xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Las Vegas Neighborhood Home Values | January 2026
+              Providence Neighborhood Home Values | January 2026
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full bg-white border border-slate-200 rounded-lg">
@@ -308,12 +308,12 @@ export default function HomeValuationPage() {
                 </thead>
                 <tbody>
                   {[
-                    { area: "Summerlin", price: "$625,000", change: "+6.8%", sqft: "$285" },
-                    { area: "Henderson", price: "$485,000", change: "+5.1%", sqft: "$245" },
-                    { area: "Green Valley", price: "$520,000", change: "+4.5%", sqft: "$255" },
-                    { area: "Southern Highlands", price: "$750,000", change: "+5.5%", sqft: "$295" },
+                    { area: "Providence (89166)", price: "$450,000", change: "+4.2%", sqft: "$245" },
+                    { area: "Oxford Commons", price: "$475,000", change: "+4.5%", sqft: "$255" },
+                    { area: "Saratoga Highlands", price: "$485,000", change: "+4.8%", sqft: "$260" },
+                    { area: "Auburn & Bradford", price: "$460,000", change: "+4.3%", sqft: "$248" },
                     { area: "North Las Vegas", price: "$385,000", change: "+3.2%", sqft: "$210" },
-                    { area: "Centennial Hills", price: "$495,000", change: "+4.8%", sqft: "$240" },
+                    { area: "Cambridge / Somerset", price: "$440,000", change: "+4.0%", sqft: "$238" },
                   ].map((row, index) => (
                     <tr key={row.area} className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}>
                       <td className="px-6 py-4 font-medium text-slate-900">{row.area}</td>

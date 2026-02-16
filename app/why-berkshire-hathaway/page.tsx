@@ -198,7 +198,7 @@ export default function WhyBerkshireHathawayPage() {
                 </h2>
                 <p className="text-lg text-slate-700 mb-6">
                   Dr. Jan Duffy brings the power of <strong>Berkshire Hathaway HomeServices</strong>{" "}
-                  to Providence Las Vegas, Henderson, Summerlin, and all of Southern Nevada.
+                  to Providence Las Vegas and all 27 Providence neighborhoods.
                   Whether you're in one of Providence's 27 neighborhoods or elsewhere in the valley,
                   serving the area since 2008 with $127M+ in closed transactions, you get global
                   brand strength with hometown expertise.

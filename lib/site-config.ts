@@ -203,84 +203,19 @@ export const valuePropositions = {
   trust:
     "Berkshire Hathaway HomeServices is the only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This means unmatched financial stability, ethical standards, and a global referral network of 50,000+ agents.",
   expertise:
-    "Serving Las Vegas since 2008 with $127M+ in closed transactions, Dr. Jan Duffy combines deep local market knowledge with the resources of a global brand.",
+    "Serving Providence Las Vegas since 2008 with $127M+ in closed transactions, Dr. Jan Duffy combines deep Providence market knowledge with the resources of a global brand.",
   providence:
     "Providence is a master-planned community in Las Vegas with 27 neighborhoods and more than 5,600 homes. Each neighborhood has its own amenities. Residents enjoy three community parks: The Promenade, Knickerbocker Park, and Huckleberry Park.",
 };
 
-// Neighborhoods served
-export const neighborhoods = [
-  {
-    name: "Summerlin",
-    slug: "summerlin",
-    description: "Master-planned community with parks, trails, and top-rated schools",
-    medianPrice: "$625,000",
-    highlights: ["Red Rock views", "150+ parks", "Top schools", "Golf courses"],
-  },
-  {
-    name: "Henderson",
-    slug: "henderson",
-    description: "Nevada's second-largest city with family-friendly neighborhoods",
-    medianPrice: "$485,000",
-    highlights: ["Low crime rate", "Excellent schools", "Lake Las Vegas", "Green Valley"],
-  },
-  {
-    name: "Green Valley",
-    slug: "green-valley",
-    description: "Established Henderson community with mature landscaping",
-    medianPrice: "$520,000",
-    highlights: ["Golf courses", "Walking trails", "Shopping", "Parks"],
-  },
-  {
-    name: "The Ridges",
-    slug: "the-ridges",
-    description: "Ultra-luxury guard-gated community in Summerlin",
-    medianPrice: "$2.5M",
-    highlights: ["Celebrity homes", "Custom estates", "Bear's Best Golf", "Strip views"],
-  },
-  {
-    name: "Southern Highlands",
-    slug: "southern-highlands",
-    description: "Master-planned luxury community with championship golf",
-    medianPrice: "$750,000",
-    highlights: ["Golf community", "Guard-gated", "Mountain views", "Luxury amenities"],
-  },
-  {
-    name: "North Las Vegas",
-    slug: "north-las-vegas",
-    description: "Rapidly growing area with affordable new construction",
-    medianPrice: "$385,000",
-    highlights: ["New construction", "Affordable", "Growing area", "Family-friendly"],
-  },
-  {
-    name: "Skye Canyon",
-    slug: "skye-canyon",
-    description: "Newer master-planned community in northwest Las Vegas",
-    medianPrice: "$550,000",
-    highlights: ["New homes", "Mountain views", "Modern amenities", "Great schools"],
-  },
-  {
-    name: "Centennial Hills",
-    slug: "centennial-hills",
-    description: "Northwest Las Vegas community with mountain proximity",
-    medianPrice: "$495,000",
-    highlights: ["Mountain access", "Parks", "Shopping", "Family-friendly"],
-  },
-  {
-    name: "Inspirada",
-    slug: "inspirada",
-    description: "Henderson master-planned community with resort-style living",
-    medianPrice: "$525,000",
-    highlights: ["Resort pools", "Walking trails", "New construction", "Great schools"],
-  },
-  {
-    name: "Mountains Edge",
-    slug: "mountains-edge",
-    description: "Southwest Las Vegas master-planned community",
-    medianPrice: "$475,000",
-    highlights: ["Mountain views", "Parks", "Growing area", "Affordable luxury"],
-  },
-];
+/** @deprecated Use providenceNeighborhoods. Kept for legacy compatibility. */
+export const neighborhoods = providenceNeighborhoods.slice(0, 10).map((n) => ({
+  name: n.name,
+  slug: n.slug,
+  description: `Providence Las Vegas neighborhood`,
+  medianPrice: "$450,000",
+  highlights: ["Providence parks", "HOA community", "North Las Vegas", "89166"],
+}));
 
 // Services offered
 export const services = [
@@ -297,9 +232,9 @@ export const services = [
     icon: "TrendingUp",
   },
   {
-    name: "Luxury Homes",
+    name: "Premium Providence Homes",
     slug: "luxury-homes",
-    description: "Specialized expertise in Las Vegas luxury real estate",
+    description: "Oxford Commons, Saratoga Highlands, Auburn & Bradford and premium Providence listings",
     icon: "Star",
   },
   {
@@ -317,7 +252,7 @@ export const services = [
   {
     name: "Relocation",
     slug: "relocation",
-    description: "Comprehensive relocation assistance for moves to Las Vegas",
+    description: "California to Providence relocation assistance",
     icon: "Truck",
   },
   {
@@ -329,18 +264,18 @@ export const services = [
   {
     name: "Market Analysis",
     slug: "market-report",
-    description: "In-depth Las Vegas real estate market insights",
+    description: "Providence Las Vegas real estate market insights",
     icon: "BarChart",
   },
 ];
 
 // Expert quotes from Dr. Jan Duffy
 export const expertQuotes = {
-  market: `"The Las Vegas market remains strong heading into 2026. We're seeing continued demand from California relocators and remote workers, but the days of 20 offers on every listing are behind us. Buyers finally have some negotiating power."`,
+  market: `"The Providence market remains strong heading into 2026. We're seeing continued demand from California relocators and remote workers. Well-priced Providence homes sell quickly. Buyers have some negotiating power in balanced segments."`,
   buyers: `"My job isn't just to show you houses—it's to make sure you don't overpay, that you understand what you're buying, and that you're protected through every step of the transaction."`,
   sellers: `"Pricing your home correctly from day one is the single most important factor in getting top dollar. Overpriced homes sit, and every day on market costs you money."`,
   luxury: `"Luxury buyers expect discretion, market expertise, and flawless execution. In this price range, one wrong move can cost hundreds of thousands of dollars."`,
-  investment: `"Las Vegas rental yields are among the best in the country right now. But you need to know which neighborhoods are appreciating and which have peaked."`,
+  investment: `"Providence and North Las Vegas rental yields can be competitive. Dr. Jan analyzes cap rates and appreciation potential for Providence neighborhoods."`,
   relocation: `"Moving to a new city is stressful enough. I handle everything from neighborhood tours to school research to contractor referrals so you can focus on your new beginning."`,
   newConstruction: `"Builders have sales agents who work for them, not you. Having your own representation costs you nothing but can save you tens of thousands in upgrades and negotiations."`,
   valueProposition: `"When clients ask why they should choose a Berkshire Hathaway HomeServices agent, I tell them: you're not just getting me—you're getting a global network of 50,000 agents, world-class marketing, and a brand that's synonymous with trust."`,
@@ -357,7 +292,7 @@ export const commonFAQs = {
     {
       question: "What areas does Berkshire Hathaway HomeServices Nevada Properties cover?",
       answer:
-        "BHHS Nevada Properties serves all of Las Vegas, Henderson, North Las Vegas, and surrounding areas, with specialized expertise in Summerlin, The Ridges, Skye Canyon, Southern Highlands, Green Valley, and Henderson's master-planned communities.",
+        "BHHS Nevada Properties serves Providence Las Vegas and all 27 Providence neighborhoods. Dr. Jan Duffy specializes in Providence HOA resale certificates, Design Review, new construction, and neighborhood comparisons across Oxford Commons, Saratoga Highlands, Auburn & Bradford, and every Providence community.",
     },
     {
       question: "How do Berkshire Hathaway HomeServices agents get paid?",
@@ -365,14 +300,14 @@ export const commonFAQs = {
         "Commission structures are negotiable. Dr. Jan Duffy offers transparent pricing and will walk you through all costs before you sign anything. For buyers, our services are typically free as commissions are paid by the seller.",
     },
     {
-      question: "What is Dr. Jan Duffy's experience in Las Vegas real estate?",
+      question: "What is Dr. Jan Duffy's experience in Providence real estate?",
       answer:
-        "Dr. Jan Duffy has been serving Las Vegas since 2008, with $127M+ in closed transactions and 500+ satisfied clients. Her expertise spans residential, luxury, investment, and new construction properties throughout Southern Nevada.",
+        "Dr. Jan Duffy has been serving Providence Las Vegas since 2008, with $127M+ in closed transactions and 500+ satisfied clients. Her expertise spans all 27 Providence neighborhoods—residential, premium homes, investment, and new construction.",
     },
   ],
   buying: [
     {
-      question: "How long does the home buying process take in Las Vegas?",
+      question: "How long does the home buying process take in Providence?",
       answer:
         "Typically 30-45 days from offer acceptance to closing. Cash purchases can close in as little as 7-14 days. The timeline depends on financing, inspections, and other contingencies.",
     },

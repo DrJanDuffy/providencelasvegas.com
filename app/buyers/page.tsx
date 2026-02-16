@@ -22,33 +22,32 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { getFAQsForPage } from "@/lib/faq-library";
-import { realscoutUrls } from "@/lib/site-config";
+import { realscoutUrls, providenceNeighborhoods } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Home Buying Guide Las Vegas | Berkshire Hathaway HomeServices",
+  title: "Buy a Providence Home | Providence Las Vegas Real Estate",
   description:
-    "Looking to buy a home in Las Vegas? Dr. Jan Duffy with Berkshire Hathaway HomeServices Nevada Properties guides you through every step. Free buyer consultation. Call (702) 744-2993.",
+    "Buy your Providence Las Vegas home with Dr. Jan Duffy. Providence-specific buying process, HOA approval, neighborhood comparisons. Free buyer representation. Call (702) 744-2993.",
   keywords: [
-    "buy home Las Vegas",
-    "Las Vegas home buyer",
-    "Berkshire Hathaway buyer agent",
-    "Henderson homes for sale",
-    "first time home buyer Las Vegas",
-    "California relocation Las Vegas",
-    "55+ communities Las Vegas",
+    "buy Providence home",
+    "Providence Las Vegas home buyer",
+    "Providence neighborhoods",
+    "Providence HOA approval",
+    "first time home buyer Providence",
+    "California to Providence",
   ],
 };
 
 const buyerSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Home Buying Services Las Vegas",
+  name: "Providence Home Buying Services",
   provider: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
     telephone: "+17027442993",
   },
-  areaServed: "Las Vegas, Henderson, Summerlin, Clark County NV",
+  areaServed: "Providence, North Las Vegas, NV 89166",
   serviceType: "Buyer Representation",
 };
 
@@ -63,7 +62,7 @@ const buyingSteps = [
     icon: Search,
     title: "Define Your Priorities & Search",
     description:
-      "Dr. Jan provides access to all MLS listings, off-market opportunities, and new construction. She'll help you identify which Las Vegas neighborhoods match your lifestyle while setting up automated alerts so you never miss a new listing.",
+      "Dr. Jan provides access to all MLS listings, off-market opportunities, and new construction. She'll help you identify which Providence neighborhoods match your lifestyle while setting up automated alerts so you never miss a new listing.",
   },
   {
     icon: FileText,
@@ -85,14 +84,11 @@ const buyingSteps = [
   },
 ];
 
-const neighborhoods = [
-  { name: "Summerlin", price: "$625K", description: "Master-planned community with Red Rock views" },
-  { name: "Henderson", price: "$485K", description: "Family-friendly with low crime rates" },
-  { name: "Green Valley", price: "$520K", description: "Established with mature landscaping" },
-  { name: "The Ridges", price: "$2.5M", description: "Ultra-luxury guard-gated estates" },
-  { name: "North Las Vegas", price: "$385K", description: "Affordable new construction" },
-  { name: "Southern Highlands", price: "$750K", description: "Golf course community" },
-];
+const featuredNeighborhoods = providenceNeighborhoods.slice(0, 6).map((n) => ({
+  name: n.name,
+  slug: n.slug,
+  description: `Providence neighborhood with access to three community parks`,
+}));
 
 export default function BuyersPage() {
   const buyersFAQs = getFAQsForPage("buyers");
@@ -113,7 +109,7 @@ export default function BuyersPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Buy Your Las Vegas Home with Confidence
+              Buy Your Providence Home
             </h1>
             <p className="text-xl text-slate-600 mb-8">
               When you work with a <strong>Berkshire Hathaway HomeServices</strong> buyer's agent,
@@ -135,10 +131,10 @@ export default function BuyersPage() {
               <div>
                 <h2 className="text-3xl font-bold mb-4">Why You Need a Buyer's Agent</h2>
                 <p className="text-slate-300 mb-6">
-                  Here's what many buyers don't know: having your own agent costs you nothing. The
+                  Here&apos;s what many buyers don&apos;t know: having your own agent costs you nothing. The
                   seller pays the commission, but the representation is yours.{" "}
                   <strong>Berkshire Hathaway HomeServices</strong> agents protect your interests,
-                  not the seller's. In a competitive market like Las Vegas, having expert 
+                  not the seller&apos;s. In the Providence market, having expert 
                   representation can mean the difference between winning your dream home and losing out.
                 </p>
                 <ul className="space-y-2">
@@ -216,34 +212,31 @@ export default function BuyersPage() {
           {/* Neighborhood Guide */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
-              Las Vegas Neighborhoods for Home Buyers
+              Providence Neighborhoods for Home Buyers
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Las Vegas offers diverse neighborhoods for every lifestyle and budget. Whether you're 
-              seeking luxury estates in guard-gated communities, family homes near top-rated schools, 
-              or affordable new construction, Dr. Jan helps you find the perfect neighborhood. Here's 
-              a quick guide to median prices and what each area offers.
+              Providence offers 27 diverse neighborhoods for every lifestyle and budget. Each 
+              Providence neighborhood has access to three community parks. Dr. Jan helps you compare 
+              Providence neighborhoods, understand HOA requirements, and find the perfect fit.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {neighborhoods.map((neighborhood) => (
-                <div
-                  key={neighborhood.name}
-                  className="bg-white rounded-lg p-4 border border-slate-200"
+              {featuredNeighborhoods.map((neighborhood) => (
+                <Link
+                  key={neighborhood.slug}
+                  href={`/providence/neighborhoods/${neighborhood.slug}`}
+                  className="bg-white rounded-lg p-4 border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all"
                 >
-                  <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-bold text-slate-900">{neighborhood.name}</h3>
-                    <span className="text-blue-600 font-semibold">{neighborhood.price}</span>
-                  </div>
+                  <h3 className="font-bold text-slate-900 mb-2">{neighborhood.name}</h3>
                   <p className="text-slate-600 text-sm">{neighborhood.description}</p>
-                </div>
+                </Link>
               ))}
             </div>
             <div className="text-center mt-6">
               <Link
-                href="/neighborhoods"
+                href="/providence"
                 className="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center"
               >
-                Explore All Neighborhoods <ArrowRight className="h-4 w-4 ml-2" />
+                Explore All 27 Providence Neighborhoods <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
             </div>
           </section>
@@ -266,11 +259,11 @@ export default function BuyersPage() {
               >
                 <div className="text-3xl mb-4">🌴</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
-                  California Relocators
+                  California to Providence
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  0% state income tax, 40-60% lower home prices. See what your CA equity buys in 
-                  Las Vegas. Dr. Jan specializes in helping California families transition to Nevada.
+                  0% state income tax, $300K–$700K price range. See why California buyers love 
+                  Providence. Dr. Jan specializes in helping California families transition to Providence Las Vegas.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
               </Link>
@@ -284,21 +277,21 @@ export default function BuyersPage() {
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
                   Down payment assistance programs, FHA/VA loans, and builder incentives explained. 
-                  Step-by-step guidance through your first home purchase.
+                  Step-by-step guidance through your first Providence home purchase.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
               </Link>
               <Link
-                href="/buyers/luxury-homes-las-vegas"
+                href="/luxury-homes"
                 className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
               >
                 <div className="text-3xl mb-4">💎</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
-                  Luxury Home Buyers
+                  Premium Providence Homes
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  $1M+ properties with discrete service. The Ridges, MacDonald Highlands, Southern 
-                  Highlands, and Las Vegas Strip views. Off-market opportunities available.
+                  Oxford Commons, Saratoga Highlands, and premier Providence neighborhoods. 
+                  Custom upgrades, larger lots, move-in ready homes.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
               </Link>

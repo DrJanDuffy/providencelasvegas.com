@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   description:
     "Providence Real Estate. Homes for sale in Providence Las Vegas and North Las Vegas. Real Estate Agency. Call (702) 744-2993.",
   keywords: [
-    "Las Vegas real estate",
+    "Providence Las Vegas real estate",
     "Providence Las Vegas homes",
-    "Summerlin real estate",
-    "Henderson real estate",
-    "hyperlocal Las Vegas",
+    "Providence homes for sale",
+    "Providence neighborhoods",
+    "89166 homes",
   ],
 };
 
@@ -49,27 +49,24 @@ export default function Home() {
             </h2>
             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
               <div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-4">Services</h3>
+                <h3 className="text-xl font-semibold text-slate-800 mb-4">Providence Services</h3>
                 <ul className="space-y-2 text-slate-700">
-                  <li><Link href="/buyers" className="text-blue-600 hover:underline">Home Buying</Link></li>
-                  <li><Link href="/sellers" className="text-blue-600 hover:underline">Home Selling</Link></li>
-                  <li><Link href="/luxury-homes" className="text-blue-600 hover:underline">Luxury Homes</Link></li>
-                  <li><Link href="/55-plus-communities" className="text-blue-600 hover:underline">55+ Communities</Link></li>
-                  <li><Link href="/new-construction" className="text-blue-600 hover:underline">New Construction</Link></li>
-                  <li><Link href="/relocation" className="text-blue-600 hover:underline">Relocation</Link></li>
+                  <li><Link href="/buyers" className="text-blue-600 hover:underline">Buy in Providence</Link></li>
+                  <li><Link href="/sellers" className="text-blue-600 hover:underline">Sell Your Providence Home</Link></li>
+                  <li><Link href="/new-construction" className="text-blue-600 hover:underline">Providence New Construction</Link></li>
+                  <li><Link href="/55-plus-communities" className="text-blue-600 hover:underline">Providence 55+ Options</Link></li>
                   <li><Link href="/home-valuation" className="text-blue-600 hover:underline">Home Valuation</Link></li>
                   <li><a href={realscoutUrls.searchHomepageServices} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Search Providence Homes</a></li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-4">Locations</h3>
+                <h3 className="text-xl font-semibold text-slate-800 mb-4">Providence Neighborhoods</h3>
                 <ul className="space-y-2 text-slate-700">
-                  <li><Link href="/providence" className="text-blue-600 hover:underline">Providence (27 neighborhoods)</Link></li>
-                  <li><Link href="/neighborhoods/summerlin" className="text-blue-600 hover:underline">Summerlin</Link></li>
-                  <li><Link href="/neighborhoods/henderson" className="text-blue-600 hover:underline">Henderson</Link></li>
-                  <li><Link href="/neighborhoods/green-valley" className="text-blue-600 hover:underline">Green Valley</Link></li>
-                  <li><Link href="/neighborhoods/the-ridges" className="text-blue-600 hover:underline">The Ridges</Link></li>
-                  <li><Link href="/neighborhoods" className="text-blue-600 hover:underline">All Las Vegas Neighborhoods</Link></li>
+                  <li><Link href="/providence" className="text-blue-600 hover:underline">All 27 Providence Neighborhoods</Link></li>
+                  <li><Link href="/providence/neighborhoods/oxford-commons" className="text-blue-600 hover:underline">Oxford Commons</Link></li>
+                  <li><Link href="/providence/neighborhoods/saratoga-highlands" className="text-blue-600 hover:underline">Saratoga Highlands</Link></li>
+                  <li><Link href="/providence/neighborhoods/auburn-bradford" className="text-blue-600 hover:underline">Auburn & Bradford</Link></li>
+                  <li><Link href="/providence" className="text-blue-600 hover:underline">View All 27 →</Link></li>
                 </ul>
               </div>
             </div>
@@ -97,10 +94,10 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Las Vegas Real Estate Market
+                Providence Real Estate Market
               </h2>
               <p className="text-slate-300">
-                Current market data for Providence, Summerlin, Henderson, and Las Vegas.
+                Current market data for Providence Las Vegas and North Las Vegas.
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
@@ -195,10 +192,10 @@ export default function Home() {
         </section>
 
         <WhyChooseUs />
-        <ReviewsSection />
+        <ReviewsSection subtitle="Real testimonials from satisfied Providence homeowners" />
         <FAQSection
-          title="Las Vegas Real Estate FAQs"
-          subtitle="Questions about services, locations, buying, and selling"
+          title="Providence Las Vegas Real Estate FAQs"
+          subtitle="Questions about Providence services, neighborhoods, buying, and selling"
           faqs={homeFAQs}
         />
 

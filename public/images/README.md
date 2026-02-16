@@ -25,7 +25,7 @@ images/
 
 ## Naming Conventions
 
-- Use lowercase with hyphens: `summerlin-aerial.webp`
+- Use lowercase with hyphens: `providence-aerial.webp`
 - Be descriptive: `dr-jan-duffy-headshot.jpg`
 - Include size if multiple: `hero-desktop.webp`, `hero-mobile.webp`
 
