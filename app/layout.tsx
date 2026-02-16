@@ -97,7 +97,7 @@ export default function RootLayout({
         <SchemaScript schema={siteWideSchemas} id="site-schema" />
         {/* Google tag (gtag.js) - Providence Las Vegas - lazyOnload for performance */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-L5B3V7RE8R"
+          src="https://www.googletagmanager.com/gtag/js?id=G-MRG4ZVGKDK"
           strategy="lazyOnload"
         />
         <Script id="google-analytics" strategy="lazyOnload">
@@ -105,7 +105,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-L5B3V7RE8R');
+            gtag('config', 'G-MRG4ZVGKDK');
           `}
         </Script>
         {/* RealScout Widget Script - loaded once globally - lazyOnload to avoid blocking LCP */}
